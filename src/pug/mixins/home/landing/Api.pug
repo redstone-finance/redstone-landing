@@ -14,7 +14,8 @@ mixin Api
             | This data in automatically extracted by a proxy contract and put the content in on-chain storage.
             | After the transaction is executed we clear the storage to avoid gas payments
 
-          p.my-4 The data which is temporarily put in storage could be used by all the protocols maintaining composability - the key aspect of DeFi. Thanks to clearing of the on-chain storage we greatly reduce gas costs and scalable. 
+          p.my-4 The data which is temporarily put in storage could be used by all the protocols maintaining composability - the key aspect of DeFi. 
+            | The solution is also very scalable as there is only a flat verification fee and no extra storage costs. 
     .container-lg
       .row.align-items-center
         .col-md-7.col-lg-6.px-sm-5.px-md-0
@@ -22,7 +23,7 @@ mixin Api
           p.my-4 The data could also be linked to your website, a mobile application or a backend server. 
             | We provide a classic http-api and a 
             a(href='https://www.npmjs.com/package/limestone-api' role='button')  npm package 
-            | to the minimize the amount of code necessary for integration. 
+            | to minimize the amount of code necessary for integration. 
           p.my-4 All data is delivered with a cryptographic signature allowing blockchain grade integrity in an off-chain environment. 
             | You can find more details and explore our API in the
             a(href='https://docs.limestone.finance/' role='button')  documentation
