@@ -1,0 +1,39 @@
+append variables
+    -
+        var web3Features = [
+        {
+        image:'fast-performance.png',
+        title:'1. Connect to the front end',
+        text:'Seamlessly connect to your front-end using a web3 contract wrapper'
+        },
+        {
+        image:'customization.png',
+        title:'2. Connect to the contracts',
+        text:'Configure a proxy pointing to your smart contract'
+        },
+        {
+        image:'app.png',
+        title:'3. Access the data',
+        text:'Read data directly from the evm storage'
+        }
+        
+        ]
+
+mixin ApiWeb3(config)
+    .col-md-4.mb-6
+        .text-center.px-lg-3
+            img.img-fluid.mb-3(src=`${CWD}assets/img/illustrations/${config.image}` width="90"  alt='')
+            h5.fw-bold=config.title
+            p.mb-md-0=config.text
+
+mixin ApiWeb3
+    +Section.py-6#features
+        .row.justify-content-center.mb-6
+            .col-lg-12.text-center.mx-auto.mb-3.mb-md-5.mt-4
+                h6.fw-bold.fs-4.display-3.lh-sm Accessing data in contracts
+                p.mb-0 We use a radically different way of putting data on-chain called "flash storage".
+                p.mb-0 The data is automatically attached to a transaction and erased afterwards reducing gas fees.
+                p.mb-0 The information is kept in the EVM storage maintaining inter-protocol composability.
+        .row
+            each feature in web3Features
+                +ChooseFeature(feature )

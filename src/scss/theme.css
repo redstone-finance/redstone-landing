@@ -4568,7 +4568,7 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .nav-link.disabled {

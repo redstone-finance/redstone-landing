@@ -46,13 +46,15 @@
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#features">Key Features</a></li>
+              <!--li.nav-item(data-anchor)-->
+              <!--  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home-->
+              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#features">Features</a></li>
               <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#api">Accessing Data</a></li>
               <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#about">About us</a></li>
               <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
+              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#contact">Contact </a></li>
             </ul>
-            <form class="ps-lg-5"><a class="button btn btn-lg btn-danger rounded-pill order-0" href="https://limestone.finance/#/browse-data" type="submit">See our data</a></form>
+            <form class="ps-lg-5"><a class="button btn btn-lg btn-danger rounded-pill order-0" href="https://app.redstone.finance" target="_blank" type="submit">See our data</a></form>
           </div>
         </div>
       </nav>
@@ -65,7 +67,7 @@
               <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
               <!--  img.img-fluid.float-start.me-3(src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
               <h1 class="mb-4 display-3 fw-bold lh-sm">Powering DeFi<br class="d-block d-lg-none d-xl-block" />with real-world data</h1>
-              <p class="mt-3 mb-4 fs-1">We provide highly customisable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill hover-top" href="https://limestone.finance/#/browse-data" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#features" role="button"> Learn more</a>
+              <p class="mt-3 mb-4 fs-1">We provide highly customisable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill hover-top" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate</a>
             </div>
           </div>
         </div>
@@ -82,7 +84,7 @@
           <div class="row justify-content-center mb-6">
             <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
               <h6 class="fw-bold fs-4 display-3 lh-sm">The next generation of Oracles</h6>
-              <p class="mb-0">The new wave of DeFi protocols build advance financial products requiring more data delivered at low latency</p>
+              <p class="mb-0">The new wave of DeFi protocols build advance financial products requiring more data delivered at <lower></lower> latency</p>
             </div>
           </div>
           <div class="row">
@@ -130,37 +132,6 @@
       <!-- ============================================-->
 
 
-      <section class="py-5" id="api">
-        <div class="container-lg">
-          <div class="row align-items-center">
-            <div class="col-md-5 col-lg-6 order-md-0 text-center text-md-start"><img class="img-fluid" src="assets/img/illustrations/contracts.png" width="550" alt="" /></div>
-            <div class="col-md-7 col-lg-6 px-sm-5 px-md-0">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in contracts</h6>
-              <p class="my-4">You can easily access data as it was available in the native blockchain storage. We achieve this effect using a radically different way of putting data on-chain inspired by the meta-transactions pattern. </p>
-              <!--We use a radically different way of putting data on-chain inspired by the meta-transactions pattern.
-              | We append the raw transaction with an extra payload.
-              | This data in automatically extracted by a proxy contract and put the content in on-chain storage.
-              | After the transaction is executed we clear the storage to avoid gas payments
-              
-              -->
-              <p class="my-4">
-                The data which is temporarily put in storage could be used by all the protocols maintaining composability - the key aspect of DeFi. The solution is also very scalable as there is only a flat verification fee and no extra storage costs. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container-lg">
-          <div class="row align-items-center">
-            <div class="col-md-7 col-lg-6 px-sm-5 px-md-0">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in applications</h6>
-              <p class="my-4">
-                The data could also be linked to your website, a mobile application or a backend server. We provide a classic http-api and a <a href="https://www.npmjs.com/package/limestone-api" role="button" target="_blank"> npm package </a>to minimize the amount of code necessary for integration. </p>
-              <p class="my-4">
-                All data is delivered with a cryptographic signature allowing blockchain grade integrity in an off-chain environment. You can find more details and explore our API in the<a href="https://docs.limestone.finance/" role="button" target="_blank"> documentation</a>.</p>
-            </div>
-            <div class="col-md-5 col-lg-6 order-md-0 text-center text-md-start"><img class="img-fluid" src="assets/img/illustrations/call-to-action.png" width="500" alt="" /></div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- ============================================-->
@@ -195,6 +166,91 @@
       <!--+UltimateFeatures-->
       <!--+Pricing-->
       <!--+Testimonials-->
+      <!--+Api-->
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-6" id="api">
+
+        <div class="container">
+          <div class="row justify-content-center mb-6">
+            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
+              <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in applications</h6>
+              <p class="mb-0">The data could be linked to your website, a mobile application or a backend server.</p>
+              <p class="mb-0">All data comes with a verifiable cryptographic signature allowing a blockchain grade integrity.</p>
+              <p class="mb-0">Learn more and explore examples in the<a href="https://docs.limestone.finance/" role="button" target="_blank"> documentation </a>or<a href="https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed" role="button" target="_blank"> play with the code</a>.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/fast-performance.png" width="90" alt="" />
+                <h5 class="fw-bold">Http endpoint</h5>
+                <p class="mb-md-0">Maintain full control using a low-level http api</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/customization.png" width="90" alt="" />
+                <h5 class="fw-bold">Npm library</h5>
+                <p class="mb-md-0">Our library allows you to query data in one line of code</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/app.png" width="90" alt="" />
+                <h5 class="fw-bold">Query interface</h5>
+                <p class="mb-md-0">Use a human readable interface to write more complex queries</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-6" id="features">
+
+        <div class="container">
+          <div class="row justify-content-center mb-6">
+            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
+              <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in contracts</h6>
+              <p class="mb-0">We use a radically different way of putting data on-chain called "flash storage".</p>
+              <p class="mb-0">The data is automatically attached to a transaction and erased afterwards reducing gas fees.</p>
+              <p class="mb-0">The information is kept in the EVM storage maintaining inter-protocol composability.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/fast-performance.png" width="90" alt="" />
+                <h5 class="fw-bold">1. Connect to the front end</h5>
+                <p class="mb-md-0">Seamlessly connect to your front-end using a web3 contract wrapper</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/customization.png" width="90" alt="" />
+                <h5 class="fw-bold">2. Connect to the contracts</h5>
+                <p class="mb-md-0">Configure a proxy pointing to your smart contract</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-6">
+              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/app.png" width="90" alt="" />
+                <h5 class="fw-bold">3. Access the data</h5>
+                <p class="mb-md-0">Read data directly from the evm storage</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
 
 
       <!-- ============================================-->
@@ -266,22 +322,25 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-8 bg-1000">
+      <section class="py-5 bg-1000" id="contact">
 
         <div class="container">
-          <div class="row flex-center">
-            <div class="col-auto mb-5"><a class="pe-2 d-flex align-items-center text-decoration-none fw-bold fs-3" href="#">
-                <div class="text-danger">Red</div>
-                <div class="text-white">Stone</div>
-              </a></div>
-          </div>
           <!--.row.flex-center-->
           <!--  .col-auto.mb-5-->
-          <!--    ul.list-unstyled.list-inline.mb-0-->
-          <!--      +FooterList('Home','Key Features','Pricing','Testimonial','FAQ')-->
+          <!--    a.pe-2.d-flex.align-items-center.text-decoration-none.fw-bold.fs-3(href='#')-->
+          <!--      .text-danger Red-->
+          <!--      .text-white Stone-->
           <div class="row flex-center">
-            <div class="col-auto mb-5">
+            <div class="col-12 mb-3 mx-auto align-items-center text-center">
+              <h5 class="mb-2 text-xl-white">Do you want to learn more about the project or integrate with us?</h5>
+              <p>Reach out at: <a class="text-xl-white" href="mailto:hello@redstone.finance" target="_blank">hello@redstone.finance </a>or talk to us on <a class="text-xl-white" href="mailto:hello@redstone.finance" target="_blank">Discord</a></p>
+            </div>
+            <div class="col-auto mb-3">
               <ul class="list-unstyled list-inline">
+                <li class="list-inline-item me-3"><a href="mailto:hello@redstone.finance" target="_blank">
+                    <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 1000 1000">
+                      <path d="M 900 163C 934 163 962 191 962 225C 962 225 962 305 962 305C 962 305 579 569 579 569C 545 592 521 600 500 600C 479 600 455 592 421 569C 421 569 38 305 38 305C 38 305 38 225 38 225C 38 191 66 163 100 163C 100 163 900 163 900 163M 379 631C 379 631 379 631 379 631C 420 658 459 675 500 675C 541 675 580 658 621 631C 621 631 621 631 621 631C 621 631 962 396 962 396C 962 396 962 800 962 800C 962 834 934 862 900 862C 900 862 100 862 100 862C 66 862 38 834 38 800C 38 800 38 396 38 396C 38 396 379 631 379 631"></path>
+                    </svg></a></li>
                 <li class="list-inline-item me-3"><a href="https://twitter.com/limestone_defi" target="_blank">
                     <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 16 16">
                       <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>

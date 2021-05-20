@@ -5,21 +5,26 @@ mixin FooterList(...items)
         =item
 
 mixin Footer
-  +Section.py-8.bg-1000
-    .row.flex-center
-      .col-auto.mb-5
-        a.pe-2.d-flex.align-items-center.text-decoration-none.fw-bold.fs-3(href='#')
-          .text-danger Red
-          .text-white Stone
-
+  +Section.py-5.bg-1000#contact
     //.row.flex-center
     //  .col-auto.mb-5
-    //    ul.list-unstyled.list-inline.mb-0
-    //      +FooterList('Home','Key Features','Pricing','Testimonial','FAQ')
+    //    a.pe-2.d-flex.align-items-center.text-decoration-none.fw-bold.fs-3(href='#')
+    //      .text-danger Red
+    //      .text-white Stone
 
     .row.flex-center
-      .col-auto.mb-5
+      .col-12.mb-3.mx-auto.align-items-center.text-center
+        h5.mb-2.text-xl-white Do you want to learn more about the project or integrate with us?
+        p Reach out at: 
+          a.text-xl-white(href='mailto:hello@redstone.finance' target="_blank") hello@redstone.finance 
+          | or talk to us on 
+          a.text-xl-white(href='mailto:hello@redstone.finance' target="_blank") Discord
+      .col-auto.mb-3
         ul.list-unstyled.list-inline
+          li.list-inline-item.me-3
+            a(href='mailto:hello@redstone.finance' target="_blank")
+              svg.bi.bi-twitter(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#ffffff' viewBox='0 0 1000 1000')
+                path(d='M 900 163C 934 163 962 191 962 225C 962 225 962 305 962 305C 962 305 579 569 579 569C 545 592 521 600 500 600C 479 600 455 592 421 569C 421 569 38 305 38 305C 38 305 38 225 38 225C 38 191 66 163 100 163C 100 163 900 163 900 163M 379 631C 379 631 379 631 379 631C 420 658 459 675 500 675C 541 675 580 658 621 631C 621 631 621 631 621 631C 621 631 962 396 962 396C 962 396 962 800 962 800C 962 834 934 862 900 862C 900 862 100 862 100 862C 66 862 38 834 38 800C 38 800 38 396 38 396C 38 396 379 631 379 631')
           li.list-inline-item.me-3
             a(href='https://twitter.com/limestone_defi' target="_blank")
               svg.bi.bi-twitter(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='#ffffff' viewBox='0 0 16 16')

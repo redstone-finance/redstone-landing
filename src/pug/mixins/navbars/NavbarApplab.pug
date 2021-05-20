@@ -9,16 +9,18 @@ mixin NavbarApplab
 
       #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
         ul.navbar-nav.ms-auto.pt-2.pt-lg-0
+          //li.nav-item(data-anchor)
+          //  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home
           li.nav-item(data-anchor)
-            a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#features') Key Features
+            a.nav-link.fw-medium(href='#features') Features
           li.nav-item(data-anchor)
             a.nav-link.fw-medium(href='#api') Accessing Data
           li.nav-item(data-anchor)
             a.nav-link.fw-medium(href='#about') About us
           li.nav-item(data-anchor)
             a.nav-link.fw-medium(href='#faq') FAQ
+          li.nav-item(data-anchor)
+            a.nav-link.fw-medium(href='#contact') Contact  
 
         form.ps-lg-5
-          a(href='https://limestone.finance/#/browse-data').button.btn.btn-lg.btn-danger.rounded-pill.order-0(type='submit') See our data
+          a(href='https://app.redstone.finance' target='_blank').button.btn.btn-lg.btn-danger.rounded-pill.order-0(type='submit') See our data

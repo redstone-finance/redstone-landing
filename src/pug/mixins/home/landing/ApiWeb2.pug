@@ -1,0 +1,43 @@
+append variables
+    -
+        var web2Features = [
+        {
+        image:'fast-performance.png',
+        title: 'Http endpoint',
+        text:'Maintain full control using a low-level http api'
+        },
+        {
+        image:'customization.png',
+        title:'Npm library',
+        text:'Our library allows you to query data in one line of code'
+        },
+        {
+        image:'app.png',
+        title:'Query interface',
+        text:'Use a human readable interface to write more complex queries'
+        }
+
+        ]
+
+mixin ApiWeb2(config)
+    .col-md-4.mb-6
+        .text-center.px-lg-3
+            img.img-fluid.mb-3(src=`${CWD}assets/img/illustrations/${config.image}` width="90"  alt='')
+            h5.fw-bold=config.title
+            p.mb-md-0=config.text
+
+mixin ApiWeb2
+    +Section.py-6#api
+        .row.justify-content-center.mb-6
+            .col-lg-12.text-center.mx-auto.mb-3.mb-md-5.mt-4
+                h6.fw-bold.fs-4.display-3.lh-sm Accessing data in applications
+                p.mb-0 The data could be linked to your website, a mobile application or a backend server.
+                p.mb-0 All data comes with a verifiable cryptographic signature allowing a blockchain grade integrity.
+                p.mb-0 Learn more and explore examples in the
+                 a(href='https://docs.limestone.finance/' role='button' target="_blank")  documentation 
+                 | or
+                 a(href='https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed' role='button' target="_blank")  play with the code
+                 | .
+        .row
+            each feature in web2Features
+                +ChooseFeature(feature )
