@@ -1,9 +1,11 @@
 mixin NavbarApplab
   nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3(data-navbar-on-scroll)
     .container
+      
       a.navbar-brand.d-flex.align-items-center.fw-bold.fs-2(href='index.html')
-        .text-danger Red
-        .text-1000 Stone
+        img(src=`${CWD}assets/img/redstone-logo.png` width='32' alt='')
+        .text-danger.mx-2 Red
+        .text-1000.mx-n2 Stone
       button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
 
