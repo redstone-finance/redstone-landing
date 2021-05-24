@@ -4,12 +4,12 @@ append variables
         {
         image:'fast-performance.png',
         title:'1. Connect to the front end',
-        text:'Seamlessly connect to your front-end using a web3 contract wrapper'
+        text:''
         },
         {
         image:'customization.png',
-        title:'2. Connect to the contracts',
-        text:'Configure a proxy pointing to your smart contract'
+        title:'',
+        text:''
         },
         {
         image:'app.png',
@@ -34,6 +34,59 @@ mixin ApiWeb3
                 p.mb-0 We use a radically different way of putting data on-chain called "flash storage".
                 p.mb-0 The data is automatically attached to a transaction and erased afterwards reducing gas fees.
                 p.mb-0 The information is kept in the EVM storage maintaining inter-protocol composability.
-        .row
-            each feature in web3Features
-                +ChooseFeature(feature )
+             
+        .row.align-items-center.mb-5
+            .col-md-6.col-lg-6.text-center.text-md-start
+                h5.mb-3 1. Connect to your contracts
+                p.mb-3 Configure a proxy pointing to your smart contract
+                
+            .col-md-6.col-lg-6.px-sm-5.px-md-0
+                pre.prettyprint
+                    br
+                    |   const Proxy = await ethers.getContractFactory("Redstone proxy");
+                    |   const defiProtocol = await DefiProtocol.attach("0x....");
+                    |   const priceFeed = await PriceFeed.attach("0x....");
+                    |
+                    |   //Deploy proxy
+                    |   const defiProtocolProxy = await Proxy.deploy(
+                    |       defiProtocol.address,
+                    |       proxyAdmin.address,
+                    |       priceFeed.address
+                    |   );
+                    |   
+                
+        .row.align-items-center.mb-5
+            .col-md-6.col-lg-6.px-sm-5.px-md-0
+                pre.prettyprint
+                    br
+                    |   const priceFeedApi = require('redstone-api'); 
+                    |   const defiProtocol = await DefiProtocol.attach("0x....");
+                    |
+                    |   //Wrap web3 smart contract
+                    |   const wrappedProtocol = wrapContract(defiProtocol, priceFeedApi);
+                    |
+                    |   //Execute action with attached prices
+                    |   await wrappedProtocol.executeAction();
+                    |           
+
+            .col-md-6.col-lg-6.text-center.text-md-start
+                h5.mb-3 2. Connect to the front end
+                p.mb-3 Seamlessly connect to your front-end using a web3 contract wrapper
+
+                    
+        .row.align-items-center
+            .col-md-6.col-lg-6.text-center.text-md-start
+                h5.mb-3 3. Access the data in your contracts
+                p.mb-3 Read data with the same convenience as using other Oracles based on the on-chain storage
+
+            .col-md-6.col-lg-6.px-sm-5.px-md-0
+                pre.prettyprint
+                    br
+                    |   function executeAction(...) external {
+                    |         uint256 latestETHPrice = priceFeed.getPrice("ETH");
+                    |
+                    |         //The rest of code accessing price data
+                    |         //...
+                    |    }
+                    |   
+                        

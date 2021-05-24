@@ -22,6 +22,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/redstone-logo.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 
 
     <!-- ===============================================-->
@@ -67,7 +68,7 @@
               <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
               <!--  img.img-fluid.float-start.me-3(src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
               <h1 class="mb-4 display-3 fw-bold lh-sm">Powering DeFi<br class="d-block d-lg-none d-xl-block" />with real-world data</h1>
-              <p class="mt-3 mb-4 fs-1">We provide highly customizable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill hover-top" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate</a>
+              <p class="mt-3 mb-4 fs-1">We provide highly customizable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill hover-top" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
             </div>
           </div>
         </div>
@@ -211,24 +212,55 @@
               <p class="mb-0">The information is kept in the EVM storage maintaining inter-protocol composability.</p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/fast-performance.png" width="90" alt="" />
-                <h5 class="fw-bold">1. Connect to the front end</h5>
-                <p class="mb-md-0">Seamlessly connect to your front-end using a web3 contract wrapper</p>
-              </div>
+          <div class="row align-items-center mb-5">
+            <div class="col-md-6 col-lg-6 text-center text-md-start">
+              <h5 class="mb-3">1. Connect to your contracts</h5>
+              <p class="mb-3">Configure a proxy pointing to your smart contract</p>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/customization.png" width="90" alt="" />
-                <h5 class="fw-bold">2. Connect to the contracts</h5>
-                <p class="mb-md-0">Configure a proxy pointing to your smart contract</p>
-              </div>
+            <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
+              <pre class="prettyprint"><br/>  const Proxy = await ethers.getContractFactory("Redstone proxy");
+  const defiProtocol = await DefiProtocol.attach("0x....");
+  const priceFeed = await PriceFeed.attach("0x....");
+
+  //Deploy proxy
+  const defiProtocolProxy = await Proxy.deploy(
+      defiProtocol.address,
+      proxyAdmin.address,
+      priceFeed.address
+  );
+  </pre>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/app.png" width="90" alt="" />
-                <h5 class="fw-bold">3. Access the data</h5>
-                <p class="mb-md-0">Read data directly from the evm storage</p>
-              </div>
+          </div>
+          <div class="row align-items-center mb-5">
+            <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
+              <pre class="prettyprint"><br/>  const priceFeedApi = require('redstone-api'); 
+  const defiProtocol = await DefiProtocol.attach("0x....");
+
+  //Wrap web3 smart contract
+  const wrappedProtocol = wrapContract(defiProtocol, priceFeedApi);
+
+  //Execute action with attached prices
+  await wrappedProtocol.executeAction();
+          </pre>
+            </div>
+            <div class="col-md-6 col-lg-6 text-center text-md-start">
+              <h5 class="mb-3">2. Connect to the front end</h5>
+              <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper</p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-6 col-lg-6 text-center text-md-start">
+              <h5 class="mb-3">3. Access the data in your contracts</h5>
+              <p class="mb-3">Read data with the same convenience as using other Oracles based on the on-chain storage</p>
+            </div>
+            <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
+              <pre class="prettyprint"><br/>  function executeAction(...) external {
+        uint256 latestETHPrice = priceFeed.getPrice("ETH");
+
+        //The rest of code accessing price data
+        //...
+   }
+  </pre>
             </div>
           </div>
         </div><!-- end of .container-->
