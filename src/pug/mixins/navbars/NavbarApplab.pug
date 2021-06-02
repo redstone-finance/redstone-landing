@@ -3,9 +3,7 @@ mixin NavbarApplab
     .container
       
       a.navbar-brand.d-flex.align-items-center.fw-bold.fs-2(href='index.html')
-        img(src=`${CWD}assets/img/redstone-logo.png` width='32' alt='')
-        .text-danger.mx-2 Red
-        .text-1000.mx-n2 Stone
+        img(src=`${CWD}assets/img/redstone-logo-full.svg` width='175' alt='')
       button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
 
@@ -13,16 +11,16 @@ mixin NavbarApplab
         ul.navbar-nav.ms-auto.pt-2.pt-lg-0
           //li.nav-item(data-anchor)
           //  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#features') Features
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#api') Accessing Data
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#faq') FAQ  
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#about') About us          
-          li.nav-item(data-anchor)
-            a.nav-link.fw-medium(href='#contact') Contact  
+          li.nav-item(data-anchor).mx-lg-2
+            a.nav-link.fw-medium.text-end.text-lg-center.text-primary(href='#features') Features
+          li.nav-item(data-anchor).mx-lg-2
+            a.nav-link.fw-medium.text-end.text-lg-center.text-primary(href='#api') Accessing Data
+          li.nav-item(data-anchor).mx-lg-2
+            a.nav-link.fw-medium.text-end.text-lg-center.text-primary(href='#faq') FAQ  
+          li.nav-item(data-anchor).mx-lg-2
+            a.nav-link.fw-medium.text-end.text-lg-center.text-primary(href='#about') About us          
+          li.nav-item(data-anchor).mx-lg-2
+            a.nav-link.fw-medium.text-end.text-lg-center.text-primary(href='#contact') Contact  
 
-        form.ps-lg-5
-          a(href='https://app.redstone.finance' target='_blank').button.btn.btn-lg.btn-danger.rounded-pill.order-0(type='submit') See our data
+        form.ps-lg-5.text-end.text-lg-center.mt-3.mt-lg-0
+          a(href='https://app.redstone.finance' target='_blank').button.btn.btn-lg.btn-danger.rounded-pill.order-0 See our data

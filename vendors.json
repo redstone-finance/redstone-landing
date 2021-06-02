@@ -17,5 +17,10 @@
   "is_js": {
     "src": "is.min.js",
     "dest": "is"
+  },
+
+  "@lottiefiles/lottie-player": {
+    "src": "dist/lottie-player.js",
+    "dest": "@lottiefiles"
   }
 }

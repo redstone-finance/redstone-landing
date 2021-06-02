@@ -27,7 +27,7 @@ mixin ApiWeb2(config)
             p.mb-md-0=config.text
 
 mixin ApiWeb2
-    +Section.py-6#api
+    +Section.py-4.py-lg-6#api
         .row.mb-12
             .col-lg-12.text-center.mx-auto.mb-3.mb-md-5
                 h6.fw-bold.fs-4.display-3.lh-sm.mb-6 Accessing data in applications
@@ -36,12 +36,12 @@ mixin ApiWeb2
                         p.mb-3 The data could be linked to your website, a mobile application, or a backend server.
                          | All data comes with a verifiable cryptographic signature allowing a blockchain grade integrity.
                         p.mb-0 You can access the data by an http-api or using our
-                         a(href='https://docs.limestone.finance/' role='button' target="_blank")  npm library 
+                         a(href='https://www.npmjs.com/package/redstone-api' role='button' target="_blank")  npm library 
                          | that comes with extra features.
                          | Learn more and explore examples in the
-                         a(href='https://docs.limestone.finance/' role='button' target="_blank")  documentation 
+                         a(href='http://api.docs.redstone.finance/' role='button' target="_blank")  documentation 
                          | or
                          a(href='https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed' role='button' target="_blank")  play with the code
                          | .
-                    .col-md-6.col-lg-6.px-sm-5.px-md-0
-                      img.img-fluid.mb-3(src=`${CWD}assets/img/limestone-symbols-example.gif` width="600"  alt='')
+                    .col-md-6.col-lg-6.px-sm-5.px-md-0.mt-4.mt-lg-0
+                      img.img-fluid.mb-3(src=`${CWD}assets/img/redstone-symbols-example.gif` width="600"  alt='')

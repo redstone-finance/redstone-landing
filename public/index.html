@@ -19,7 +19,7 @@
     <!--link(rel="apple-touch-icon" sizes="180x180", href=`${CWD}assets/img/favicons/apple-touch-icon.png`)-->
     <!--link(rel="icon" type="image/png" sizes="32x32", href=`${CWD}assets/img/favicons/favicon-32x32.png`)-->
     <!--link(rel="icon" type="image/png" sizes="16x16", href=`${CWD}assets/img/favicons/favicon-16x16.png`)-->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/redstone-logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/redstone-logo.svg">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="theme-color" content="#ffffff">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
@@ -40,35 +40,34 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img src="assets/img/redstone-logo.png" width="32" alt="" />
-            <div class="text-danger mx-2">Red</div>
-            <div class="text-1000 mx-n2">Stone</div>
-          </a>
+        <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img src="assets/img/redstone-logo-full.svg" width="175" alt="" /></a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
               <!--li.nav-item(data-anchor)-->
               <!--  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home-->
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#features">Features</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#api">Accessing Data</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#faq">FAQ </a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#about">About us </a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#contact">Contact </a></li>
+              <li class="nav-item mx-lg-2" data-anchor="data-anchor"><a class="nav-link fw-medium text-end text-lg-center text-primary" href="#features">Features</a></li>
+              <li class="nav-item mx-lg-2" data-anchor="data-anchor"><a class="nav-link fw-medium text-end text-lg-center text-primary" href="#api">Accessing Data</a></li>
+              <li class="nav-item mx-lg-2" data-anchor="data-anchor"><a class="nav-link fw-medium text-end text-lg-center text-primary" href="#faq">FAQ </a></li>
+              <li class="nav-item mx-lg-2" data-anchor="data-anchor"><a class="nav-link fw-medium text-end text-lg-center text-primary" href="#about">About us </a></li>
+              <li class="nav-item mx-lg-2" data-anchor="data-anchor"><a class="nav-link fw-medium text-end text-lg-center text-primary" href="#contact">Contact </a></li>
             </ul>
-            <form class="ps-lg-5"><a class="button btn btn-lg btn-danger rounded-pill order-0" href="https://app.redstone.finance" target="_blank" type="submit">See our data</a></form>
+            <form class="ps-lg-5 text-end text-lg-center mt-3 mt-lg-0"><a class="button btn btn-lg btn-danger rounded-pill order-0" href="https://app.redstone.finance" target="_blank">See our data</a></form>
           </div>
         </div>
       </nav>
       <section class="py-0" id="home">
         <!--+Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'bottom', 'background-size': 'cover',} }, className: '' })-->
         <div class="container position-relative">
-          <div class="row align-items-center py-8">
-            <div class="col-md-5 col-lg-6 order-md-1 text-center text-md-end"><img class="img-fluid" src="assets/img/illustrations/datacenter.png" alt="" /></div>
+          <div class="row align-items-center mt-6 mt-lg-6 py-4 py-lg-8">
             <div class="col-md-7 col-lg-6 text-center text-md-start">
               <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
               <!--  img.img-fluid.float-start.me-3(src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
-              <h1 class="mb-4 display-3 fw-bold lh-sm">Powering DeFi<br class="d-block d-lg-none d-xl-block" />with real-world data</h1>
-              <p class="mt-3 mb-4 fs-1">We provide highly customizable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill hover-top" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
+              <h1 class="mb-4 display-3 fw-bold lh-sm mt-6 mt-lg-0">Powering DeFi<br class="d-block d-lg-none d-xl-block" />with real-world data</h1>
+              <p class="mt-3 mb-4 fs-1">We provide highly customizable data streams<br class="d-none d-lg-block" /> in a fast, reliable and cost-efficient way<br class="d-none d-lg-block" /> fulfilling the needs of the growing DeFi ecosystem.</p><a class="btn btn-lg btn-danger rounded-pill" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
+            </div>
+            <div class="col-md-5 col-lg-6 text-center text-md-end mt-6 mt-lg-0">
+              <lottie-player autoplay="true" loop="true" speed="1" src="assets/animations/redstone.json" style="height: 100%; background: transparent" background="transparent"></lottie-player>
             </div>
           </div>
         </div>
@@ -77,11 +76,11 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-6" id="features">
+      <section class="py-4 py-lg-6" id="features">
 
         <div class="container">
           <div class="row justify-content-center mb-6">
-            <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
+            <div class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
               <h6 class="fw-bold fs-4 display-3 lh-sm">The next generation of Oracles</h6>
               <p class="mb-0">The new wave of DeFi protocols builds advanced financial products requiring more data delivered at lower latency</p>
             </div>
@@ -135,7 +134,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-6" id="api">
+      <section class="py-4 py-lg-6" id="api">
 
         <div class="container">
           <div class="row mb-12">
@@ -145,11 +144,11 @@
                 <div class="col-md-6 col-lg-6 text-center text-md-start">
                   <p class="mb-3">
                     The data could be linked to your website, a mobile application, or a backend server.All data comes with a verifiable cryptographic signature allowing a blockchain grade integrity.</p>
-                  <p class="mb-0">You can access the data by an http-api or using our<a href="https://docs.limestone.finance/" role="button" target="_blank"> npm library </a>that comes with extra features.
-                    Learn more and explore examples in the<a href="https://docs.limestone.finance/" role="button" target="_blank"> documentation </a>or<a href="https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed" role="button" target="_blank"> play with the code</a>.
+                  <p class="mb-0">You can access the data by an http-api or using our<a href="https://www.npmjs.com/package/redstone-api" role="button" target="_blank"> npm library </a>that comes with extra features.
+                    Learn more and explore examples in the<a href="http://api.docs.redstone.finance/" role="button" target="_blank"> documentation </a>or<a href="https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed" role="button" target="_blank"> play with the code</a>.
                   </p>
                 </div>
-                <div class="col-md-6 col-lg-6 px-sm-5 px-md-0"><img class="img-fluid mb-3" src="assets/img/limestone-symbols-example.gif" width="600" alt="" /></div>
+                <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 mt-4 mt-lg-0"><img class="img-fluid mb-3" src="assets/img/redstone-symbols-example.gif" width="600" alt="" /></div>
               </div>
             </div>
           </div>
@@ -164,19 +163,19 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-6" id="features">
+      <section class="py-4 py-lg-6" id="features">
 
         <div class="container">
           <div class="row justify-content-center mb-6">
-            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
+            <div class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
               <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in contracts</h6>
-              <p class="mb-0">We use a radically different way of putting data on-chain called "flash storage".</p>
-              <p class="mb-0">The data is automatically attached to a transaction and erased afterwards thus reducing gas fees.</p>
-              <p class="mb-0">The information is kept in the EVM storage ensuring inter-protocol composability.</p>
+              <p class="mb-0"> </p> We use a radically different way of putting data on-chain called "flash storage". The data
+              is automatically attached to a transaction and erased afterwards thus reducing gas fees. The information
+              is kept in the EVM storage ensuring inter-protocol composability.
             </div>
           </div>
-          <div class="row align-items-center mb-5">
-            <div class="col-md-6 col-lg-6 text-center text-md-start">
+          <div class="row align-items-center mb-6">
+            <div class="col-md-6 col-lg-6 text-center text-md-end">
               <h5 class="mb-3">1. Connect to your contracts</h5>
               <p class="mb-3">Configure a proxy pointing to your smart contract</p>
             </div>
@@ -194,8 +193,12 @@
   </pre>
             </div>
           </div>
-          <div class="row align-items-center mb-5">
-            <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
+          <div class="row align-items-center mb-6">
+            <div class="col-md-6 col-lg-6 text-center text-center text-lg-start order-lg-2">
+              <h5 class="mb-3">2. Connect to the front end</h5>
+              <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper</p>
+            </div>
+            <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
               <pre class="prettyprint"><br/>  const priceFeedApi = require('redstone-api'); 
   const defiProtocol = await DefiProtocol.attach("0x....");
 
@@ -206,13 +209,9 @@
   await wrappedProtocol.executeAction();
           </pre>
             </div>
-            <div class="col-md-6 col-lg-6 text-center text-md-start">
-              <h5 class="mb-3">2. Connect to the front end</h5>
-              <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper</p>
-            </div>
           </div>
           <div class="row align-items-center">
-            <div class="col-md-6 col-lg-6 text-center text-md-start">
+            <div class="col-md-6 col-lg-6 text-center text-md-end">
               <h5 class="mb-3">3. Access the data in your contracts</h5>
               <p class="mb-3">Read data with the same convenience as using other Oracles based on the on-chain storage</p>
             </div>
@@ -237,12 +236,12 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-8" id="faq">
+      <section class="py-4 py-lg-8" id="faq">
 
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 text-center mb-3">
-              <h6 class="fw-bold fs-4 display-3 lh-sm mb-3">Frequently asked questions</h6>
+              <h6 class="fw-bold fs-4 display-3 lh-sm mb-3 mt-4">Frequently asked questions</h6>
               <!--p.mb-5 The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.-->
             </div>
           </div>
@@ -303,7 +302,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-6" id="about">
+      <section class="py-4 py-lg-6" id="about">
 
         <div class="container">
           <div class="row justify-content-center">
@@ -334,7 +333,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="mb-3 pt-5">
+      <section class="mb-lg-3 pt-5">
 
         <div class="container">
           <div class="row">
@@ -373,7 +372,7 @@
           <div class="row flex-center">
             <div class="col-12 mb-3 mx-auto align-items-center text-center">
               <h5 class="mb-3 text-white">Do you want to learn more about the project or integrate with us?</h5>
-              <p>Reach out at: <a class="text-white" href="mailto:hello@redstone.finance" target="_blank">hello@redstone.finance </a>or talk to us on <a class="text-white" href="https://discord.com/invite/PVxBZKFr46" target="_blank">Discord</a></p>
+              <p class="text-white-50">Reach out at: <a class="text-white" href="mailto:hello@redstone.finance" target="_blank">hello@redstone.finance </a>or talk to us on <a class="text-white" href="https://discord.com/invite/PVxBZKFr46" target="_blank">Discord</a></p>
             </div>
             <div class="col-auto mb-3">
               <ul class="list-unstyled list-inline">
@@ -422,6 +421,7 @@
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/@lottiefiles/lottie-player.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
 

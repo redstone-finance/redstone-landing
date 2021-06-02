@@ -3,3 +3,23 @@
 // user.scss
 //
 // Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+@import "user-variables";
+
+.btn-danger {
+    &:hover {
+        background-color: $red-100;
+        border-color: $red-100;
+    }
+
+    &:active {
+        background-color: $red-200;
+        border-color: $red-200;
+        color:rgba($white, 0.7)
+    }
+}
+
+.accordion-button {
+    &:hover {
+        background-color: $gray-200;
+    }
+} 
