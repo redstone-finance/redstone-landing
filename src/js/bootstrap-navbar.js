@@ -33,6 +33,18 @@ const navbarInit = () =>{
     }
   })
 
+  document.addEventListener('click',(e)=>{
+    if (navbar !== e.target && !navbar.contains(e.target)) {
+      if (
+        !utils.hasClass(
+          navbar.querySelector(Selector.NAVBAR_TOGGLER),
+          ClassNames.COLLAPSED
+         )) {
+          navbar.querySelector(Selector.NAVBAR_TOGGLER).click()
+        }
+    }
+  })
+
   if (navbar){
     const windowHeight = window.innerHeight;
     const html = document.documentElement;

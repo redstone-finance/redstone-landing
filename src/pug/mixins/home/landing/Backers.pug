@@ -4,7 +4,7 @@ mixin Backer(image, url)
             img(src=`${CWD}assets/img/backers/${image}` width="120px"  alt='')
 
 mixin Backers
-    +Section.mb-3.pt-5
+    +Section.mb-lg-3.pt-5
         .row
             .col-12.mx-auto.align-items-center.text-center
                 h6.fw-bold.fs-4.display-3.lh-sm.mb-5 Our partners
@@ -16,6 +16,6 @@ mixin Backers
             +Backer('beringwaters.png', "https://beringwaters.com/").mb-5.mb-lg-0.text-center
             +Backer('trgc.svg', "https://trgc.io/").mb-5.mb-lg-0.text-center
             +Backer('collider.png', "https://www.collider.vc/").mb-5.mb-lg-0.text-center
-            +Backer('1kx.jpeg', "http://1kx.network").mb-5.mb-lg-0.text-center
+            +Backer('1kx.jpeg', "https://twitter.com/1kxnetwork").mb-5.mb-lg-0.text-center
             
 

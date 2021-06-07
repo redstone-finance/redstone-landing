@@ -27,16 +27,17 @@ mixin ApiWeb3(config)
             p.mb-md-0=config.text
 
 mixin ApiWeb3
-    +Section.py-6#features
+    +Section.py-4.py-lg-6#features
         .row.justify-content-center.mb-6
-            .col-lg-12.text-center.mx-auto.mb-3.mb-md-5.mt-4
+            .col-sm-10.col-lg-6.text-center.mx-auto.mb-3.mb-md-5.mt-4
                 h6.fw-bold.fs-4.display-3.lh-sm Accessing data in contracts
-                p.mb-0 We use a radically different way of putting data on-chain called "flash storage".
-                p.mb-0 The data is automatically attached to a transaction and erased afterwards thus reducing gas fees.
-                p.mb-0 The information is kept in the EVM storage ensuring inter-protocol composability.
+                p.mb-0 
+                |   We use a radically different way of putting data on-chain called "flash storage". The data 
+                |   is automatically attached to a transaction and erased afterwards thus reducing gas fees. The information 
+                |   is kept in the EVM storage ensuring inter-protocol composability.
              
-        .row.align-items-center.mb-5
-            .col-md-6.col-lg-6.text-center.text-md-start
+        .row.align-items-center.mb-6
+            .col-md-6.col-lg-6.text-center.text-md-end
                 h5.mb-3 1. Connect to your contracts
                 p.mb-3 Configure a proxy pointing to your smart contract
                 
@@ -55,8 +56,12 @@ mixin ApiWeb3
                     |   );
                     |   
                 
-        .row.align-items-center.mb-5
-            .col-md-6.col-lg-6.px-sm-5.px-md-0
+        .row.align-items-center.mb-6
+            .col-md-6.col-lg-6.text-center.text-center.text-lg-start.order-lg-2
+                h5.mb-3 2. Connect to the front end
+                p.mb-3 Seamlessly connect to your front-end using a web3 contract wrapper
+
+            .col-md-6.col-lg-6.px-sm-5.px-md-0.order-lg-1
                 pre.prettyprint
                     br
                     |   const priceFeedApi = require('redstone-api'); 
@@ -69,13 +74,9 @@ mixin ApiWeb3
                     |   await wrappedProtocol.executeAction();
                     |           
 
-            .col-md-6.col-lg-6.text-center.text-md-start
-                h5.mb-3 2. Connect to the front end
-                p.mb-3 Seamlessly connect to your front-end using a web3 contract wrapper
-
                     
         .row.align-items-center
-            .col-md-6.col-lg-6.text-center.text-md-start
+            .col-md-6.col-lg-6.text-center.text-md-end
                 h5.mb-3 3. Access the data in your contracts
                 p.mb-3 Read data with the same convenience as using other Oracles based on the on-chain storage
 
