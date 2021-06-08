@@ -223,12 +223,12 @@ sup {
 }
 
 a {
-  color: #24355B;
+  color: #FD627A;
   text-decoration: none;
 }
 
 a:hover {
-  color: #1d2a49;
+  color: #ca4e62;
   text-decoration: underline;
 }
 
@@ -4087,12 +4087,12 @@ fieldset:disabled .btn {
 
 .btn-link {
   font-weight: 400;
-  color: #24355B;
+  color: #FD627A;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  color: #1d2a49;
+  color: #ca4e62;
   text-decoration: underline;
 }
 
@@ -5396,7 +5396,7 @@ fieldset:disabled .btn {
 .page-link {
   position: relative;
   display: block;
-  color: #24355B;
+  color: #FD627A;
   background-color: #fff;
   border: 1px solid #E1E0E4;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -5416,7 +5416,7 @@ fieldset:disabled .btn {
 
 .page-link:hover {
   z-index: 2;
-  color: #1d2a49;
+  color: #ca4e62;
   text-decoration: none;
   background-color: #EBEBED;
   border-color: #E1E0E4;
@@ -5424,7 +5424,7 @@ fieldset:disabled .btn {
 
 .page-link:focus {
   z-index: 3;
-  color: #1d2a49;
+  color: #ca4e62;
   background-color: #EBEBED;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(36, 53, 91, 0.25);
