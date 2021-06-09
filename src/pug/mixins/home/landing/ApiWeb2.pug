@@ -2,17 +2,17 @@ append variables
     -
         var web2Features = [
         {
-        image:'fast-performance.png',
+        image:'fast.svg',
         title: 'Http endpoint',
         text:'Maintain full control using a low-level http api'
         },
         {
-        image:'customization.png',
+        image:'versatile.svg',
         title:'Npm library',
         text:'Our library allows you to query data in one line of code'
         },
         {
-        image:'app.png',
+        image:'accountable.svg',
         title:'Query interface',
         text:'Use a human readable interface to write more complex queries'
         }
@@ -22,7 +22,7 @@ append variables
 mixin ApiWeb2(config)
     .col-md-4.mb-6
         .text-center.px-lg-3
-            img.img-fluid.mb-3(src=`${CWD}assets/img/illustrations/${config.image}` width="90"  alt='')
+            img.img-fluid.mb-3(src=`${CWD}assets/img/icons/${config.image}` width="90"  alt='')
             h5.fw-bold=config.title
             p.mb-md-0=config.text
 

@@ -2,17 +2,17 @@ append variables
     -
         var web3Features = [
         {
-        image:'fast-performance.png',
+        image:'fast.svg',
         title:'1. Connect to the front end',
         text:''
         },
         {
-        image:'customization.png',
+        image:'versatile.svg',
         title:'',
         text:''
         },
         {
-        image:'app.png',
+        image:'accountable.svg',
         title:'3. Access the data',
         text:'Read data directly from the evm storage'
         }
@@ -22,7 +22,7 @@ append variables
 mixin ApiWeb3(config)
     .col-md-4.mb-6
         .text-center.px-lg-3
-            img.img-fluid.mb-3(src=`${CWD}assets/img/illustrations/${config.image}` width="90"  alt='')
+            img.img-fluid.mb-3(src=`${CWD}assets/img/icons/${config.image}` width="90"  alt='')
             h5.fw-bold=config.title
             p.mb-md-0=config.text
 

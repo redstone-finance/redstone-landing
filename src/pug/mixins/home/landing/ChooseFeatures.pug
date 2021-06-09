@@ -2,42 +2,41 @@ append variables
  -
     var cfeatures = [
       {
-        image:'fast-performance.png',
+        image:'fast.svg',
         title:'Fast',
         text:'There is no need to wait for 10 minutes to get an update. We can let your contracts access data within seconds'
       },
       {
-        image:'rewards.png',
+        image:'cost-efficient.svg',
         title:'Cost-efficient',
         text:'We reduce gas costs using "flash storage" based on meta transactions and proxy contracts'
       },
        {
-        image:'customization.png',
+        image:'versatile.svg',
         title:'Versatile',
         text:'Any non-standard data, like historical volatility, order books or trading volumes could be easily fetched to your contracts'
       },
-    {
-    image:'app.png',
-    title:'Accountable',
-    text:'The full track of records of providers\' activity is permanently available on the Arweave chain'
-    },
-       {
-        image:'network.png',
+      {
+        image:'accountable.svg',
+        title:'Accountable',
+        text:'The full track of records of providers\' activity is permanently available on the Arweave chain'
+      },
+      {
+        image:'decentralized.svg',
         title:'Decentralized',
         text:'Anyone can become a data provider and configure a data stream with just few clicks'
       },
-
-    {
-    image:'automatic.png',
-    title:'Insured',
-    text:'For every downtime or incorrect data, you can request a refund covered by the provider\'s stake'
-    },
+      {
+        image:'insured.svg',
+        title:'Insured',
+        text:'For every downtime or incorrect data, you can request a refund covered by the provider\'s stake'
+      },
       ]
 
 mixin ChooseFeature(config)
   .col-md-4.mb-6
     .text-center.px-lg-3
-      img.img-fluid.mb-3(src=`${CWD}assets/img/illustrations/${config.image}` width="90"  alt='')
+      img.img-fluid.img-features.mb-3(src=`${CWD}assets/img/icons/${config.image}`  alt='')
       h5.fw-bold=config.title
       p.mb-md-0=config.text
 
