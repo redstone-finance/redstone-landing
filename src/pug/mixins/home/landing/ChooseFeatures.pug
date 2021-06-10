@@ -4,32 +4,32 @@ append variables
       {
         image:'fast.svg',
         title:'Fast',
-        text:'There is no need to wait for 10 minutes to get an update. We can let your contracts access data within seconds'
+        text:'Stop waiting 10+ minutes for updates. Your contracts access data in seconds'
       },
       {
         image:'cost-efficient.svg',
         title:'Cost-efficient',
-        text:'We reduce gas costs using "flash storage" based on meta transactions and proxy contracts'
+        text:'"Flash storage" reduces gas costs thanks to meta transactions and proxy contracts'
       },
        {
         image:'versatile.svg',
         title:'Versatile',
-        text:'Any non-standard data, like historical volatility, order books or trading volumes could be easily fetched to your contracts'
+        text:'Allow your smart contracts to fetch any non-standard data, like volatility, order books or trading volumes'
       },
       {
         image:'accountable.svg',
         title:'Accountable',
-        text:'The full track of records of providers\' activity is permanently available on the Arweave chain'
+        text:'Each data provider\'s track record is permanently available on Arweave'
       },
       {
         image:'decentralized.svg',
         title:'Decentralized',
-        text:'Anyone can become a data provider and configure a data stream with just few clicks'
+        text:'Anyone can become a data provider and configure a data stream with just a few clicks'
       },
       {
         image:'insured.svg',
         title:'Insured',
-        text:'For every downtime or incorrect data, you can request a refund covered by the provider\'s stake'
+        text:'Downtime or incorrect data are covered by the provider\'s stake'
       },
       ]
 
@@ -44,9 +44,8 @@ mixin ChooseFeatures
   +Section.py-4.py-lg-6#features
     .row.justify-content-center.mb-6
       .col-sm-10.col-lg-6.text-center.mx-auto.mb-3.mb-md-5.mt-4
-        h6.fw-bold.fs-4.display-3.lh-sm The next generation of Oracles
-        p.mb-0 DeFi keeps evolving.
-        | New protocols require more data delivered at lower latency. 
+        h6.fw-bold.fs-4.display-3.lh-sm The next generation of oracles
+        p.mb-0 New protocols require more data delivered at lower latency. 
     .row
       each feature in cfeatures
         +ChooseFeature(feature )
