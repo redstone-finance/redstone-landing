@@ -22,5 +22,10 @@
   "@lottiefiles/lottie-player": {
     "src": "dist/lottie-player.js",
     "dest": "@lottiefiles"
+  },
+
+  "cookieconsent": {
+    "src": "build/cookieconsent.min.js",
+    "dest": "cookieconsent"
   }
 }
