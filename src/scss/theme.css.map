@@ -84,6 +84,7 @@
         "../../node_modules/bootstrap/scss/helpers/_stretched-link.scss",
         "../../node_modules/bootstrap/scss/helpers/_text-truncation.scss",
         "../../node_modules/bootstrap/scss/utilities/_api.scss",
+        "_cookieconsent.scss",
         "theme/_theme.scss",
         "theme/_reboot.scss",
         "theme/_fonts.scss",

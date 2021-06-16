@@ -18240,4 +18240,14 @@ label {
   height: 80px;
 }
 
+.cc-revoke, .cc-window {
+  font-family: "Poppins";
+}
+
+.cc-theme-classic .cc-btn {
+  border-radius: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=theme-rtl.css.map */

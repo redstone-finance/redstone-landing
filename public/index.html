@@ -22,12 +22,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/redstone-logo.svg">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="theme-color" content="#ffffff">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-FT767HW5C2');
+    </script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css">
     <link href="assets/css/theme.css" rel="stylesheet" />
 
   </head>
@@ -64,7 +75,7 @@
               <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
               <!--  img.img-fluid.float-start.me-3(src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
               <h1 class="mb-4 display-3 fw-bold lh-sm mt-6 mt-lg-0">Powering DeFi<br class="d-block d-lg-none d-xl-block" />with real-world data</h1>
-              <p class="mt-3 mb-4 fs-1">Highly customizable DeFi data streams <br class="d-none d-lg-block" /> delivered quickly, reliably and cost-efficiently</p><a class="btn btn-lg btn-danger rounded-pill" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
+              <p class="mt-3 mb-4 fs-1">Highly customizable DeFi data streams <br class="d-none d-lg-block" /> delivered quickly, reliably and cost-efficiently.</p><a class="btn btn-lg btn-danger rounded-pill" href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
             </div>
             <div class="col-md-5 col-lg-6 text-center text-md-end mt-6 mt-lg-0">
               <lottie-player autoplay="true" loop="true" speed="1" src="assets/animations/redstone.json" style="height: 100%; background: transparent" background="transparent"></lottie-player>
@@ -89,37 +100,37 @@
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/fast.svg" alt="" />
                 <h5 class="fw-bold">Fast</h5>
-                <p class="mb-md-0">Stop waiting 10+ minutes for updates. Your contracts access data in seconds</p>
+                <p class="mb-md-0">Stop waiting 10+ minutes for updates. Your contracts access data in seconds.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/cost-efficient.svg" alt="" />
                 <h5 class="fw-bold">Cost-efficient</h5>
-                <p class="mb-md-0">&quot;Flash storage&quot; reduces gas costs thanks to meta transactions and proxy contracts</p>
+                <p class="mb-md-0">&quot;Flash storage&quot; reduces gas costs thanks to meta transactions and proxy contracts.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/versatile.svg" alt="" />
                 <h5 class="fw-bold">Versatile</h5>
-                <p class="mb-md-0">Allow your smart contracts to fetch any non-standard data, like volatility, order books or trading volumes</p>
+                <p class="mb-md-0">Allow your smart contracts to fetch any non-standard data, like volatility, order books or trading volumes.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/accountable.svg" alt="" />
                 <h5 class="fw-bold">Accountable</h5>
-                <p class="mb-md-0">Each data provider's track record is permanently available on Arweave</p>
+                <p class="mb-md-0">Each data provider's track record is permanently available on Arweave.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/decentralized.svg" alt="" />
                 <h5 class="fw-bold">Decentralized</h5>
-                <p class="mb-md-0">Anyone can become a data provider and configure a data stream with just a few clicks</p>
+                <p class="mb-md-0">Anyone can become a data provider and configure a data stream with just a few clicks.</p>
               </div>
             </div>
             <div class="col-md-4 mb-6">
               <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/insured.svg" alt="" />
                 <h5 class="fw-bold">Insured</h5>
-                <p class="mb-md-0">Downtime or incorrect data are covered by the provider's stake</p>
+                <p class="mb-md-0">Downtime or incorrect data are covered by the provider's stake.</p>
               </div>
             </div>
           </div>
@@ -177,7 +188,7 @@
           <div class="row align-items-center mb-6">
             <div class="col-md-6 col-lg-6 text-center text-md-end">
               <h5 class="mb-3">1. Connect to your contracts</h5>
-              <p class="mb-3">Configure a proxy pointing to your smart contract</p>
+              <p class="mb-3">Configure a proxy pointing to your smart contract.</p>
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
               <pre class="prettyprint"><br/>  const Proxy = await ethers.getContractFactory("Redstone proxy");
@@ -196,7 +207,7 @@
           <div class="row align-items-center mb-6">
             <div class="col-md-6 col-lg-6 text-center text-center text-lg-start order-lg-2">
               <h5 class="mb-3">2. Connect to the front end</h5>
-              <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper</p>
+              <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper.</p>
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
               <pre class="prettyprint"><br/>  const priceFeedApi = require('redstone-api'); 
@@ -213,7 +224,7 @@
           <div class="row align-items-center">
             <div class="col-md-6 col-lg-6 text-center text-md-end">
               <h5 class="mb-3">3. Access the data in your contracts</h5>
-              <p class="mb-3">Read data with the same convenience as using other oracles based on the on-chain storage</p>
+              <p class="mb-3">Read data with the same convenience as using other oracles based on the on-chain storage.</p>
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
               <pre class="prettyprint"><br/>  function executeAction(...) external {
@@ -418,6 +429,7 @@
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
     <script src="vendors/@lottiefiles/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
 
