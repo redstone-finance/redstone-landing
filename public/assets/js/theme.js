@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -247,6 +247,63 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, 'windows');
   navigator.userAgent.match('CriOS') && addClass(html, 'chrome');
 };
+
+if (window.location.href.includes('blog')) {
+  var posts = [{
+    title: 'Decoupling ahead? Bitcoin and Ethereum may finally snap their 36-month correlation',
+    cardDesc: '',
+    img: 'https://images.cointelegraph.com/images/1434_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjEtMDcvMzQ0NDZmYTEtYWIyMC00ZDhjLWE1YmUtMGE2NzJkNGI3ZWNjLmpwZw==.jpg',
+    subtitle: 'Bitcoin and Ethereum have been majorly trading in sync since 2018, increasing risk exposure of crypto-only investment portfolios.',
+    content: "Anish Saxena, a New Delhi-based automobile dealer, made \u201Cincredible\u201D profits by investing in cryptocurrencies in 2020, just as his business took a hit from the coronavirus pandemic-induced lockdown.\n\n            \u201CI had known about Bitcoin and Ethereum and dozens of other assets for years,\u201D the 33-year old businessman said. \u201CBut I only got to invest in them after the lockdown pushed me and my family members out of work. And it helped us survive \u2014 big time.\u201D<br/><br/>\n            \n            Saxena revealed that he had allocated about 80% of his investment portfolio to Bitcoin (BTC) and Ether (ETH), with the rest of his capital distributed across Polygon, Dogecoin (DOGE) and Chainlink\u2019s LINK. His crypto-only investment netted him great profits, the numbers of which Saxena declined to reveal. <br/><br/>\n            \n            However, he did notice how he almost got half of his unrealized profits wiped by deciding not to liquidate ahead of the May 2021 crash.<br/><br/>\n            \n            \u201CI was liquidating cryptocurrencies based on my household demand for cash,\u201D Saxena said. \u201CWhile I am still in profits, seeing my profits decline by more than 50% has prompted me to get a huge portion of my investments back into cash.\u201D<br/><br/>\n            \n            Correlation risks\n            Retail traders like Saxena have come under pressure due to over-reliance on the two most predominant cryptocurrencies: Bitcoin and Ether.<br/><br/>\n            \n            While different in terms of economics and use cases, both digital assets tend to move in the same direction. In recent history, their losses and profits appeared well-synced, illustrating that their holders might see their investments grow rapidly during bull trends but, at the same time, risk losing a lot when the uptrend exhausts and reverses to the bearish side.",
+    tag: 'news',
+    author: 'Alex',
+    authorImg: '/assets/img/team/alex.png',
+    time: '22/07/2021',
+    hashtags: ['crypto', 'bitcoin', 'ethereum']
+  }];
+  var urlParams = new URLSearchParams(window.location.search);
+  var postId = urlParams.get('id');
+
+  if (postId) {
+    var post = posts[postId];
+    var postEl = document.getElementById('post');
+    var postWrapperEl = document.createElement('div');
+    postEl.appendChild(postWrapperEl);
+    postWrapperEl.classList.add('col-12', 'col-md-8');
+    postWrapperEl.innerHTML += "\n                <div class=\"post-info d-flex justify-content-between mb-3\">\n                    <div class=\"post-author\">\n                        <img class=\"post-author-img\" src=\"".concat(post.authorImg, "\"/>\n                        <strong>").concat(post.author, "</strong>\n                    </div>\n                    <div class=\"post-time\">").concat(post.time, "</div>\n                </div>\n                <div class=\"post-img-wrapper mb-4\">\n                    <img class=\"post-img\" src=\"").concat(post.img, "\"/>\n                </div>\n                <div class=\"post-info mt-3 d-flex flex-column justify-content-between\">\n                    <h6 class=\"post-title fw-bold fs-4 display-3 lh-sm mb-4\">").concat(post.title, "</h6>\n                    <h5 class=\"post-subtitle mb-4\">").concat(post.subtitle, "</h5>\n                    <div class=\"post-content\">").concat(post.content, "</div>\n                </div>");
+    var latestPostsWrapper = document.createElement('div');
+    latestPostsWrapper.classList.add('col-12', 'col-md-4');
+    var latestPosts = posts.slice(1).slice(-5).reverse();
+    alert(latestPosts);
+    latestPosts.forEach(function (p, index) {
+      var title;
+
+      if (index === 0) {
+        title = "<h5 class=\"latest-post-title\">".concat(p.title, "</h5>");
+      } else {
+        title = "<h5 class=\"post-title\">".concat(p.title, "</h5>");
+      }
+
+      if (latestPosts.length > index + 1) {
+        title.add('<hr>');
+      }
+
+      latestPostsWrapper.appendChild(title);
+    });
+    postEl.appendChild(latestPostsWrapper);
+  } else {
+    var postList = document.getElementById('post-list');
+    posts.forEach(function (post, index) {
+      var cardWrapper = document.createElement('div');
+      cardWrapper.classList.add('post-card-wrapper', 'col-12', 'col-md-6', 'col-lg-3', 'mb-4');
+      var card = document.createElement('div');
+      card.classList.add('post-card');
+      card.innerHTML += "\n            <a href=\"blog.html?id=".concat(index, "\">\n                <div class=\"post-card-img-wrapper\">\n                    <img class=\"post-card-img\" src=\"").concat(post.img, "\"/>\n                    <div class=\"post-card-subtitle\">").concat(post.subtitle, "</div>\n                </div>\n                <div class=\"post-card-info d-flex flex-column justify-content-between\">\n                    <div class=\"post-card-title fw-semi-bold\">").concat(post.title, "</div>\n                    <div class=\"d-flex justify-content-between fw-normal\">\n                        <div class=\"post-card-author\">by <strong>").concat(post.author, "</strong></div>\n                        <div class=\"post-card-time\">").concat(post.time, "</div>\n                    </div>\n                </div>\n            </a>");
+      cardWrapper.appendChild(card);
+      postList.appendChild(cardWrapper);
+    });
+  }
+}
 /*-----------------------------------------------
 |   Top navigation opacity on scroll
 -----------------------------------------------*/
@@ -376,7 +433,65 @@ var scrollToTop = function scrollToTop() {
       window.location.hash = id;
     });
   });
-}; // /* -------------------------------------------------------------------------- */
+};
+
+if (document.getElementById('members')) {
+  var members = [{
+    name: 'Jakub',
+    role: 'Founder',
+    img: 'assets/img/team/jakub.png',
+    email: 'jakub@redstone.finance',
+    linkedin: '',
+    bio: "Krótki opis Jakub.I'm developing a web app that makes web service requests via Axios to an endpoint on one of our development servers. The requests are going from my local computer to an internal URL."
+  }, {
+    name: 'Marcin',
+    role: 'Head of Growth',
+    img: 'assets/img/team/marcin.jpg',
+    email: 'marcin@redstone.finance',
+    linkedin: 'https://www.linkedin.com/in/marcin-kazmierczak1/',
+    bio: 'Marcin handles strategic cooperation with DeFi protocols as well as Traditional businesses. Present in the blockchain ecosystem since 2018, his domains are Co-Opetition, Building long-term relationships, Education and "Growing the Pie" approach. Any doubt about cooperation options with Redstone? Write to me on Discord! Privately Travelling, Sports and understanding new cultures.'
+  }, {
+    name: 'Alex',
+    role: 'Backend',
+    img: 'assets/img/team/alex.png',
+    email: 'alex@redstone.finance',
+    linkedin: 'https://www.linkedin.com/in/alex-suvorov/',
+    bio: 'Alex has over four years of experience as a full-stack developer in both startup and corporate environments. He enjoys solving problems and bring new ideas to life. He has developed a game-based <a href="https://codenplay.io/">educational coding platform</a> and many other projects with a variety of technologies and languages.'
+  }, {
+    name: 'Piotr',
+    role: 'Blockchain',
+    img: 'assets/img/team/ppe.jpeg',
+    email: 'peter@redstone.finance',
+    linkedin: 'https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/',
+    bio: 'Piotr considers himself an old guy (we would agree only judging his competency!), with over 15 years of experience in financial and insurance industry (and few startups), working as Software Developer and Technical Team Leader. Now he decided to take active part in the DeFi revolution. Privately father of three, fan of retro video games and drumming.'
+  }, {
+    name: 'Piotr',
+    role: 'Frontend',
+    img: 'assets/img/team/piotr.jpeg',
+    email: 'pduda@redstone.finance',
+    linkedin: 'www.linkedin.com/in/piotr-duda-62b66b63',
+    bio: 'New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href="https://wutracing.pl/">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!'
+  }];
+  var element = document.getElementById('members');
+  var bio = document.getElementById('member-bio');
+  members.forEach(function (member, index) {
+    var card = document.createElement('div');
+    card.classList.add('member-card', 'col-12', 'col-md-3', 'col-lg-2', 'mb-4');
+    var memberBio = document.createElement('div');
+    memberBio.innerHTML = member.bio;
+    memberBio.style.display = 'none';
+    bio.appendChild(memberBio);
+    card.addEventListener('mouseenter', function () {
+      bio.childNodes.forEach(function (node, i) {
+        if (i > 0) {
+          node.style.display = i === index + 1 ? 'block' : 'none';
+        }
+      });
+    });
+    card.innerHTML += "\n            <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n            <div class=\"member-info fw-medium\">\n                <div class=\"member-name\">").concat(member.name, "</div>\n                <div class=\"member-role\">").concat(member.role, "</div>\n                <div class=\"member-social\">\n                    <a href=\"mailto:").concat(member.email, "\">\n                        <img src=\"assets/img/icons/mail.svg\">\n                    </a>\n                    <a href=\"").concat(member.linkedin, "\" target=\"_blank\">\n                        <img src=\"assets/img/icons/linkedin.svg\">\n                    </a>\n                </div>\n            </div>");
+    element.appendChild(card);
+  });
+} // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */
 

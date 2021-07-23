@@ -15,7 +15,8 @@
     "implicit-arrow-linebreak": "off",
     "import/named": "off",
     "import/no-extraneous-dependencies": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "no-param-reassign": ["error", { "props": false }]
   },
   "parserOptions": {
     "ecmaVersion": 2020

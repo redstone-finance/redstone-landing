@@ -57,6 +57,7 @@
     "@lottiefiles/lottie-player": "^1.0.4",
     "@popperjs/core": "^2.6.0",
     "bootstrap": "5.0.0-beta2",
+    "gulp-file-include": "^2.3.0",
     "is_js": "^0.9.0"
   },
   "browserslist": [

@@ -16,20 +16,15 @@
       "!src/js/theme.js",
       "src/js/theme.js"
     ],
-    
+
     "dest": "assets/js"
   },
-  "pug": {
-    "base": "src/pug",
-    "src": {
-      "all": "src/pug/**/*.pug",
-      "pages": [
-        "*.pug",
-        "pages/**/*.pug",
-        "pages/*.pug"
-      ]
-    },
-    "dest": ""
+  "html": {
+    "src": [
+        "src/html/*.html",
+        "src/html/**/*.html"
+    ],
+    "dest": "./"
   },
   "watch": ["assets/img", "assets/video", "assets/fonts", "vendors"]
 }
