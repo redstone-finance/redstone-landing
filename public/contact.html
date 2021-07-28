@@ -22,8 +22,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/redstone-favicon.png">
 <link rel="manifest" href="assets/img/favicons/manifest.json">
 <meta name="theme-color" content="#ffffff">
+<meta name="description" content="Highly customizable DeFi data streams delivered quickly, reliably and cost-efficiently.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"></script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
 
   function gtag() {
@@ -32,7 +33,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FT767HW5C2');
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 <!-- <script>
   "use strict";
 
@@ -66,15 +67,17 @@
 <!-- ===============================================-->
 <!--    Stylesheets-->
 <!-- ===============================================-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css">
-<link href="/assets/css/theme.css" rel="stylesheet" />
+<link href="/assets/css/theme.css" rel="stylesheet" lazyload />
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></noscript>
 
 </head>
 
 <body>
     <main>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-    <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img src="assets/img/redstone-logo-full.svg" width="175" alt="" /></a>
+    <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img class="lazy" data-src="assets/img/redstone-logo-full.svg" width="175" height="50" alt="Redstone logo" /></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
@@ -91,14 +94,13 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 text-center mx-auto mb-3 mb-md-5 mt-4">
-                        <h6 class="fw-bold fs-4 display-3 lh-sm">Contact us</h6>
+                        <div class="h6 fw-bold fs-4 display-3 lh-sm">Contact us</div>
                         <div class="mt-3 mb-5">
                             Feel free to contact us if you have any questions or would like to contribute in our project.
                             We'll be happy to answer!
                             <br /><br />
-                            You can also join us on our <a href="https://discord.com/invite/PVxBZKFr46"
-                                target="_blank">Discord channel</a> and
-                            <a href="https://twitter.com/redstone_defi" target="_blank">Twitter</a> to get fresh news about
+                            You can also join us on our <a href="https://discord.com/invite/PVxBZKFr46" target="_blank" rel="noreferrer noopener">Discord channel</a> and
+                            <a href="https://twitter.com/redstone_defi" target="_blank" rel="noreferrer noopener">Twitter</a> to get fresh news about
                             progress of our projects.
                         </div>
                         <div class="justify-content-center">
@@ -159,22 +161,27 @@
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item me-3">
                         <a href="mailto:hello@redstone.finance" target="_blank">
-                            <img src="/assets/img/icons/mail.svg" />
+                            <img src="/assets/img/icons/mail.svg" alt="Mail icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://twitter.com/redstone_defi" target="_blank">
-                            <img src="/assets/img/icons/twitter.svg" />
+                        <a href="https://twitter.com/redstone_defi" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/twitter.svg" alt="Twitter icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://discord.com/invite/PVxBZKFr46" target="_blank">
-                            <img src="/assets/img/icons/discord.svg" />
+                        <a href="https://discord.com/invite/PVxBZKFr46" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/discord.svg" alt="Discord icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://github.com/redstone-finance" target="_blank">
-                            <img src="/assets/img/icons/github.svg" />
+                        <a href="https://github.com/redstone-finance" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/github.svg" alt="Github icon"/>
+                        </a>
+                    </li>
+                    <li class="list-inline-item me-3">
+                        <a href="https://www.linkedin.com/company/75012238/admin/" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/linkedin.svg" alt="Github icon"/>
                         </a>
                     </li>
                 </ul>
@@ -190,13 +197,13 @@
     <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
-<script src="vendors/@popperjs/popper.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/is/is.min.js"></script>
-<script src="vendors/@lottiefiles/lottie-player.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-<script src="assets/js/theme.js"></script>
+<script async src="vendors/@popperjs/popper.min.js"></script>
+<script async src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/is/is.min.js"></script> 
+<script async src="vendors/vanilla-lazyload/lazyload.min.js"></script>
+<script async id="cookie-script" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script>
+<script async src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script async src="assets/js/theme.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap" rel="stylesheet">
 

@@ -1,12 +1,17 @@
+import isDeviceMobile from './ismobile';
+
 if (document.getElementById("members")) {
+
+    const isMobile = isDeviceMobile();
+
     const members = [
         {
             name: "Jakub",
             role: "Founder",
             img: "assets/img/team/jakub.png",
             email: "jakub@redstone.finance",
-            linkedin: "",
-            bio: "Krótki opis Jakub.I'm developing a web app that makes web service requests via Axios to an endpoint on one of our development servers. The requests are going from my local computer to an internal URL."
+            linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/",
+            bio: ""
         },
         {
             name: "Marcin",
@@ -14,7 +19,7 @@ if (document.getElementById("members")) {
             img: "assets/img/team/marcin.jpg",
             email: "marcin@redstone.finance",
             linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/",
-            bio: "Marcin handles strategic cooperation with DeFi protocols as well as Traditional businesses. Present in the blockchain ecosystem since 2018, his domains are Co-Opetition, Building long-term relationships, Education and \"Growing the Pie\" approach. Any doubt about cooperation options with Redstone? Write to me on Discord! Privately Travelling, Sports and understanding new cultures."
+            bio: 'Marcin handles strategic cooperation with DeFi protocols as well as Traditional businesses. Present in the blockchain ecosystem since 2018, his domains are Co-Opetition, Building long-term relationships, Education and "Growing the Pie" approach. Any doubt about cooperation options with Redstone? <a href="https://www.linkedin.com/in/marcin-kazmierczak1/" target="_blank">Write to me on LinkedIn!</a> Privately Travelling, Sports and understanding new cultures.'
         },
         {
             name: "Alex",
@@ -37,8 +42,8 @@ if (document.getElementById("members")) {
             role: "Frontend",
             img: "assets/img/team/piotr.jpeg",
             email: "pduda@redstone.finance",
-            linkedin: "www.linkedin.com/in/piotr-duda-62b66b63",
-            bio: 'New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href="https://wutracing.pl/">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!'
+            linkedin: "https://www.linkedin.com/in/piotr-duda-62b66b63/",
+            bio: 'New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href="https://wutracing.pl/" target="_blank">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!'
         }
     ]
     
@@ -48,22 +53,6 @@ if (document.getElementById("members")) {
     members.forEach((member, index) => {
         const card = document.createElement("div");
         card.classList.add("member-card","col-12","col-md-3","col-lg-2", "mb-4");
-    
-        const memberBio = document.createElement("div");
-        memberBio.innerHTML = member.bio;
-        memberBio.style.display = 'none';
-    
-        bio.appendChild(memberBio);
-    
-        card.addEventListener("mouseenter", () => {
-            bio.childNodes.forEach(
-                (node, i) => {
-                    if (i > 0) {
-                        node.style.display = ((i === (index + 1)) ? 'block' : 'none');
-                    }
-                }
-            )
-        });
     
         card.innerHTML += `
             <img class="member-picture" src="` + member.img + `"/>
@@ -79,8 +68,29 @@ if (document.getElementById("members")) {
                     </a>
                 </div>
             </div>`;
+
+            element.appendChild(card);
+                
+            const memberBio = document.createElement("div");
+            memberBio.innerHTML = member.bio;
+
+            if (!isMobile) {
+                memberBio.style.display = 'none';
+                bio.appendChild(memberBio);
+                
+                card.addEventListener("mouseenter", () => {
+                    bio.childNodes.forEach(
+                        (node, i) => {
+                            if (i > 0) {
+                                node.style.display = ((i === (index + 1)) ? 'block' : 'none');
+                            }
+                        }
+                    )
+                });
+            } else {
+                memberBio.classList.add('text-center', 'mt-2', 'mb-4');
+                element.appendChild(memberBio);
+            }    
     
-        element.appendChild(card);
     });
-    
 }

@@ -22,5 +22,10 @@
   "@lottiefiles/lottie-player": {
     "src": "dist/lottie-player.js",
     "dest": "@lottiefiles"
+  },
+
+  "vanilla-lazyload": {
+    "src": "dist/lazyload.min.js",
+    "dest": "vanilla-lazyload"
   }
 }

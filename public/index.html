@@ -22,8 +22,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/redstone-favicon.png">
 <link rel="manifest" href="assets/img/favicons/manifest.json">
 <meta name="theme-color" content="#ffffff">
+<meta name="description" content="Highly customizable DeFi data streams delivered quickly, reliably and cost-efficiently.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"></script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
 
   function gtag() {
@@ -32,7 +33,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FT767HW5C2');
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 <!-- <script>
   "use strict";
 
@@ -66,8 +67,10 @@
 <!-- ===============================================-->
 <!--    Stylesheets-->
 <!-- ===============================================-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css">
-<link href="/assets/css/theme.css" rel="stylesheet" />
+<link href="/assets/css/theme.css" rel="stylesheet" lazyload />
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></noscript>
 
 </head>
 
@@ -79,7 +82,7 @@
   <!-- ===============================================-->
   <main class="main" id="top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-    <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img src="assets/img/redstone-logo-full.svg" width="175" alt="" /></a>
+    <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html"><img class="lazy" data-src="assets/img/redstone-logo-full.svg" width="175" height="50" alt="Redstone logo" /></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
@@ -106,17 +109,16 @@
         <div class="row align-items-center mt-6 mt-lg-6 py-4 py-lg-8">
           <div class="col-md-7 col-lg-6 text-center text-md-start">
             <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
-            <!--  img.img-fluid.float-start.me-3(src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
-            <h1 class="mb-4 display-3 fw-bold lh-sm mt-6 mt-lg-0">Powering DeFi<br
-                class="d-block d-lg-none d-xl-block" />with real-world data</h1>
+            <!--  img.*data-src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
+            <div class="h1 mb-4 display-3 fw-bold lh-sm mt-6 mt-lg-0">Powering DeFi<br
+                class="d-block d-lg-none d-xl-block" />with real-world data</div>
             <p class="mt-3 mb-4 fs-1">Highly customizable DeFi data streams <br class="d-none d-lg-block" /> delivered
               quickly, reliably and cost-efficiently.</p><a class="btn btn-lg btn-danger rounded-pill"
               href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a
               class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
           </div>
           <div class="col-md-5 col-lg-6 text-center text-md-end mt-6 mt-lg-0">
-            <lottie-player autoplay="true" loop="true" speed="1" src="assets/animations/redstone.json"
-              style="height: 100%; background: transparent" background="transparent"></lottie-player>
+            <div id="redstone-video"></div>
           </div>
         </div>
       </div>
@@ -130,53 +132,53 @@
       <div class="container">
         <div class="row justify-content-center mb-6">
           <div class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-            <h6 class="fw-bold fs-4 display-3 lh-sm">The next generation of oracles</h6>
+            <div class="h6 fw-bold fs-4 display-3 lh-sm">The next generation of oracles</div>
             <p class="mb-0">New protocols require more data delivered at lower latency. </p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/fast.svg"
-                alt="" />
-              <h5 class="fw-bold">Fast</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/fast.svg" alt="Speed-o-meter" height="80" width="80" />
+              <div class="h5 w-bold">Fast</div>
               <p class="mb-md-0">Stop waiting 10+ minutes for updates. Your contracts access data in seconds.</p>
             </div>
           </div>
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3"
-                src="assets/img/icons/cost-efficient.svg" alt="" />
-              <h5 class="fw-bold">Cost-efficient</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/cost-efficient.svg" alt="Cost efficient" height="80" width="80" />
+              <div class="h5 fw-bold">Cost-efficient</div>
               <p class="mb-md-0">&quot;Flash storage&quot; reduces gas costs thanks to meta transactions and proxy
                 contracts.</p>
             </div>
           </div>
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3"
-                src="assets/img/icons/versatile.svg" alt="" />
-              <h5 class="fw-bold">Versatile</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/versatile.svg" alt="Multitool" height="80" width="80"  />
+              <div class="h5 fw-bold">Versatile</div>
               <p class="mb-md-0">Allow your smart contracts to fetch any non-standard data, like volatility, order books
                 or trading volumes.</p>
             </div>
           </div>
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3"
-                src="assets/img/icons/accountable.svg" alt="" />
-              <h5 class="fw-bold">Accountable</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/accountable.svg" alt="Contract" height="80" width="80"  />
+              <div class="h5 fw-bold">Accountable</div>
               <p class="mb-md-0">Each data provider's track record is permanently available on Arweave.</p>
             </div>
           </div>
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3"
-                src="assets/img/icons/decentralized.svg" alt="" />
-              <h5 class="fw-bold">Decentralized</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/decentralized.svg" alt="Decentralized structure" height="80" width="80"  />
+              <div class="h5 fw-bold">Decentralized</div>
               <p class="mb-md-0">Anyone can become a data provider and configure a data stream with just a few clicks.
               </p>
             </div>
           </div>
           <div class="col-md-4 mb-6">
-            <div class="text-center px-lg-3"><img class="img-fluid img-features mb-3" src="assets/img/icons/insured.svg"
-                alt="" />
-              <h5 class="fw-bold">Insured</h5>
+            <div class="text-center px-lg-3"><img loading="lazy" class="lazy img-fluid img-features mb-3"
+                data-src="assets/img/icons/insured.svg" alt="Insurance" height="80" width="80"  />
+              <div class="h5 fw-bold">Insured</div>
               <p class="mb-md-0">Downtime or incorrect data are covered by the provider's stake.</p>
             </div>
           </div>
@@ -197,23 +199,23 @@
       <div class="container">
         <div class="row mb-12">
           <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5">
-            <h6 class="fw-bold fs-4 display-3 lh-sm mb-6">Accessing data in applications</h6>
+            <div class="h6 fw-bold fs-4 display-3 lh-sm mb-6">Accessing data in applications</div>
             <div class="row align-items-center">
               <div class="col-md-6 col-lg-6 text-center text-md-start">
                 <p class="mb-3">
                   Data is accessible from any website, mobile application, or backend server. All data comes with a
                   verifiable cryptographic signature allowing a blockchain grade integrity.</p>
                 <p class="mb-0">You can access the data by an http-api or using our<a
-                    href="https://www.npmjs.com/package/redstone-api" role="button" target="_blank"> npm library
+                    href="https://www.npmjs.com/package/redstone-api" role="button" target="_blank" rel="noreferrer noopener"> npm library
                   </a>that comes with extra features.
-                  Learn more and explore examples in the<a href="http://api.docs.redstone.finance/" role="button"
+                  Learn more and explore examples in the<a href="https://api.docs.redstone.finance/" role="button"
                     target="_blank"> documentation </a>or<a
-                    href="https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed" role="button" target="_blank">
+                    href="https://codesandbox.io/s/limestone-api-demo-0h4oo?from-embed" role="button" target="_blank" rel="noreferrer noopener">
                     play with the code</a>.
                 </p>
               </div>
-              <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 mt-4 mt-lg-0"><img class="img-fluid mb-3"
-                  src="assets/img/redstone-symbols-example.gif" width="600" alt="" /></div>
+              <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 mt-4 mt-lg-0"><img loading="lazy" class="lazy img-fluid mb-3"
+                  alt="Code example" data-src="assets/img/redstone-symbols-example.gif" rel="noreferrer noopener" width="600" alt="" /></div>
             </div>
           </div>
         </div>
@@ -233,7 +235,7 @@
       <div class="container">
         <div class="row justify-content-center mb-6">
           <div class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-            <h6 class="fw-bold fs-4 display-3 lh-sm">Accessing data in contracts</h6>
+            <div class="h6 fw-bold fs-4 display-3 lh-sm">Accessing data in contracts</div>
             <p class="mb-0"> </p> We use a radically different way of putting data on-chain called "flash storage". The
             data
             is automatically attached to a transaction and erased afterwards thus reducing gas fees. The information
@@ -242,7 +244,7 @@
         </div>
         <div class="row align-items-center mb-6">
           <div class="col-md-6 col-lg-6 text-center text-md-end">
-            <h5 class="mb-3">1. Connect to your contracts</h5>
+            <div class="h5 mb-3">1. Connect to your contracts</div>
             <p class="mb-3">Configure a proxy pointing to your smart contract.</p>
           </div>
           <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
@@ -261,7 +263,7 @@
         </div>
         <div class="row align-items-center mb-6">
           <div class="col-md-6 col-lg-6 text-center text-center text-lg-start order-lg-2">
-            <h5 class="mb-3">2. Connect to the front end</h5>
+            <div class="h5 mb-3">2. Connect to the front end</div>
             <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper.</p>
           </div>
           <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
@@ -278,7 +280,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-6 col-lg-6 text-center text-md-end">
-            <h5 class="mb-3">3. Access the data in your contracts</h5>
+            <div class="h5 mb-3">3. Access the data in your contracts</div>
             <p class="mb-3">Read data with the same convenience as using other oracles based on the on-chain storage.
             </p>
           </div>
@@ -300,20 +302,19 @@
       <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 text-center mb-3">
-            <h6 class="fw-bold fs-4 display-3 lh-sm mb-3 mt-4">Frequently asked questions</h6>
-            <!--p.mb-5 The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as Facebook.-->
+            <div class="h6 fw-bold fs-4 display-3 lh-sm mb-3 mt-4">Frequently asked questions</div>
         </div>
     </div>
     <div class="row flex-center">
         <div class="col-lg-9">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="heading1">
+                    <div class="h2 accordion-header" id="heading1">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><span
                                 class="mb-0 fw-bold text-start fs-1 text-1000">Which blockchain do you
                                 use?</span></button>
-                    </h2>
+                    </div>
                     <div class="accordion-collapse collapse show" id="collapse1" aria-labelledby="heading1"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-100">RedStone is a cross-chain solution that takes the
@@ -326,12 +327,12 @@
                     </div>
                 </div>
                 <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="heading2">
+                    <div class="h2 accordion-header" id="heading2">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><span
                                 class="mb-0 fw-bold text-start fs-1 text-1000">Where do you take the data
                                 from?</span></button>
-                    </h2>
+                    </div>
                     <div class="accordion-collapse collapse" id="collapse2" aria-labelledby="heading2"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-100">We support any public and private data API. There are
@@ -341,12 +342,12 @@
                     </div>
                 </div>
                 <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="heading3">
+                    <div class="h2 accordion-header" id="heading3">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><span
                                 class="mb-0 fw-bold text-start fs-1 text-1000">How does the data guarantee
                                 works?</span></button>
-                    </h2>
+                    </div>
                     <div class="accordion-collapse collapse" id="collapse3" aria-labelledby="heading3"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-100">Users can claim a refund if providers fail to return
@@ -356,12 +357,12 @@
                     </div>
                 </div>
                 <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="heading4">
+                    <div class="h2 accordion-header" id="heading4">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4"><span
                                 class="mb-0 fw-bold text-start fs-1 text-1000">How can I become a data
                                 provider?</span></button>
-                    </h2>
+                    </div>
                     <div class="accordion-collapse collapse" id="collapse4" aria-labelledby="heading4"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-100">To become a data provider, you need to publish a
@@ -375,13 +376,13 @@
                     </div>
                 </div>
                 <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="heading5">
+                    <div class="h2 accordion-header" id="heading5">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5"><span
                                 class="mb-0 fw-bold text-start fs-1 text-1000">How to connect RedStone data to
                                 my
                                 smart contract?</span></button>
-                    </h2>
+                    </div>
                     <div class="accordion-collapse collapse" id="collapse5" aria-labelledby="heading5"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body bg-100">We designed the system to work exactly like other
@@ -402,12 +403,12 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
-            <h6 class="fw-bold fs-4 display-3 lh-sm">Made by DeFi builders for DeFi builders</h6>
+            <div class="h6 fw-bold fs-4 display-3 lh-sm">Made by DeFi builders for DeFi builders</div>
           </div>
         </div>
         <div class="row align-items-center">
-          <div class="col-md-5 order-md-0 text-center text-md-start"><img class="img-fluid mb-4"
-              src="assets/img/illustrations/builders.png" width="550" alt="" /></div>
+          <div class="col-md-5 order-md-0 text-center text-md-start"><img loading="lazy" class="lazy img-fluid mb-4"
+              data-src="assets/img/illustrations/builders.png" width="550" alt="Picture with builders" /></div>
           <div class="col-md-6 text-center text-md-start offset-md-1">
             <p class="my-4 pe-xl-5">
               Our team has won dozens of hackathon prizes. But many of our projects never made it into
@@ -428,30 +429,31 @@
       <div class="container">
         <div class="row">
           <div class="col-12 mx-auto align-items-center text-center">
-            <h6 class="fw-bold fs-4 display-3 lh-sm mb-5">Our partners</h6>
+            <div class="h6 fw-bold fs-4 display-3 lh-sm mb-5">Our partners</div>
           </div>
         </div>
         <div class="row align-items-center justify-content-center justify-content-lg-around">
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://www.arweave.org/" role="button" target="_blank"><img src="assets/img/backers/arweave.png"
-                width="120px" alt="" /></a></div>
+              href="https://www.arweave.org/" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+              class="lazy" data-src="assets/img/backers/arweave.png" width="120px" height="33px" alt="Arweave logo" /></a></div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://www.maven11.com/" role="button" target="_blank"><img src="assets/img/backers/maven11.jpeg"
-                width="120px" alt="" /></a></div>
+              href="https://www.maven11.com/" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+              class="lazy" data-src="assets/img/backers/maven11.jpeg" width="120px" height="120px" alt="Maven11 logo" /></a></div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://www.kryptonite1.co/" role="button" target="_blank"><img src="assets/img/backers/kr1.jpg"
-                width="120px" alt="" /></a></div>
+              href="https://www.kryptonite1.co/" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+              class="lazy" data-src="assets/img/backers/kr1.jpg" width="120px" height="60px" alt="KR1 logo" /></a></div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://beringwaters.com/" role="button" target="_blank"><img
-                src="assets/img/backers/beringwaters.png" width="120px" alt="" /></a></div>
+              href="https://beringwaters.com/" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+              class="lazy" data-src="assets/img/backers/beringwaters.png" width="120px" height="78px" alt="Bering Waters logo" /></a></div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a href="https://trgc.io/"
-              role="button" target="_blank"><img src="assets/img/backers/trgc.svg" width="120px" alt="" /></a></div>
+              role="button" target="_blank"><img loading="lazy" class="lazy" data-src="assets/img/backers/trgc.svg" width="120px" height="26px" alt="TRGC logo" /></a>
+          </div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://www.collider.vc/" role="button" target="_blank"><img src="assets/img/backers/collider.png"
-                width="120px" alt="" /></a></div>
+              href="https://www.collider.vc/" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+              class="lazy" data-src="assets/img/backers/collider.png" width="120px" height="120px" alt="Collider logo" /></a></div>
           <div class="col-6 col-sm-4 col-md-4 col-lg-1 px-md-0 mb-5 mb-lg-0 text-center"><a
-              href="https://twitter.com/1kxnetwork" role="button" target="_blank"><img src="assets/img/backers/1kx.jpeg"
-                width="120px" alt="" /></a></div>
+              href="https://twitter.com/1kxnetwork" role="button" target="_blank" rel="noreferrer noopener"><img loading="lazy"
+               class="lazy" data-src="assets/img/backers/1kx.jpeg" width="120px" height="120px" alt="1KX logo"/></a></div>
         </div>
       </div><!-- end of .container-->
 
@@ -467,7 +469,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-8 mx-auto align-items-center text-center">
-          <h6 class="fw-bold fs-4 display-3 lh-sm mb-5">Want to know more?</h6>
+          <div class="h6 fw-bold fs-4 display-3 lh-sm mb-5">Want to know more?</div>
           <div class="mt-3">
             If there are any questions coming to your mind, check our <a href="#faq">FAQ</a>.</br>
             You can also learn more about <a href="about.html">our team</a> or reach us
@@ -536,22 +538,27 @@
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item me-3">
                         <a href="mailto:hello@redstone.finance" target="_blank">
-                            <img src="/assets/img/icons/mail.svg" />
+                            <img src="/assets/img/icons/mail.svg" alt="Mail icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://twitter.com/redstone_defi" target="_blank">
-                            <img src="/assets/img/icons/twitter.svg" />
+                        <a href="https://twitter.com/redstone_defi" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/twitter.svg" alt="Twitter icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://discord.com/invite/PVxBZKFr46" target="_blank">
-                            <img src="/assets/img/icons/discord.svg" />
+                        <a href="https://discord.com/invite/PVxBZKFr46" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/discord.svg" alt="Discord icon"/>
                         </a>
                     </li>
                     <li class="list-inline-item me-3">
-                        <a href="https://github.com/redstone-finance" target="_blank">
-                            <img src="/assets/img/icons/github.svg" />
+                        <a href="https://github.com/redstone-finance" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/github.svg" alt="Github icon"/>
+                        </a>
+                    </li>
+                    <li class="list-inline-item me-3">
+                        <a href="https://www.linkedin.com/company/75012238/admin/" target="_blank" rel="noreferrer noopener">
+                            <img src="/assets/img/icons/linkedin.svg" alt="Github icon"/>
                         </a>
                     </li>
                 </ul>
@@ -566,13 +573,13 @@
   <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
-<script src="vendors/@popperjs/popper.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/is/is.min.js"></script>
-<script src="vendors/@lottiefiles/lottie-player.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-<script src="assets/js/theme.js"></script>
+<script async src="vendors/@popperjs/popper.min.js"></script>
+<script async src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/is/is.min.js"></script> 
+<script async src="vendors/vanilla-lazyload/lazyload.min.js"></script>
+<script async id="cookie-script" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js"></script>
+<script async src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script async src="assets/js/theme.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap" rel="stylesheet">
 

@@ -18,8 +18,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/redstone-favicon.png">
 <link rel="manifest" href="assets/img/favicons/manifest.json">
 <meta name="theme-color" content="#ffffff">
+<meta name="description" content="Highly customizable DeFi data streams delivered quickly, reliably and cost-efficiently.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"></script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
 
   function gtag() {
@@ -28,7 +29,7 @@
   gtag('js', new Date());
   gtag('config', 'G-FT767HW5C2');
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 <!-- <script>
   "use strict";
 
@@ -62,5 +63,7 @@
 <!-- ===============================================-->
 <!--    Stylesheets-->
 <!-- ===============================================-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css">
-<link href="/assets/css/theme.css" rel="stylesheet" />
+<link href="/assets/css/theme.css" rel="stylesheet" lazyload />
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"></noscript>
