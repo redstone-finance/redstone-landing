@@ -2,6 +2,7 @@ import { docReady } from './utils';
 import navbarInit from './bootstrap-navbar';
 import detectorInit from './detector';
 import scrollToTop from './scroll-to-top';
+import isDeviceMobile from './ismobile';
 
 
 // /* -------------------------------------------------------------------------- */
@@ -12,7 +13,40 @@ docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
 
-window.cookieconsent.initialise({
+  window.lazyLoadOptions = {
+    // Your custom settings go here
+  };
+
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+
+  var videoElem = document.getElementById("redstone-video");
+
+  if (videoElem) {
+    if (!isDeviceMobile()) {
+      var scriptEle = document.createElement("script");
+      scriptEle.setAttribute("src", "vendors/@lottiefiles/lottie-player.js");
+    
+      document.getElementsByTagName("body")[0].appendChild(scriptEle);
+  
+      videoElem.innerHTML = `            
+        <lottie-player autoplay="true" loop="true" speed="1" src="assets/animations/redstone.json"
+                       style="height: 100%; background: transparent" background="transparent"></lottie-player>`;
+  
+    } else {
+      videoElem.innerHTML = `<video width="100%" src="assets/animations/redstone.mov" autoplay loop muted playsinline></video>`;
+    }
+  }
+
+var cookieScript = document.getElementById("cookie-script");
+
+cookieScript.addEventListener('load', function () {
+  window.cookieconsent.initialise({
     "palette": {
       "popup": {
         "background": "#24355B",
@@ -31,3 +65,4 @@ window.cookieconsent.initialise({
       "dismiss": "Agree"
     }
   });
+});

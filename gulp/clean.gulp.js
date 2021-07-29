@@ -13,5 +13,6 @@ gulp.task('clean', () =>
     `${baseDir}/**/*.html`,
   ])
 );
+
 gulp.task('clean:build', () => del(paths.dir.prod));
 gulp.task('clean:live', () => del(`live/${version}`));

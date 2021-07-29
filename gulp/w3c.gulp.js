@@ -37,5 +37,3 @@ gulp.task('w3cjs', (done) => {
       done();
     });
 });
-
-gulp.task('w3c', gulp.series('pug', 'w3cjs'));

@@ -6,13 +6,12 @@ requireDir('./gulp');
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 |  Compile
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-gulp.task('compile', gulp.parallel('style', 'script', 'script:webpack', 'vendor'));
-gulp.task('compile:all', gulp.parallel('compile', 'pug'));
+gulp.task('compile', gulp.parallel('style', 'script', 'script:webpack', 'html', 'vendor'));
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 |  Deploy
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-gulp.task('build', gulp.series('clean:build', 'build:static', 'compile:all'));
+gulp.task('build', gulp.series('clean:build', 'build:static'));
 gulp.task('build:test', gulp.series('build', 'watch'));
 gulp.task('live', gulp.series('clean:live', 'build', 'build:push'));
 
