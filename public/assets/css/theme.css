@@ -18263,6 +18263,7 @@ label {
 .stat-number {
   font-size: 4.2rem;
   opacity: 0.75;
+  white-space: nowrap;
 }
 
 .accordion-button:hover {

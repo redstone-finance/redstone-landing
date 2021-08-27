@@ -7,6 +7,11 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
     referenceDataPoints + 
     (fromReferenceToNow * (pointsPerDisplayInterval / displayInterval));
 
+
+  function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
   function animateValue(htmlElement, startPoint, interval, pointsPerInterval) {
     let startTimestamp = null;
     let previousPoint = startPoint;
@@ -16,7 +21,7 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
       if ((timestamp - previousTimestamp) > interval) { 
         const progress = ((timestamp - previousTimestamp) / interval) * pointsPerInterval;
         const currentPoint = Math.floor(previousPoint + progress);
-        htmlElement.innerHTML = currentPoint;
+        htmlElement.innerHTML = numberWithSpaces(currentPoint);
         previousTimestamp = timestamp;
         previousPoint = currentPoint;
       }
@@ -27,6 +32,7 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
     
   const obj = document.getElementById("data-points-number");
   animateValue(obj, pointsOnPageOpen, displayInterval, pointsPerDisplayInterval);
+
   
 }
 
