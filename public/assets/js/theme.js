@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -247,6 +247,38 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, 'windows');
   navigator.userAgent.match('CriOS') && addClass(html, 'chrome');
 };
+
+function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
+  var referenceDataPoints = 771549199;
+  var referenceTimestamp = 1630068468954;
+  var fromReferenceToNow = Date.now() - referenceTimestamp;
+  var pointsOnPageOpen = referenceDataPoints + fromReferenceToNow * (pointsPerDisplayInterval / displayInterval);
+
+  function animateValue(htmlElement, startPoint, interval, pointsPerInterval) {
+    var startTimestamp = null;
+    var previousPoint = startPoint;
+    var previousTimestamp = 0;
+
+    var step = function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+
+      if (timestamp - previousTimestamp > interval) {
+        var progress = (timestamp - previousTimestamp) / interval * pointsPerInterval;
+        var currentPoint = Math.floor(previousPoint + progress);
+        htmlElement.innerHTML = currentPoint;
+        previousTimestamp = timestamp;
+        previousPoint = currentPoint;
+      }
+
+      window.requestAnimationFrame(step);
+    };
+
+    window.requestAnimationFrame(step);
+  }
+
+  var obj = document.getElementById('data-points-number');
+  animateValue(obj, pointsOnPageOpen, displayInterval, pointsPerDisplayInterval);
+}
 /*-----------------------------------------------
 |   Top navigation opacity on scroll
 -----------------------------------------------*/
@@ -354,6 +386,48 @@ var navbarInit = function navbarInit() {
   }
 };
 
+function fetchData() {
+  fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/sources.json').then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    console.log('Sources:', Object.keys(data).length);
+    var element = document.getElementById('sources-number');
+    element.innerHTML = Object.keys(data).length;
+  });
+  fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/tokens.json').then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    console.log('Tokens:', Object.keys(data).length);
+    var element = document.getElementById('tokens-number');
+    element.innerHTML = Object.keys(data).length;
+  });
+  var milisecondInterval = 10;
+  var pointsPerDisplayInterval = 0;
+  Promise.all([fetch('https://arweave.net/SQqLyX5MKMRhfetfIJXJOqht8qPCJyxf1VIUOwIUjas').then(function (r) {
+    return r.json();
+  }), fetch('https://arweave.net/syqhA_uEcZ-okZ94NHZCcY3CuUW4aK2njwOp6xQpjSE').then(function (r) {
+    return r.json();
+  }), fetch('https://arweave.net/Q7qbcNnOrqFbI4K5vLOecPeZn2YXE8-lEpNmMCCw39w').then(function (r) {
+    return r.json();
+  })]).then(function (resp) {
+    resp.forEach(function (manifest) {
+      var pointsPerInterval = 0;
+      Object.values(manifest.tokens).forEach(function (token) {
+        pointsPerInterval += token.source ? Object.keys(token.source).length : 1;
+      });
+      pointsPerDisplayInterval += pointsPerInterval / manifest.interval * milisecondInterval;
+    });
+    animateDataPoints(milisecondInterval, pointsPerDisplayInterval);
+  });
+  fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/providers.json').then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    console.log('Providers:', Object.keys(data).length);
+    var element = document.getElementById('tokens-number');
+    element.innerHTML = Object.keys(data).length;
+  });
+}
+
 var _window2 = window,
     is = _window2.is;
 
@@ -453,6 +527,7 @@ if (document.getElementById('members')) {
 // /* -------------------------------------------------------------------------- */
 
 
+docReady(fetchData);
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);

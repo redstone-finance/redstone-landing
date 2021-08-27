@@ -18244,6 +18244,7 @@ label {
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
+/* prettier-ignore */
 .btn-danger:hover {
   background-color: #FF788A;
   border-color: #FF788A;
@@ -18253,6 +18254,15 @@ label {
   background-color: #E9586F;
   border-color: #E9586F;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.monospace {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.stat-number {
+  font-size: 4.2rem;
+  opacity: 0.75;
 }
 
 .accordion-button:hover {

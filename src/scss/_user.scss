@@ -4,6 +4,7 @@
 //
 // Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
 @import "user-variables";
+@import "theme/variables";
 
 .btn-danger {
     &:hover {
@@ -16,6 +17,15 @@
         border-color: $red-200;
         color:rgba($white, 0.7)
     }
+}
+
+.monospace {
+    font-family: $font-family-monospace;
+}
+
+.stat-number {
+    font-size: 4.2rem;
+    opacity: 0.75;
 }
 
 .accordion-button {
