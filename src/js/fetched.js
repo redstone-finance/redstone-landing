@@ -44,13 +44,7 @@ function fetchData() {
         }
     );
          
-    fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/providers.json')
-        .then(response => response.json())
-        .then(data => { 
-            console.log('Providers:',Object.keys(data).length);
-            const element = document.getElementById("tokens-number");
-            element.innerHTML = Object.keys(data).length;
-        });}   
+}   
 
 
         

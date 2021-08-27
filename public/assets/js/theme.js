@@ -255,7 +255,7 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
   var pointsOnPageOpen = referenceDataPoints + fromReferenceToNow * (pointsPerDisplayInterval / displayInterval);
 
   function numberWithSpaces(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
   function animateValue(htmlElement, startPoint, interval, pointsPerInterval) {
@@ -422,13 +422,6 @@ function fetchData() {
       pointsPerDisplayInterval += pointsPerInterval / manifest.interval * milisecondInterval;
     });
     animateDataPoints(milisecondInterval, pointsPerDisplayInterval);
-  });
-  fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/providers.json').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    console.log('Providers:', Object.keys(data).length);
-    var element = document.getElementById('tokens-number');
-    element.innerHTML = Object.keys(data).length;
   });
 }
 
