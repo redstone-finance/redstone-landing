@@ -38,7 +38,9 @@
 }
 
 .first-page {
-    height: 100vh;
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
 }
 
 .stat-number {

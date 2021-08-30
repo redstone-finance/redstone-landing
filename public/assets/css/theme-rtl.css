@@ -18251,8 +18251,10 @@ label {
   font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.first-page {
-  height: 100vh;
+@media (min-width: 992px) {
+  .first-page {
+    height: 100vh;
+  }
 }
 
 .stat-number {
