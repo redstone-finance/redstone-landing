@@ -61,7 +61,6 @@ cookieScript.addEventListener('load', function () {
     },
     "showLink": false,
     "theme": "classic",
-    "position": "bottom-right",
     "content": {
       "message": "This site uses cookies to analyze traffic and offer a better browsing experience.",
       "dismiss": "Agree"

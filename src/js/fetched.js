@@ -10,14 +10,25 @@ function fetchData() {
             element.innerHTML = Object.keys(data).length;
         });
 
-    fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/tokens.json')
-        .then(response => response.json())
-        .then(data => { 
-            console.log('Tokens:',Object.keys(data).length);
-            const element = document.getElementById("tokens-number");
-            element.innerHTML = Object.keys(data).length;
-        });
+    Promise.all([
+        fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/all-supported-tokens.json')
+            .then(r => r.json()),
+        fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json')
+            .then(r => r.json()),
+    ])  
+    .then(
+        resp => {
+            let tokensNumber = 0;
 
+            resp.forEach(set => {
+                tokensNumber += Object.keys(set.tokens).length;
+            })
+
+            const element = document.getElementById("tokens-number");
+            element.innerHTML = tokensNumber;
+        }
+    );
+    
     let milisecondInterval = 10;    
     let pointsPerDisplayInterval = 0;
 

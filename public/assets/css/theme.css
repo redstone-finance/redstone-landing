@@ -18256,14 +18256,57 @@ label {
   color: rgba(255, 255, 255, 0.7);
 }
 
+#home, #statistics {
+  padding: 0;
+}
+
+#redstone-video video {
+  height: 30vh;
+}
+
+@media (min-width: 768px) {
+  #redstone-video video {
+    height: initial;
+  }
+}
+
 .monospace {
   font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.first-page {
+  height: 100vh;
+}
+
 .stat-number {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   opacity: 0.75;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: 2.0rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .stat-number {
+    font-size: 2.8rem;
+  }
+}
+
+.stats {
+  background-color: #F5F7FA;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    padding: 30px 70px;
+  }
 }
 
 .accordion-button:hover {

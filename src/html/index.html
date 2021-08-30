@@ -14,27 +14,54 @@
   <main class="main" id="top">
     @@include('./common/navbar.html', { "isHome": true })
 
-    <section class="py-0" id="home">
-      <!--+Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'bottom', 'background-size': 'cover',} }, className: '' })-->
-      <div class="container position-relative">
-        <div class="row align-items-center mt-6 mt-lg-6 py-4 py-lg-8">
-          <div class="col-md-7 col-lg-6 text-center text-md-start">
-            <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
-            <!--  img.*data-src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
-            <div class="h1 mb-4 display-3 fw-bold lh-sm mt-6 mt-lg-0">Powering DeFi<br
-                class="d-block d-lg-none d-xl-block" />with real-world data</div>
-            <p class="mt-3 mb-4 fs-1">Highly customizable DeFi data streams <br class="d-none d-lg-block" /> delivered
-              quickly, reliably and cost-efficiently.</p><a class="btn btn-lg btn-danger rounded-pill"
-              href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a
-              class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
-          </div>
-          <div class="col-md-5 col-lg-6 text-center text-md-end mt-6 mt-lg-0">
-            <div id="redstone-video"></div>
+    <div class="first-page">
+      <section class="pt-7 py-md-8 py-lg-2 mt-md-8 mt-lg-8" id="home">
+        <!--+Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'bottom', 'background-size': 'cover',} }, className: '' })-->
+        <div class="container position-relative">
+          <div class="row align-items-center">
+            <div class="col-md-7 col-lg-6 text-center text-md-start">
+              <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
+              <!--  img.*data-src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
+              <div class="h1 mt-3 mb-2 display-3 fw-bold lh-sm mt-lg-0">Powering DeFi<br
+                  class="d-block d-lg-none d-xl-block" />with real-world data</div>
+              <p class="my-2 my-md-4 fs-1">Highly customizable DeFi data streams <br class="d-none d-lg-block" /> delivered
+                quickly, reliably and cost-efficiently.</p><a class="btn btn-lg btn-danger rounded-pill"
+                href="https://app.redstone.finance" target="_blank" role="button">See our data</a><a
+                class="btn btn-link ps-md-4" href="#api" role="button"> Learn how to integrate </a>
+            </div>
+            <div class="col-md-5 text-center text-md-end">
+              <div id="redstone-video"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+
+          <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="mt-md-6 mt-lg-7" id="statistics">
+
+          <div class="container">
+            <div class="row justify-content-center stats flex-column flex-md-row">
+              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="h5 mb-0 fw-bold mx-md-auto">Assets</div>
+                <div class="stat-number mx-md-auto monospace" id="tokens-number">0</div>
+              </div>
+              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="h5 mb-0 fw-bold mx-md-auto">Sources</div>
+                <div class="stat-number mx-md-auto monospace" id="sources-number">0</div>
+              </div>
+              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="h5 mb-0 fw-bold mx-md-auto">Data points</div>
+                <div class="stat-number mx-md-auto monospace" id="data-points-number">0</div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+    
+        </section>
+      </div>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
@@ -100,42 +127,6 @@
     <!-- <section> close ============================-->
     <!-- ============================================-->
 
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-      <section class="py-4 py-lg-6" id="statistics">
-
-        <div class="container">
-          <div class="row justify-content-center mb-6">
-            <div class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-              <div class="h6 fw-bold fs-4 display-3 lh-sm">Broadest dataset in DeFi</div>
-              <p class="mb-0">Our ecosystem creates a level of flexibility not yet seen among DeFi oracles. 
-                It let us become an industry leader in delivering the largest dataset for crypto tokens, stocks, fiat currencies and commodities.
-              </p>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-4 d-flex flex-column justify-content-center">
-              <div class="h5 fw-bold mx-auto">Supported tokens and assets</div>
-              <div class="stat-number mx-auto monospace" id="tokens-number">0</div>
-            </div>
-            <div class="col-4 d-flex flex-column justify-content-center">
-              <div class="h5 fw-bold mx-auto">Sources</div>
-              <div class="stat-number mx-auto monospace" id="sources-number">0</div>
-            </div>
-            <div class="col-4 d-flex flex-column justify-content-center">
-              <div class="h5 fw-bold mx-auto">Data points</div>
-              <div class="stat-number mx-auto monospace" id="data-points-number">0</div>
-            </div>
-          </div>
-            
-    
-          </div>
-        </div><!-- end of .container-->
-  
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->

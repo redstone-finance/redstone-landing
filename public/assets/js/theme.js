@@ -398,12 +398,17 @@ function fetchData() {
     var element = document.getElementById('sources-number');
     element.innerHTML = Object.keys(data).length;
   });
-  fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/tokens.json').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    console.log('Tokens:', Object.keys(data).length);
+  Promise.all([fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/all-supported-tokens.json').then(function (r) {
+    return r.json();
+  }), fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json').then(function (r) {
+    return r.json();
+  })]).then(function (resp) {
+    var tokensNumber = 0;
+    resp.forEach(function (set) {
+      tokensNumber += Object.keys(set.tokens).length;
+    });
     var element = document.getElementById('tokens-number');
-    element.innerHTML = Object.keys(data).length;
+    element.innerHTML = tokensNumber;
   });
   var milisecondInterval = 10;
   var pointsPerDisplayInterval = 0;
@@ -561,7 +566,6 @@ cookieScript.addEventListener('load', function () {
     },
     showLink: false,
     theme: 'classic',
-    position: 'bottom-right',
     content: {
       message: 'This site uses cookies to analyze traffic and offer a better browsing experience.',
       dismiss: 'Agree'
