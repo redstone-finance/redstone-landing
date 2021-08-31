@@ -249,8 +249,8 @@ var detectorInit = function detectorInit() {
 };
 
 function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
-  var referenceDataPoints = 771549199;
-  var referenceTimestamp = 1630068468954;
+  var referenceDataPoints = 269400336;
+  var referenceTimestamp = 1630398567000;
   var fromReferenceToNow = Date.now() - referenceTimestamp;
   var pointsOnPageOpen = referenceDataPoints + fromReferenceToNow * (pointsPerDisplayInterval / displayInterval);
 
@@ -535,9 +535,6 @@ docReady(detectorInit);
 docReady(scrollToTop);
 window.lazyLoadOptions = {// Your custom settings go here
 };
-window.addEventListener('LazyLoad::Initialized', function (event) {
-  window.lazyLoadInstance = event.detail.instance;
-}, false);
 var videoElem = document.getElementById('redstone-video');
 
 if (videoElem) {

@@ -18266,12 +18266,14 @@ label {
 @media (min-width: 768px) {
   .stat-number {
     font-size: 2.0rem;
+    line-height: 2.0rem;
   }
 }
 
 @media (min-width: 992px) {
   .stat-number {
     font-size: 2.8rem;
+    line-height: 2.8rem;
   }
 }
 

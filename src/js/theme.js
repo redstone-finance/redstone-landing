@@ -18,15 +18,7 @@ docReady(scrollToTop);
   window.lazyLoadOptions = {
     // Your custom settings go here
   };
-
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-
+  
   var videoElem = document.getElementById("redstone-video");
 
   if (videoElem) {

@@ -1,7 +1,7 @@
 function animateDataPoints(displayInterval, pointsPerDisplayInterval) { 
 
-  const referenceDataPoints = 771549199;
-  const referenceTimestamp = 1630068468954;
+  const referenceDataPoints = 269400336;
+  const referenceTimestamp = 1630398567000;
   const fromReferenceToNow = Date.now() - referenceTimestamp;
   const pointsOnPageOpen = 
     referenceDataPoints + 
