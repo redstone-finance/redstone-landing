@@ -42,18 +42,18 @@
         <section class="mt-md-6 mt-lg-7" id="statistics">
 
           <div class="container">
-            <div class="row justify-content-center stats flex-column flex-md-row">
-              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
-                <div class="h5 mb-0 mb-md-3 fw-bold mx-md-auto">Assets</div>
-                <div class="stat-number mx-md-auto monospace" id="tokens-number">0</div>
+            <div class="row justify-content-between stats b-15 flex-column flex-md-row">
+              <div class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="stat-label mb-0 mb-md-3 mx-md-auto">Assets</div>
+                <div class="stat-number mx-md-auto monospace" id="tokens-number"></div>
               </div>
-              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
-                <div class="h5 mb-0 mb-md-3 fw-bold mx-md-auto">Sources</div>
-                <div class="stat-number mx-md-auto monospace" id="sources-number">0</div>
+              <div class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="stat-label mb-0 mb-md-3 mx-md-auto">Sources</div>
+                <div class="stat-number mx-md-auto monospace" id="sources-number"></div>
               </div>
-              <div class="col-12 col-md-4 d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
-                <div class="h5 mb-0 mb-md-3 fw-bold mx-md-auto">Data points</div>
-                <div class="stat-number mx-md-auto monospace" id="data-points-number">0</div>
+              <div class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+                <div class="stat-label mb-0 mb-md-3 mx-md-auto">Data points</div>
+                <div class="stat-number mx-md-auto monospace" id="data-points-number"></div>
               </div>
             </div>
           </div><!-- end of .container-->
@@ -150,7 +150,7 @@
                     play with the code</a>.
                 </p>
               </div>
-              <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 mt-4 mt-lg-0"><img loading="lazy" class="lazy img-fluid mb-3"
+              <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 mt-4 mt-lg-0"><img loading="lazy" class="lazy img-fluid b-15 mb-3"
                   alt="Code example" src="assets/img/redstone-symbols-example.gif" rel="noreferrer noopener" width="600" alt="" /></div>
             </div>
           </div>
@@ -184,7 +184,7 @@
             <p class="mb-3">Configure a proxy pointing to your smart contract.</p>
           </div>
           <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
-            <pre class="prettyprint"><br/>  const Proxy = await ethers.getContractFactory("Redstone proxy");
+            <pre class="prettyprint b-15"><br/>  const Proxy = await ethers.getContractFactory("Redstone proxy");
   const defiProtocol = await DefiProtocol.attach("0x....");
   const priceFeed = await PriceFeed.attach("0x....");
 
@@ -203,7 +203,7 @@
             <p class="mb-3">Seamlessly connect to your front-end using a web3 contract wrapper.</p>
           </div>
           <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
-            <pre class="prettyprint"><br/>  const priceFeedApi = require('redstone-api'); 
+            <pre class="prettyprint b-15"><br/>  const priceFeedApi = require('redstone-api'); 
   const defiProtocol = await DefiProtocol.attach("0x....");
 
   //Wrap web3 smart contract
@@ -221,7 +221,7 @@
             </p>
           </div>
           <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
-            <pre class="prettyprint"><br/>  function executeAction(...) external {
+            <pre class="prettyprint b-15"><br/>  function executeAction(...) external {
         uint256 latestETHPrice = priceFeed.getPrice("ETH");
 
         //Now you can use the price in your code

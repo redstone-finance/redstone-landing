@@ -391,12 +391,18 @@ var navbarInit = function navbarInit() {
 };
 
 function fetchData() {
+  var preloader = '<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>';
+  var sourcesNumberElement = document.getElementById('sources-number');
+  var tokensNumberElement = document.getElementById('tokens-number');
+  var dataPointsElement = document.getElementById('data-points-number');
+  sourcesNumberElement.innerHTML = preloader;
+  tokensNumberElement.innerHTML = preloader;
+  dataPointsElement.innerHTML = preloader;
   fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/sources.json').then(function (response) {
     return response.json();
   }).then(function (data) {
     console.log('Sources:', Object.keys(data).length);
-    var element = document.getElementById('sources-number');
-    element.innerHTML = Object.keys(data).length;
+    sourcesNumberElement.innerHTML = Object.keys(data).length;
   });
   Promise.all([fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/all-supported-tokens.json').then(function (r) {
     return r.json();
@@ -407,8 +413,8 @@ function fetchData() {
     resp.forEach(function (set) {
       tokensNumber += Object.keys(set.tokens).length;
     });
-    var element = document.getElementById('tokens-number');
-    element.innerHTML = tokensNumber;
+    console.log(tokensNumber);
+    tokensNumberElement.innerHTML = tokensNumber;
   });
   var milisecondInterval = 10;
   var pointsPerDisplayInterval = 0;
@@ -533,8 +539,6 @@ docReady(fetchData);
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
-window.lazyLoadOptions = {// Your custom settings go here
-};
 var videoElem = document.getElementById('redstone-video');
 
 if (videoElem) {

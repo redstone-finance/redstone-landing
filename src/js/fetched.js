@@ -2,12 +2,21 @@ import animateDataPoints from "./animate";
 
 function fetchData() { 
 
+    const preloader = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`;
+
+    const sourcesNumberElement = document.getElementById("sources-number");
+    const tokensNumberElement = document.getElementById("tokens-number");
+    const dataPointsElement = document.getElementById("data-points-number");
+
+    sourcesNumberElement.innerHTML = preloader;
+    tokensNumberElement.innerHTML = preloader;
+    dataPointsElement.innerHTML = preloader;
+
     fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/sources.json')
         .then(response => response.json())
         .then(data => { 
             console.log('Sources:',Object.keys(data).length);
-            const element = document.getElementById("sources-number");
-            element.innerHTML = Object.keys(data).length;
+            sourcesNumberElement.innerHTML = Object.keys(data).length;
         });
 
     Promise.all([
@@ -23,9 +32,8 @@ function fetchData() {
             resp.forEach(set => {
                 tokensNumber += Object.keys(set.tokens).length;
             })
-
-            const element = document.getElementById("tokens-number");
-            element.innerHTML = tokensNumber;
+            console.log(tokensNumber)
+            tokensNumberElement.innerHTML = tokensNumber;
         }
     );
     

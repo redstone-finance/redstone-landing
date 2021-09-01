@@ -14,10 +14,6 @@ docReady(fetchData);
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
-
-  window.lazyLoadOptions = {
-    // Your custom settings go here
-  };
   
   var videoElem = document.getElementById("redstone-video");
 
