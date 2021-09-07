@@ -404,7 +404,7 @@ function fetchData() {
     console.log('Sources:', Object.keys(data).length);
     sourcesNumberElement.innerHTML = Object.keys(data).length;
   });
-  Promise.all([fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/all-supported-tokens.json').then(function (r) {
+  Promise.all([fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/main.json').then(function (r) {
     return r.json();
   }), fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json').then(function (r) {
     return r.json();

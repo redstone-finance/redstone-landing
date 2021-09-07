@@ -20,7 +20,7 @@ function fetchData() {
         });
 
     Promise.all([
-        fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/all-supported-tokens.json')
+        fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/main.json')
             .then(r => r.json()),
         fetch('https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json')
             .then(r => r.json()),
