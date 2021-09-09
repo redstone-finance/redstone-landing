@@ -18427,8 +18427,8 @@ label {
   background-color: #EBEBED;
 }
 
-.cc-revoke, .cc-window {
-  font-family: "Poppins";
+.cc-banner {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
 .cc-theme-classic .cc-btn {

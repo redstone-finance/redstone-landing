@@ -103,8 +103,8 @@
     }
 } 
 
-.cc-revoke, .cc-window {
-    font-family: "Poppins";
+.cc-banner {
+    font-family: $font-family-base !important; 
 }
 
 .cc-theme-classic .cc-btn {
