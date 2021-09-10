@@ -475,7 +475,7 @@ if (document.getElementById('members')) {
     img: 'assets/img/team/jakub.png',
     email: 'jakub@redstone.finance',
     linkedin: 'https://www.linkedin.com/in/jakub-wojciechowski-5901b68/',
-    bio: ''
+    bio: 'Software engineer with 10 years experience in FinTech, including 4 years in blockchain; CTO of <a href="https://twitter.com/alice_si_" target="_blank">Alice</a>, blockchain impact investment platform. Leading Etheroscope project - Ethereum analytics platform funded by UK Gov. Winner of ethLondon, NYBW, ethOnline hackathons.'
   }, {
     name: 'Marcin',
     role: 'Head of Growth',
@@ -510,7 +510,7 @@ if (document.getElementById('members')) {
   members.forEach(function (member, index) {
     var card = document.createElement('div');
     card.classList.add('member-card', 'col-12', 'col-md-3', 'col-lg-2', 'mb-4');
-    card.innerHTML += "\n            <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n            <div class=\"member-info fw-medium\">\n                <div class=\"member-name\">").concat(member.name, "</div>\n                <div class=\"member-role\">").concat(member.role, "</div>\n                <div class=\"member-social\">\n                    <a href=\"mailto:").concat(member.email, "\">\n                        <img src=\"assets/img/icons/mail.svg\">\n                    </a>\n                    <a href=\"").concat(member.linkedin, "\" target=\"_blank\">\n                        <img src=\"assets/img/icons/linkedin.svg\">\n                    </a>\n                </div>\n            </div>");
+    card.innerHTML += "\n            <div class=\"member-picture-wrapper\">\n                <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n            </div>\n            <div class=\"member-info fw-medium\">\n                <div class=\"member-name\">").concat(member.name, "</div>\n                <div class=\"member-role\">").concat(member.role, "</div>\n                <div class=\"member-social\">\n                    <a href=\"mailto:").concat(member.email, "\">\n                        <img src=\"assets/img/icons/mail.svg\">\n                    </a>\n                    <a href=\"").concat(member.linkedin, "\" target=\"_blank\">\n                        <img src=\"assets/img/icons/linkedin.svg\">\n                    </a>\n                </div>\n            </div>");
     element.appendChild(card);
     var memberBio = document.createElement('div');
     memberBio.innerHTML = member.bio;

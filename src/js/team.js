@@ -11,7 +11,7 @@ if (document.getElementById("members")) {
             img: "assets/img/team/jakub.png",
             email: "jakub@redstone.finance",
             linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/",
-            bio: ""
+            bio: 'Software engineer with 10 years experience in FinTech, including 4 years in blockchain; CTO of <a href="https://twitter.com/alice_si_" target="_blank">Alice</a>, blockchain impact investment platform. Leading Etheroscope project - Ethereum analytics platform funded by UK Gov. Winner of ethLondon, NYBW, ethOnline hackathons.'
         },
         {
             name: "Marcin",
@@ -55,7 +55,9 @@ if (document.getElementById("members")) {
         card.classList.add("member-card","col-12","col-md-3","col-lg-2", "mb-4");
     
         card.innerHTML += `
-            <img class="member-picture" src="` + member.img + `"/>
+            <div class="member-picture-wrapper">
+                <img class="member-picture" src="` + member.img + `"/>
+            </div>
             <div class="member-info fw-medium">
                 <div class="member-name">` + member.name + `</div>
                 <div class="member-role">` +  member.role + `</div>

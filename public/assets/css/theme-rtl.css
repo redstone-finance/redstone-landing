@@ -18443,7 +18443,7 @@ label {
 
 .container.team .member-card {
   overflow: hidden;
-  max-height: 200px;
+  max-height: 190px;
   max-width: 200px;
   border-radius: 8px;
   padding-right: 0;
@@ -18488,9 +18488,20 @@ label {
   transform: translateY(-88px);
 }
 
+.container.team .member-card .member-picture-wrapper {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+}
+
 .container.team .member-card .member-picture {
   max-height: inherit;
   max-width: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 
 .container.team .member-card .member-name, .container.team .member-card .member-role {
