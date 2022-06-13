@@ -19,6 +19,14 @@
     }
 }
 
+.carousel-control-prev { 
+    left: -65px !important; 
+}
+
+.carousel-control-next { 
+    right: -65px !important; 
+}
+
 .b-15 {
     border-radius: 15px;
 }

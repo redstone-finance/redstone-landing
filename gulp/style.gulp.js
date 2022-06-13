@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const rtlcss = require('gulp-rtlcss');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
@@ -31,9 +31,7 @@ gulp.task('style', () => {
     .pipe(sass(getOption('compressed')).on('error', sass.logError))
     .pipe(autoprefixer({ cascade: false }));
 
-  const ltrCompressedStream = compressedStream
-    .pipe(clone())
-    .pipe(rename({ suffix: '.min' }));
+  const ltrCompressedStream = compressedStream.pipe(clone()).pipe(rename({ suffix: '.min' }));
 
   const rtlExpandedStream = expandedStream
     .pipe(clone())
@@ -45,12 +43,7 @@ gulp.task('style', () => {
     .pipe(gulpIf(paths.rtl, rtlcss()))
     .pipe(gulpIf(paths.rtl, rename({ suffix: '-rtl.min' })));
 
-  return merge(
-    expandedStream,
-    ltrCompressedStream,
-    rtlExpandedStream,
-    rtlCompressedStream
-  )
+  return merge(expandedStream, ltrCompressedStream, rtlExpandedStream, rtlCompressedStream)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${baseDir}/${paths.style.dest}`))
     .pipe(browserSync.stream());

@@ -2,8 +2,8 @@
   "bootstrap": {
     "src": ["dist/js/bootstrap.min.js", "dist/js/bootstrap.min.js.map"],
     "dest": "bootstrap"
-  },  
- 
+  },
+
   "@fortawesome/fontawesome-free": {
     "src": "js/all.min.js",
     "dest": "fontawesome"
@@ -22,10 +22,5 @@
   "@lottiefiles/lottie-player": {
     "src": "dist/lottie-player.js",
     "dest": "@lottiefiles"
-  },
-
-  "vanilla-lazyload": {
-    "src": "dist/lazyload.min.js",
-    "dest": "vanilla-lazyload"
   }
 }
