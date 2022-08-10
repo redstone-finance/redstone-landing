@@ -7,7 +7,7 @@ const uglify = require("gulp-uglify");
 const replace = require("gulp-replace");
 const concat = require("gulp-concat");
 const clone = require("gulp-clone");
-const include = require('gulp-file-include');
+const include = require("gulp-file-include");
 const merge = require("merge-stream");
 const webpackStream = require("webpack-stream");
 
@@ -71,14 +71,17 @@ gulp.task("script", () => {
 /* -------------------------------------------------------------------------- */
 /*                       Including html files                                 */
 /* -------------------------------------------------------------------------- */
-gulp.task('html', () => {
-  return gulp.src(['./src/html/**/*.html'])
-    .pipe(include({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest('./public'))
+gulp.task("html", () => {
+  return gulp
+    .src(["./src/html/**/*.html"])
+    .pipe(
+      include({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(gulp.dest("./public"))
     .on("end", () => {
       reload();
-    });;
+    });
 });

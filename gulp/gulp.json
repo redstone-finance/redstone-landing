@@ -20,10 +20,7 @@
     "dest": "assets/js"
   },
   "html": {
-    "src": [
-        "src/html/*.html",
-        "src/html/**/*.html"
-    ],
+    "src": ["src/html/*.html", "src/html/**/*.html"],
     "dest": "./"
   },
   "watch": ["assets/img", "assets/video", "assets/fonts", "vendors"]

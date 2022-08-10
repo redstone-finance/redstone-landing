@@ -1,27 +1,27 @@
-const gulp = require('gulp');
-const del = require('del');
+const gulp = require("gulp");
+const del = require("del");
 
 const {
   dependencies,
   vendors,
   baseDir,
   isIterableArray,
-} = require('./utils.js');
+} = require("./utils.js");
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 |  Vendor
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 // Move vendor css and js files from node_modules to public folder
 
-gulp.task('vendor:temp', () => {
+gulp.task("vendor:temp", () => {
   const modules = Object.keys(dependencies).map((key) => `${key}/**/*`);
 
   return gulp
-    .src(modules, { cwd: 'node_modules', base: './node_modules' })
-    .pipe(gulp.dest('temp'));
+    .src(modules, { cwd: "node_modules", base: "./node_modules" })
+    .pipe(gulp.dest("temp"));
 });
 
-gulp.task('vendor:move', () => {
+gulp.task("vendor:move", () => {
   const promises = [];
   const addToPromises = (src, dest) =>
     promises.push(
@@ -29,7 +29,7 @@ gulp.task('vendor:move', () => {
         gulp
           .src(src)
           .pipe(gulp.dest(dest))
-          .on('end', (err) => {
+          .on("end", (err) => {
             if (err) {
               console.log(err);
               reject(err);
@@ -43,7 +43,7 @@ gulp.task('vendor:move', () => {
   Object.keys(vendors).forEach((vendor) => {
     const { src, dest } = vendors[vendor];
 
-    if (typeof src === 'object') {
+    if (typeof src === "object") {
       if (isIterableArray(src)) {
         src.forEach((file) => {
           addToPromises(
@@ -80,13 +80,13 @@ gulp.task('vendor:move', () => {
   return Promise.all(promises);
 });
 
-gulp.task('vendor:clean', () => {
+gulp.task("vendor:clean", () => {
   const directories = Object.keys(vendors).map(
     (vendor) => `${baseDir}/vendors/${vendors[vendor].dest}`
   );
-  const targetedDirectories = [...directories, 'temp'];
+  const targetedDirectories = [...directories, "temp"];
 
   return del(targetedDirectories);
 });
 
-gulp.task('vendor', gulp.series('vendor:clean', 'vendor:move'));
+gulp.task("vendor", gulp.series("vendor:clean", "vendor:move"));

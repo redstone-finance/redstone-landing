@@ -11,7 +11,7 @@ gulp.task("watch", () => {
     // proxy: '127.0.0.1:8010',
     port: 3000,
     open: true, // or "local"
-    notify: false
+    notify: false,
   });
 
   const updating = (done) => {
