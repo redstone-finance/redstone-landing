@@ -102,58 +102,146 @@
         <!--li.nav-item(data-anchor)-->
         <!--  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home-->
         
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2" data-anchor="data-anchor">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
             href="#features"
             >Features</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2" data-anchor="data-anchor">
+          <a
+            class="nav-link fw-medium text-end text-lg-center text-primary"
+            href="#features"
+            >Cross-chain</a
+          >
+        </li>
+        <li class="nav-item navbar-center mx-lg-2" data-anchor="data-anchor">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
             href="#api"
-            >Accessing Data</a
+            >Developers</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#faq"
-            >FAQ</a
+            href="https://redstone.finance/careers/"
+            target="_blank"
+            >Careers</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#project"
-            >About</a
-          >
-        </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
-          <a
-            class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#partners"
-            >Partners</a
-          >
-        </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
-          <a
-            class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#contact"
+            href="/contact.html"
             >Contact</a
           >
         </li>
+        <div class="dropdown navbar-dropdown nav-item navbar-center mx-lg-2">
+          <div
+            class="nav-link fw-medium text-end text-lg-center text-primary"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            About
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://blog.redstone.finance/"
+                target="_blank"
+                >Blog</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="/team.html">Team</a></li>
+          </ul>
+        </div>
+        <div class="navbar-mobile-about">
+          <li class="nav-item navbar-center mx-lg-2">
+            <a
+              class="nav-link fw-medium text-end text-lg-center text-primary"
+              href="https://blog.redstone.finance/"
+              target="_blank"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item navbar-center mx-lg-2">
+            <a
+              class="nav-link fw-medium text-end text-lg-center text-primary"
+              href="/team.html"
+            >
+              Team
+            </a>
+          </li>
+        </div>
+        <div class="navbar-socials">
+          <li class="nav-item mx-lg-2">
+            <a
+              href="https://twitter.com/redstone_defi"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/twitter.svg"
+                class="navbar-image"
+                alt="Twitter icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              href="https://discord.com/invite/PVxBZKFr46"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/discord.svg"
+                class="navbar-image"
+                alt="Discord icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              href="https://github.com/redstone-finance"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/github.svg"
+                class="navbar-image"
+                alt="Github icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              href="https://www.linkedin.com/company/75012238/admin/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/linkedin.svg"
+                class="navbar-image"
+                alt="Github icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a href="mailto:hello@redstone.finance" target="_blank">
+              <img
+                src="/assets/img/icons/mail.svg"
+                class="navbar-image"
+                alt="Mail icon"
+              />
+            </a>
+          </li>
+        </div>
         
       </ul>
-      <form class="ps-lg-5 text-end text-lg-center mt-3 mt-lg-0">
-        <a
-          class="button btn btn-lg btn-danger rounded-pill order-0"
-          href="https://app.redstone.finance"
-          target="_blank"
-          >See our data</a
-        >
-      </form>
     </div>
   </div>
 </nav>
@@ -168,13 +256,13 @@
                 <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
                 <!--  img.*src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
                 <div class="h1 mt-4 mb-2 display-3 fw-bold lh-sm mt-lg-0">
-                  Powering DeFi<br class="d-block d-lg-none d-xl-block" />with
-                  real-world data
+                  Integrate once<br class="d-block d-lg-none d-xl-block" />
+                  use on any chain
                 </div>
                 <p class="my-3 my-md-4 fs-1">
-                  Highly customizable DeFi data streams
+                  RedStone delivers frequently updated, reliable and
                   <br class="d-none d-lg-block" />
-                  delivered quickly, reliably and cost-efficiently.
+                  diverse data for your dApp and smart contracts.
                 </p>
                 <a
                   class="btn btn-lg btn-danger rounded-pill"
@@ -182,8 +270,13 @@
                   target="_blank"
                   role="button"
                   >See our data</a
-                ><a class="btn btn-link ps-md-4" href="#api" role="button">
-                  Learn how to integrate
+                ><a
+                  class="btn btn-lg btn-outline-danger ms-lg-4 rounded-pill"
+                  href="https://docs.redstone.finance/"
+                  target="_blank"
+                  role="button"
+                >
+                  Start Building
                 </a>
               </div>
               <div class="col-md-5 text-center text-md-end">
@@ -266,8 +359,8 @@
                 />
                 <div class="h5 fw-bold">Fast</div>
                 <p class="mb-md-0">
-                  Stop waiting 10+ minutes for updates. Your contracts access
-                  data in seconds.
+                  Stop waiting minutes for updates. RedStone delivers data in
+                  seconds
                 </p>
               </div>
             </div>
@@ -283,8 +376,8 @@
                 />
                 <div class="h5 fw-bold">Cost-efficient</div>
                 <p class="mb-md-0">
-                  &quot;Flash storage&quot; reduces gas costs thanks to meta
-                  transactions and proxy contracts.
+                  EVM-connector reduces gas costs thanks to meta transactions
+                  and call-data utilisation
                 </p>
               </div>
             </div>
@@ -318,7 +411,12 @@
                 <div class="h5 fw-bold">Accountable</div>
                 <p class="mb-md-0">
                   Each data provider's track record is permanently available on
-                  Arweave.
+                  <a
+                    href="https://www.arweave.org/"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    >Arweave</a
+                  >.
                 </p>
               </div>
             </div>
@@ -359,6 +457,43 @@
           </div>
         </div>
         <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-4 py-lg-6" id="cross-chain">
+        <div class="container">
+          <div class="tabs-buttons">
+            <button
+              class="tab-button h5 fw-bold"
+              style="border-bottom: 1px solid #fd627a"
+              onclick="openTab(event, 'chains')"
+            >
+              Chains
+            </button>
+            <button
+              class="tab-button h5 fw-bold"
+              onclick="openTab(event, 'trusted-by')"
+            >
+              Trusted by
+            </button>
+            <button
+              class="tab-button h5 fw-bold"
+              onclick="openTab(event, 'data-sources')"
+            >
+              Data sources
+            </button>
+          </div>
+          <div id="chains" class="tab-content"></div>
+          <div id="trusted-by" class="tab-content" style="display: none"></div>
+          <div
+            id="data-sources"
+            class="tab-content"
+            style="display: none"
+          ></div>
+        </div>
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
@@ -514,7 +649,39 @@
         </div>
         <!-- end of .container-->
       </section>
-
+      <section id="project">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
+              <div class="h6 fw-bold fs-4 display-3 lh-sm">
+                Made by Web3 builders for Web3 builders
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-5 order-md-0 text-center text-md-start">
+              <img
+                loading="lazy"
+                class="lazy img-fluid mb-4"
+                src="assets/img/illustrations/builders.png"
+                width="550"
+                alt="Picture with builders"
+              />
+            </div>
+            <div class="col-md-6 text-center text-md-start offset-md-1">
+              <p class="my-4 pe-xl-5">
+                Our team won dozens of hackathon prizes. But many of our
+                projects never made it into production because we couldn't find
+                oracles that were fast, cheap or reliable enough. But now, we
+                take care of that and you can simply use
+                <a href="http://docs.redstone.finance/" target="_blank">
+                  RedStone </a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="faq" n><div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6 text-center mb-3">
@@ -537,7 +704,7 @@
               aria-controls="collapse1"
             >
               <span class="mb-0 fw-bold text-start fs-1 text-1000"
-                >Which blockchain do you use?</span
+                >On which blockchains I can integrate RedStone data feeds?</span
               >
             </button>
           </div>
@@ -548,12 +715,11 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body bg-100">
-              RedStone is a cross-chain solution that takes the best from
-              different chains. We utilize the permanent and affordable storage
-              of the Arweave chain to keep our data and track the providers'
-              reputation. We also support all the EVM-compatible chains such as
-              Ethereum, Avalanche or Polygon, where most of the DeFi activity
-              happens.
+              RedStone supports any chain such as Ethereum, Avalanche or
+              Polygon, where all the Web3 & DeFi activity happens, as well as
+              their testnets. We also utilize the permanent and affordable
+              storage of the Arweave chain to keep our data and track the
+              providers' reputations.
             </div>
           </div>
         </div>
@@ -568,8 +734,8 @@
               aria-controls="collapse2"
             >
               <span class="mb-0 fw-bold text-start fs-1 text-1000"
-                >Where do you take the data from?</span
-              >
+                >How to connect RedStone data to my smart contract?
+              </span>
             </button>
           </div>
           <div
@@ -579,10 +745,17 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body bg-100">
-              We support any public and private data API. There are dedicated
-              plugins available for the most popular aggregators, off-chain
-              exchanges and DEXes. It is also possible to directly connect your
-              internal data source.
+              We designed the system to work exactly like other popular on-chain
+              oracles. You just need to update the address of an oracle
+              contract. Reach out to us on our
+              <a
+                href="https://discord.com/invite/PVxBZKFr46"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                >Discord</a
+              >
+              or via the Contact form below and we will work with you to
+              implement and test the updates.
             </div>
           </div>
         </div>
@@ -597,7 +770,7 @@
               aria-controls="collapse3"
             >
               <span class="mb-0 fw-bold text-start fs-1 text-1000"
-                >How does the data guarantee work?</span
+                >How much does using RedStone cost?</span
               >
             </button>
           </div>
@@ -608,9 +781,11 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body bg-100">
-              Users can claim a refund if providers fail to return correct data.
-              Disputes are resolved by decentralized juries using token-based
-              voting.
+              The pricing model is published in each Data Provider’s manifest
+              making the RedStone ecosystem a naturally competitive market. No
+              more overpaying for data feeds - get low latency data at minimal
+              cost and pay just for what you need. <br />
+              Welcome to the next generation of oracles!
             </div>
           </div>
         </div>
@@ -625,7 +800,7 @@
               aria-controls="collapse4"
             >
               <span class="mb-0 fw-bold text-start fs-1 text-1000"
-                >How can I become a data provider?</span
+                >Where do you take the data from?</span
               >
             </button>
           </div>
@@ -636,12 +811,10 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body bg-100">
-              To become a data provider, you need to publish a manifest
-              specifying which data and on which terms you are going to publish.
-              There is also a need to stake tokens as collateral for data
-              quality and maintain a dedicated node. We provide tools to host
-              and monitor data nodes and we will assist you through this
-              process.
+              We support any public and private data API. There are dedicated
+              plugins available for the most popular aggregators, off-chain
+              exchanges and DEXes. It is also possible to directly connect your
+              internal data source.
             </div>
           </div>
         </div>
@@ -656,7 +829,7 @@
               aria-controls="collapse5"
             >
               <span class="mb-0 fw-bold text-start fs-1 text-1000"
-                >How to connect RedStone data to my smart contract?</span
+                >How does data guarantee work?</span
               >
             </button>
           </div>
@@ -667,10 +840,82 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body bg-100">
-              We designed the system to work exactly like other popular on-chain
-              oracles. You just need to update the address of an oracle
-              contract. Reach out to us and we will work with you to implement
-              and test the updates.
+              Users can claim a refund if a provider fails to return the correct
+              data. Disputes are resolved by decentralized juries using voting
+              based on the RedStone tokens
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2">
+          <div class="h2 accordion-header" id="heading6">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse6"
+              aria-expanded="true"
+              aria-controls="collapse6"
+            >
+              <span class="mb-0 fw-bold text-start fs-1 text-1000"
+                >How can I get RedStone tokens?</span
+              >
+            </button>
+          </div>
+          <div
+            class="accordion-collapse collapse"
+            id="collapse6"
+            aria-labelledby="heading6"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body bg-100">
+              We will release RedStone tokens for Early Adopters of our data and
+              Data Providers by distributing grants and stipends. To stay
+              updated about the token and timeline for launch on exchanges
+              <a href="#project">subscribe as an enthusiast</a>, follow us on
+              <a
+                href="https://twitter.com/redstone_defi"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                >Twitter</a
+              >
+              and join our
+              <a
+                href="https://discord.com/invite/PVxBZKFr46"
+                target="_blank"
+                referrerpolicy="no-referrer"
+                >Discord</a
+              >.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2">
+          <div class="h2 accordion-header" id="heading7">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse7"
+              aria-expanded="true"
+              aria-controls="collapse7"
+            >
+              <span class="mb-0 fw-bold text-start fs-1 text-1000"
+                >How can I become a data provider?
+              </span>
+            </button>
+          </div>
+          <div
+            class="accordion-collapse collapse"
+            id="collapse7"
+            aria-labelledby="heading7"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body bg-100">
+              To become a data provider, you need to publish a manifest
+              specifying which data and on which terms you are going to publish.
+              There is also a need to stake RedStone tokens as collateral for
+              data quality and maintain a dedicated node. We provide tools to
+              host and monitor data nodes and we will assist you through this
+              process.
             </div>
           </div>
         </div>
@@ -679,45 +924,6 @@
   </div>
 </div>
 </section>
-
-      <section id="project">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
-              <div class="h6 fw-bold fs-4 display-3 lh-sm">
-                Made by DeFi builders for DeFi builders
-              </div>
-            </div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-md-5 order-md-0 text-center text-md-start">
-              <img
-                loading="lazy"
-                class="lazy img-fluid mb-4"
-                src="assets/img/illustrations/builders.png"
-                width="550"
-                alt="Picture with builders"
-              />
-            </div>
-            <div class="col-md-6 text-center text-md-start offset-md-1">
-              <p class="my-4 pe-xl-5">
-                Our team has won dozens of hackathon prizes. But many of our
-                projects never made it into production because we couldn't find
-                oracles that were fast, cheap or reliable enough.
-              </p>
-              <p class="my-4 pe-xl-5">
-                So we decided to solve this structural problem by building our
-                own oracle system that is open, flexible, efficient and easy to
-                use by other developers.
-              </p>
-              <p class="my-4 pe-xl-5">
-                Want to now more about the team behind the project? Check our
-                <a href="/about.html">About us</a> page.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
@@ -933,15 +1139,15 @@
         class="footer-links d-flex flex-wrap justify-content-center mb-3 mb-md-0"
       >
         <div class="text-white" style="margin-right: 0.5rem">
-          &copy; RedStone 2021
+          &copy; RedStone 2022
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">
-          <a class="text-white" href="./contact.html">Contact </a>
+          <a class="text-white" href="./contact.html">Contact</a>
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">
-          <a class="text-white" href="./about.html">About us</a>
+          <a class="text-white" href="./team.html">Team</a>
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">

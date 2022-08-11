@@ -1,0 +1,32 @@
+.tabs-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-button {
+  flex: 1;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+.tab-content {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-item {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+  margin-bottom: 2rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
