@@ -476,7 +476,7 @@ if (chainsCrossChainSection) {
       var chainItem = document.createElement("div");
       chainItem.classList.add("tab-item");
       var isNonSquareLogo = ["Boba network", "RSK"].includes(chain.name);
-      chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, "\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
+      chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, " Logo\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
       element.appendChild(chainItem);
     });
   }
@@ -553,6 +553,99 @@ var openTab = function openTab(event, tabName) {
   document.getElementById(tabName).style.display = "flex";
   event.currentTarget.style["border-bottom"] = "1px solid #FD627A";
 };
+
+var partners = [{
+  name: "Lemniscap",
+  url: "https://lemniscap.com/",
+  image: "assets/img/partners/lemniscap.png"
+}, {
+  name: "Blockchain Capital",
+  url: "https://blockchain.capital/",
+  image: "assets/img/partners/blockchain-capital.png"
+}, {
+  name: "Coinbase Ventures",
+  url: "https://www.coinbase.com/ventures",
+  image: "assets/img/partners/coinbase-ventures.png"
+}, {
+  name: "Maven11",
+  url: "https://www.maven11.com/",
+  image: "assets/img/partners/maven11.jpeg"
+}, {
+  name: "Distributed Global",
+  url: "http://www.distributedglobal.com/",
+  image: "assets/img/partners/distributed-global.png"
+}, {
+  name: "Arweave",
+  url: "assets/img/partners/arweave.png",
+  image: "assets/img/partners/arweave.png"
+}, {
+  name: "Lattice",
+  url: "https://lattice.com/",
+  image: "assets/img/partners/lattice.png"
+}, {
+  name: "SevenX",
+  url: "https://7xvc.com/",
+  image: "assets/img/partners/seven-x.png"
+}, {
+  name: "KR1",
+  url: "https://www.kryptonite1.co/",
+  image: "assets/img/partners/kr1.jpg"
+}, {
+  name: "BeringWaters",
+  url: "https://beringwaters.com/",
+  image: "assets/img/partners/beringwaters.png"
+}, {
+  name: "1KX",
+  url: "https://twitter.com/1kxnetwork",
+  image: "assets/img/partners/1kx.jpeg"
+}, {
+  name: "Collider Ventures",
+  url: "https://www.collider.vc/",
+  image: "assets/img/partners/collider.png"
+}, {
+  name: "Folius Ventures",
+  url: "https://www.folius.ventures/",
+  image: "assets/img/partners/folius-ventures.png"
+}, {
+  name: "TRGC",
+  url: "https://trgc.io/",
+  image: "assets/img/partners/trgc.svg"
+}, {
+  name: "Permanent Ventures",
+  url: "https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs",
+  image: "assets/img/partners/permanent-ventures.png"
+}, {
+  name: "4SV",
+  url: "https://www.4sv.io/",
+  image: "assets/img/partners/4sv.png"
+}, {
+  name: "Numeus",
+  url: "https://numeus.xyz/",
+  image: "assets/img/partners/numeus.png"
+}, {
+  name: "The Graph",
+  url: "https://thegraph.com/",
+  image: "assets/img/partners/graph.png"
+}, {
+  name: "Compute Ventures",
+  url: "https://compute.ventures/",
+  image: "assets/img/partners/compute-ventures.svg"
+}];
+var partnerCrossChainSection = document.getElementById("partners");
+
+if (partnerCrossChainSection) {
+  var _element = document.getElementById("backed-by");
+
+  if (_element.childNodes.length === 0) {
+    partners.forEach(function (partner) {
+      var partnerItem = document.createElement("div");
+      partnerItem.classList.add("partner-item");
+      partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            loading=\"lazy\"\n            class=\"lazy\"\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n          />\n        </a>\n      ");
+
+      _element.appendChild(partnerItem);
+    });
+  }
+}
 /* -------------------------------------------------------------------------- */
 
 /*                                Scroll To Top                               */
@@ -621,7 +714,7 @@ if (document.getElementById("members")) {
     bio: "New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href=\"https://wutracing.pl/\" target=\"_blank\">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!"
   }];
 
-  var _element = document.getElementById("members");
+  var _element2 = document.getElementById("members");
 
   var bio = document.getElementById("member-bio");
   members.forEach(function (member, index) {
@@ -629,7 +722,7 @@ if (document.getElementById("members")) {
     card.classList.add("member-card", "col-12", "col-md-3", "col-lg-2", "mb-4");
     card.innerHTML += "\n            <div class=\"member-picture-wrapper\">\n                <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n            </div>\n            <div class=\"member-info fw-medium\">\n                <div class=\"member-name\">").concat(member.name, "</div>\n                <div class=\"member-role\">").concat(member.role, "</div>\n                <div class=\"member-social\">\n                    <a href=\"mailto:").concat(member.email, "\">\n                        <img src=\"assets/img/icons/mail.svg\">\n                    </a>\n                    <a href=\"").concat(member.linkedin, "\" target=\"_blank\">\n                        <img src=\"assets/img/icons/linkedin.svg\">\n                    </a>\n                </div>\n            </div>");
 
-    _element.appendChild(card);
+    _element2.appendChild(card);
 
     var memberBio = document.createElement("div");
     memberBio.innerHTML = member.bio;
@@ -647,7 +740,7 @@ if (document.getElementById("members")) {
     } else {
       memberBio.classList.add("text-center", "mt-2", "mb-4");
 
-      _element.appendChild(memberBio);
+      _element2.appendChild(memberBio);
     }
   });
 }
@@ -680,16 +773,16 @@ var projects = [{
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 
 if (trustedByCrossChainSection) {
-  var _element2 = document.getElementById("trusted-by");
+  var _element3 = document.getElementById("trusted-by");
 
-  if (_element2.childNodes.length === 0) {
+  if (_element3.childNodes.length === 0) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
       var isNonSquareLogo = ["Boba network", "RSK"].includes(project.name);
-      projectItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(project.image, "\"\n          alt=\"").concat(project.name, "\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n      ");
+      projectItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(project.image, "\"\n          alt=\"").concat(project.name, " Logo\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n      ");
 
-      _element2.appendChild(projectItem);
+      _element3.appendChild(projectItem);
     });
   }
 } // /* -------------------------------------------------------------------------- */

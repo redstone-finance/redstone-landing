@@ -115,7 +115,7 @@ if (chainsCrossChainSection) {
         <img
           loading="lazy"
           src="${chain.image}"
-          alt="${chain.name}"
+          alt="${chain.name} Logo"
           height="60"
           ${isNonSquareLogo ? "height='60'" : "width='60'"}
         />

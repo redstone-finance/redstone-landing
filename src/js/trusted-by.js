@@ -47,7 +47,7 @@ if (trustedByCrossChainSection) {
         <img
           loading="lazy"
           src="${project.image}"
-          alt="${project.name}"
+          alt="${project.name} Logo"
           height="60"
           ${isNonSquareLogo ? "height='60'" : "width='60'"}
         />
