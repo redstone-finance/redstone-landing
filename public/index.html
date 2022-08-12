@@ -465,6 +465,19 @@
       <!-- <section> begin ============================-->
       <section class="py-4 py-lg-6" id="cross-chain">
         <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center mx-auto mb-md-5">
+              <div class="h6 fw-bold fs-4 display-3 lh-sm">
+                RedStone works on multiple chains instantly
+              </div>
+              <div class="col-sm-10 col-lg-6 text-center mx-auto mt-4">
+                <p class="mb-0">
+                  Thanks to our unique approach that avoids putting data into
+                  on-chain storage we are available on any chain out of the box.
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="tabs-buttons">
             <button
               class="tab-button h5 fw-bold"
@@ -503,23 +516,24 @@
       <section class="py-4 py-lg-6" id="developers">
         <div class="container">
           <div class="row mb-12">
-            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5">
+            <div class="col-lg-12 text-center mx-auto">
               <div class="h6 fw-bold fs-4 display-3 lh-sm">
                 Integrate RedStone with a few lines of code
               </div>
             </div>
           </div>
-          <div class="row justify-content-center mb-6">
+          <div class="row justify-content-center mb-4">
             <div
-              class="col-sm-10 col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4"
+              class="col-sm-10 col-lg-8 text-center mx-auto mb-3 mb-md-5 mt-4"
             >
-              <p class="mb-0"></p>
-              We use a radically different way of putting data on EVM chains
-              called EVM-connector. The data is automatically attached to a
-              transaction and erased afterwards thus reducing gas fees. The
-              information is kept in the EVM storage ensuring inter-protocol
-              composability. Thus, all the data is delivered at a minimal
-              latency.
+              <p class="mb-0">
+                We use a radically different way of putting data on EVM chains
+                called EVM-connector. The data is automatically attached to a
+                transaction and erased afterwards thus reducing gas fees. The
+                information is kept in the EVM storage ensuring inter-protocol
+                composability. Thus, all the data is delivered at a minimal
+                latency.
+              </p>
             </div>
           </div>
           <div class="row align-items-center mb-6">
@@ -599,13 +613,36 @@
           </div>
           <div class="row align-items-center">
             <div class="col-md-5 order-md-0 text-center text-md-start">
-              <img
-                loading="lazy"
-                class="lazy img-fluid mb-4"
-                src="assets/img/illustrations/builders.png"
-                width="550"
-                alt="Picture with builders"
-              />
+              <div class="justify-content-center">
+  <form action="https://formsubmit.co/el/catiru" method="POST">
+    <div class="row">
+      <div class="form-group">
+        <label class="control-label" for="email-input">Email address</label>
+        <input
+          id="email-input"
+          type="email"
+          name="email"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group mt-3">
+      <select class="form-select" name="whoAmI" id="whoAmI">
+        <option value="developer" selected>I’m a Developer</option>
+        <option value="enthusiast">I’m a Enthusiast</option>
+        <option value="both">I’m a Both</option>
+      </select>
+    </div>
+    <button
+      class="button btn btn-lg btn-danger rounded-pill mt-3"
+      type="submit"
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+
             </div>
             <div class="col-md-6 text-center text-md-start offset-md-1">
               <p class="my-4 pe-xl-5">
@@ -642,7 +679,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="faq" n><div class="container">
+      <section id="faq"><div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6 text-center mb-3">
       <div class="h6 fw-bold fs-4 display-3 lh-sm mb-3 mt-4">
@@ -886,6 +923,68 @@
 </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="flex flex-between-center">
+              <button class="contact-button">
+                <a
+                  href="https://discord.com/invite/PVxBZKFr46"
+                  target="blank"
+                  referrerpolicy="no-referrer"
+                  style="color: #616368"
+                >
+                  <img
+                    src="/assets/img/icons/discord.svg"
+                    class="contact-button-image mb-2"
+                    alt="Discord icon"
+                  />
+                  <h4 class="mb-0 mb-1">Join Discord</h4>
+                  <p class="mb-0">Talk to other RedStone enthusiasts</p>
+                </a>
+              </button>
+              <button class="contact-button">
+                <a
+                  href="https://twitter.com/redstone_defi"
+                  target="blank"
+                  referrerpolicy="no-referrer"
+                  style="color: #616368"
+                >
+                  <img
+                    src="/assets/img/icons/twitter.svg"
+                    class="contact-button-image mb-2"
+                    alt="Twitter icon"
+                  />
+                  <h4 class="mb-0 mb-1">Follow us on Twitter</h4>
+                  <p class="mb-0">Stay up to date with latest news</p>
+                </a>
+              </button>
+              <button class="contact-button docs">
+                <a
+                  href="https://docs.redstone.finance/"
+                  target="blank"
+                  referrerpolicy="no-referrer"
+                  style="color: #616368"
+                >
+                  <img
+                    src="/assets/img/icons/accountable.svg"
+                    class="contact-button-image mb-2"
+                    alt="Twitter icon"
+                  />
+                  <h4 class="mb-0 mb-1">Read docs</h4>
+                  <p class="mb-0">Learn more about RedStone</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section id="contact">
@@ -895,7 +994,7 @@
               <div class="h6 fw-bold fs-4 display-3 lh-sm mb-5">
                 Want to know more?
               </div>
-              <div class="mt-3">
+              <div class="mb-3">
                 Check our <a href="#faq">FAQ</a>, see our
                 <a href="/team">team page</a> and engage in a discussion on our
                 <a

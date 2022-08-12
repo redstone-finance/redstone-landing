@@ -17463,6 +17463,23 @@ label {
   justify-content: center;
 }
 
+.contact-button {
+  width: 350px;
+  max-height: 165px;
+  outline: none;
+  background: none;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.contact-button-image {
+  -webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
+  width: 36px;
+}
+
 /*-----------------------------------------------
 |   LaslesVPN glow buttons
 -----------------------------------------------*/
