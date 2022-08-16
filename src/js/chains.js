@@ -95,10 +95,6 @@ const chains = [
     name: "Velas",
     image: "assets/img/chains/velas.png",
   },
-  {
-    name: "Ontology",
-    image: "assets/img/chains/ontology.png",
-  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");

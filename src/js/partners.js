@@ -112,8 +112,6 @@ if (partnerCrossChainSection) {
           rel="noreferrer noopener"
         >
           <img
-            loading="lazy"
-            class="lazy"
             src="${partner.image}"
             width="120px"
             alt="${partner.name} Logo"

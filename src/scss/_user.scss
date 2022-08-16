@@ -51,9 +51,17 @@
 }
 
 .first-page {
-    @include media-breakpoint-up(lg) {
-        height: 100vh;
+    height: 100vh;
+    margin-bottom: 5rem;
+}
+
+.first-page-buttons-container {
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
     }
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 }
 
 .stat {

@@ -17412,15 +17412,28 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .partners-container {
+    gap: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
 }
 
 .partner-item {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  max-width: 16.666667%;
-  -ms-flex-preferred-size: 16.666667%;
-  flex-basis: 16.666667%;
+  max-width: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
   margin-bottom: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -17439,6 +17452,13 @@ label {
   -ms-flex-pack: center;
   justify-content: center;
 }
+@media (min-width: 992px) {
+  .partner-item {
+    max-width: 16.666667%;
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+}
 
 .contact-button {
   width: 350px;
@@ -17455,6 +17475,28 @@ label {
   -webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   width: 36px;
+}
+
+.trusted-by-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #616368;
+}
+
+.trusted-by-button:hover, .trusted-by-button:focus, .trusted-by-button:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*-----------------------------------------------
@@ -17864,6 +17906,19 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .tab-content {
+    gap: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
 }
 
 .tab-item {
@@ -17935,9 +17990,27 @@ label {
   font-family: "DM Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@media (min-width: 992px) {
-  .first-page {
-    height: 100vh;
+.first-page {
+  height: 100vh;
+  margin-bottom: 5rem;
+}
+
+.first-page-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .first-page-buttons-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 

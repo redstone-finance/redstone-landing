@@ -462,9 +462,6 @@ var chains = [{
 }, {
   name: "Velas",
   image: "assets/img/chains/velas.png"
-}, {
-  name: "Ontology",
-  image: "assets/img/chains/ontology.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -640,7 +637,7 @@ if (partnerCrossChainSection) {
     partners.forEach(function (partner) {
       var partnerItem = document.createElement("div");
       partnerItem.classList.add("partner-item");
-      partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            loading=\"lazy\"\n            class=\"lazy\"\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n          />\n        </a>\n      ");
+      partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n          />\n        </a>\n      ");
 
       _element.appendChild(partnerItem);
     });
@@ -661,10 +658,6 @@ var scrollToTop = function scrollToTop() {
       e.preventDefault();
       var el = e.target;
       var id = utils.getData(el, "scroll-to") || el.getAttribute("href");
-      console.log(utils.getData(el, "scroll-to"));
-      console.log(el.getAttribute("href"));
-      console.log(id);
-      console.log(utils.getData(el, "offset-top"));
       window.scroll({
         top: (_utils$getData = utils.getData(el, "offset-top")) !== null && _utils$getData !== void 0 ? _utils$getData : utils.getOffset(document.querySelector(id)).top - 100,
         left: 0,
@@ -747,28 +740,36 @@ if (document.getElementById("members")) {
 
 var projects = [{
   name: "DeltaPrime",
-  image: "assets/img/trusted-by/delta-prime.png"
+  image: "assets/img/trusted-by/delta-prime.png",
+  url: "https://deltaprime.io/"
 }, {
   name: "ZKX",
-  image: "assets/img/trusted-by/zkx.png"
+  image: "assets/img/trusted-by/zkx.png",
+  url: "https://zkx.fi/"
 }, {
   name: "Moola Market",
-  image: "assets/img/trusted-by/moola.png"
+  image: "assets/img/trusted-by/moola.png",
+  url: "https://moola.market/"
 }, {
   name: "FujiDAO",
-  image: "assets/img/trusted-by/fuji.png"
+  image: "assets/img/trusted-by/fuji.png",
+  url: "https://www.fujidao.org/"
 }, {
   name: "DLC.link",
-  image: "assets/img/trusted-by/dlc-link.png"
+  image: "assets/img/trusted-by/dlc-link.png",
+  url: "https://www.dlc.link/"
 }, {
   name: "Bundlr Network",
-  image: "assets/img/trusted-by/bundlr.png"
+  image: "assets/img/trusted-by/bundlr.png",
+  url: "https://bundlr.network/"
 }, {
   name: "ArDrive",
-  image: "assets/img/trusted-by/ardrive.png"
+  image: "assets/img/trusted-by/ardrive.png",
+  url: "https://ardrive.io/"
 }, {
   name: "Pinnata",
-  image: "assets/img/trusted-by/pinnata.png"
+  image: "assets/img/trusted-by/pinnata.svg",
+  url: "https://www.pinnata.xyz/earn"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 
@@ -779,8 +780,7 @@ if (trustedByCrossChainSection) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
-      var isNonSquareLogo = ["Boba network", "RSK"].includes(project.name);
-      projectItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(project.image, "\"\n          alt=\"").concat(project.name, " Logo\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n      ");
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
       _element3.appendChild(projectItem);
     });

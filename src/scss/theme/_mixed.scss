@@ -140,16 +140,27 @@
 
 
 .partners-container {
+  @include media-breakpoint-up(lg) {
+    gap: 0;
+    justify-content: flex-start;
+  }
   margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .partner-item {
+  @include media-breakpoint-up(lg) {
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
   flex-grow: 0;
-  max-width: 16.666667%;
-  flex-basis: 16.666667%;
+  max-width: auto;
+  flex-basis: auto;
   margin-bottom: 2rem;
   width: fit-content;
   display: flex;
@@ -172,4 +183,17 @@
 .contact-button-image {
   filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   width: 36px;
+}
+
+.trusted-by-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#616368
+}
+
+.trusted-by-button:hover, .trusted-by-button:focus, .trusted-by-button:active {
+  text-decoration: none;
+  color: inherit;
 }

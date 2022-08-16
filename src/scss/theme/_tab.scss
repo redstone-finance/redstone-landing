@@ -13,10 +13,17 @@
 }
 
 .tab-content {
+  @include media-breakpoint-up(lg) {
+    gap: 0;
+    justify-content: flex-start;
+  }
   margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .tab-item {

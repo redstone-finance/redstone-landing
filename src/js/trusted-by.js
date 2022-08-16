@@ -2,34 +2,42 @@ const projects = [
   {
     name: "DeltaPrime",
     image: "assets/img/trusted-by/delta-prime.png",
+    url: "https://deltaprime.io/",
   },
   {
     name: "ZKX",
     image: "assets/img/trusted-by/zkx.png",
+    url: "https://zkx.fi/",
   },
   {
     name: "Moola Market",
     image: "assets/img/trusted-by/moola.png",
+    url: "https://moola.market/",
   },
   {
     name: "FujiDAO",
     image: "assets/img/trusted-by/fuji.png",
+    url: "https://www.fujidao.org/",
   },
   {
     name: "DLC.link",
     image: "assets/img/trusted-by/dlc-link.png",
+    url: "https://www.dlc.link/",
   },
   {
     name: "Bundlr Network",
     image: "assets/img/trusted-by/bundlr.png",
+    url: "https://bundlr.network/",
   },
   {
     name: "ArDrive",
     image: "assets/img/trusted-by/ardrive.png",
+    url: "https://ardrive.io/",
   },
   {
     name: "Pinnata",
-    image: "assets/img/trusted-by/pinnata.png",
+    image: "assets/img/trusted-by/pinnata.svg",
+    url: "https://www.pinnata.xyz/earn",
   },
 ];
 
@@ -41,17 +49,23 @@ if (trustedByCrossChainSection) {
       const projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
 
-      const isNonSquareLogo = ["Boba network", "RSK"].includes(project.name);
-
       projectItem.innerHTML += `
-        <img
-          loading="lazy"
-          src="${project.image}"
-          alt="${project.name} Logo"
-          height="60"
-          ${isNonSquareLogo ? "height='60'" : "width='60'"}
-        />
-        <p class="mb-0 mt-2">${project.name}</p>
+        <a
+          href="${project.url}"
+          role="button"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="trusted-by-button"
+        >
+          <img
+            loading="lazy"
+            src="${project.image}"
+            alt="${project.name} Logo"
+            height="60"
+            width="60"
+          />
+          <p class="mb-0 mt-2">${project.name}</p>
+        </a>
       `;
       element.appendChild(projectItem);
     });

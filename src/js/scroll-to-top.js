@@ -10,10 +10,6 @@ const scrollToTop = () => {
         e.preventDefault();
         const el = e.target;
         const id = utils.getData(el, "scroll-to") || el.getAttribute("href");
-        console.log(utils.getData(el, "scroll-to"));
-        console.log(el.getAttribute("href"));
-        console.log(id);
-        console.log(utils.getData(el, "offset-top"));
         window.scroll({
           top:
             utils.getData(el, "offset-top") ??
