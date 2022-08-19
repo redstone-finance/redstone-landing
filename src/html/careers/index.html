@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    @@include('../common/head.html')
+  </head>
+  <body>
+    <main>
+      @@include('../common/navbar.html', { "isHome": false })
+      <section class="pt-8 pb-6" id="careers">
+        @@include('../common/careers-introduction.html')
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="slide">
+            <p>
+              RedStone team works as a well-coordinated crowd, with the premise
+              of attracting top-tier talent and creating the best possible
+              conditions to unfold their full potential. Strong ownership and
+              influence on the final product combined with a great dose of
+              flexibility is our go-to formula for the highest effectiveness.
+            </p>
+            <p>Jakub Wojciechowski, Founder and CEO</p>
+          </div>
+
+          <div class="slide">
+            <p>
+              The technical side of RedStone Oracles is truly unique. Novel
+              challenges, pioneer solutions and problems that nobody has ever
+              fully solved before are our bread and butter here. Building on the
+              forefront of innovation in the field of blockchain Oracles is just
+              as gripping as it gets.
+            </p>
+            <p>Alex Suvorov, Lead Developer</p>
+          </div>
+
+          <div class="slide">
+            <p>
+              RedStone team has a broad presence and visibility at global events
+              and it really pays out. We have built an international network of
+              Web3 partners and cooperate closely with founders of some of the
+              most successful protocols worldwide, such as Arweave or Avalanche,
+              together with their world-class teams and top Web3 & DeFi
+              builders.
+            </p>
+            <p>Marcin Kaźmierczak, COO</p>
+          </div>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+      @@include('../common/footer.html') @@include('../common/scripts.html')
+    </main>
+  </body>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</html>

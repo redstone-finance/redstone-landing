@@ -643,6 +643,30 @@ if (partnerCrossChainSection) {
     });
   }
 }
+
+var pictures = [{
+  text: "test 1",
+  image: "assets/img/pictures/6.jpg"
+}, {
+  text: "test 2",
+  image: "assets/img/pictures/7.jpg"
+}, {
+  text: "test 3",
+  image: "assets/img/pictures/8.jpg"
+}, {
+  text: "test 4",
+  image: "assets/img/pictures/9.jpg"
+}];
+var pictureSection = document.getElementById("pictures");
+
+if (pictureSection) {
+  pictures.forEach(function (picture) {
+    var pictureItem = document.createElement("div");
+    pictureItem.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
+    pictureItem.innerHTML += "\n      <img\n        loading=\"lazy\"\n        src=\"".concat(picture.image, "\"\n        alt=\"").concat(picture.text, "\"\n        width=\"100%\"\n      />\n      <p class=\"mb-0 mt-2 text-center\">").concat(picture.text, "</p>\n    ");
+    pictureSection.appendChild(pictureItem);
+  });
+}
 /* -------------------------------------------------------------------------- */
 
 /*                                Scroll To Top                               */
@@ -669,72 +693,64 @@ var scrollToTop = function scrollToTop() {
 };
 
 if (document.getElementById("members")) {
-  var isMobile = isDeviceMobile();
   var members = [{
     name: "Jakub",
     role: "Founder",
     img: "assets/img/team/jakub.png",
-    email: "jakub@redstone.finance",
-    linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/",
-    bio: "Software engineer with 10 years experience in FinTech, including 4 years in blockchain; CTO of <a href=\"https://twitter.com/alice_si_\" target=\"_blank\">Alice</a>, blockchain impact investment platform. Leading Etheroscope project - Ethereum analytics platform funded by UK Gov. Winner of ethLondon, NYBW, ethOnline hackathons."
+    twitter: "https://twitter.com/kuba_eth",
+    linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/"
   }, {
     name: "Marcin",
     role: "Head of Growth",
     img: "assets/img/team/marcin.jpg",
-    email: "marcin@redstone.finance",
-    linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/",
-    bio: "Marcin handles strategic cooperation with DeFi protocols as well as Traditional businesses. Present in the blockchain ecosystem since 2018, his domains are Co-Opetition, Building long-term relationships, Education and \"Growing the Pie\" approach. Any doubt about cooperation options with Redstone? <a href=\"https://www.linkedin.com/in/marcin-kazmierczak1/\" target=\"_blank\">Write to me on LinkedIn!</a> Privately Travelling, Sports and understanding new cultures."
+    twitter: "https://twitter.com/Marcin_Kaz13",
+    linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/"
   }, {
     name: "Alex",
-    role: "Backend",
+    role: "Developer",
     img: "assets/img/team/alex.png",
-    email: "alex@redstone.finance",
-    linkedin: "https://www.linkedin.com/in/alex-suvorov/",
-    bio: "Alex has over four years of experience as a full-stack developer in both startup and corporate environments. He enjoys solving problems and bring new ideas to life. He has developed a game-based <a href=\"https://codenplay.io/\">educational coding platform</a> and many other projects with a variety of technologies and languages."
+    twitter: "https://twitter.com/hatskier_me",
+    linkedin: "https://www.linkedin.com/in/alex-suvorov/"
   }, {
     name: "Piotr",
-    role: "Blockchain",
+    role: "Developer",
     img: "assets/img/team/ppe.jpeg",
-    email: "peter@redstone.finance",
-    linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/",
-    bio: "Piotr considers himself an old guy (we would agree only judging his competency!), with over 15 years of experience in financial and insurance industry (and few startups), working as Software Developer and Technical Team Leader. Now he decided to take active part in the DeFi revolution. Privately father of three, fan of retro video games and drumming."
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
   }, {
-    name: "Piotr",
-    role: "Frontend",
-    img: "assets/img/team/piotr.jpeg",
-    email: "pduda@redstone.finance",
-    linkedin: "https://www.linkedin.com/in/piotr-duda-62b66b63/",
-    bio: "New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href=\"https://wutracing.pl/\" target=\"_blank\">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!"
+    name: "Asia",
+    role: "Developer",
+    img: "assets/img/team/asia.png",
+    twitter: "https://twitter.com/jzi_on_fire",
+    linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/"
+  }, {
+    name: "Cezary",
+    role: "Developer",
+    img: "assets/img/team/cezary.png",
+    twitter: "https://twitter.com/cehalihali",
+    linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/"
+  }, {
+    name: "Matt",
+    role: "Developer",
+    img: "assets/img/team/matt.png",
+    twitter: "https://twitter.com/mattgurbiel",
+    linkedin: "https://pl.linkedin.com/in/mateuszgurbiel"
+  }, {
+    name: "Max",
+    role: "Developer",
+    img: "assets/img/team/max.png",
+    twitter: "https://twitter.com/Max_Levitskiy",
+    linkedin: "https://www.linkedin.com/in/maximlevicky/"
   }];
 
   var _element2 = document.getElementById("members");
 
-  var bio = document.getElementById("member-bio");
-  members.forEach(function (member, index) {
+  members.forEach(function (member) {
     var card = document.createElement("div");
-    card.classList.add("member-card", "col-12", "col-md-3", "col-lg-2", "mb-4");
-    card.innerHTML += "\n            <div class=\"member-picture-wrapper\">\n                <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n            </div>\n            <div class=\"member-info fw-medium\">\n                <div class=\"member-name\">").concat(member.name, "</div>\n                <div class=\"member-role\">").concat(member.role, "</div>\n                <div class=\"member-social\">\n                    <a href=\"mailto:").concat(member.email, "\">\n                        <img src=\"assets/img/icons/mail.svg\">\n                    </a>\n                    <a href=\"").concat(member.linkedin, "\" target=\"_blank\">\n                        <img src=\"assets/img/icons/linkedin.svg\">\n                    </a>\n                </div>\n            </div>");
+    card.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
+    card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n          style=\"").concat(!member.twitter && "display: none", "\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
 
     _element2.appendChild(card);
-
-    var memberBio = document.createElement("div");
-    memberBio.innerHTML = member.bio;
-
-    if (!isMobile) {
-      memberBio.style.display = "none";
-      bio.appendChild(memberBio);
-      card.addEventListener("mouseenter", function () {
-        bio.childNodes.forEach(function (node, i) {
-          if (i > 0) {
-            node.style.display = i === index + 1 ? "block" : "none";
-          }
-        });
-      });
-    } else {
-      memberBio.classList.add("text-center", "mt-2", "mb-4");
-
-      _element2.appendChild(memberBio);
-    }
   });
 }
 
@@ -770,6 +786,18 @@ var projects = [{
   name: "Pinnata",
   image: "assets/img/trusted-by/pinnata.svg",
   url: "https://www.pinnata.xyz/earn"
+}, {
+  name: "EverFinance",
+  image: "assets/img/trusted-by/everfinance.png",
+  url: "https://ever.finance/"
+}, {
+  name: "Brightpool Finance",
+  image: "assets/img/trusted-by/brightpool.png",
+  url: "https://brightpool.finance/"
+}, {
+  name: "Prime Protocol",
+  image: "assets/img/trusted-by/prime-protocol.png",
+  url: "https://www.primeprotocol.xyz/"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 
@@ -780,7 +808,8 @@ if (trustedByCrossChainSection) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
-      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
+      var isBlackBackgroundRequired = project.name === "Prime Protocol";
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired && "background: black; padding: 6px", "\"\n            \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
       _element3.appendChild(projectItem);
     });

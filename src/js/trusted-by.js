@@ -39,6 +39,21 @@ const projects = [
     image: "assets/img/trusted-by/pinnata.svg",
     url: "https://www.pinnata.xyz/earn",
   },
+  {
+    name: "EverFinance",
+    image: "assets/img/trusted-by/everfinance.png",
+    url: "https://ever.finance/",
+  },
+  {
+    name: "Brightpool Finance",
+    image: "assets/img/trusted-by/brightpool.png",
+    url: "https://brightpool.finance/",
+  },
+  {
+    name: "Prime Protocol",
+    image: "assets/img/trusted-by/prime-protocol.png",
+    url: "https://www.primeprotocol.xyz/",
+  },
 ];
 
 const trustedByCrossChainSection = document.getElementById("cross-chain");
@@ -48,6 +63,8 @@ if (trustedByCrossChainSection) {
     projects.forEach((project) => {
       const projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
+
+      const isBlackBackgroundRequired = project.name === "Prime Protocol";
 
       projectItem.innerHTML += `
         <a
@@ -63,6 +80,10 @@ if (trustedByCrossChainSection) {
             alt="${project.name} Logo"
             height="60"
             width="60"
+            style="${
+              isBlackBackgroundRequired && "background: black; padding: 6px"
+            }"
+            
           />
           <p class="mb-0 mt-2">${project.name}</p>
         </a>

@@ -1,105 +1,99 @@
-import isDeviceMobile from "./ismobile";
-
 if (document.getElementById("members")) {
-  const isMobile = isDeviceMobile();
-
   const members = [
     {
       name: "Jakub",
       role: "Founder",
       img: "assets/img/team/jakub.png",
-      email: "jakub@redstone.finance",
+      twitter: "https://twitter.com/kuba_eth",
       linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/",
-      bio: 'Software engineer with 10 years experience in FinTech, including 4 years in blockchain; CTO of <a href="https://twitter.com/alice_si_" target="_blank">Alice</a>, blockchain impact investment platform. Leading Etheroscope project - Ethereum analytics platform funded by UK Gov. Winner of ethLondon, NYBW, ethOnline hackathons.',
     },
     {
       name: "Marcin",
       role: "Head of Growth",
       img: "assets/img/team/marcin.jpg",
-      email: "marcin@redstone.finance",
+      twitter: "https://twitter.com/Marcin_Kaz13",
       linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/",
-      bio: 'Marcin handles strategic cooperation with DeFi protocols as well as Traditional businesses. Present in the blockchain ecosystem since 2018, his domains are Co-Opetition, Building long-term relationships, Education and "Growing the Pie" approach. Any doubt about cooperation options with Redstone? <a href="https://www.linkedin.com/in/marcin-kazmierczak1/" target="_blank">Write to me on LinkedIn!</a> Privately Travelling, Sports and understanding new cultures.',
     },
     {
       name: "Alex",
-      role: "Backend",
+      role: "Developer",
       img: "assets/img/team/alex.png",
-      email: "alex@redstone.finance",
+      twitter: "https://twitter.com/hatskier_me",
       linkedin: "https://www.linkedin.com/in/alex-suvorov/",
-      bio: 'Alex has over four years of experience as a full-stack developer in both startup and corporate environments. He enjoys solving problems and bring new ideas to life. He has developed a game-based <a href="https://codenplay.io/">educational coding platform</a> and many other projects with a variety of technologies and languages.',
     },
     {
       name: "Piotr",
-      role: "Blockchain",
+      role: "Developer",
       img: "assets/img/team/ppe.jpeg",
-      email: "peter@redstone.finance",
+      twitter: "",
       linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/",
-      bio: "Piotr considers himself an old guy (we would agree only judging his competency!), with over 15 years of experience in financial and insurance industry (and few startups), working as Software Developer and Technical Team Leader. Now he decided to take active part in the DeFi revolution. Privately father of three, fan of retro video games and drumming.",
     },
     {
-      name: "Piotr",
-      role: "Frontend",
-      img: "assets/img/team/piotr.jpeg",
-      email: "pduda@redstone.finance",
-      linkedin: "https://www.linkedin.com/in/piotr-duda-62b66b63/",
-      bio: 'New challenge? Sounds like a task for Piotr! In his not so long story he built a <a href="https://wutracing.pl/" target="_blank">racing car</a>, designed machinery for production of Tesla cars, developed numerous web apps and created furniture related company. Passionate full-stack developer with 4 years of experience, now exploring the world of blockchain!',
+      name: "Asia",
+      role: "Developer",
+      img: "assets/img/team/asia.png",
+      twitter: "https://twitter.com/jzi_on_fire",
+      linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/",
+    },
+    {
+      name: "Cezary",
+      role: "Developer",
+      img: "assets/img/team/cezary.png",
+      twitter: "https://twitter.com/cehalihali",
+      linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/",
+    },
+    {
+      name: "Matt",
+      role: "Developer",
+      img: "assets/img/team/matt.png",
+      twitter: "https://twitter.com/mattgurbiel",
+      linkedin: "https://pl.linkedin.com/in/mateuszgurbiel",
+    },
+    {
+      name: "Max",
+      role: "Developer",
+      img: "assets/img/team/max.png",
+      twitter: "https://twitter.com/Max_Levitskiy",
+      linkedin: "https://www.linkedin.com/in/maximlevicky/",
     },
   ];
 
   const element = document.getElementById("members");
-  const bio = document.getElementById("member-bio");
 
-  members.forEach((member, index) => {
+  members.forEach((member) => {
     const card = document.createElement("div");
-    card.classList.add("member-card", "col-12", "col-md-3", "col-lg-2", "mb-4");
+    card.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
 
-    card.innerHTML +=
-      `
-            <div class="member-picture-wrapper">
-                <img class="member-picture" src="` +
-      member.img +
-      `"/>
-            </div>
-            <div class="member-info fw-medium">
-                <div class="member-name">` +
-      member.name +
-      `</div>
-                <div class="member-role">` +
-      member.role +
-      `</div>
-                <div class="member-social">
-                    <a href="mailto:` +
-      member.email +
-      `">
-                        <img src="assets/img/icons/mail.svg">
-                    </a>
-                    <a href="` +
-      member.linkedin +
-      `" target="_blank">
-                        <img src="assets/img/icons/linkedin.svg">
-                    </a>
-                </div>
-            </div>`;
+    card.innerHTML += `
+      <img class="member-picture" src="${member.img}"/>
+      <div class="member-info fw-medium">
+        <p class="mb-0 fs-0">${member.name}</p>
+        <p  class="mb-0 fs-0">${member.role}</p>
+        <div class="member-social">
+        <a
+          href="${member.twitter}"
+          target="_blank" 
+          referrerpolicy="no-referrer"
+          style="${!member.twitter && "display: none"}"
+        >
+          <img
+            class="contact-button-image"
+            src="assets/img/icons/twitter.svg"
+          >
+        </a>
+        <a
+          href="${member.linkedin}"
+          style="color: #616368
+          target="_blank"
+          referrerpolicy="no-referrer"
+        >
+          <img
+            class="contact-button-image"
+            src="assets/img/icons/linkedin.svg"
+          >
+        </a>
+      </div>`;
 
     element.appendChild(card);
-
-    const memberBio = document.createElement("div");
-    memberBio.innerHTML = member.bio;
-
-    if (!isMobile) {
-      memberBio.style.display = "none";
-      bio.appendChild(memberBio);
-
-      card.addEventListener("mouseenter", () => {
-        bio.childNodes.forEach((node, i) => {
-          if (i > 0) {
-            node.style.display = i === index + 1 ? "block" : "none";
-          }
-        });
-      });
-    } else {
-      memberBio.classList.add("text-center", "mt-2", "mb-4");
-      element.appendChild(memberBio);
-    }
   });
 }
