@@ -12,12 +12,12 @@ const partners = [
   {
     name: "Coinbase Ventures",
     url: "https://www.coinbase.com/ventures",
-    image: "assets/img/partners/coinbase-ventures.png",
+    image: "assets/img/partners/coinbase.png",
   },
   {
     name: "Maven11",
     url: "https://www.maven11.com/",
-    image: "assets/img/partners/maven11.jpeg",
+    image: "assets/img/partners/maven11.svg",
   },
   {
     name: "Distributed Global",
@@ -26,8 +26,8 @@ const partners = [
   },
   {
     name: "Arweave",
-    url: "assets/img/partners/arweave.png",
-    image: "assets/img/partners/arweave.png",
+    url: "https://www.arweave.org/",
+    image: "assets/img/partners/arweave.svg",
   },
   {
     name: "Lattice",
@@ -104,6 +104,8 @@ if (partnerCrossChainSection) {
       const partnerItem = document.createElement("div");
       partnerItem.classList.add("partner-item");
 
+      const isBlackBackgroundRequired = partner.name === "Distributed Global";
+
       partnerItem.innerHTML += `
         <a
           href="${partner.url}"
@@ -115,6 +117,9 @@ if (partnerCrossChainSection) {
             src="${partner.image}"
             width="120px"
             alt="${partner.name} Logo"
+            style="${
+              isBlackBackgroundRequired ? "background: black; padding: 6px" : ""
+            }"
           />
         </a>
       `;

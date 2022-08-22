@@ -54,6 +54,11 @@ const projects = [
     image: "assets/img/trusted-by/prime-protocol.png",
     url: "https://www.primeprotocol.xyz/",
   },
+  {
+    name: "Unilend Finance",
+    image: "assets/img/trusted-by/unilend-finance.png",
+    url: "https://unilend.finance/",
+  },
 ];
 
 const trustedByCrossChainSection = document.getElementById("cross-chain");
@@ -81,9 +86,8 @@ if (trustedByCrossChainSection) {
             height="60"
             width="60"
             style="${
-              isBlackBackgroundRequired && "background: black; padding: 6px"
-            }"
-            
+              isBlackBackgroundRequired ? "background: black; padding: 6px" : ""
+            }"  
           />
           <p class="mb-0 mt-2">${project.name}</p>
         </a>

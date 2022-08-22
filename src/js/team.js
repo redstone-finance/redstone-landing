@@ -3,56 +3,56 @@ if (document.getElementById("members")) {
     {
       name: "Jakub",
       role: "Founder",
-      img: "assets/img/team/jakub.png",
+      img: "/assets/img/team/jakub.png",
       twitter: "https://twitter.com/kuba_eth",
       linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/",
     },
     {
       name: "Marcin",
-      role: "Head of Growth",
-      img: "assets/img/team/marcin.jpg",
+      role: "COO",
+      img: "/assets/img/team/marcin.jpg",
       twitter: "https://twitter.com/Marcin_Kaz13",
       linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/",
     },
     {
       name: "Alex",
-      role: "Developer",
-      img: "assets/img/team/alex.png",
+      role: "Lead Dev",
+      img: "/assets/img/team/alex.png",
       twitter: "https://twitter.com/hatskier_me",
       linkedin: "https://www.linkedin.com/in/alex-suvorov/",
     },
     {
       name: "Piotr",
-      role: "Developer",
-      img: "assets/img/team/ppe.jpeg",
+      role: "Lead Dev",
+      img: "/assets/img/team/ppe.jpeg",
       twitter: "",
       linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/",
     },
     {
       name: "Asia",
-      role: "Developer",
-      img: "assets/img/team/asia.png",
+      role: "Fullstack Developer",
+      img: "/assets/img/team/asia.png",
       twitter: "https://twitter.com/jzi_on_fire",
       linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/",
     },
     {
       name: "Cezary",
       role: "Developer",
-      img: "assets/img/team/cezary.png",
+      img: "/assets/img/team/cezary.png",
       twitter: "https://twitter.com/cehalihali",
       linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/",
     },
     {
       name: "Matt",
-      role: "Developer",
-      img: "assets/img/team/matt.png",
+      role: "BizDev",
+      img: "/assets/img/team/matt.png",
       twitter: "https://twitter.com/mattgurbiel",
       linkedin: "https://pl.linkedin.com/in/mateuszgurbiel",
     },
     {
       name: "Max",
-      role: "Developer",
-      img: "assets/img/team/max.png",
+      role: "DevOps",
+      img: "/assets/img/team/max.png",
       twitter: "https://twitter.com/Max_Levitskiy",
       linkedin: "https://www.linkedin.com/in/maximlevicky/",
     },
@@ -78,7 +78,7 @@ if (document.getElementById("members")) {
         >
           <img
             class="contact-button-image"
-            src="assets/img/icons/twitter.svg"
+            src="/assets/img/icons/twitter.svg"
           >
         </a>
         <a
@@ -89,7 +89,7 @@ if (document.getElementById("members")) {
         >
           <img
             class="contact-button-image"
-            src="assets/img/icons/linkedin.svg"
+            src="/assets/img/icons/linkedin.svg"
           >
         </a>
       </div>`;

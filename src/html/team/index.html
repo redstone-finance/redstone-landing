@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
-    @@include('./common/head.html')
+    @@include('../common/head.html')
   </head>
   <body>
     <main>
-      @@include('./common/navbar.html', { "isHome": false })
+      @@include('../common/navbar.html', { "isHome": false })
       <section class="pt-8 pb-6" id="team">
         <div class="container team mb-5">
           <div class="col-lg-8 text-center mx-auto mb-4">
@@ -23,47 +23,67 @@
             id="members"
           ></div>
         </div>
-        @@include('./common/careers-introduction.html')
+        @@include('../common/careers-introduction.html')
         <div class="mt-5 container">
-          <div
-            class="d-flex flex-wrap justify-content-center row grid-container"
-            id="pictures"
-          ></div>
+          <div id="gallery">
+            <!-- <div
+              class="d-flex flex-wrap justify-content-center row grid-container"
+              id="pictures"
+            ></div> -->
+          </div>
         </div>
         <div class="row flex-center gap-2 mt-5">
-          <button class="contact-button">
+          <button class="contact-button-big">
             <a
               href="https://www.youtube.com/watch?v=S2-yE2U9lDo"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/youtube.png"
+                class="mb-2"
+                alt="YouTube icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 See our presentation on the biggest DeFi hackathon worldwide
                 HackMoney2022
               </p>
             </a>
           </button>
-          <button class="contact-button">
+          <button class="contact-button-big">
             <a
               href="https://open.spotify.com/episode/1M3UJ9pSSWCZJHMukLZWWY"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/spotify.png"
+                class="mb-2"
+                alt="Spotify icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 Listen to story of RedStone origins with Jakub and Marcin at
                 Permaweb Pioneers
               </p>
             </a>
           </button>
-          <button class="contact-button docs">
+          <button class="contact-button-big">
             <a
               href="https://youtu.be/t-oHzxEH2r8?"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/youtube.png"
+                class="mb-2"
+                alt="YouTube icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 Check out Jakub’s presentation at the ETHWarsaw meetup
               </p>
@@ -71,7 +91,7 @@
           </button>
         </div>
       </section>
-      @@include('./common/footer.html') @@include('./common/scripts.html')
+      @@include('../common/footer.html') @@include('../common/scripts.html')
     </main>
   </body>
 </html>

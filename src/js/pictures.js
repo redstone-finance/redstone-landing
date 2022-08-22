@@ -1,37 +1,59 @@
 const pictures = [
   {
-    text: "test 1",
-    image: "assets/img/pictures/6.jpg",
+    image: "/assets/img/pictures/1.jpg",
   },
   {
-    text: "test 2",
-    image: "assets/img/pictures/7.jpg",
+    image: "/assets/img/pictures/2.jpg",
   },
   {
-    text: "test 3",
-    image: "assets/img/pictures/8.jpg",
+    image: "/assets/img/pictures/3.jpg",
   },
   {
-    text: "test 4",
-    image: "assets/img/pictures/9.jpg",
+    image: "/assets/img/pictures/4.jpg",
+  },
+  {
+    image: "/assets/img/pictures/5.jpg",
+  },
+  {
+    image: "/assets/img/pictures/6.jpg",
+  },
+  {
+    image: "/assets/img/pictures/7.jpg",
+  },
+  {
+    image: "/assets/img/pictures/8.jpg",
+  },
+  {
+    image: "/assets/img/pictures/9.jpg",
+  },
+  {
+    image: "/assets/img/pictures/10.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/11.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/12.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/13.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/14.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/15.jpeg",
+  },
+  {
+    image: "/assets/img/pictures/16.jpeg",
   },
 ];
 
-const pictureSection = document.getElementById("pictures");
+const pictureSection = document.getElementById("gallery");
 if (pictureSection) {
   pictures.forEach((picture) => {
-    const pictureItem = document.createElement("div");
-    pictureItem.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
-
-    pictureItem.innerHTML += `
-      <img
-        loading="lazy"
-        src="${picture.image}"
-        alt="${picture.text}"
-        width="100%"
-      />
-      <p class="mb-0 mt-2 text-center">${picture.text}</p>
-    `;
+    const pictureItem = document.createElement("img");
+    pictureItem.src = picture.image;
     pictureSection.appendChild(pictureItem);
   });
 }

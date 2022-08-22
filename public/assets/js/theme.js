@@ -479,6 +479,78 @@ if (chainsCrossChainSection) {
   }
 }
 
+var dataSources = [{
+  name: "Uniswap",
+  image: "/assets/img/data-sources/uniswap.png"
+}, {
+  name: "Sushiswap",
+  image: "/assets/img/data-sources/sushiswap.png"
+}, {
+  name: "Coingecko",
+  image: "/assets/img/data-sources/coingecko.png"
+}, {
+  name: "Binance",
+  image: "/assets/img/data-sources/binance.png"
+}, {
+  name: "Coinbase",
+  image: "/assets/img/data-sources/coinbase.svg"
+}, {
+  name: "Kraken",
+  image: "/assets/img/data-sources/kraken.png"
+}, {
+  name: "FTX",
+  image: "/assets/img/data-sources/ftx.png"
+}, {
+  name: "Houbi",
+  image: "/assets/img/data-sources/houbi.png"
+}, {
+  name: "Kucoin",
+  image: "/assets/img/data-sources/kucoin.png"
+}, {
+  name: "Bitfinex",
+  image: "/assets/img/data-sources/bitfinex.png"
+}, {
+  name: "Bittrex",
+  image: "/assets/img/data-sources/bittrex.png"
+}, {
+  name: "Trader Joe",
+  image: "/assets/img/data-sources/traderjoe.png"
+}, {
+  name: "Pangolin",
+  image: "/assets/img/data-sources/pangolin.png"
+}, {
+  name: "Yahoo finance",
+  image: "/assets/img/data-sources/yahoo.png"
+}, {
+  name: "ECB",
+  image: "/assets/img/data-sources/ecb.png"
+}, {
+  name: "Drand",
+  image: "/assets/img/data-sources/drand.png"
+}, {
+  name: "Verto",
+  image: "/assets/img/data-sources/verto.png"
+}, {
+  name: "Okcoin",
+  image: "/assets/img/data-sources/okcoin.png"
+}];
+var dataSourcesCrossChainSection = document.getElementById("cross-chain");
+
+if (dataSourcesCrossChainSection) {
+  var _element = document.getElementById("data-sources");
+
+  if (_element.childNodes.length === 0) {
+    dataSources.forEach(function (dataSource) {
+      var dataSourceItem = document.createElement("div");
+      dataSourceItem.classList.add("tab-item");
+      var isNonSquare = ["Coinbase", "Yahoo finance"].includes(dataSource.name);
+      dataSourceItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(dataSource.image, "\"\n          alt=\"").concat(dataSource.name, " Logo\"\n          height=\"60\"\n          width=\"").concat(isNonSquare ? 120 : 60, "\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(dataSource.name, "</p>\n    ");
+
+      _element.appendChild(dataSourceItem);
+    });
+  }
+}
+
 function fetchData() {
   var preloader = "<div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>";
   var sourcesNumberElement = document.getElementById("sources-number");
@@ -562,19 +634,19 @@ var partners = [{
 }, {
   name: "Coinbase Ventures",
   url: "https://www.coinbase.com/ventures",
-  image: "assets/img/partners/coinbase-ventures.png"
+  image: "assets/img/partners/coinbase.png"
 }, {
   name: "Maven11",
   url: "https://www.maven11.com/",
-  image: "assets/img/partners/maven11.jpeg"
+  image: "assets/img/partners/maven11.svg"
 }, {
   name: "Distributed Global",
   url: "http://www.distributedglobal.com/",
   image: "assets/img/partners/distributed-global.png"
 }, {
   name: "Arweave",
-  url: "assets/img/partners/arweave.png",
-  image: "assets/img/partners/arweave.png"
+  url: "https://www.arweave.org/",
+  image: "assets/img/partners/arweave.svg"
 }, {
   name: "Lattice",
   url: "https://lattice.com/",
@@ -631,39 +703,59 @@ var partners = [{
 var partnerCrossChainSection = document.getElementById("partners");
 
 if (partnerCrossChainSection) {
-  var _element = document.getElementById("backed-by");
+  var _element2 = document.getElementById("backed-by");
 
-  if (_element.childNodes.length === 0) {
+  if (_element2.childNodes.length === 0) {
     partners.forEach(function (partner) {
       var partnerItem = document.createElement("div");
       partnerItem.classList.add("partner-item");
-      partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n          />\n        </a>\n      ");
+      var isBlackBackgroundRequired = partner.name === "Distributed Global";
+      partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"\n          />\n        </a>\n      ");
 
-      _element.appendChild(partnerItem);
+      _element2.appendChild(partnerItem);
     });
   }
 }
 
 var pictures = [{
-  text: "test 1",
-  image: "assets/img/pictures/6.jpg"
+  image: "/assets/img/pictures/1.jpg"
 }, {
-  text: "test 2",
-  image: "assets/img/pictures/7.jpg"
+  image: "/assets/img/pictures/2.jpg"
 }, {
-  text: "test 3",
-  image: "assets/img/pictures/8.jpg"
+  image: "/assets/img/pictures/3.jpg"
 }, {
-  text: "test 4",
-  image: "assets/img/pictures/9.jpg"
+  image: "/assets/img/pictures/4.jpg"
+}, {
+  image: "/assets/img/pictures/5.jpg"
+}, {
+  image: "/assets/img/pictures/6.jpg"
+}, {
+  image: "/assets/img/pictures/7.jpg"
+}, {
+  image: "/assets/img/pictures/8.jpg"
+}, {
+  image: "/assets/img/pictures/9.jpg"
+}, {
+  image: "/assets/img/pictures/10.jpeg"
+}, {
+  image: "/assets/img/pictures/11.jpeg"
+}, {
+  image: "/assets/img/pictures/12.jpeg"
+}, {
+  image: "/assets/img/pictures/13.jpeg"
+}, {
+  image: "/assets/img/pictures/14.jpeg"
+}, {
+  image: "/assets/img/pictures/15.jpeg"
+}, {
+  image: "/assets/img/pictures/16.jpeg"
 }];
-var pictureSection = document.getElementById("pictures");
+var pictureSection = document.getElementById("gallery");
 
 if (pictureSection) {
   pictures.forEach(function (picture) {
-    var pictureItem = document.createElement("div");
-    pictureItem.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
-    pictureItem.innerHTML += "\n      <img\n        loading=\"lazy\"\n        src=\"".concat(picture.image, "\"\n        alt=\"").concat(picture.text, "\"\n        width=\"100%\"\n      />\n      <p class=\"mb-0 mt-2 text-center\">").concat(picture.text, "</p>\n    ");
+    var pictureItem = document.createElement("img");
+    pictureItem.src = picture.image;
     pictureSection.appendChild(pictureItem);
   });
 }
@@ -696,61 +788,61 @@ if (document.getElementById("members")) {
   var members = [{
     name: "Jakub",
     role: "Founder",
-    img: "assets/img/team/jakub.png",
+    img: "/assets/img/team/jakub.png",
     twitter: "https://twitter.com/kuba_eth",
     linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/"
   }, {
     name: "Marcin",
-    role: "Head of Growth",
-    img: "assets/img/team/marcin.jpg",
+    role: "COO",
+    img: "/assets/img/team/marcin.jpg",
     twitter: "https://twitter.com/Marcin_Kaz13",
     linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/"
   }, {
     name: "Alex",
-    role: "Developer",
-    img: "assets/img/team/alex.png",
+    role: "Lead Dev",
+    img: "/assets/img/team/alex.png",
     twitter: "https://twitter.com/hatskier_me",
     linkedin: "https://www.linkedin.com/in/alex-suvorov/"
   }, {
     name: "Piotr",
-    role: "Developer",
-    img: "assets/img/team/ppe.jpeg",
+    role: "Lead Dev",
+    img: "/assets/img/team/ppe.jpeg",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
   }, {
     name: "Asia",
-    role: "Developer",
-    img: "assets/img/team/asia.png",
+    role: "Fullstack Developer",
+    img: "/assets/img/team/asia.png",
     twitter: "https://twitter.com/jzi_on_fire",
     linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/"
   }, {
     name: "Cezary",
     role: "Developer",
-    img: "assets/img/team/cezary.png",
+    img: "/assets/img/team/cezary.png",
     twitter: "https://twitter.com/cehalihali",
     linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/"
   }, {
     name: "Matt",
-    role: "Developer",
-    img: "assets/img/team/matt.png",
+    role: "BizDev",
+    img: "/assets/img/team/matt.png",
     twitter: "https://twitter.com/mattgurbiel",
     linkedin: "https://pl.linkedin.com/in/mateuszgurbiel"
   }, {
     name: "Max",
-    role: "Developer",
-    img: "assets/img/team/max.png",
+    role: "DevOps",
+    img: "/assets/img/team/max.png",
     twitter: "https://twitter.com/Max_Levitskiy",
     linkedin: "https://www.linkedin.com/in/maximlevicky/"
   }];
 
-  var _element2 = document.getElementById("members");
+  var _element3 = document.getElementById("members");
 
   members.forEach(function (member) {
     var card = document.createElement("div");
     card.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
-    card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n          style=\"").concat(!member.twitter && "display: none", "\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
+    card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n          style=\"").concat(!member.twitter && "display: none", "\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
 
-    _element2.appendChild(card);
+    _element3.appendChild(card);
   });
 }
 
@@ -798,20 +890,24 @@ var projects = [{
   name: "Prime Protocol",
   image: "assets/img/trusted-by/prime-protocol.png",
   url: "https://www.primeprotocol.xyz/"
+}, {
+  name: "Unilend Finance",
+  image: "assets/img/trusted-by/unilend-finance.png",
+  url: "https://unilend.finance/"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 
 if (trustedByCrossChainSection) {
-  var _element3 = document.getElementById("trusted-by");
+  var _element4 = document.getElementById("trusted-by");
 
-  if (_element3.childNodes.length === 0) {
+  if (_element4.childNodes.length === 0) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
       var isBlackBackgroundRequired = project.name === "Prime Protocol";
-      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired && "background: black; padding: 6px", "\"\n            \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"  \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
-      _element3.appendChild(projectItem);
+      _element4.appendChild(projectItem);
     });
   }
 } // /* -------------------------------------------------------------------------- */

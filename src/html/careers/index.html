@@ -8,50 +8,152 @@
       @@include('../common/navbar.html', { "isHome": false })
       <section class="pt-8 pb-6" id="careers">
         @@include('../common/careers-introduction.html')
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-          <!-- Full-width images with number and caption text -->
-          <div class="slide">
-            <p>
-              RedStone team works as a well-coordinated crowd, with the premise
-              of attracting top-tier talent and creating the best possible
-              conditions to unfold their full potential. Strong ownership and
-              influence on the final product combined with a great dose of
-              flexibility is our go-to formula for the highest effectiveness.
-            </p>
-            <p>Jakub Wojciechowski, Founder and CEO</p>
-          </div>
+        <div class="container">
+          <div class="slideshow-container mt-6 mb-6">
+            <div class="slide">
+              <p class="fst-italic">
+                RedStone team works as a well-coordinated crowd, with the
+                premise of attracting top-tier talent and creating the best
+                possible conditions to unfold their full potential. Strong
+                ownership and influence on the final product combined with a
+                great dose of flexibility is our go-to formula for the highest
+                effectiveness.
+              </p>
+              <img
+                class="my-2 testimonial-image"
+                src="/assets/img/team/jakub.png"
+                alt="Jakub photo"
+              />
+              <p>Jakub Wojciechowski, Founder and CEO</p>
+            </div>
 
-          <div class="slide">
-            <p>
-              The technical side of RedStone Oracles is truly unique. Novel
-              challenges, pioneer solutions and problems that nobody has ever
-              fully solved before are our bread and butter here. Building on the
-              forefront of innovation in the field of blockchain Oracles is just
-              as gripping as it gets.
-            </p>
-            <p>Alex Suvorov, Lead Developer</p>
-          </div>
+            <div class="slide">
+              <p class="fst-italic">
+                The technical side of RedStone Oracles is truly unique. Novel
+                challenges, pioneer solutions and problems that nobody has ever
+                fully solved before are our bread and butter here. Building on
+                the forefront of innovation in the field of blockchain Oracles
+                is just as gripping as it gets.
+              </p>
+              <img
+                class="my-2 testimonial-image"
+                src="/assets/img/team/alex.png"
+                alt="Alex photo"
+              />
+              <p>Alex Suvorov, Lead Developer</p>
+            </div>
 
-          <div class="slide">
-            <p>
-              RedStone team has a broad presence and visibility at global events
-              and it really pays out. We have built an international network of
-              Web3 partners and cooperate closely with founders of some of the
-              most successful protocols worldwide, such as Arweave or Avalanche,
-              together with their world-class teams and top Web3 & DeFi
-              builders.
-            </p>
-            <p>Marcin Kaźmierczak, COO</p>
+            <div class="slide">
+              <p class="fst-italic">
+                RedStone team has a broad presence and visibility at global
+                events and it really pays out. We have built an international
+                network of Web3 partners and cooperate closely with founders of
+                some of the most successful protocols worldwide, such as Arweave
+                or Avalanche, together with their world-class teams and top Web3
+                & DeFi builders.
+              </p>
+              <img
+                class="my-2 testimonial-image"
+                src="/assets/img/team/marcin.jpg"
+                alt="Marcin photo"
+              />
+              <p>Marcin Kaźmierczak, COO</p>
+            </div>
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
           </div>
-        </div>
-        <br />
-
-        <!-- The dots/circles -->
-        <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <div class="py-4 py-lg-6">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center mx-auto mb-5">
+                  <h2 class="fw-bold lh-sm">Joining RedStone means</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">Growth mindset</div>
+                    <p class="mb-md-0">
+                      Grow together with the team and RedStone by interacting
+                      with global Web3 projects
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">
+                      Striving for products excellence
+                    </div>
+                    <p class="mb-md-0">
+                      We build products for developers, we care to deliver a
+                      top-notch experience
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">Open-source software approach</div>
+                    <p class="mb-md-0">
+                      Our goal is to make the whole Web3 ecosystem a better
+                      place
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">
+                      Remote & flexible working hours
+                    </div>
+                    <p class="mb-md-0">
+                      We work remotely and meet regularly - we have WeWork cards
+                      and an office in Warsaw soon!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">
+                      Joining the hottest dev industry
+                    </div>
+                    <p class="mb-md-0">
+                      Web3 is growing and will grow even more with RedStone
+                      unlocking its potential
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-6">
+                  <div class="text-center px-lg-3">
+                    <div class="h5 fw-bold">Being a key player in the team</div>
+                    <p class="mb-md-0">
+                      We are a small, agile crowd - everyone plays a key role
+                      here!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a
+              class="row-cols-1 mb-4"
+              href="https://angel.co/company/redstonefinance"
+              target="_blank"
+              referrerpolicy="no-referrer"
+            >
+              <button class="btn btn-lg btn-danger rounded-pill">
+                See open roles
+              </button>
+            </a>
+            <h5 class="mb-2 text-center">
+              Do the first move into the Web3 industry and apply!
+            </h5>
+            <h5 class="text-center">
+              <a href="/team">Check out our team.</a>
+            </h5>
+          </div>
         </div>
       </section>
       @@include('../common/footer.html') @@include('../common/scripts.html')

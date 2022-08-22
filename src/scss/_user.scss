@@ -51,7 +51,7 @@
 }
 
 .first-page {
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 5rem;
 }
 
@@ -67,7 +67,7 @@
 .stat {
     width: 100%;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         width: min-content;
     }
 }
@@ -190,7 +190,7 @@
         }
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         .footer-social {
             width: initial;
 

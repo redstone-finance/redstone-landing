@@ -19,9 +19,9 @@
 <link
   rel="shortcut icon"
   type="image/x-icon"
-  href="assets/img/favicons/redstone-favicon.png"
+  href="/assets/img/favicons/redstone-favicon.png"
 />
-<link rel="manifest" href="assets/img/favicons/manifest.json" />
+<link rel="manifest" href="/assets/img/favicons/manifest.json" />
 <meta name="theme-color" content="#ffffff" />
 <meta
   name="description"
@@ -65,8 +65,11 @@
   </head>
   <body>
     <main>
-      <nav
-  class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      <div class="announcement">
+  RedStone closed a $7 Million Seed round led by Lemniscap 🎉
+</div>
+<nav
+  class="navbar navbar-expand-lg navbar-light navbar-margins fixed-top py-3"
   data-navbar-on-scroll="data-navbar-on-scroll"
 >
   <div class="container">
@@ -120,9 +123,9 @@
             id="members"
           ></div>
         </div>
-        <div class="container">
-  <div class="row flex-wrap gap-2 justify-content-between">
-    <div class="flex-1">
+        <div class="container" id="careers-introduction">
+  <div class="flex flex-wrap gap-2 justify-content-between">
+    <div class="no-mobile-flex mb-4 text-sm-start text-center">
       <h2 class="mb-4">Join us on a mission to disrupt blockchain Oracles!</h3>
       <p class="mb-4">
         RedStone originated at Open Web Foundry incubation program in 2020 and
@@ -130,16 +133,18 @@
         disrupting Web3 & DeFi space - join us in revolutionising the
         blockchain industry.
       </p>
-      <a href="https://angel.co/company/redstone-finance" target="_blank" referrerpolicy="no-referrer">
+      <a href="https://angel.co/company/redstonefinance" target="_blank" referrerpolicy="no-referrer">
         <button class="btn btn-lg btn-danger rounded-pill">
           See open roles
         </button>
       </a>
     </div>
-    <div class="flex-1">
-      <h4 class="mb-4">At RedStone we create disruptive solutions at Warp Speed</h4>
+    <div class="no-mobile-flex">
+      <h4 class="mb-4 text-sm-start text-center">
+        At RedStone we create disruptive solutions at Warp Speed
+      </h4>
       <ul>
-        <li>RedStone is compatible with over 30 chains,</li>
+        <li>RedStone is compatible with over 30 chains</li>
         <li>We deliver over 1000 data feeds to Web3 & DeFi projects</li>
         <li>
           We have top players in our team (almost 80% of RedStone folks are
@@ -161,45 +166,65 @@
 </div>
 
         <div class="mt-5 container">
-          <div
-            class="d-flex flex-wrap justify-content-center row grid-container"
-            id="pictures"
-          ></div>
+          <div id="gallery">
+            <!-- <div
+              class="d-flex flex-wrap justify-content-center row grid-container"
+              id="pictures"
+            ></div> -->
+          </div>
         </div>
         <div class="row flex-center gap-2 mt-5">
-          <button class="contact-button">
+          <button class="contact-button-big">
             <a
               href="https://www.youtube.com/watch?v=S2-yE2U9lDo"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/youtube.png"
+                class="mb-2"
+                alt="YouTube icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 See our presentation on the biggest DeFi hackathon worldwide
                 HackMoney2022
               </p>
             </a>
           </button>
-          <button class="contact-button">
+          <button class="contact-button-big">
             <a
               href="https://open.spotify.com/episode/1M3UJ9pSSWCZJHMukLZWWY"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/spotify.png"
+                class="mb-2"
+                alt="Spotify icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 Listen to story of RedStone origins with Jakub and Marcin at
                 Permaweb Pioneers
               </p>
             </a>
           </button>
-          <button class="contact-button docs">
+          <button class="contact-button-big">
             <a
               href="https://youtu.be/t-oHzxEH2r8?"
               target="blank"
               referrerpolicy="no-referrer"
               style="color: #616368"
             >
+              <img
+                src="/assets/img/icons/youtube.png"
+                class="mb-2"
+                alt="YouTube icon"
+                style="height: 36px; width: auto"
+              />
               <p class="mb-0">
                 Check out Jakub’s presentation at the ETHWarsaw meetup
               </p>
@@ -218,18 +243,18 @@
     <!--      .text-white Stone-->
     <div class="d-flex flex-wrap justify-content-between">
       <div
-        class="footer-links d-flex flex-wrap justify-content-center mb-3 mb-md-0"
+        class="footer-links d-flex flex-wrap justify-content-center mb-3 mb-lg-0"
       >
         <div class="text-white" style="margin-right: 0.5rem">
           &copy; RedStone 2022
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">
-          <a class="text-white" href="/index.html#contact">Contact</a>
+          <a class="text-white" href="/#contact">Contact</a>
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">
-          <a class="text-white" href="/team.html">Team</a>
+          <a class="text-white" href="/team">Team</a>
         </div>
         <div class="text-white">·</div>
         <div class="mx-2">
@@ -279,8 +304,16 @@
             </a>
           </li>
           <li class="list-inline-item me-3">
-            <a href="mailto:hello@redstone.finance" target="_blank">
-              <img src="/assets/img/icons/mail.svg" alt="Mail icon" />
+            <a
+              href="https://www.linkedin.com/company/redstone-finance/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/telegram.svg"
+                class="icon-white"
+                alt="Telegram icon"
+              />
             </a>
           </li>
         </ul>
@@ -294,9 +327,9 @@
  <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
-<script async src="vendors/@popperjs/popper.min.js"></script>
-<script async src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/is/is.min.js"></script>
+<script async src="/vendors/@popperjs/popper.min.js"></script>
+<script async src="/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="/vendors/is/is.min.js"></script>
 <script
   async
   id="cookie-script"
@@ -306,7 +339,7 @@
   async
   src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"
 ></script>
-<script async src="assets/js/theme.js"></script>
+<script async src="/assets/js/theme.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
