@@ -17688,15 +17688,6 @@ label {
   filter: brightness(0) invert(1);
 }
 
-.navbar-margins {
-  margin-top: 3rem;
-}
-@media (min-width: 576px) {
-  .navbar-margins {
-    margin-top: 2rem;
-  }
-}
-
 .testimonial-image {
   height: 100px;
   border-radius: 50px;
