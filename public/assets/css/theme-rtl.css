@@ -17462,17 +17462,6 @@ label {
 
 .contact-button {
   width: 350px;
-  height: 165px;
-  outline: none;
-  background: none;
-  border: 1px solid;
-  border-radius: 15px;
-  padding: 2rem;
-  text-align: right;
-}
-
-.contact-button-big {
-  width: 350px;
   height: 185px;
   outline: none;
   background: none;
@@ -17480,6 +17469,15 @@ label {
   border-radius: 15px;
   padding: 2rem;
   text-align: right;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.contact-button:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .contact-button-image {

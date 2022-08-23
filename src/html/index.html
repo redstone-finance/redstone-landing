@@ -36,7 +36,7 @@
                     role="button"
                     >See our data</a
                   ><a
-                    class="btn btn-lg btn-outline-danger ms-lg-4 rounded-pill"
+                    class="btn btn-lg btn-outline-danger rounded-pill"
                     href="https://github.com/redstone-finance/redstone-evm-connector#-getting-started"
                     target="_blank"
                     role="button"
@@ -93,6 +93,25 @@
           <!-- end of .container-->
         </section>
       </div>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-4 py-lg-6" id="features">
+        <div class="container">
+          <div class="row">
+            <div class="row col-12 col-md-9 align-items-center mx-auto mb-6">
+              <iframe
+                width="420"
+                height="480"
+                src="https://www.youtube.com/embed/LZbcYmUULzM"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
@@ -286,7 +305,7 @@
               <div class="h6 fw-bold fs-4 lh-sm mb-3">
                 Integrate RedStone with a few lines of code
               </div>
-              <div class="col-lg-6 text-center mx-auto mb-5">
+              <div class="col-lg-6 text-center mx-auto mb-3">
                 <p class="mb-0">
                   We use a radically different way of putting data on EVM chains
                   called EVM-connector. The data is automatically attached to a
@@ -310,30 +329,25 @@
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
               <pre class="prettyprint b-15 pb-2"><br/>  
-  pragma solidity ^0.8.2;
   import "redstone-evm-connector/lib/contracts/message-based/PriceAware.sol";
 
   contract RedStoneExample is PriceAware {
-    uint256 private lastPrice = 0;
-
     function isSignerAuthorized(address _receviedSigner)
       public override virtual view returns (bool) {
-        return _receviedSigner == 0x0C39486f770B26F5527BBBf942726537986Cd7eb;
+        return _receivedSigner == 0x0C39486f770B26F5527BBBf942726537986Cd7eb;
     }
     
-    function setPrice() public {
+    function doSomethingWithPrice() public {
+      // Extracting oracle data from tx calldata
+      // verifying signature and timestamp
       uint256 ethPrice = getPriceFromMsg(bytes32("ETH"));
-      lastPrice = ethPrice;
-    }
-
-    function getLastPrice() public view returns(uint256) {
-      return lastPrice;
+      ...
     }
   }
-  </pre>
+              </pre>
             </div>
           </div>
-          <div class="row align-items-center mb-8">
+          <div class="row align-items-center mb-5">
             <div
               class="col-md-6 col-lg-6 text-center text-center text-lg-start order-lg-2"
             >
@@ -345,16 +359,17 @@
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
               <pre class="prettyprint b-15 pb-3"><br/>
+  import { WrapperBuilder } from "redstone-evm-connector";
+
   const wrappedContract = WrapperBuilder
                             .wrapLite(contract)
                             .usingPriceFeed("redstone");
-                      
-  await wrappedContract.setPrice();
-  const price = wrappedContract.getLastPrice();
+                        
+  const tx = await wrappedContract.doSomethingWithPrice();
               </pre>
             </div>
           </div>
-          <div class="row col-12 col-md-9 align-items-center mx-auto mb-5">
+          <div class="row col-12 col-md-9 align-items-center mx-auto">
             <h5 class="text-center">
               Want to dive deeper?
               <a
@@ -365,14 +380,6 @@
                 Check the Docs!
               </a>
             </h5>
-          </div>
-          <div class="row col-12 col-md-9 align-items-center mx-auto mb-6">
-            <iframe
-              width="420"
-              height="480"
-              src="https://www.youtube.com/embed/LZbcYmUULzM"
-            >
-            </iframe>
           </div>
         </div>
         <!-- end of .container-->
@@ -441,13 +448,13 @@
       <!-- <section> begin ============================-->
       <section>
         <div class="container">
-          <div class="row flex-center gap-2">
+          <div class="row flex-center gap-3">
             <button class="contact-button">
               <a
                 href="https://discord.com/invite/PVxBZKFr46"
                 target="blank"
                 referrerpolicy="no-referrer"
-                style="color: #616368"
+                style="color: #616368; text-decoration: none"
               >
                 <img
                   src="/assets/img/icons/discord.svg"
@@ -463,7 +470,7 @@
                 href="https://twitter.com/redstone_defi"
                 target="blank"
                 referrerpolicy="no-referrer"
-                style="color: #616368"
+                style="color: #616368; text-decoration: none"
               >
                 <img
                   src="/assets/img/icons/twitter.svg"
@@ -479,7 +486,7 @@
                 href="https://github.com/redstone-finance/redstone-evm-connector#-getting-started"
                 target="blank"
                 referrerpolicy="no-referrer"
-                style="color: #616368"
+                style="color: #616368; text-decoration: none"
               >
                 <img
                   src="/assets/img/icons/accountable.svg"

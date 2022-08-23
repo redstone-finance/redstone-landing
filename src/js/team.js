@@ -72,7 +72,7 @@ if (document.getElementById("members")) {
         <div class="member-social">
         <a
           href="${member.twitter}"
-          target="_blank" 
+          target="_blank"
           referrerpolicy="no-referrer"
         >
           <img
