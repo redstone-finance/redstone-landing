@@ -25,7 +25,7 @@ if (document.getElementById("members")) {
       name: "Piotr",
       role: "Warp Lead Dev",
       img: "/assets/img/team/ppe.jpeg",
-      twitter: "",
+      twitter: "https://twitter.com/ppe_warp",
       linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/",
     },
     {
@@ -74,7 +74,6 @@ if (document.getElementById("members")) {
           href="${member.twitter}"
           target="_blank" 
           referrerpolicy="no-referrer"
-          style="${!member.twitter && "display: none"}"
         >
           <img
             class="contact-button-image"

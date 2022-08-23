@@ -31,7 +31,7 @@ const partners = [
   },
   {
     name: "Lattice",
-    url: "https://lattice.com/",
+    url: "https://lattice.fund/",
     image: "assets/img/partners/lattice.png",
   },
   {

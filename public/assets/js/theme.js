@@ -653,7 +653,7 @@ var partners = [{
   image: "assets/img/partners/arweave.svg"
 }, {
   name: "Lattice",
-  url: "https://lattice.com/",
+  url: "https://lattice.fund/",
   image: "assets/img/partners/lattice.png"
 }, {
   name: "SevenX",
@@ -811,7 +811,7 @@ if (document.getElementById("members")) {
     name: "Piotr",
     role: "Warp Lead Dev",
     img: "/assets/img/team/ppe.jpeg",
-    twitter: "",
+    twitter: "https://twitter.com/ppe_warp",
     linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
   }, {
     name: "Asia",
@@ -844,7 +844,7 @@ if (document.getElementById("members")) {
   members.forEach(function (member) {
     var card = document.createElement("div");
     card.classList.add("col-12", "col-sm-5", "col-md-4", "col-lg-3");
-    card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n          style=\"").concat(!member.twitter && "display: none", "\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
+    card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
 
     _element3.appendChild(card);
   });
