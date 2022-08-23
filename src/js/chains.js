@@ -119,5 +119,17 @@ if (chainsCrossChainSection) {
       `;
       element.appendChild(chainItem);
     });
+    const manyMoreItem = document.createElement("div");
+    manyMoreItem.classList.add(
+      "d-flex",
+      "col-lg-12",
+      "justify-content-center",
+      "mt-lg-0",
+      "mt-n5"
+    );
+    manyMoreItem.innerHTML += `
+      <p class="mb-0 mt-2 fw-bold">And many more!</p>
+    `;
+    element.appendChild(manyMoreItem);
   }
 }

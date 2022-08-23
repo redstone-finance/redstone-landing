@@ -16,14 +16,14 @@ if (document.getElementById("members")) {
     },
     {
       name: "Alex",
-      role: "Lead Dev",
+      role: "Oracle Lead Dev",
       img: "/assets/img/team/alex.png",
       twitter: "https://twitter.com/hatskier_me",
       linkedin: "https://www.linkedin.com/in/alex-suvorov/",
     },
     {
       name: "Piotr",
-      role: "Lead Dev",
+      role: "Warp Lead Dev",
       img: "/assets/img/team/ppe.jpeg",
       twitter: "",
       linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/",
@@ -37,21 +37,21 @@ if (document.getElementById("members")) {
     },
     {
       name: "Cezary",
-      role: "Developer",
+      role: "Fullstack Developer",
       img: "/assets/img/team/cezary.png",
       twitter: "https://twitter.com/cehalihali",
       linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/",
     },
     {
       name: "Matt",
-      role: "BizDev",
+      role: "Growth",
       img: "/assets/img/team/matt.png",
       twitter: "https://twitter.com/mattgurbiel",
       linkedin: "https://pl.linkedin.com/in/mateuszgurbiel",
     },
     {
       name: "Max",
-      role: "DevOps",
+      role: "DevOps & Web3 Dev",
       img: "/assets/img/team/max.png",
       twitter: "https://twitter.com/Max_Levitskiy",
       linkedin: "https://www.linkedin.com/in/maximlevicky/",
@@ -62,7 +62,7 @@ if (document.getElementById("members")) {
 
   members.forEach((member) => {
     const card = document.createElement("div");
-    card.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
+    card.classList.add("col-12", "col-sm-5", "col-md-4", "col-lg-3");
 
     card.innerHTML += `
       <img class="member-picture" src="${member.img}"/>

@@ -53,7 +53,7 @@ const dataSources = [
   },
   {
     name: "Yahoo finance",
-    image: "/assets/img/data-sources/yahoo.png",
+    image: "/assets/img/data-sources/yahoo-finance.png",
   },
   {
     name: "ECB",
@@ -81,9 +81,7 @@ if (dataSourcesCrossChainSection) {
       const dataSourceItem = document.createElement("div");
       dataSourceItem.classList.add("tab-item");
 
-      const isNonSquare = ["Coinbase", "Yahoo finance"].includes(
-        dataSource.name
-      );
+      const isNonSquare = ["Coinbase"].includes(dataSource.name);
 
       dataSourceItem.innerHTML += `
         <img
@@ -91,7 +89,7 @@ if (dataSourcesCrossChainSection) {
           src="${dataSource.image}"
           alt="${dataSource.name} Logo"
           height="60"
-          width="${isNonSquare ? 120 : 60}"
+          width="${isNonSquare ? 80 : 60}"
         />
         <p class="mb-0 mt-2">${dataSource.name}</p>
     `;

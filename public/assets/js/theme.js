@@ -476,6 +476,10 @@ if (chainsCrossChainSection) {
       chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, " Logo\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
       element.appendChild(chainItem);
     });
+    var manyMoreItem = document.createElement("div");
+    manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
+    manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">And many more!</p>\n    ";
+    element.appendChild(manyMoreItem);
   }
 }
 
@@ -520,7 +524,7 @@ var dataSources = [{
   image: "/assets/img/data-sources/pangolin.png"
 }, {
   name: "Yahoo finance",
-  image: "/assets/img/data-sources/yahoo.png"
+  image: "/assets/img/data-sources/yahoo-finance.png"
 }, {
   name: "ECB",
   image: "/assets/img/data-sources/ecb.png"
@@ -543,8 +547,8 @@ if (dataSourcesCrossChainSection) {
     dataSources.forEach(function (dataSource) {
       var dataSourceItem = document.createElement("div");
       dataSourceItem.classList.add("tab-item");
-      var isNonSquare = ["Coinbase", "Yahoo finance"].includes(dataSource.name);
-      dataSourceItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(dataSource.image, "\"\n          alt=\"").concat(dataSource.name, " Logo\"\n          height=\"60\"\n          width=\"").concat(isNonSquare ? 120 : 60, "\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(dataSource.name, "</p>\n    ");
+      var isNonSquare = ["Coinbase"].includes(dataSource.name);
+      dataSourceItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(dataSource.image, "\"\n          alt=\"").concat(dataSource.name, " Logo\"\n          height=\"60\"\n          width=\"").concat(isNonSquare ? 80 : 60, "\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(dataSource.name, "</p>\n    ");
 
       _element.appendChild(dataSourceItem);
     });
@@ -799,13 +803,13 @@ if (document.getElementById("members")) {
     linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/"
   }, {
     name: "Alex",
-    role: "Lead Dev",
+    role: "Oracle Lead Dev",
     img: "/assets/img/team/alex.png",
     twitter: "https://twitter.com/hatskier_me",
     linkedin: "https://www.linkedin.com/in/alex-suvorov/"
   }, {
     name: "Piotr",
-    role: "Lead Dev",
+    role: "Warp Lead Dev",
     img: "/assets/img/team/ppe.jpeg",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
@@ -817,19 +821,19 @@ if (document.getElementById("members")) {
     linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/"
   }, {
     name: "Cezary",
-    role: "Developer",
+    role: "Fullstack Developer",
     img: "/assets/img/team/cezary.png",
     twitter: "https://twitter.com/cehalihali",
     linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/"
   }, {
     name: "Matt",
-    role: "BizDev",
+    role: "Growth",
     img: "/assets/img/team/matt.png",
     twitter: "https://twitter.com/mattgurbiel",
     linkedin: "https://pl.linkedin.com/in/mateuszgurbiel"
   }, {
     name: "Max",
-    role: "DevOps",
+    role: "DevOps & Web3 Dev",
     img: "/assets/img/team/max.png",
     twitter: "https://twitter.com/Max_Levitskiy",
     linkedin: "https://www.linkedin.com/in/maximlevicky/"
@@ -839,7 +843,7 @@ if (document.getElementById("members")) {
 
   members.forEach(function (member) {
     var card = document.createElement("div");
-    card.classList.add("col-12", "col-sm-5", "col-md-3", "col-lg-3");
+    card.classList.add("col-12", "col-sm-5", "col-md-4", "col-lg-3");
     card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\" \n          referrerpolicy=\"no-referrer\"\n          style=\"").concat(!member.twitter && "display: none", "\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"contact-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
 
     _element3.appendChild(card);

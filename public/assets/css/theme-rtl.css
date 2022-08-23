@@ -18093,7 +18093,7 @@ label {
 }
 
 .first-page {
-  min-height: 100vh;
+  max-height: 100vh;
   margin-bottom: 5rem;
 }
 
