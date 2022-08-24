@@ -76,7 +76,7 @@ if (document.getElementById("members")) {
           referrerpolicy="no-referrer"
         >
           <img
-            class="contact-button-image"
+            class="big-button-image"
             src="/assets/img/icons/twitter.svg"
           >
         </a>
@@ -87,7 +87,7 @@ if (document.getElementById("members")) {
           referrerpolicy="no-referrer"
         >
           <img
-            class="contact-button-image"
+            class="big-button-image"
             src="/assets/img/icons/linkedin.svg"
           >
         </a>

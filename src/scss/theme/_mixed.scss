@@ -169,24 +169,31 @@
   justify-content: center;
 }
 
-.contact-button {
+.big-button-link {
   width: 350px;
   height: 185px;
-  outline: none;
-  background: none;
   border: 1px solid;
   border-radius: 15px;
   padding: 2rem;
-  text-align: left;
+  color: #616368;
+  text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
     transform: scale(1.05);
     cursor: pointer;
+    border: 1px solid #616368;
   }
 }
 
-.contact-button-image {
+.big-button {
+  outline: none;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.big-button-image {
   filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   width: 36px;
 }

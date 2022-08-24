@@ -17483,27 +17483,34 @@ label {
   }
 }
 
-.contact-button {
+.big-button-link {
   width: 350px;
   height: 185px;
-  outline: none;
-  background: none;
   border: 1px solid;
   border-radius: 15px;
   padding: 2rem;
-  text-align: left;
+  color: #616368;
+  text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.contact-button:hover {
+.big-button-link:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   cursor: pointer;
+  border: 1px solid #616368;
 }
 
-.contact-button-image {
+.big-button {
+  outline: none;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.big-button-image {
   -webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
   width: 36px;
