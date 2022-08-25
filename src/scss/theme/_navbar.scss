@@ -1,0 +1,56 @@
+.backdrop{
+  backdrop-filter: blur(3px);
+  margin-top: 0 !important;
+}
+
+.navbar-image {
+  align-self: center;
+  filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(5012%) hue-rotate(184deg) brightness(100%) contrast(97%);
+  width: 20px;
+}
+
+.navbar-center {
+  align-self: flex-end;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-center {
+    align-self: center;
+  }
+}
+
+.navbar-socials {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 1rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-socials {
+    img {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar-dropdown {
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-dropdown {
+    display: block;
+  }
+}
+
+.navbar-mobile-about {
+  display: block;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-mobile-about {
+    display: none;
+  }
+}

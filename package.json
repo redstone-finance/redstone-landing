@@ -1,7 +1,7 @@
 {
-  "name": "trafalgar",
+  "name": "redstone-landing",
   "version": "1.0.0",
-  "description": "Landing, Corporate & Business Template",
+  "description": "RedStone Landing page",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",

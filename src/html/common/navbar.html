@@ -1,13 +1,13 @@
 <nav
-  class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+  class="navbar navbar-expand-lg navbar-light navbar-margins fixed-top py-3"
   data-navbar-on-scroll="data-navbar-on-scroll"
 >
   <div class="container">
     <a
       class="navbar-brand d-flex align-items-center fw-bold fs-2"
-      href="index.html"
+      href="/index.html"
       ><img
-        src="assets/img/redstone-logo-full.svg"
+        src="/assets/img/redstone-logo-full.svg"
         width="175"
         height="50"
         alt="Redstone logo"
@@ -31,58 +31,167 @@
         <!--li.nav-item(data-anchor)-->
         <!--  a.nav-link.fw-medium(aria-current='page', href='#home' class= currentPage === 'index' ? 'active' : false ) Home-->
         @@if (context.isHome === true) {
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#features"
+            href="/#features"
             >Features</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#api"
-            >Accessing Data</a
+            href="/#cross-chain"
+            >Cross-chain</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#faq"
-            >FAQ</a
+            href="/#developers"
+            >Developers</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
+        <li class="nav-item navbar-center mx-lg-2">
           <a
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#project"
-            >About</a
+            href="/careers/"
+            >Careers</a
           >
         </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
-          <a
+        <div class="dropdown navbar-dropdown nav-item navbar-center mx-lg-2">
+          <div
             class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#partners"
-            >Partners</a
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-        </li>
-        <li class="nav-item mx-lg-2" data-anchor="data-anchor">
-          <a
-            class="nav-link fw-medium text-end text-lg-center text-primary"
-            href="#contact"
-            >Contact</a
-          >
-        </li>
+            About
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://medium.com/@RedStone_Finance"
+                target="_blank"
+                >Blog</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="/team">Team</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://drive.google.com/drive/folders/1QzoQ-9YokSjTUYffcd0Ow-j-VuXD0FC4"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                Press Kit
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-mobile-about">
+          <li class="nav-item navbar-center mx-lg-2">
+            <a
+              class="nav-link fw-medium text-end text-lg-center text-primary"
+              href="https://medium.com/@RedStone_Finance/"
+              target="_blank"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item navbar-center mx-lg-2">
+            <a
+              class="nav-link fw-medium text-end text-lg-center text-primary"
+              href="/team"
+            >
+              Team
+            </a>
+          </li>
+          <li class="nav-item navbar-center mx-lg-2">
+            <a
+              class="nav-link fw-medium text-end text-lg-center text-primary"
+              href="https://drive.google.com/drive/folders/1QzoQ-9YokSjTUYffcd0Ow-j-VuXD0FC4"
+              target="_blank"
+              referrerpolicy="no-referrer"
+            >
+              Press Kit
+            </a>
+          </li>
+        </div>
+        <div class="navbar-socials">
+          <li class="nav-item mx-lg-2">
+            <a
+              class="nav-link"
+              href="https://twitter.com/redstone_defi"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/twitter.svg"
+                class="navbar-image"
+                alt="Twitter icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              class="nav-link"
+              href="https://discord.com/invite/PVxBZKFr46"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/discord.svg"
+                class="navbar-image"
+                alt="Discord icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              class="nav-link"
+              href="https://github.com/redstone-finance"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/github.svg"
+                class="navbar-image"
+                alt="Github icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              class="nav-link"
+              href="https://www.linkedin.com/company/redstone-finance/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/linkedin.svg"
+                class="navbar-image"
+                alt="Github icon"
+              />
+            </a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a
+              class="nav-link"
+              href="https://t.me/redstonefinance/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="/assets/img/icons/telegram.svg"
+                class="navbar-image"
+                alt="Telegram icon"
+              />
+            </a>
+          </li>
+        </div>
         }
       </ul>
-      <form class="ps-lg-5 text-end text-lg-center mt-3 mt-lg-0">
-        <a
-          class="button btn btn-lg btn-danger rounded-pill order-0"
-          href="https://app.redstone.finance"
-          target="_blank"
-          >See our data</a
-        >
-      </form>
     </div>
   </div>
 </nav>

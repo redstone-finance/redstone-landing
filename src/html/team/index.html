@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    @@include('../common/head.html')
+  </head>
+  <body>
+    <main>
+      @@include('../common/navbar.html', { "isHome": true })
+      <section class="pt-8 pb-6" id="team">
+        <div class="container team mb-5">
+          <div class="col-lg-8 text-center mx-auto mb-4">
+            <div class="h6 fw-bold fs-4 lh-sm">
+              Meet the team behind RedStone
+            </div>
+            <div class="mt-3">
+              Committed, hard-working and always with a cup of coffee or some
+              energy drinks - to provide you with the most reliable and
+              efficient blockchain oracle for Web3, DeFi & NFT projects.
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center row grid-container"
+            id="members"
+          ></div>
+        </div>
+        @@include('../common/careers-introduction.html')
+        <div class="mt-5 container">
+          <div id="gallery"></div>
+        </div>
+        <div class="container">
+          <div class="row flex-center gap-3 mt-5">
+            <a
+              href="https://www.youtube.com/watch?v=S2-yE2U9lDo"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="big-button-link"
+            >
+              <button class="big-button">
+                <img
+                  src="/assets/img/icons/youtube.png"
+                  class="mb-2"
+                  alt="YouTube icon"
+                  style="height: 36px; width: auto"
+                />
+                <p class="mb-0">
+                  See our presentation on the biggest DeFi hackathon worldwide
+                  HackMoney2022
+                </p>
+              </button>
+            </a>
+            <a
+              href="https://open.spotify.com/episode/1M3UJ9pSSWCZJHMukLZWWY"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="big-button-link"
+            >
+              <button class="big-button">
+                <img
+                  src="/assets/img/icons/spotify.png"
+                  class="mb-2"
+                  alt="Spotify icon"
+                  style="height: 36px; width: auto"
+                />
+                <p class="mb-0">
+                  Listen to story of RedStone origins with Jakub and Marcin at
+                  Permaweb Pioneers
+                </p>
+              </button>
+            </a>
+            <a
+              href="https://youtu.be/t-oHzxEH2r8?"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="big-button-link"
+            >
+              <button class="big-button">
+                <img
+                  src="/assets/img/icons/youtube.png"
+                  class="mb-2"
+                  alt="YouTube icon"
+                  style="height: 36px; width: auto"
+                />
+                <p class="mb-0">
+                  Check out Jakub’s presentation at the ETHWarsaw meetup
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      @@include('../common/footer.html') @@include('../common/scripts.html')
+    </main>
+  </body>
+</html>

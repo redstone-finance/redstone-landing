@@ -16,7 +16,9 @@
     "import/named": "off",
     "import/no-extraneous-dependencies": "off",
     "arrow-parens": "off",
-    "no-param-reassign": ["error", { "props": false }]
+    "no-param-reassign": ["error", { "props": false }],
+    "quotes": [1, "double"],
+    "operator-linebreak": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2020
