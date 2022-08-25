@@ -12,7 +12,7 @@ const partners = [
   {
     name: "Coinbase Ventures",
     url: "https://www.coinbase.com/ventures",
-    image: "assets/img/partners/coinbase.png",
+    image: "assets/img/partners/coinbase-ventures.png",
   },
   {
     name: "Maven11",
@@ -71,7 +71,7 @@ const partners = [
   },
   {
     name: "Permanent Ventures",
-    url: "https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs",
+    url: "https://twitter.com/permanentvc",
     image: "assets/img/partners/permanent-ventures.png",
   },
   {
