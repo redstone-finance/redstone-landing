@@ -552,6 +552,14 @@ if (dataSourcesCrossChainSection) {
 
       _element.appendChild(dataSourceItem);
     });
+
+    var _manyMoreItem = document.createElement("div");
+
+    _manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
+
+    _manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">And many more!</p>\n    ";
+
+    _element.appendChild(_manyMoreItem);
   }
 }
 
@@ -638,7 +646,7 @@ var partners = [{
 }, {
   name: "Coinbase Ventures",
   url: "https://www.coinbase.com/ventures",
-  image: "assets/img/partners/coinbase.png"
+  image: "assets/img/partners/coinbase-ventures.png"
 }, {
   name: "Maven11",
   url: "https://www.maven11.com/",
@@ -685,7 +693,7 @@ var partners = [{
   image: "assets/img/partners/trgc.svg"
 }, {
   name: "Permanent Ventures",
-  url: "https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs",
+  url: "https://twitter.com/permanentvc",
   image: "assets/img/partners/permanent-ventures.png"
 }, {
   name: "4SV",
@@ -881,7 +889,7 @@ var projects = [{
 }, {
   name: "Pinnata",
   image: "assets/img/trusted-by/pinnata.svg",
-  url: "https://www.pinnata.xyz/earn"
+  url: "https://twitter.com/PinnataXYZ"
 }, {
   name: "EverFinance",
   image: "assets/img/trusted-by/everfinance.png",

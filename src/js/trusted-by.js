@@ -37,7 +37,7 @@ const projects = [
   {
     name: "Pinnata",
     image: "assets/img/trusted-by/pinnata.svg",
-    url: "https://www.pinnata.xyz/earn",
+    url: "https://twitter.com/PinnataXYZ",
   },
   {
     name: "EverFinance",
