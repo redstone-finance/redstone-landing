@@ -14,6 +14,7 @@
     -webkit-transform: scale(1);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
+    height: ;
   }
 
   .sr-only {
@@ -61,7 +62,7 @@
     letter-spacing: normal !important;
   }
   #mlb2-1266555.ml-form-embedContainer .ml-form-embedWrapper {
-    background-color: #f6f6f6;
+    background-color: #ffffff;
 
     border-width: 0px;
     border-color: transparent;
@@ -619,8 +620,8 @@
     .ml-form-checkboxRow
     input[type="checkbox"]:checked
     ~ .label-description::before {
-    border-color: #000000 !important;
-    background-color: #000000 !important;
+    border-color: #fd6179 !important;
+    background-color: #fd6179 !important;
     color: #ffffff !important;
   }
 
@@ -1038,11 +1039,11 @@
     .ml-form-embedBody
     .ml-form-horizontalRow
     button {
-    background-color: #000000 !important;
-    border-color: #000000;
+    background-color: #fd6179 !important;
+    border-color: #fd6179;
     border-style: solid;
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 25px;
     box-shadow: none;
     color: #ffffff !important;
     cursor: pointer;
@@ -1060,8 +1061,8 @@
     .ml-form-embedBody
     .ml-form-horizontalRow
     button:hover {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
+    background-color: #ff788a !important;
+    border-color: #ff788a !important;
   }
   #mlb2-1266555.ml-form-embedContainer
     .ml-form-embedWrapper
@@ -1148,9 +1149,9 @@
     .ml-form-embedBody
     .ml-form-embedSubmit
     button {
-    background-color: #000000 !important;
+    background-color: #fd6179 !important;
     border: none !important;
-    border-radius: 4px !important;
+    border-radius: 25px !important;
     box-shadow: none !important;
     color: #ffffff !important;
     cursor: pointer;
@@ -1175,7 +1176,7 @@
     .ml-form-embedBody
     .ml-form-embedSubmit
     button:hover {
-    background-color: #333333 !important;
+    background-color: #ff788a !important;
   }
   .ml-subscribe-close {
     width: 30px;
@@ -1499,11 +1500,7 @@
   <div class="ml-form-align-center">
     <div class="ml-form-embedWrapper embedForm">
       <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-        <div class="ml-form-embedContent" style="">
-          <h4>Newsletter</h4>
-
-          <p>Signup for news and special offers!</p>
-        </div>
+        <div class="ml-form-embedContent" style="margin-bottom: 0px"></div>
 
         <form
           class="ml-block-form"
@@ -1551,44 +1548,6 @@
                 <!-- /countries -->
               </div>
             </div>
-            <div class="ml-form-fieldRow">
-              <div
-                class="ml-field-group ml-field-last_name ml-validate-required"
-              >
-                <!-- input -->
-                <input
-                  aria-label="last_name"
-                  aria-required="true"
-                  type="text"
-                  class="form-control"
-                  data-inputmask=""
-                  name="fields[last_name]"
-                  placeholder="What should we call you?"
-                  autocomplete=""
-                />
-                <!-- /input -->
-
-                <!-- textarea -->
-
-                <!-- /textarea -->
-
-                <!-- select -->
-
-                <!-- /select -->
-
-                <!-- checkboxes -->
-
-                <!-- /checkboxes -->
-
-                <!-- radio -->
-
-                <!-- /radio -->
-
-                <!-- countries -->
-
-                <!-- /countries -->
-              </div>
-            </div>
             <div class="ml-form-fieldRow ml-last-item">
               <div class="ml-field-group ml-field-name ml-validate-required">
                 <label>I'm a:</label>
@@ -1612,9 +1571,9 @@
                   <!-- Visible if current or any next has value -->
                   <option>Developer</option>
 
-                  <option>Builder</option>
+                  <option>Enthusiast</option>
 
-                  <option>Investor</option>
+                  <option>Both</option>
                 </select>
                 <!-- /select -->
 
@@ -1636,7 +1595,7 @@
           <!-- Privacy policy -->
           <div class="ml-form-embedPermissions" style="">
             <div class="ml-form-embedPermissionsContent default privacy-policy">
-              <p>
+              <p style="text-align: center">
                 You can unsubscribe anytime. For more details, review our
                 Privacy Policy.
               </p>
