@@ -280,6 +280,10 @@
   color: #f2f2f2;
   text-align: center;
   padding: 0.25rem;
+
+  a {
+    color: #f2f2f2;
+  }
 }
 
 #gallery {
@@ -350,12 +354,12 @@
   filter: brightness(0) invert(1);
 }
 
-// .navbar-margins {
-//   margin-top: 3rem;
-//   @media (min-width: 576px) {
-//     margin-top: 2rem
-//   }
-// }
+.navbar-margins {
+  margin-top: 3rem;
+  @media (min-width: 576px) {
+    margin-top: 2rem
+  }
+}
 
 .testimonial-image {
   height: 100px;

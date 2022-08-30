@@ -17631,6 +17631,9 @@ label {
   text-align: center;
   padding: 0.25rem;
 }
+.announcement a {
+  color: #f2f2f2;
+}
 
 #gallery {
   line-height: 0;
@@ -17691,6 +17694,15 @@ label {
 .icon-white {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
+}
+
+.navbar-margins {
+  margin-top: 3rem;
+}
+@media (min-width: 576px) {
+  .navbar-margins {
+    margin-top: 2rem;
+  }
 }
 
 .testimonial-image {
