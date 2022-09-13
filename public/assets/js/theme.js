@@ -702,7 +702,7 @@ var partners = [{
 }, {
   name: "Numeus",
   url: "https://numeus.xyz/",
-  image: "assets/img/partners/numeus.png"
+  image: "assets/img/partners/numeus.svg"
 }, {
   name: "The Graph",
   url: "https://thegraph.com/",
