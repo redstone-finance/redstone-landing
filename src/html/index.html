@@ -330,7 +330,7 @@
   import "redstone-evm-connector/lib/contracts/message-based/PriceAware.sol";
 
   contract RedStoneExample is PriceAware {
-    function isSignerAuthorized(address _receviedSigner)
+    function isSignerAuthorized(address _receivedSigner)
       public override virtual view returns (bool) {
         return _receivedSigner == 0x0C39486f770B26F5527BBBf942726537986Cd7eb;
     }
