@@ -18252,7 +18252,7 @@ label {
   height: 20px;
 }
 
-#team, #contact {
+#team {
   min-height: calc(100vh - 56px);
 }
 
