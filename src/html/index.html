@@ -338,20 +338,20 @@
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0">
               <pre class="prettyprint b-15 pb-2"><br/>  
-  import "redstone-evm-connector/lib/contracts/message-based/PriceAware.sol";
+  import "@redstone-finance/evm-connector/contracts/data-services/AvalancheDataServiceConsumerBase.sol";
 
-  contract RedStoneExample is PriceAware {
-    function isSignerAuthorized(address _receivedSigner)
-      public override virtual view returns (bool) {
-        return _receivedSigner == 0x0C39486f770B26F5527BBBf942726537986Cd7eb;
-    }
-    
-    function doSomethingWithPrice() public {
-      // Extracting oracle data from tx calldata
-      // verifying signature and timestamp
-      uint256 ethPrice = getPriceFromMsg(bytes32("ETH"));
-      ...
-    }
+  contract YourContractName is AvalancheDataServiceConsumerBase {
+
+    // Getting a single value
+    uint256 ethPrice = getOracleNumericValueFromTxMsg(bytes32("ETH"));
+
+    // Getting several values
+    bytes32[] memory dataFeedIds = new bytes32[](2);
+    dataFeedIds[0] = bytes32("ETH");
+    dataFeedIds[1] = bytes32("BTC");
+    uint256[] memory values = getOracleNumericValuesFromTxMsg(dataFeedIds);
+    uint256 ethPrice = values[0];
+    uint256 btcPrice = values[1];
   }
               </pre>
             </div>
@@ -368,13 +368,18 @@
             </div>
             <div class="col-md-6 col-lg-6 px-sm-5 px-md-0 order-lg-1">
               <pre class="prettyprint b-15 pb-3"><br/>
-  import { WrapperBuilder } from "redstone-evm-connector";
+  import { WrapperBuilder } from "@redstone-finance/evm-connector";
 
-  const wrappedContract = WrapperBuilder
-                            .wrapLite(contract)
-                            .usingPriceFeed("redstone");
-                        
-  const tx = await wrappedContract.doSomethingWithPrice();
+  const contract = new ethers.Contract(address, abi, provider);
+
+  const wrappedContract = WrapperBuilder.wrap(contract).usingDataService(
+    {
+      dataServiceId: "redstone-avalanche-prod",
+      uniqueSignersCount: 10,
+      dataFeeds: ["AVAX", "ETH", "PNG"],
+    },
+    ["https://d33trozg86ya9x.cloudfront.net"]
+  );
               </pre>
             </div>
           </div>
