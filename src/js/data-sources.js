@@ -24,10 +24,6 @@ const dataSources = [
     image: "/assets/img/data-sources/kraken.png",
   },
   {
-    name: "FTX",
-    image: "/assets/img/data-sources/ftx.png",
-  },
-  {
     name: "Houbi",
     image: "/assets/img/data-sources/houbi.png",
   },
