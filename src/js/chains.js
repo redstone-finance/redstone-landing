@@ -8,7 +8,7 @@ const chains = [
     image: "assets/img/chains/avax.png",
   },
   {
-    name: "Polygon",
+    name: "Polygon zkEVM & PoS",
     image: "assets/img/chains/polygon.png",
   },
   {
@@ -28,12 +28,36 @@ const chains = [
     image: "assets/img/chains/arbitrum.png",
   },
   {
-    name: "Fantom",
-    image: "assets/img/chains/fantom.png",
+    name: "zkSync Era",
+    image: "assets/img/chains/zk-sync.png",
   },
   {
-    name: "Stacks",
-    image: "assets/img/chains/stacks.png",
+    name: "Base",
+    image: "assets/img/chains/base.png",
+  },
+  {
+    name: "Scroll",
+    image: "assets/img/chains/scroll.png",
+  },
+  {
+    name: "Starknet",
+    image: "assets/img/chains/starknet.png",
+  },
+  {
+    name: "Canto",
+    image: "assets/img/chains/canto.png",
+  },
+  {
+    name: "Fuel Network",
+    image: "assets/img/chains/fuel-network.png",
+  },
+  {
+    name: "TON",
+    image: "assets/img/chains/ton.png",
+  },
+  {
+    name: "Fantom",
+    image: "assets/img/chains/fantom.png",
   },
   {
     name: "Evmos",
@@ -48,8 +72,8 @@ const chains = [
     image: "assets/img/chains/gnosis.png",
   },
   {
-    name: "RSK",
-    image: "assets/img/chains/rsk.png",
+    name: "Rootstock",
+    image: "assets/img/chains/rootstock.png",
   },
   {
     name: "Klaytn",
@@ -60,20 +84,8 @@ const chains = [
     image: "assets/img/chains/cronos.png",
   },
   {
-    name: "Elrond",
-    image: "assets/img/chains/elrond.png",
-  },
-  {
     name: "Metis",
     image: "assets/img/chains/metis.png",
-  },
-  {
-    name: "Boba network",
-    image: "assets/img/chains/boba.png",
-  },
-  {
-    name: "Harmony",
-    image: "assets/img/chains/harmony.png",
   },
   {
     name: "Moonbeam",
@@ -82,18 +94,6 @@ const chains = [
   {
     name: "Aurora",
     image: "assets/img/chains/aurora.png",
-  },
-  {
-    name: "OKC",
-    image: "assets/img/chains/okc.png",
-  },
-  {
-    name: "Oasis Network",
-    image: "assets/img/chains/oasis.png",
-  },
-  {
-    name: "Velas",
-    image: "assets/img/chains/velas.png",
   },
 ];
 
@@ -105,15 +105,13 @@ if (chainsCrossChainSection) {
       const chainItem = document.createElement("div");
       chainItem.classList.add("tab-item");
 
-      const isNonSquareLogo = ["Boba network", "RSK"].includes(chain.name);
-
       chainItem.innerHTML += `
         <img
           loading="lazy"
           src="${chain.image}"
           alt="${chain.name} Logo"
           height="60"
-          ${isNonSquareLogo ? "height='60'" : "width='60'"}
+          width="60"
         />
         <p class="mb-0 mt-2">${chain.name}</p>
       `;
@@ -128,7 +126,16 @@ if (chainsCrossChainSection) {
       "mt-n5"
     );
     manyMoreItem.innerHTML += `
-      <p class="mb-0 mt-2 fw-bold">And many more!</p>
+      <a
+        class="mb-0 mt-2 fw-bold"
+        style="color: #616368;"
+        href="https://docs.redstone.finance/docs/smart-contract-devs/supported-chains"
+        target="_blank"
+        role="button"
+        referrerpolicy="no-referrer"
+      >
+        Full list in Docs!
+      </a>
     `;
     element.appendChild(manyMoreItem);
   }

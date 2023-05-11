@@ -89,15 +89,10 @@ const partners = [
     url: "https://thegraph.com/",
     image: "assets/img/partners/graph.png",
   },
-  {
-    name: "Compute Ventures",
-    url: "https://compute.ventures/",
-    image: "assets/img/partners/compute-ventures.svg",
-  },
 ];
 
-const partnerCrossChainSection = document.getElementById("partners");
-if (partnerCrossChainSection) {
+const partnersSection = document.getElementById("partners");
+if (partnersSection) {
   const element = document.getElementById("backed-by");
   if (element.childNodes.length === 0) {
     partners.forEach((partner) => {

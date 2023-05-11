@@ -56,16 +56,44 @@ const dataSources = [
     image: "/assets/img/data-sources/ecb.png",
   },
   {
-    name: "Drand",
-    image: "/assets/img/data-sources/drand.png",
-  },
-  {
-    name: "Verto",
-    image: "/assets/img/data-sources/verto.png",
-  },
-  {
     name: "Okcoin",
     image: "/assets/img/data-sources/okcoin.png",
+  },
+  {
+    name: "Curve",
+    image: "/assets/img/data-sources/curve.png",
+  },
+  {
+    name: "Balancer",
+    image: "/assets/img/data-sources/balancer.png",
+  },
+  {
+    name: "Camelot",
+    image: "/assets/img/data-sources/camelot.png",
+  },
+  {
+    name: "Frax",
+    image: "/assets/img/data-sources/frax.svg",
+  },
+  {
+    name: "Coinmarketcap",
+    image: "/assets/img/data-sources/coinmarketcap.png",
+  },
+  {
+    name: "Lens",
+    image: "/assets/img/data-sources/lens.png",
+  },
+  {
+    name: "Twelve Data",
+    image: "/assets/img/data-sources/twelve-data.png",
+  },
+  {
+    name: "KAIKO",
+    image: "/assets/img/data-sources/kaiko.png",
+  },
+  {
+    name: "4SV",
+    image: "/assets/img/data-sources/4sv.png",
   },
 ];
 

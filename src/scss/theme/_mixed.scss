@@ -144,7 +144,6 @@
     gap: 0;
     justify-content: flex-start;
   }
-  margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -213,10 +212,19 @@
 
 * {box-sizing:border-box}
 
+
 .slideshow-container {
   max-width: 1000px;
+  min-height: 420px;
   position: relative;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 300px;
+  }
 }
 
 .slide {
