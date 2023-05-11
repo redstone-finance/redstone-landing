@@ -249,31 +249,40 @@ var detectorInit = function detectorInit() {
 };
 
 var angels = [{
-  name: "Stani Kulechov, Aave Companies and Lens Protocol Founder and CEO",
+  name: "Stani Kulechov",
+  title: "Aave & Lens Founder",
   image: "assets/img/angels/stani-kulechov.png"
 }, {
-  name: "Sandeep Nailwal, Polygon Co-Founder",
+  name: "Sandeep Nailwal",
+  title: "Polygon Co-Founder",
   image: "assets/img/angels/sandeep-nailwal.png"
 }, {
-  name: "Alex Gluchovski, Matter Labs (zkSync) CEO & Co-Founder",
+  name: "Alex Gluchovski",
+  title: "zkSync Co-Founder",
   image: "assets/img/angels/alex-gluchovski.png"
 }, {
-  name: "Emin Gün Sirer, AvaLabs (Avalanche) CEO & Co-Founder",
+  name: "Emin Gün Sirer",
+  title: "Avalanche Co-Founder",
   image: "assets/img/angels/emin-gun-sirer.png"
 }, {
-  name: "Coinflipcanada, GMX Core Contributor",
+  name: "Coinflipcanada",
+  title: "GMX Contributor",
   image: "assets/img/angels/coinflipcanada.png"
 }, {
-  name: "Richard Ma, Quantstamp CEO",
+  name: "Richard Ma",
+  title: "Quantstamp CEO",
   image: "assets/img/angels/richard-ma.png"
 }, {
-  name: "Hilmar Orth, Gelato Co-Founder",
+  name: "Hilmar Orth",
+  title: "Gelato Co-Founder",
   image: "assets/img/angels/hilmar-orth.png"
 }, {
-  name: "Marco Cora, Matter Labs (zkSync) Head of BD",
+  name: "Marco Cora",
+  title: "zkSync BD Head",
   image: "assets/img/angels/marco-cora.png"
 }, {
-  name: "Patrick Dai, Qtum Founder",
+  name: "Patrick Dai",
+  title: "Qtum Founder",
   image: "assets/img/angels/patrick-dai.png"
 }];
 var angelsSection = document.getElementById("cross-chain");
@@ -284,8 +293,9 @@ if (angelsSection) {
   if (element.childNodes.length === 0) {
     angels.forEach(function (angel) {
       var angelItem = document.createElement("div");
-      angelItem.classList.add("tab-item");
-      angelItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(angel.image, "\"\n          alt=\"").concat(angel.name, " Logo\"\n          height=\"100\"\n          width=\"100\"\n        />\n        <p class=\"mb-0 mt-2\" style=\"height: 100px;\">").concat(angel.name, "</p>\n      ");
+      angelItem.classList.add("partner-item");
+      angelItem.classList.add("mt-4");
+      angelItem.innerHTML += "\n        <img\n          class=\"testimonial-image\"\n          loading=\"lazy\"\n          src=\"".concat(angel.image, "\"\n          alt=\"").concat(angel.name, " Logo\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n        <p class=\"mb-0 mt-0\" style=\"height: 100px;\">").concat(angel.title, "</p>\n      ");
       element.appendChild(angelItem);
     });
   }
@@ -335,7 +345,8 @@ var auditorsPartners = [{
   image: "assets/img/auditors-partners/peckshield.png"
 }, {
   name: "Piotr Szlachciak",
-  image: "assets/img/auditors-partners/l2beat.png"
+  image: "assets/img/auditors-partners/l2beat.png",
+  title: "L2Beat Co-Founder"
 }, {
   name: "AuditOne",
   image: "assets/img/auditors-partners/auditone.png"
@@ -359,9 +370,11 @@ if (auditorsPartnersChainsCrossChainSection) {
 
   if (_element.childNodes.length === 0) {
     auditorsPartners.forEach(function (auditorsPartnersElement) {
+      var _auditorsPartnersElem;
+
       var auditorsPartnersItem = document.createElement("div");
       auditorsPartnersItem.classList.add("tab-item");
-      auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n          width=\"60\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n      ");
+      auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n          width=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n        <p class=\"mb-0 mt-0\">").concat((_auditorsPartnersElem = auditorsPartnersElement === null || auditorsPartnersElement === void 0 ? void 0 : auditorsPartnersElement.title) !== null && _auditorsPartnersElem !== void 0 ? _auditorsPartnersElem : "", "</p>\n      ");
 
       _element.appendChild(auditorsPartnersItem);
     });
@@ -562,7 +575,7 @@ if (chainsCrossChainSection) {
     });
     var manyMoreItem = document.createElement("div");
     manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
-    manyMoreItem.innerHTML += "\n      <a\n        class=\"mb-0 mt-2 fw-bold\"\n        style=\"color: #616368;\"\n        href=\"https://docs.redstone.finance/docs/smart-contract-devs/supported-chains\"\n        target=\"_blank\"\n        role=\"button\"\n        referrerpolicy=\"no-referrer\"\n      >\n        Full list in Docs!\n      </a>\n    ";
+    manyMoreItem.innerHTML += "\n      <a\n        class=\"mb-0 mt-2 fw-bold\"\n        href=\"https://docs.redstone.finance/docs/smart-contract-devs/supported-chains\"\n        target=\"_blank\"\n        role=\"button\"\n        referrerpolicy=\"no-referrer\"\n      >\n        Full list in Docs!\n      </a>\n    ";
 
     _element2.appendChild(manyMoreItem);
   }

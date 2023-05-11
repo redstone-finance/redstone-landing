@@ -128,7 +128,6 @@ if (chainsCrossChainSection) {
     manyMoreItem.innerHTML += `
       <a
         class="mb-0 mt-2 fw-bold"
-        style="color: #616368;"
         href="https://docs.redstone.finance/docs/smart-contract-devs/supported-chains"
         target="_blank"
         role="button"

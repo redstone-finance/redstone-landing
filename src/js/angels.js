@@ -1,38 +1,47 @@
 const angels = [
   {
-    name: "Stani Kulechov, Aave Companies and Lens Protocol Founder and CEO",
+    name: "Stani Kulechov",
+    title: "Aave & Lens Founder",
     image: "assets/img/angels/stani-kulechov.png",
   },
   {
-    name: "Sandeep Nailwal, Polygon Co-Founder",
+    name: "Sandeep Nailwal",
+    title: "Polygon Co-Founder",
     image: "assets/img/angels/sandeep-nailwal.png",
   },
   {
-    name: "Alex Gluchovski, Matter Labs (zkSync) CEO & Co-Founder",
+    name: "Alex Gluchovski",
+    title: "zkSync Co-Founder",
     image: "assets/img/angels/alex-gluchovski.png",
   },
   {
-    name: "Emin Gün Sirer, AvaLabs (Avalanche) CEO & Co-Founder",
+    name: "Emin Gün Sirer",
+    title: "Avalanche Co-Founder",
     image: "assets/img/angels/emin-gun-sirer.png",
   },
   {
-    name: "Coinflipcanada, GMX Core Contributor",
+    name: "Coinflipcanada",
+    title: "GMX Contributor",
     image: "assets/img/angels/coinflipcanada.png",
   },
   {
-    name: "Richard Ma, Quantstamp CEO",
+    name: "Richard Ma",
+    title: "Quantstamp CEO",
     image: "assets/img/angels/richard-ma.png",
   },
   {
-    name: "Hilmar Orth, Gelato Co-Founder",
+    name: "Hilmar Orth",
+    title: "Gelato Co-Founder",
     image: "assets/img/angels/hilmar-orth.png",
   },
   {
-    name: "Marco Cora, Matter Labs (zkSync) Head of BD",
+    name: "Marco Cora",
+    title: "zkSync BD Head",
     image: "assets/img/angels/marco-cora.png",
   },
   {
-    name: "Patrick Dai, Qtum Founder",
+    name: "Patrick Dai",
+    title: "Qtum Founder",
     image: "assets/img/angels/patrick-dai.png",
   },
 ];
@@ -43,17 +52,18 @@ if (angelsSection) {
   if (element.childNodes.length === 0) {
     angels.forEach((angel) => {
       const angelItem = document.createElement("div");
-      angelItem.classList.add("tab-item");
+      angelItem.classList.add("partner-item");
+      angelItem.classList.add("mt-4");
 
       angelItem.innerHTML += `
         <img
+          class="testimonial-image"
           loading="lazy"
           src="${angel.image}"
           alt="${angel.name} Logo"
-          height="100"
-          width="100"
         />
-        <p class="mb-0 mt-2" style="height: 100px;">${angel.name}</p>
+        <p class="mb-0 mt-2">${angel.name}</p>
+        <p class="mb-0 mt-0" style="height: 100px;">${angel.title}</p>
       `;
       element.appendChild(angelItem);
     });

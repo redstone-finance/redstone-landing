@@ -138,6 +138,18 @@
   text-align: center;
 }
 
+.angels-container {
+  @include media-breakpoint-up(lg) {
+    gap: 0;
+    justify-content: flex-start;
+  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
 
 .partners-container {
   @include media-breakpoint-up(lg) {

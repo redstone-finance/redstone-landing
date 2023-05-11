@@ -10,6 +10,7 @@ const auditorsPartners = [
   {
     name: "Piotr Szlachciak",
     image: "assets/img/auditors-partners/l2beat.png",
+    title: "L2Beat Co-Founder",
   },
   {
     name: "AuditOne",
@@ -48,9 +49,10 @@ if (auditorsPartnersChainsCrossChainSection) {
           src="${auditorsPartnersElement.image}"
           alt="${auditorsPartnersElement.name} Logo"
           height="60"
-          width="60
+          width="60"
         />
         <p class="mb-0 mt-2">${auditorsPartnersElement.name}</p>
+        <p class="mb-0 mt-0">${auditorsPartnersElement?.title ?? ""}</p>
       `;
       element.appendChild(auditorsPartnersItem);
     });

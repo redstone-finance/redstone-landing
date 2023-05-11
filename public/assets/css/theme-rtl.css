@@ -17404,6 +17404,28 @@ label {
   text-align: center;
 }
 
+.angels-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .angels-container {
+    gap: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
 .partners-container {
   width: 100%;
   display: -webkit-box;
