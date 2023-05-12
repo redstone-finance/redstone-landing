@@ -251,39 +251,48 @@ var detectorInit = function detectorInit() {
 var angels = [{
   name: "Stani Kulechov",
   title: "Aave & Lens Founder",
-  image: "assets/img/angels/stani-kulechov.png"
+  image: "assets/img/angels/stani-kulechov.png",
+  url: "https://twitter.com/StaniKulechov"
 }, {
   name: "Sandeep Nailwal",
   title: "Polygon Co-Founder",
-  image: "assets/img/angels/sandeep-nailwal.png"
+  image: "assets/img/angels/sandeep-nailwal.png",
+  url: "https://twitter.com/sandeepnailwal"
 }, {
   name: "Alex Gluchovski",
   title: "zkSync Co-Founder",
-  image: "assets/img/angels/alex-gluchovski.png"
+  image: "assets/img/angels/alex-gluchovski.png",
+  url: "https://twitter.com/gluk64"
 }, {
   name: "Emin Gün Sirer",
   title: "Avalanche Co-Founder",
-  image: "assets/img/angels/emin-gun-sirer.png"
+  image: "assets/img/angels/emin-gun-sirer.png",
+  url: "https://twitter.com/el33th4xor"
 }, {
   name: "Coinflipcanada",
   title: "GMX Contributor",
-  image: "assets/img/angels/coinflipcanada.png"
+  image: "assets/img/angels/coinflipcanada.png",
+  url: "https://twitter.com/coinflipcanada"
 }, {
   name: "Richard Ma",
   title: "Quantstamp CEO",
-  image: "assets/img/angels/richard-ma.png"
+  image: "assets/img/angels/richard-ma.png",
+  url: "https://www.linkedin.com/in/rtmtd/"
 }, {
   name: "Hilmar Orth",
   title: "Gelato Co-Founder",
-  image: "assets/img/angels/hilmar-orth.png"
+  image: "assets/img/angels/hilmar-orth.png",
+  url: "https://twitter.com/hilmarxo"
 }, {
   name: "Marco Cora",
   title: "zkSync BD Head",
-  image: "assets/img/angels/marco-cora.png"
+  image: "assets/img/angels/marco-cora.png",
+  url: "https://twitter.com/Be1garat"
 }, {
   name: "Patrick Dai",
   title: "Qtum Founder",
-  image: "assets/img/angels/patrick-dai.png"
+  image: "assets/img/angels/patrick-dai.png",
+  url: "https://twitter.com/PatrickXDai"
 }];
 var angelsSection = document.getElementById("cross-chain");
 
@@ -295,7 +304,7 @@ if (angelsSection) {
       var angelItem = document.createElement("div");
       angelItem.classList.add("partner-item");
       angelItem.classList.add("mt-4");
-      angelItem.innerHTML += "\n        <img\n          class=\"testimonial-image\"\n          loading=\"lazy\"\n          src=\"".concat(angel.image, "\"\n          alt=\"").concat(angel.name, " Logo\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n        <p class=\"mb-0 mt-0\" style=\"height: 100px;\">").concat(angel.title, "</p>\n      ");
+      angelItem.innerHTML += "\n        <a\n          href=\"".concat(angel.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            class=\"testimonial-image\"\n            loading=\"lazy\"\n            src=\"").concat(angel.image, "\"\n            alt=\"").concat(angel.name, " Logo\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n          <p class=\"mb-0 mt-0\" style=\"height: 75px;\">").concat(angel.title, "</p>\n        </a>\n      ");
       element.appendChild(angelItem);
     });
   }
@@ -1112,7 +1121,7 @@ if (trustedByCrossChainSection) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
       var isBlackBackgroundRequired = project.name === "Prime Protocol";
-      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"  \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"  \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
       _element6.appendChild(projectItem);
     });

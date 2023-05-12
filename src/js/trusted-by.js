@@ -137,7 +137,7 @@ if (trustedByCrossChainSection) {
           role="button"
           target="_blank"
           rel="noreferrer noopener"
-          class="trusted-by-button"
+          class="link-like-text-button"
         >
           <img
             loading="lazy"

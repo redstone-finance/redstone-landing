@@ -17514,7 +17514,7 @@ label {
   width: 36px;
 }
 
-.trusted-by-button {
+.link-like-text-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17531,7 +17531,7 @@ label {
   color: #616368;
 }
 
-.trusted-by-button:hover, .trusted-by-button:focus, .trusted-by-button:active {
+.link-like-text-button:hover, .link-like-text-button:focus, .link-like-text-button:active {
   text-decoration: none;
   color: inherit;
 }
