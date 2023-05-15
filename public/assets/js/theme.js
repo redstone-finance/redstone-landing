@@ -979,7 +979,7 @@ if (document.getElementById("members")) {
     linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
   }, {
     name: "Matt",
-    role: "RedStone BD Lead",
+    role: "RedStone Head of BD",
     img: "/assets/img/team/matt.png",
     twitter: "https://twitter.com/mattgurbiel",
     linkedin: "https://pl.linkedin.com/in/mateuszgurbiel"

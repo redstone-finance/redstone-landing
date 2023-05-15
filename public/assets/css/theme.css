@@ -17443,9 +17443,9 @@ label {
 @media (min-width: 992px) {
   .angels-container {
     gap: 0;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
