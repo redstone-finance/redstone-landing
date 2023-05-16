@@ -16,7 +16,6 @@ function fetchData() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log("Sources:", Object.keys(data).length);
       sourcesNumberElement.innerHTML = Object.keys(data).length;
     });
 
@@ -30,7 +29,6 @@ function fetchData() {
     resp.forEach((set) => {
       tokensNumber += Object.keys(set.tokens).length;
     });
-    console.log(tokensNumber);
     tokensNumberElement.innerHTML = tokensNumber;
   });
 

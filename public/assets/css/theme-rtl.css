@@ -18133,13 +18133,9 @@ label {
   padding: 0;
 }
 
-#redstone-video video {
-  height: 30vh;
-}
-@media (min-width: 768px) {
-  #redstone-video video {
-    height: initial;
-  }
+#redstone-video {
+  height: 100%;
+  min-height: 200px;
 }
 
 .monospace {

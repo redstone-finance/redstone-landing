@@ -699,7 +699,6 @@ function fetchData() {
   fetch("https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/src/config/sources.json").then(function (response) {
     return response.json();
   }).then(function (data) {
-    console.log("Sources:", Object.keys(data).length);
     sourcesNumberElement.innerHTML = Object.keys(data).length;
   });
   Promise.all([fetch("https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/manifests/data-services/main.json").then(function (r) {
@@ -709,7 +708,6 @@ function fetchData() {
     resp.forEach(function (set) {
       tokensNumber += Object.keys(set.tokens).length;
     });
-    console.log(tokensNumber);
     tokensNumberElement.innerHTML = tokensNumber;
   });
   var milisecondInterval = 10;
@@ -1146,14 +1144,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  if (!isDeviceMobile()) {
-    var scriptEle = document.createElement("script");
-    scriptEle.setAttribute("src", "vendors/@lottiefiles/lottie-player.js");
-    document.getElementsByTagName("body")[0].appendChild(scriptEle);
-    videoElem.innerHTML = "            \n        <lottie-player autoplay=\"true\" loop=\"true\" speed=\"1\" src=\"assets/animations/redstone.json\"\n                       style=\"height: 100%; background: transparent\" background=\"transparent\"></lottie-player>";
-  } else {
-    videoElem.innerHTML = "<video width=\"100%\" src=\"assets/animations/redstone.mov\" autoplay loop muted playsinline></video>";
-  }
+  videoElem.innerHTML = "<iframe style=\"border: none; position: relative; width: 100%; height: 100%;\" scrolling=\"no\" frameborder=\"0\" src=\"https://rive.app/community/5039-10179-redstone-interactive-animation/embed\"></iframe>";
 }
 
 var cookieScript = document.getElementById("cookie-script");

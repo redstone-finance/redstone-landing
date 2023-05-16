@@ -2,7 +2,6 @@ import { docReady } from "./utils";
 import navbarInit from "./bootstrap-navbar";
 import detectorInit from "./detector";
 import scrollToTop from "./scroll-to-top";
-import isDeviceMobile from "./ismobile";
 import fetchData from "./fetched";
 
 // /* -------------------------------------------------------------------------- */
@@ -17,18 +16,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  if (!isDeviceMobile()) {
-    var scriptEle = document.createElement("script");
-    scriptEle.setAttribute("src", "vendors/@lottiefiles/lottie-player.js");
-
-    document.getElementsByTagName("body")[0].appendChild(scriptEle);
-
-    videoElem.innerHTML = `            
-        <lottie-player autoplay="true" loop="true" speed="1" src="assets/animations/redstone.json"
-                       style="height: 100%; background: transparent" background="transparent"></lottie-player>`;
-  } else {
-    videoElem.innerHTML = `<video width="100%" src="assets/animations/redstone.mov" autoplay loop muted playsinline></video>`;
-  }
+  videoElem.innerHTML = `<iframe style="border: none; position: relative; width: 100%; height: 100%;" scrolling="no" frameborder="0" src="https://rive.app/community/5039-10179-redstone-interactive-animation/embed"></iframe>`;
 }
 
 var cookieScript = document.getElementById("cookie-script");
