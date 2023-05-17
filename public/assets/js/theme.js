@@ -1144,7 +1144,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  videoElem.innerHTML = "<iframe style=\"border: none; position: relative; width: 100%; height: 100%;\" scrolling=\"no\" frameborder=\"0\" src=\"https://rive.app/community/5039-10179-redstone-interactive-animation/embed\"></iframe>";
+  videoElem.innerHTML = "<iframe style=\"border: none; position: relative; width: 100%; height: 100%;\" scrolling=\"no\" frameborder=\"0\" src=\"https://rive.app/s/qeztlrfx_0qlhO_8bKRXCQ/embed\"></iframe>";
 }
 
 var cookieScript = document.getElementById("cookie-script");
