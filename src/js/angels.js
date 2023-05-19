@@ -36,10 +36,10 @@ const angels = [
     url: "https://www.linkedin.com/in/rtmtd/",
   },
   {
-    name: "Hilmar Orth",
-    title: "Gelato Co-Founder",
-    image: "assets/img/angels/hilmar-orth.png",
-    url: "https://twitter.com/hilmarxo",
+    name: "Jacob Blish",
+    title: "Lido Head of BD",
+    image: "assets/img/angels/jacob-blish.png",
+    url: "https://twitter.com/chaingenius",
   },
   {
     name: "Marco Cora",
