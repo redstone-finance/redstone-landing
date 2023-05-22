@@ -285,9 +285,14 @@ var angels = [{
   url: "https://twitter.com/chaingenius"
 }, {
   name: "Marco Cora",
-  title: "zkSync BD Head",
+  title: "zkSync Head of BD",
   image: "assets/img/angels/marco-cora.png",
   url: "https://twitter.com/Be1garat"
+}, {
+  name: "Justin Reyes",
+  title: "Lido Head of DeFi",
+  image: "assets/img/angels/justin-reyes.png",
+  url: "https://twitter.com/Justin_Stables"
 }, {
   name: "Patrick Dai",
   title: "Qtum Founder",
