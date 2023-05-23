@@ -35,16 +35,6 @@ const projects = [
     url: "https://ardrive.io/",
   },
   {
-    name: "Pinnata",
-    image: "assets/img/trusted-by/pinnata.svg",
-    url: "https://twitter.com/PinnataXYZ",
-  },
-  {
-    name: "EverFinance",
-    image: "assets/img/trusted-by/everfinance.png",
-    url: "https://ever.finance/",
-  },
-  {
     name: "Brightpool Finance",
     image: "assets/img/trusted-by/brightpool.png",
     url: "https://brightpool.finance/",
@@ -55,9 +45,79 @@ const projects = [
     url: "https://www.primeprotocol.xyz/",
   },
   {
-    name: "Unilend Finance",
-    image: "assets/img/trusted-by/unilend-finance.png",
-    url: "https://unilend.finance/",
+    name: "Mento Finance",
+    image: "assets/img/trusted-by/mento-finance.svg",
+    url: "https://mento.finance/",
+  },
+  {
+    name: "Lido",
+    image: "assets/img/trusted-by/lido.png",
+    url: "https://lido.fi/",
+  },
+  {
+    name: "Gamma",
+    image: "assets/img/trusted-by/gamma.png",
+    url: "https://www.gamma.xyz/",
+  },
+  {
+    name: "Vesta Finance",
+    image: "assets/img/trusted-by/vesta-finance.png",
+    url: "https://vestafinance.xyz/",
+  },
+  {
+    name: "Y2K",
+    image: "assets/img/trusted-by/y2k.png",
+    url: "https://www.y2k.finance/",
+  },
+  {
+    name: "Yield Yak",
+    image: "assets/img/trusted-by/yield-yak.png",
+    url: "https://twitter.com/yieldyak_/",
+  },
+  {
+    name: "Float Capital",
+    image: "assets/img/trusted-by/float-capital.png",
+    url: "https://float.capital/",
+  },
+  {
+    name: "Cadence Protocol",
+    image: "assets/img/trusted-by/cadence-protocol.png",
+    url: "https://twitter.com/CadenceProtocol",
+  },
+  {
+    name: "Silo",
+    image: "assets/img/trusted-by/silo.png",
+    url: "https://www.silo.finance/",
+  },
+  {
+    name: "Raft",
+    image: "assets/img/trusted-by/raft.png",
+    url: "https://www.raft.fi/",
+  },
+  {
+    name: "Nostra",
+    image: "assets/img/trusted-by/nostra.png",
+    url: "https://nostra.finance/",
+  },
+  {
+    name: "Hubble Exchange",
+    image: "assets/img/trusted-by/hubble-exchange.png",
+    url: "https://twitter.com/HubbleExchange/",
+  },
+  {
+    name: "EMDX",
+    image: "assets/img/trusted-by/emdx.png",
+    url: "https://twitter.com/emdx_io/",
+  },
+  {
+    name: "Voltz",
+    image: "assets/img/trusted-by/voltz.png",
+    url: "https://twitter.com/voltz_xyz/",
+  },
+  {
+    name: "Swell",
+    image: "assets/img/trusted-by/swell.png",
+    url: "https://twitter.com/swellnetworkio/photo",
   },
 ];
 
@@ -77,7 +137,7 @@ if (trustedByCrossChainSection) {
           role="button"
           target="_blank"
           rel="noreferrer noopener"
-          class="trusted-by-button"
+          class="link-like-text-button"
         >
           <img
             loading="lazy"
@@ -94,5 +154,19 @@ if (trustedByCrossChainSection) {
       `;
       element.appendChild(projectItem);
     });
+    const manyMoreItem = document.createElement("div");
+    manyMoreItem.classList.add(
+      "d-flex",
+      "col-lg-12",
+      "justify-content-center",
+      "mt-lg-0",
+      "mt-n5"
+    );
+    manyMoreItem.innerHTML += `
+    <p class="mb-0 mt-2 fw-bold">
+      And many more!
+    </p>
+  `;
+    element.appendChild(manyMoreItem);
   }
 }

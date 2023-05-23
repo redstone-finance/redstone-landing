@@ -248,6 +248,73 @@ var detectorInit = function detectorInit() {
   navigator.userAgent.match("CriOS") && addClass(html, "chrome");
 };
 
+var angels = [{
+  name: "Stani Kulechov",
+  title: "Aave & Lens Founder",
+  image: "assets/img/angels/stani-kulechov.png",
+  url: "https://twitter.com/StaniKulechov"
+}, {
+  name: "Sandeep Nailwal",
+  title: "Polygon Co-Founder",
+  image: "assets/img/angels/sandeep-nailwal.png",
+  url: "https://twitter.com/sandeepnailwal"
+}, {
+  name: "Alex Gluchovski",
+  title: "zkSync Co-Founder",
+  image: "assets/img/angels/alex-gluchovski.png",
+  url: "https://twitter.com/gluk64"
+}, {
+  name: "Emin Gün Sirer",
+  title: "Avalanche Co-Founder",
+  image: "assets/img/angels/emin-gun-sirer.png",
+  url: "https://twitter.com/el33th4xor"
+}, {
+  name: "Coinflipcanada",
+  title: "GMX Contributor",
+  image: "assets/img/angels/coinflipcanada.png",
+  url: "https://twitter.com/coinflipcanada"
+}, {
+  name: "Richard Ma",
+  title: "Quantstamp CEO",
+  image: "assets/img/angels/richard-ma.png",
+  url: "https://www.linkedin.com/in/rtmtd/"
+}, {
+  name: "Jacob Blish",
+  title: "Lido Head of BD",
+  image: "assets/img/angels/jacob-blish.png",
+  url: "https://twitter.com/chaingenius"
+}, {
+  name: "Marco Cora",
+  title: "zkSync Head of BD",
+  image: "assets/img/angels/marco-cora.png",
+  url: "https://twitter.com/Be1garat"
+}, {
+  name: "Justin Reyes",
+  title: "Lido Head of DeFi",
+  image: "assets/img/angels/justin-reyes.png",
+  url: "https://twitter.com/Justin_Stables"
+}, {
+  name: "Patrick Dai",
+  title: "Qtum Founder",
+  image: "assets/img/angels/patrick-dai.png",
+  url: "https://twitter.com/PatrickXDai"
+}];
+var angelsSection = document.getElementById("cross-chain");
+
+if (angelsSection) {
+  var element = document.getElementById("angels");
+
+  if (element.childNodes.length === 0) {
+    angels.forEach(function (angel) {
+      var angelItem = document.createElement("div");
+      angelItem.classList.add("partner-item");
+      angelItem.classList.add("mt-4");
+      angelItem.innerHTML += "\n        <a\n          href=\"".concat(angel.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            class=\"testimonial-image\"\n            loading=\"lazy\"\n            src=\"").concat(angel.image, "\"\n            alt=\"").concat(angel.name, " Logo\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n          <p class=\"mb-0 mt-0\" style=\"height: 75px;\">").concat(angel.title, "</p>\n        </a>\n      ");
+      element.appendChild(angelItem);
+    });
+  }
+}
+
 function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
   var referenceDataPoints = 269400336;
   var referenceTimestamp = 1630398567000;
@@ -282,6 +349,50 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
 
   var obj = document.getElementById("data-points-number");
   animateValue(obj, pointsOnPageOpen, displayInterval, pointsPerDisplayInterval);
+}
+
+var auditorsPartners = [{
+  name: "ABDK",
+  image: "assets/img/auditors-partners/abdk.png"
+}, {
+  name: "Peckshield",
+  image: "assets/img/auditors-partners/peckshield.png"
+}, {
+  name: "Piotr Szlachciak",
+  image: "assets/img/auditors-partners/l2beat.png",
+  title: "L2Beat Co-Founder"
+}, {
+  name: "AuditOne",
+  image: "assets/img/auditors-partners/auditone.png"
+}, {
+  name: "Gelato",
+  image: "assets/img/auditors-partners/gelato.png"
+}, {
+  name: "Quantstamp",
+  image: "assets/img/auditors-partners/quantstamp.png"
+}, {
+  name: "Sygnum",
+  image: "assets/img/auditors-partners/sygnum.png"
+}, {
+  name: "Caldera",
+  image: "assets/img/auditors-partners/caldera.png"
+}];
+var auditorsPartnersChainsCrossChainSection = document.getElementById("cross-chain");
+
+if (auditorsPartnersChainsCrossChainSection) {
+  var _element = document.getElementById("auditors-partners");
+
+  if (_element.childNodes.length === 0) {
+    auditorsPartners.forEach(function (auditorsPartnersElement) {
+      var _auditorsPartnersElem;
+
+      var auditorsPartnersItem = document.createElement("div");
+      auditorsPartnersItem.classList.add("tab-item");
+      auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n          width=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n        <p class=\"mb-0 mt-0\">").concat((_auditorsPartnersElem = auditorsPartnersElement === null || auditorsPartnersElement === void 0 ? void 0 : auditorsPartnersElement.title) !== null && _auditorsPartnersElem !== void 0 ? _auditorsPartnersElem : "", "</p>\n      ");
+
+      _element.appendChild(auditorsPartnersItem);
+    });
+  }
 }
 /*-----------------------------------------------
 |   Top navigation opacity on scroll
@@ -397,7 +508,7 @@ var chains = [{
   name: "Avalanche",
   image: "assets/img/chains/avax.png"
 }, {
-  name: "Polygon",
+  name: "Polygon zkEVM & PoS",
   image: "assets/img/chains/polygon.png"
 }, {
   name: "Celo",
@@ -412,11 +523,29 @@ var chains = [{
   name: "Arbitrum",
   image: "assets/img/chains/arbitrum.png"
 }, {
+  name: "zkSync Era",
+  image: "assets/img/chains/zk-sync.png"
+}, {
+  name: "Base",
+  image: "assets/img/chains/base.png"
+}, {
+  name: "Scroll",
+  image: "assets/img/chains/scroll.png"
+}, {
+  name: "Starknet",
+  image: "assets/img/chains/starknet.png"
+}, {
+  name: "Canto",
+  image: "assets/img/chains/canto.png"
+}, {
+  name: "Fuel Network",
+  image: "assets/img/chains/fuel-network.png"
+}, {
+  name: "TON",
+  image: "assets/img/chains/ton.png"
+}, {
   name: "Fantom",
   image: "assets/img/chains/fantom.png"
-}, {
-  name: "Stacks",
-  image: "assets/img/chains/stacks.png"
 }, {
   name: "Evmos",
   image: "assets/img/chains/evmos.png"
@@ -427,8 +556,8 @@ var chains = [{
   name: "Gnosis",
   image: "assets/img/chains/gnosis.png"
 }, {
-  name: "RSK",
-  image: "assets/img/chains/rsk.png"
+  name: "Rootstock",
+  image: "assets/img/chains/rootstock.png"
 }, {
   name: "Klaytn",
   image: "assets/img/chains/klaytn.png"
@@ -436,50 +565,33 @@ var chains = [{
   name: "Cronos",
   image: "assets/img/chains/cronos.png"
 }, {
-  name: "Elrond",
-  image: "assets/img/chains/elrond.png"
-}, {
   name: "Metis",
   image: "assets/img/chains/metis.png"
-}, {
-  name: "Boba network",
-  image: "assets/img/chains/boba.png"
-}, {
-  name: "Harmony",
-  image: "assets/img/chains/harmony.png"
 }, {
   name: "Moonbeam",
   image: "assets/img/chains/moonbeam.png"
 }, {
   name: "Aurora",
   image: "assets/img/chains/aurora.png"
-}, {
-  name: "OKC",
-  image: "assets/img/chains/okc.png"
-}, {
-  name: "Oasis Network",
-  image: "assets/img/chains/oasis.png"
-}, {
-  name: "Velas",
-  image: "assets/img/chains/velas.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
 if (chainsCrossChainSection) {
-  var element = document.getElementById("chains");
+  var _element2 = document.getElementById("chains");
 
-  if (element.childNodes.length === 0) {
+  if (_element2.childNodes.length === 0) {
     chains.forEach(function (chain) {
       var chainItem = document.createElement("div");
       chainItem.classList.add("tab-item");
-      var isNonSquareLogo = ["Boba network", "RSK"].includes(chain.name);
-      chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, " Logo\"\n          height=\"60\"\n          ").concat(isNonSquareLogo ? "height='60'" : "width='60'", "\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
-      element.appendChild(chainItem);
+      chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, " Logo\"\n          height=\"60\"\n          width=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
+
+      _element2.appendChild(chainItem);
     });
     var manyMoreItem = document.createElement("div");
     manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
-    manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">And many more!</p>\n    ";
-    element.appendChild(manyMoreItem);
+    manyMoreItem.innerHTML += "\n      <a\n        class=\"mb-0 mt-2 fw-bold\"\n        href=\"https://docs.redstone.finance/docs/smart-contract-devs/supported-chains\"\n        target=\"_blank\"\n        role=\"button\"\n        referrerpolicy=\"no-referrer\"\n      >\n        Full list in Docs!\n      </a>\n    ";
+
+    _element2.appendChild(manyMoreItem);
   }
 }
 
@@ -526,28 +638,49 @@ var dataSources = [{
   name: "ECB",
   image: "/assets/img/data-sources/ecb.png"
 }, {
-  name: "Drand",
-  image: "/assets/img/data-sources/drand.png"
-}, {
-  name: "Verto",
-  image: "/assets/img/data-sources/verto.png"
-}, {
   name: "Okcoin",
   image: "/assets/img/data-sources/okcoin.png"
+}, {
+  name: "Curve",
+  image: "/assets/img/data-sources/curve.png"
+}, {
+  name: "Balancer",
+  image: "/assets/img/data-sources/balancer.png"
+}, {
+  name: "Camelot",
+  image: "/assets/img/data-sources/camelot.png"
+}, {
+  name: "Frax",
+  image: "/assets/img/data-sources/frax.svg"
+}, {
+  name: "Coinmarketcap",
+  image: "/assets/img/data-sources/coinmarketcap.png"
+}, {
+  name: "Lens",
+  image: "/assets/img/data-sources/lens.png"
+}, {
+  name: "Twelve Data",
+  image: "/assets/img/data-sources/twelve-data.png"
+}, {
+  name: "KAIKO",
+  image: "/assets/img/data-sources/kaiko.png"
+}, {
+  name: "4SV",
+  image: "/assets/img/data-sources/4sv.png"
 }];
 var dataSourcesCrossChainSection = document.getElementById("cross-chain");
 
 if (dataSourcesCrossChainSection) {
-  var _element = document.getElementById("data-sources");
+  var _element3 = document.getElementById("data-sources");
 
-  if (_element.childNodes.length === 0) {
+  if (_element3.childNodes.length === 0) {
     dataSources.forEach(function (dataSource) {
       var dataSourceItem = document.createElement("div");
       dataSourceItem.classList.add("tab-item");
       var isNonSquare = ["Coinbase"].includes(dataSource.name);
       dataSourceItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(dataSource.image, "\"\n          alt=\"").concat(dataSource.name, " Logo\"\n          height=\"60\"\n          width=\"").concat(isNonSquare ? 80 : 60, "\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(dataSource.name, "</p>\n    ");
 
-      _element.appendChild(dataSourceItem);
+      _element3.appendChild(dataSourceItem);
     });
 
     var _manyMoreItem = document.createElement("div");
@@ -556,7 +689,7 @@ if (dataSourcesCrossChainSection) {
 
     _manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">And many more!</p>\n    ";
 
-    _element.appendChild(_manyMoreItem);
+    _element3.appendChild(_manyMoreItem);
   }
 }
 
@@ -568,22 +701,18 @@ function fetchData() {
   sourcesNumberElement.innerHTML = preloader;
   tokensNumberElement.innerHTML = preloader;
   dataPointsElement.innerHTML = preloader;
-  fetch("https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/sources.json").then(function (response) {
+  fetch("https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/src/config/sources.json").then(function (response) {
     return response.json();
   }).then(function (data) {
-    console.log("Sources:", Object.keys(data).length);
     sourcesNumberElement.innerHTML = Object.keys(data).length;
   });
-  Promise.all([fetch("https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/main.json").then(function (r) {
-    return r.json();
-  }), fetch("https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json").then(function (r) {
+  Promise.all([fetch("https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/manifests/data-services/main.json").then(function (r) {
     return r.json();
   })]).then(function (resp) {
     var tokensNumber = 0;
     resp.forEach(function (set) {
       tokensNumber += Object.keys(set.tokens).length;
     });
-    console.log(tokensNumber);
     tokensNumberElement.innerHTML = tokensNumber;
   });
   var milisecondInterval = 10;
@@ -704,24 +833,20 @@ var partners = [{
   name: "The Graph",
   url: "https://thegraph.com/",
   image: "assets/img/partners/graph.png"
-}, {
-  name: "Compute Ventures",
-  url: "https://compute.ventures/",
-  image: "assets/img/partners/compute-ventures.svg"
 }];
-var partnerCrossChainSection = document.getElementById("partners");
+var partnersSection = document.getElementById("partners");
 
-if (partnerCrossChainSection) {
-  var _element2 = document.getElementById("backed-by");
+if (partnersSection) {
+  var _element4 = document.getElementById("backed-by");
 
-  if (_element2.childNodes.length === 0) {
+  if (_element4.childNodes.length === 0) {
     partners.forEach(function (partner) {
       var partnerItem = document.createElement("div");
       partnerItem.classList.add("partner-item");
       var isBlackBackgroundRequired = partner.name === "Distributed Global";
       partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"\n          />\n        </a>\n      ");
 
-      _element2.appendChild(partnerItem);
+      _element4.appendChild(partnerItem);
     });
   }
 }
@@ -793,65 +918,102 @@ var scrollToTop = function scrollToTop() {
   });
 };
 
+var slideIndex = 1;
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+
+  if (slides.length > 0 && dots.length > 0) {
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    } // eslint-disable-next-line no-plusplus
+
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    } // eslint-disable-next-line no-plusplus
+
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+}
+
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
 if (document.getElementById("members")) {
   var members = [{
     name: "Jakub",
-    role: "Founder",
+    role: "Founder CEO",
     img: "/assets/img/team/jakub.png",
     twitter: "https://twitter.com/kuba_eth",
     linkedin: "https://www.linkedin.com/in/jakub-wojciechowski-5901b68/"
   }, {
     name: "Marcin",
-    role: "COO",
+    role: "Co-Founder COO",
     img: "/assets/img/team/marcin.jpg",
     twitter: "https://twitter.com/Marcin_Kaz13",
     linkedin: "https://www.linkedin.com/in/marcin-kazmierczak1/"
   }, {
     name: "Alex",
-    role: "Oracle Lead Dev",
+    role: "Co-Founder RedStone Lead Dev",
     img: "/assets/img/team/alex.png",
     twitter: "https://twitter.com/hatskier_me",
     linkedin: "https://www.linkedin.com/in/alex-suvorov/"
   }, {
     name: "Piotr",
-    role: "Warp Lead Dev",
+    role: "Co-Founder Warp Lead Dev",
     img: "/assets/img/team/ppe.jpeg",
     twitter: "https://twitter.com/ppe_warp",
     linkedin: "https://www.linkedin.com/in/piotr-p%C4%99dziwiatr-2ab105215/"
   }, {
-    name: "Asia",
-    role: "Fullstack Developer",
-    img: "/assets/img/team/asia.png",
-    twitter: "https://twitter.com/jzi_on_fire",
-    linkedin: "https://www.linkedin.com/in/asia-zio%C5%82a-600462136/"
-  }, {
-    name: "Cezary",
-    role: "Fullstack Developer",
-    img: "/assets/img/team/cezary.png",
-    twitter: "https://twitter.com/cehalihali",
-    linkedin: "https://www.linkedin.com/in/cezary-h-3a1338108/"
-  }, {
     name: "Matt",
-    role: "Growth",
+    role: "RedStone Head of BD",
     img: "/assets/img/team/matt.png",
     twitter: "https://twitter.com/mattgurbiel",
     linkedin: "https://pl.linkedin.com/in/mateuszgurbiel"
   }, {
-    name: "Max",
-    role: "DevOps & Web3 Dev",
-    img: "/assets/img/team/max.png",
-    twitter: "https://twitter.com/Max_Levitskiy",
-    linkedin: "https://www.linkedin.com/in/maximlevicky/"
+    name: "Filip",
+    role: "DeFi Degen",
+    img: "/assets/img/team/filip.png",
+    twitter: "https://twitter.com/Hundert1000",
+    linkedin: "https://www.linkedin.com/in/filip-rogalski-0020611b3"
+  }, {
+    name: "Maja",
+    role: "RedStone Marketing Lead",
+    img: "/assets/img/team/maja.png",
+    twitter: "https://twitter.com/MajaCholewka",
+    linkedin: "https://www.linkedin.com/in/majacholewka/"
+  }, {
+    name: "Wolf",
+    role: "Warp Marketing Lead",
+    img: "/assets/img/team/wolf.png",
+    twitter: "https://twitter.com/warcin101",
+    linkedin: "https://www.linkedin.com/in/marcin-wilk-73895a1a2/"
   }];
 
-  var _element3 = document.getElementById("members");
+  var _element5 = document.getElementById("members");
 
   members.forEach(function (member) {
     var card = document.createElement("div");
     card.classList.add("col-12", "col-sm-5", "col-md-4", "col-lg-3");
     card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"big-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"big-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
 
-    _element3.appendChild(card);
+    _element5.appendChild(card);
   });
 }
 
@@ -884,14 +1046,6 @@ var projects = [{
   image: "assets/img/trusted-by/ardrive.png",
   url: "https://ardrive.io/"
 }, {
-  name: "Pinnata",
-  image: "assets/img/trusted-by/pinnata.svg",
-  url: "https://twitter.com/PinnataXYZ"
-}, {
-  name: "EverFinance",
-  image: "assets/img/trusted-by/everfinance.png",
-  url: "https://ever.finance/"
-}, {
   name: "Brightpool Finance",
   image: "assets/img/trusted-by/brightpool.png",
   url: "https://brightpool.finance/"
@@ -900,24 +1054,88 @@ var projects = [{
   image: "assets/img/trusted-by/prime-protocol.png",
   url: "https://www.primeprotocol.xyz/"
 }, {
-  name: "Unilend Finance",
-  image: "assets/img/trusted-by/unilend-finance.png",
-  url: "https://unilend.finance/"
+  name: "Mento Finance",
+  image: "assets/img/trusted-by/mento-finance.svg",
+  url: "https://mento.finance/"
+}, {
+  name: "Lido",
+  image: "assets/img/trusted-by/lido.png",
+  url: "https://lido.fi/"
+}, {
+  name: "Gamma",
+  image: "assets/img/trusted-by/gamma.png",
+  url: "https://www.gamma.xyz/"
+}, {
+  name: "Vesta Finance",
+  image: "assets/img/trusted-by/vesta-finance.png",
+  url: "https://vestafinance.xyz/"
+}, {
+  name: "Y2K",
+  image: "assets/img/trusted-by/y2k.png",
+  url: "https://www.y2k.finance/"
+}, {
+  name: "Yield Yak",
+  image: "assets/img/trusted-by/yield-yak.png",
+  url: "https://twitter.com/yieldyak_/"
+}, {
+  name: "Float Capital",
+  image: "assets/img/trusted-by/float-capital.png",
+  url: "https://float.capital/"
+}, {
+  name: "Cadence Protocol",
+  image: "assets/img/trusted-by/cadence-protocol.png",
+  url: "https://twitter.com/CadenceProtocol"
+}, {
+  name: "Silo",
+  image: "assets/img/trusted-by/silo.png",
+  url: "https://www.silo.finance/"
+}, {
+  name: "Raft",
+  image: "assets/img/trusted-by/raft.png",
+  url: "https://www.raft.fi/"
+}, {
+  name: "Nostra",
+  image: "assets/img/trusted-by/nostra.png",
+  url: "https://nostra.finance/"
+}, {
+  name: "Hubble Exchange",
+  image: "assets/img/trusted-by/hubble-exchange.png",
+  url: "https://twitter.com/HubbleExchange/"
+}, {
+  name: "EMDX",
+  image: "assets/img/trusted-by/emdx.png",
+  url: "https://twitter.com/emdx_io/"
+}, {
+  name: "Voltz",
+  image: "assets/img/trusted-by/voltz.png",
+  url: "https://twitter.com/voltz_xyz/"
+}, {
+  name: "Swell",
+  image: "assets/img/trusted-by/swell.png",
+  url: "https://twitter.com/swellnetworkio/photo"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 
 if (trustedByCrossChainSection) {
-  var _element4 = document.getElementById("trusted-by");
+  var _element6 = document.getElementById("trusted-by");
 
-  if (_element4.childNodes.length === 0) {
+  if (_element6.childNodes.length === 0) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
       var isBlackBackgroundRequired = project.name === "Prime Protocol";
-      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"trusted-by-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"  \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"  \n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
-      _element4.appendChild(projectItem);
+      _element6.appendChild(projectItem);
     });
+
+    var _manyMoreItem2 = document.createElement("div");
+
+    _manyMoreItem2.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
+
+    _manyMoreItem2.innerHTML += "\n    <p class=\"mb-0 mt-2 fw-bold\">\n      And many more!\n    </p>\n  ";
+
+    _element6.appendChild(_manyMoreItem2);
   }
 } // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
@@ -931,14 +1149,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  if (!isDeviceMobile()) {
-    var scriptEle = document.createElement("script");
-    scriptEle.setAttribute("src", "vendors/@lottiefiles/lottie-player.js");
-    document.getElementsByTagName("body")[0].appendChild(scriptEle);
-    videoElem.innerHTML = "            \n        <lottie-player autoplay=\"true\" loop=\"true\" speed=\"1\" src=\"assets/animations/redstone.json\"\n                       style=\"height: 100%; background: transparent\" background=\"transparent\"></lottie-player>";
-  } else {
-    videoElem.innerHTML = "<video width=\"100%\" src=\"assets/animations/redstone.mov\" autoplay loop muted playsinline></video>";
-  }
+  videoElem.innerHTML = "<iframe style=\"border: none; position: relative; width: 100%; height: 100%;\" scrolling=\"no\" frameborder=\"0\" src=\"https://rive.app/community/5039-10212-redstone-interactive-animation/embed\"></iframe>";
 }
 
 var cookieScript = document.getElementById("cookie-script");

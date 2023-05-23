@@ -12,20 +12,16 @@ function fetchData() {
   dataPointsElement.innerHTML = preloader;
 
   fetch(
-    "https://raw.githubusercontent.com/redstone-finance/redstone-node/main/src/config/sources.json"
+    "https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/src/config/sources.json"
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log("Sources:", Object.keys(data).length);
       sourcesNumberElement.innerHTML = Object.keys(data).length;
     });
 
   Promise.all([
     fetch(
-      "https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/main.json"
-    ).then((r) => r.json()),
-    fetch(
-      "https://raw.githubusercontent.com/redstone-finance/redstone-node/main/manifests/stocks.json"
+      "https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/manifests/data-services/main.json"
     ).then((r) => r.json()),
   ]).then((resp) => {
     let tokensNumber = 0;
@@ -33,7 +29,6 @@ function fetchData() {
     resp.forEach((set) => {
       tokensNumber += Object.keys(set.tokens).length;
     });
-    console.log(tokensNumber);
     tokensNumberElement.innerHTML = tokensNumber;
   });
 

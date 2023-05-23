@@ -37,13 +37,8 @@
 }
 
 #redstone-video {
-    video {
-        height: 30vh;
-
-        @include media-breakpoint-up(md) {
-            height: initial;
-        }
-    }
+    height: 100%;
+    min-height: 300px;
 }
 
 .monospace {
