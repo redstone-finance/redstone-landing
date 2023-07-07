@@ -1,633 +1,552 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <head>
-    <!-- Hotjar Tracking Code for https://redstone.finance/ -->
-    <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hjfunction(){(h.hj.q=h.hj.q[]).push(arguments)};
-          h._hjSettings={hjid:3513422,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=%27);
-    </script>
-    <script>
+
+<head>
+  <!-- Hotjar Tracking Code for https://redstone.finance/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hjfunction(){ (h.hj.q = h.hj.q[]).push(arguments) };
+      h._hjSettings = { hjid: 3513422, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=%27);
+  </script>
+  <script>
       const cookie3Options = {
-        siteId: 91,
-        additionalTracking: true,
-        cookielessEnabled: true,
-      };
+      siteId: 91,
+      additionalTracking: true,
+      cookielessEnabled: true,
+    };
 
-      window._paq = window._paq || [];
-      (function () {
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src =
-          "https://cdn.staging.cookie3.co/scripts/analytics/latest/cookie3.analytics.min.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-    @@include('./common/head.html')
-  </head>
+    window._paq = window._paq || [];
+    (function () {
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+      g.src =
+        "https://cdn.staging.cookie3.co/scripts/analytics/latest/cookie3.analytics.min.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  @@include('./common/head.html')
+</head>
 
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PDZD26Z"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      >
-      </iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      @@include('./common/navbar.html', { "isHome": true })
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDZD26Z" height="0" width="0"
+      style="display: none; visibility: hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- ===============================================-->
+  <!--    Main Content-->
+  <!-- ===============================================-->
+  <main class="main" id="top">
+    @@include('./common/navbar.html', { "isHome": true })
 
-      <div class="first-page">
-        <section class="pt-7 py-md-4 py-lg-2 mt-md-8 mt-lg-8" id="home">
-          <!--+Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'bottom', 'background-size': 'cover',} }, className: '' })-->
-          <div class="container position-relative">
-            <div class="row align-items-stretch justify-content-between">
-              <div class="col-md-7 col-lg-6 text-center text-md-start">
-                <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
-                <!--  img.*src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
-                <div class="h1 mt-4 mb-3 display-3 fw-bold lh-sm mt-lg-0">
-                  Modular Oracles<br class="d-block d-lg-none d-xl-block" />
-                  tailored to your dApp
-                </div>
-                <p class="mb-3 fs-1">
-                  RedStone delivers data you need at high-frequency
-                  <br class="d-none d-lg-block" />
-                  and inherited security of the destination chain.
-                </p>
-                <div class="first-page-buttons-container">
-                  <a
-                    class="btn btn-lg btn-danger rounded-pill"
-                    href="https://app.redstone.finance"
-                    target="_blank"
-                    role="button"
-                    >See our data</a
-                  ><a
-                    class="btn btn-lg btn-outline-danger rounded-pill"
-                    href="https://docs.redstone.finance/"
-                    target="_blank"
-                    role="button"
-                  >
-                    Start Building
-                  </a>
-                </div>
+    <div class="first-page">
+      <section class="pt-7 py-md-4 py-lg-2 mt-md-8 mt-lg-8" id="home">
+        <!--+Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'bottom', 'background-size': 'cover',} }, className: '' })-->
+        <div class="container position-relative">
+          <div class="row align-items-stretch justify-content-between">
+            <div class="col-md-7 col-lg-6 text-center text-md-start">
+              <!--span.badge.bg-light.rounded-pill.text-dark.align-items-center.d-flex.flex-row-reverse.justify-content-end.mx-auto.mx-md-0.ps-0.w-75.w-sm-50.w-md-75.w-xl-50.mb-3 #1 Editiors Choice App of 2020-->
+              <!--  img.*src=`${CWD}assets/img/illustrations/arrow-right.png`   alt='')-->
+              <div class="h1 mt-4 mb-3 display-3 fw-bold lh-sm mt-lg-0">
+                Modular Oracles<br class="d-block d-lg-none d-xl-block" />
+                tailored to your dApp
               </div>
-              <div class="col-md-5 col-lg-6 text-center text-md-end px-0">
-                <div id="redstone-video"></div>
+              <p class="mb-3 fs-1">
+                RedStone delivers data you need at high-frequency
+                <br class="d-none d-lg-block" />
+                and inherited security of the destination chain.
+              </p>
+              <div class="first-page-buttons-container">
+                <a class="btn btn-lg btn-danger rounded-pill" href="https://app.redstone.finance" target="_blank"
+                  role="button">See our data</a><a class="btn btn-lg btn-outline-danger rounded-pill"
+                  href="https://docs.redstone.finance/" target="_blank" role="button">
+                  Start Building
+                </a>
               </div>
             </div>
+            <div class="col-md-5 col-lg-6 text-center text-md-end px-0">
+              <div id="redstone-video"></div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="mt-md-6 mt-lg-7" id="statistics">
-          <div class="container">
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="mt-md-6 mt-lg-7" id="statistics">
+        <div class="container">
+          <div class="row justify-content-between stats b-15 flex-column flex-md-row">
             <div
-              class="row justify-content-between stats b-15 flex-column flex-md-row"
-            >
-              <div
-                class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat"
-              >
-                <div class="stat-label mb-0 mb-md-3 mx-md-auto">Assets</div>
-                <div
-                  class="stat-number mx-md-auto monospace"
-                  id="tokens-number"
-                ></div>
+              class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+              <div class="stat-label mb-0 mb-md-3 mx-md-auto">Assets</div>
+              <div class="stat-number mx-md-auto monospace" id="tokens-number"></div>
+            </div>
+            <div
+              class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+              <div class="stat-label mb-0 mb-md-3 mx-md-auto">Sources</div>
+              <div class="stat-number mx-md-auto monospace" id="sources-number"></div>
+            </div>
+            <div
+              class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat">
+              <div class="stat-label mb-0 mb-md-3 mx-md-auto">
+                Data points
               </div>
-              <div
-                class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat"
-              >
-                <div class="stat-label mb-0 mb-md-3 mx-md-auto">Sources</div>
-                <div
-                  class="stat-number mx-md-auto monospace"
-                  id="sources-number"
-                ></div>
-              </div>
-              <div
-                class="d-flex flex-md-column justify-content-between align-items-center justify-md-content-center px-0 stat"
-              >
-                <div class="stat-label mb-0 mb-md-3 mx-md-auto">
-                  Data points
-                </div>
-                <div
-                  class="stat-number mx-md-auto monospace"
-                  id="data-points-number"
-                ></div>
-              </div>
+              <div class="stat-number mx-md-auto monospace" id="data-points-number"></div>
             </div>
           </div>
-          <!-- end of .container-->
-        </section>
+        </div>
+        <!-- end of .container-->
+      </section>
+    </div>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-4 py-lg-6">
+      <div class="container">
+        <div class="row">
+          <div class="row col-12 col-md-9 align-items-center mx-auto mb-6">
+            <iframe width="420" height="480" src="https://www.youtube.com/embed/r5O-3VMy2bc?rel=0">
+            </iframe>
+          </div>
+        </div>
       </div>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-4 py-lg-6">
-        <div class="container">
-          <div class="row">
-            <div class="row col-12 col-md-9 align-items-center mx-auto mb-6">
-              <iframe
-                width="420"
-                height="480"
-                src="https://www.youtube.com/embed/r5O-3VMy2bc?rel=0"
-              >
-              </iframe>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-4 py-lg-6" id="cross-chain">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto mb-5">
+            <div class="h6 fw-bold fs-4 lh-sm mb-3">
+              Use RedStone on all EVM L1s & L2s and beyond
+            </div>
+            <div class="col-lg-6 text-center mx-auto mb-5">
+              <p class="mb-0">
+                Thanks to unique modular design, RedStone is available
+                cross-chain including ZK and Optimistic L2s, plus roll-ups as
+                a service.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-4 py-lg-6" id="cross-chain">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto mb-5">
-              <div class="h6 fw-bold fs-4 lh-sm mb-3">
-                Use RedStone on all EVM L1s & L2s and beyond
-              </div>
-              <div class="col-lg-6 text-center mx-auto mb-5">
-                <p class="mb-0">
-                  Thanks to unique modular design, RedStone is available
-                  cross-chain including ZK and Optimistic L2s, plus roll-ups as
-                  a service.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="tabs-buttons">
-            <button
-              class="tab-button h5 fw-bold"
-              style="border-bottom: 1px solid #fd627a"
-              onclick="openTab(event, 'chains')"
-            >
-              Chains
-            </button>
-            <button
-              class="tab-button h5 fw-bold"
-              onclick="openTab(event, 'trusted-by')"
-            >
-              Trusted by
-            </button>
-            <button
-              class="tab-button h5 fw-bold"
-              onclick="openTab(event, 'data-sources')"
-            >
-              Data sources
-            </button>
-            <button
-              class="tab-button h5 fw-bold"
-              onclick="openTab(event, 'auditors-partners')"
-            >
-              Auditors & Partners
-            </button>
-          </div>
-          <div id="chains" class="tab-content"></div>
-          <div id="trusted-by" class="tab-content" style="display: none"></div>
-          <div
-            id="data-sources"
-            class="tab-content"
-            style="display: none"
-          ></div>
-          <div
-            id="auditors-partners"
-            class="tab-content"
-            style="display: none"
-          ></div>
+        <div class="tabs-buttons">
+          <button class="tab-button h5 fw-bold" style="border-bottom: 1px solid #fd627a"
+            onclick="openTab(event, 'chains')">
+            Chains
+          </button>
+          <button class="tab-button h5 fw-bold" onclick="openTab(event, 'trusted-by')">
+            Trusted by
+          </button>
+          <button class="tab-button h5 fw-bold" onclick="openTab(event, 'data-sources')">
+            Data sources
+          </button>
+          <button class="tab-button h5 fw-bold" onclick="openTab(event, 'auditors-partners')">
+            Auditors & Partners
+          </button>
         </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+        <div id="chains" class="tab-content"></div>
+        <div id="trusted-by" class="tab-content" style="display: none"></div>
+        <div id="data-sources" class="tab-content" style="display: none"></div>
+        <div id="auditors-partners" class="tab-content" style="display: none"></div>
+      </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-4 py-lg-6" id="developers">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto mb-5">
-              <div class="h6 fw-bold fs-4 lh-sm mb-4">
-                Three Oracles models tailored to your needs
-              </div>
-              <div class="col-lg-6 text-center mx-auto mb-3">
-                <p class="mb-0">
-                  Choose data consumption model that fits best to your dApp with
-                  cryptographic security guarantees.
-                </p>
-              </div>
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-4 py-lg-6" id="developers">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto mb-5">
+            <div class="h6 fw-bold fs-4 lh-sm mb-4">
+              Three Oracles models tailored to your needs
+            </div>
+            <div class="col-lg-6 text-center mx-auto mb-3">
+              <p class="mb-0">
+                Choose data consumption model that fits best to your dApp with
+                cryptographic security guarantees.
+              </p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 mb-3 mb-lg-6">
-              <div class="text-center px-lg-3">
-                <div class="h5 fw-bold">RedStone Core (Pull)</div>
-                <p class="mb-md-0">
-                  Lowest gas costs, a few seconds of latency, dApp users deliver
-                  signed data packages on demand to the destination chain.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-lg-6">
-              <div class="text-center px-lg-3">
-                <div class="h5 fw-bold">RedStone Classic (Push)</div>
-                <p class="mb-md-0">
-                  Compatible with traditional Oracles, dApp gets full control
-                  over data source and update conditions (heartbeat and
-                  deviation threshold).
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-lg-6">
-              <div class="text-center px-lg-3">
-                <div class="h5 fw-bold">RedStone X (Zero-latency)</div>
-                <p class="mb-md-0">
-                  Front-running proof, tailored for sophisticated protocols like
-                  Perps & Options, based on GMX design.
-                </p>
-              </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-lg-6">
+            <div class="text-center px-lg-3">
+              <div class="h5 fw-bold">RedStone Core (Pull)</div>
+              <p class="mb-md-0">
+                Lowest gas costs, a few seconds of latency, dApp users deliver
+                signed data packages on demand to the destination chain.
+              </p>
             </div>
           </div>
-          <div class="row col-12 col-md-9 align-items-center mx-auto">
-            <h5 class="text-center">
-              Want to dive deeper?
-              <a
-                href="https://docs.redstone.finance/"
-                target="_blank"
-                role="button"
-              >
-                Check the Docs!
+          <div class="col-md-4 mb-3 mb-lg-6">
+            <div class="text-center px-lg-3">
+              <div class="h5 fw-bold">RedStone Classic (Push)</div>
+              <p class="mb-md-0">
+                Compatible with traditional Oracles, dApp gets full control
+                over data source and update conditions (heartbeat and
+                deviation threshold).
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-lg-6">
+            <div class="text-center px-lg-3">
+              <div class="h5 fw-bold">RedStone X (Zero-latency)</div>
+              <p class="mb-md-0">
+                Front-running proof, tailored for sophisticated protocols like
+                Perps & Options, based on GMX design.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row col-12 col-md-9 align-items-center mx-auto">
+          <h5 class="text-center">
+            Want to dive deeper?
+            <a href="https://docs.redstone.finance/" target="_blank" role="button">
+              Check the Docs!
+            </a>
+          </h5>
+        </div>
+      </div>
+      <!-- end of .container-->
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="pt-5" id="testimonials">
+      <div class="container">
+        <div class="slideshow-container">
+          <div class="slide">
+            <p class="fst-italic">
+              RedStone modular architecture allows supporting swiftly both new
+              and established dApps launching on trending L1s & L2s. Combined
+              with the best security practices and the ability to deliver
+              non-standard data, like LP & staked tokens, puts RedStone in a
+              perspective position ahead.
+            </p>
+            <img class="my-2 testimonial-image" src="/assets/img/angels/stani-kulechov.png"
+              alt="Stani Kulechov photo" />
+            <p>Stani Kulechov, Aave & Lens Founder and CEO</p>
+          </div>
+
+          <div class="slide">
+            <p class="fst-italic">
+              To create innovative protocols, we can't keep on using the same
+              concepts from the 2020 DeFi Summer. The way Oracles work has not
+              evolved much in the past years, which stifles growth. We need
+              quick responses to market trends, an architecture compatible
+              with zk-powered L2s and optimisations in gas costs - that's what
+              RedStone Oracles brings to the table.
+            </p>
+            <img class="my-2 testimonial-image" src="/assets/img/angels/sandeep-nailwal.png"
+              alt="Sandeep Nailwal photo" />
+            <p>Sandeep Nailwal, Polygon Co-Founder</p>
+          </div>
+
+          <div class="slide">
+            <p class="fst-italic">
+              Pricing of LP & staked tokens is the backbone of our system but
+              no Oracle was able to provide it. RedStone delivered what others
+              couldn't and gave us all the customization we could have asked
+              for - it's a partner to go with.
+            </p>
+            <img class="my-2 testimonial-image" src="/assets/img/angels/piotr-duda.png" alt="Piotr Duda photo" />
+            <p>Piotr Duda, DeltaPrime CEO</p>
+          </div>
+
+          <div class="slide">
+            <p class="fst-italic">
+              Many oracle solutions are rather centralized, don't scale well
+              and can't be adjusted to the needs of a specific dApp.
+              Thankfully, RedStone has a unique design ensuring
+              permissionlessness, scalability and customisability, making them
+              stand out from the crowd.
+            </p>
+            <img class="my-2 testimonial-image" src="/assets/img/angels/roman-croessmann.png"
+              alt="Roman Croessmann photo" />
+            <p>Roman Croessmann, Mento Labs Co-Founder</p>
+          </div>
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="pt-lg-5" id="partners">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto mb-5">
+            <div class="h6 fw-bold fs-4 lh-sm">
+              Top-class investors & angels backed RedStone
+            </div>
+          </div>
+        </div>
+        <div id="backed-by" class="partners-container"></div>
+        <div id="angels" class="angels-container"></div>
+      </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="pt-lg-5" id="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto">
+            <div class="h6 fw-bold fs-4 lh-sm mb-3">
+              Made by Web3 builders for Web3 builders
+            </div>
+            <div class="col-lg-6 text-center mx-auto mb-5">
+              <p class="mb-0">
+                Subscribe to always know first about the latest updates,
+                milestones, and exclusive content!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-5 order-md-0 text-center text-md-start">
+            @@include('./common/subscribe-form.html')
+          </div>
+          <div class="col-md-6 text-start offset-md-1">
+            <p class="my-4 pe-xl-5">
+              Our team won dozens of hackathon prizes. But many of our
+              projects never made it into production because we couldn't find
+              oracles that were fast, cheap or reliable enough. Now, we take
+              care of that and you can simply use
+              <a href="https://docs.redstone.finance/" target="_blank">
+                RedStone</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-4 py-lg-6" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto mb-5">
+            <div class="h6 fw-bold fs-4 lh-sm mb-3">
+              Audits
+            </div>
+            <div class="col-lg-6 text-center mx-auto mb-5">
+              <p class="mb-0">
+                Redstone has undergone an audit by top-tier experts in blockchain security.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <div class="row flex-center gap-3">
+              <a href="https://github.com/redstone-finance/redstone-oracles-monorepo/blob/d11790b4f7b5a4a73c74f40d5dab9cee79e7ae4d/packages/evm-connector/audits/abdk-redstone-audit-evm-connector-nov-2022.pdf"
+                target="_blank" referrerpolicy="no-referrer" class="big-button-link">
+                <button class="big-button">
+                  <img src="/assets/img/audits/abdk.svg" loading="lazy" class="big-button-image mb-2" alt="Abdk icon" />
+                  <h5 class="mb-0 mb-1 text-danger">ABDK Consulting</h5>
+                  <p class="mb-0">November 2022</p>
+                </button>
               </a>
-            </h5>
-          </div>
-        </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-5" id="testimonials">
-        <div class="container">
-          <div class="slideshow-container">
-            <div class="slide">
-              <p class="fst-italic">
-                RedStone modular architecture allows supporting swiftly both new
-                and established dApps launching on trending L1s & L2s. Combined
-                with the best security practices and the ability to deliver
-                non-standard data, like LP & staked tokens, puts RedStone in a
-                perspective position ahead.
-              </p>
-              <img
-                class="my-2 testimonial-image"
-                src="/assets/img/angels/stani-kulechov.png"
-                alt="Stani Kulechov photo"
-              />
-              <p>Stani Kulechov, Aave & Lens Founder and CEO</p>
-            </div>
-
-            <div class="slide">
-              <p class="fst-italic">
-                To create innovative protocols, we can't keep on using the same
-                concepts from the 2020 DeFi Summer. The way Oracles work has not
-                evolved much in the past years, which stifles growth. We need
-                quick responses to market trends, an architecture compatible
-                with zk-powered L2s and optimisations in gas costs - that's what
-                RedStone Oracles brings to the table.
-              </p>
-              <img
-                class="my-2 testimonial-image"
-                src="/assets/img/angels/sandeep-nailwal.png"
-                alt="Sandeep Nailwal photo"
-              />
-              <p>Sandeep Nailwal, Polygon Co-Founder</p>
-            </div>
-
-            <div class="slide">
-              <p class="fst-italic">
-                Pricing of LP & staked tokens is the backbone of our system but
-                no Oracle was able to provide it. RedStone delivered what others
-                couldn't and gave us all the customization we could have asked
-                for - it's a partner to go with.
-              </p>
-              <img
-                class="my-2 testimonial-image"
-                src="/assets/img/angels/piotr-duda.png"
-                alt="Piotr Duda photo"
-              />
-              <p>Piotr Duda, DeltaPrime CEO</p>
-            </div>
-
-            <div class="slide">
-              <p class="fst-italic">
-                Many oracle solutions are rather centralized, don't scale well
-                and can't be adjusted to the needs of a specific dApp.
-                Thankfully, RedStone has a unique design ensuring
-                permissionlessness, scalability and customisability, making them
-                stand out from the crowd.
-              </p>
-              <img
-                class="my-2 testimonial-image"
-                src="/assets/img/angels/roman-croessmann.png"
-                alt="Roman Croessmann photo"
-              />
-              <p>Roman Croessmann, Mento Labs Co-Founder</p>
-            </div>
-            <div style="text-align: center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-              <span class="dot" onclick="currentSlide(4)"></span>
+              <a href="https://github.com/redstone-finance/redstone-oracles-monorepo/blob/d11790b4f7b5a4a73c74f40d5dab9cee79e7ae4d/packages/on-chain-relayer/audits/auditone-redstone-adapter-contracts-audit-june-2023.pdf"
+                target="_blank" referrerpolicy="no-referrer" class="big-button-link">
+                <button class="big-button">
+                  <img src="/assets/img/audits/auditOne.svg" loading="lazy" class="big-button-image mb-2"
+                    alt="Audit one icon" />
+                  <h5 class="mb-0 mb-1 mt-2 text-danger">Audit One</h5>
+                  <p class="mb-0">June 2023</p>
+                </button>
+              </a>
+              <a href="https://github.com/redstone-finance/redstone-oracles-monorepo/blob/d11790b4f7b5a4a73c74f40d5dab9cee79e7ae4d/packages/on-chain-relayer/audits/abdk-redstone-adapter-contracts-audit-june-2023.pdf"
+                target="_blank" referrerpolicy="no-referrer" loading="lazy" class="big-button-link">
+                <button class="big-button">
+                  <img src="/assets/img/audits/abdk.svg" class="big-button-image mb-2" alt="Abdk icon"
+                    style="height: 36px; width: auto" />
+                  <h5 class="mb-0 mb-1 text-danger">ABDK Consulting</h5>
+                  <p class="mb-0">June 2023</p>
+                </button>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-lg-5" id="partners">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto mb-5">
-              <div class="h6 fw-bold fs-4 lh-sm">
-                Top-class investors & angels backed RedStone
-              </div>
-            </div>
-          </div>
-          <div id="backed-by" class="partners-container"></div>
-          <div id="angels" class="angels-container"></div>
-        </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      </div>
+      <!-- end of .container-->
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-lg-5" id="project">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto">
-              <div class="h6 fw-bold fs-4 lh-sm mb-3">
-                Made by Web3 builders for Web3 builders
-              </div>
-              <div class="col-lg-6 text-center mx-auto mb-5">
-                <p class="mb-0">
-                  Subscribe to always know first about the latest updates,
-                  milestones, and exclusive content!
-                </p>
-              </div>
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-4 py-lg-6" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mx-auto mb-5">
+            <div class="h6 fw-bold fs-4 lh-sm mb-3">
+              The next generation of oracles
             </div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-md-5 order-md-0 text-center text-md-start">
-              @@include('./common/subscribe-form.html')
-            </div>
-            <div class="col-md-6 text-start offset-md-1">
-              <p class="my-4 pe-xl-5">
-                Our team won dozens of hackathon prizes. But many of our
-                projects never made it into production because we couldn't find
-                oracles that were fast, cheap or reliable enough. Now, we take
-                care of that and you can simply use
-                <a href="https://docs.redstone.finance/" target="_blank">
-                  RedStone</a
-                >.
+            <div class="col-lg-6 text-center mx-auto mb-5">
+              <p class="mb-0">
+                New protocols require more data delivered at lower latency.
               </p>
             </div>
           </div>
         </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-4 py-lg-6" id="features">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto mb-5">
-              <div class="h6 fw-bold fs-4 lh-sm mb-3">
-                The next generation of oracles
-              </div>
-              <div class="col-lg-6 text-center mx-auto mb-5">
-                <p class="mb-0">
-                  New protocols require more data delivered at lower latency.
-                </p>
-              </div>
+        <div class="row">
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/fast.svg"
+                alt="Speed-o-meter" height="80" width="80" />
+              <div class="h5 fw-bold">Fast</div>
+              <p class="mb-md-0">
+                Stop waiting minutes for updates. RedStone delivers data in
+                seconds
+              </p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/fast.svg"
-                  alt="Speed-o-meter"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Fast</div>
-                <p class="mb-md-0">
-                  Stop waiting minutes for updates. RedStone delivers data in
-                  seconds
-                </p>
-              </div>
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/cost-efficient.svg"
+                alt="Cost efficient" height="80" width="80" />
+              <div class="h5 fw-bold">Cost-efficient</div>
+              <p class="mb-md-0">
+                EVM-connector reduces gas costs thanks to meta transactions
+                and call-data utilisation
+              </p>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/cost-efficient.svg"
-                  alt="Cost efficient"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Cost-efficient</div>
-                <p class="mb-md-0">
-                  EVM-connector reduces gas costs thanks to meta transactions
-                  and call-data utilisation
-                </p>
-              </div>
+          </div>
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/versatile.svg"
+                alt="Multitool" height="80" width="80" />
+              <div class="h5 fw-bold">Versatile</div>
+              <p class="mb-md-0">
+                Allow your smart contracts to fetch any non-standard data,
+                like volatility, order books or trading volumes.
+              </p>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/versatile.svg"
-                  alt="Multitool"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Versatile</div>
-                <p class="mb-md-0">
-                  Allow your smart contracts to fetch any non-standard data,
-                  like volatility, order books or trading volumes.
-                </p>
-              </div>
+          </div>
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/accountable.svg"
+                alt="Contract" height="80" width="80" />
+              <div class="h5 fw-bold">Accountable</div>
+              <p class="mb-md-0">
+                Each data provider's track record is permanently available on
+                <a href="https://www.arweave.org/" target="_blank" referrerpolicy="no-referrer">Arweave</a>.
+              </p>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/accountable.svg"
-                  alt="Contract"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Accountable</div>
-                <p class="mb-md-0">
-                  Each data provider's track record is permanently available on
-                  <a
-                    href="https://www.arweave.org/"
-                    target="_blank"
-                    referrerpolicy="no-referrer"
-                    >Arweave</a
-                  >.
-                </p>
-              </div>
+          </div>
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/decentralized.svg"
+                alt="Decentralized structure" height="80" width="80" />
+              <div class="h5 fw-bold">Decentralized</div>
+              <p class="mb-md-0">
+                Anyone can become a data provider and configure a data stream
+                with just a few clicks.
+              </p>
             </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/decentralized.svg"
-                  alt="Decentralized structure"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Decentralized</div>
-                <p class="mb-md-0">
-                  Anyone can become a data provider and configure a data stream
-                  with just a few clicks.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3">
-                <img
-                  loading="lazy"
-                  class="lazy img-fluid img-features mb-3"
-                  src="assets/img/icons/insured.svg"
-                  alt="Insurance"
-                  height="80"
-                  width="80"
-                />
-                <div class="h5 fw-bold">Insured</div>
-                <p class="mb-md-0">
-                  Downtime or incorrect data are covered by the provider's
-                  stake.
-                </p>
-              </div>
+          </div>
+          <div class="col-md-4 mb-6">
+            <div class="text-center px-lg-3">
+              <img loading="lazy" class="lazy img-fluid img-features mb-3" src="assets/img/icons/insured.svg"
+                alt="Insurance" height="80" width="80" />
+              <div class="h5 fw-bold">Insured</div>
+              <p class="mb-md-0">
+                Downtime or incorrect data are covered by the provider's
+                stake.
+              </p>
             </div>
           </div>
         </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      </div>
+      <!-- end of .container-->
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-        <div class="container">
-          <div class="row flex-center gap-3">
-            <a
-              href="https://discord.com/invite/PVxBZKFr46"
-              target="_blank"
-              referrerpolicy="no-referrer"
-              class="big-button-link"
-            >
-              <button class="big-button">
-                <img
-                  src="/assets/img/icons/discord.svg"
-                  class="big-button-image mb-2"
-                  alt="Discord icon"
-                />
-                <h4 class="mb-0 mb-1">Join Developer Chat</h4>
-                <p class="mb-0">We are waiting for all your questions</p>
-              </button>
-            </a>
-            <a
-              href="https://twitter.com/redstone_defi"
-              target="_blank"
-              referrerpolicy="no-referrer"
-              class="big-button-link"
-            >
-              <button class="big-button">
-                <img
-                  src="/assets/img/icons/twitter.svg"
-                  class="big-button-image mb-2"
-                  alt="Twitter icon"
-                />
-                <h4 class="mb-0 mb-1">Follow us on Twitter</h4>
-                <p class="mb-0">Stay up to date with latest news</p>
-              </button>
-            </a>
-            <a
-              href="https://docs.redstone.finance/"
-              target="_blank"
-              referrerpolicy="no-referrer"
-              class="big-button-link"
-            >
-              <button class="big-button docs">
-                <img
-                  src="/assets/img/icons/accountable.svg"
-                  class="big-button-image mb-2"
-                  alt="Twitter icon"
-                  style="height: 36px; width: auto"
-                />
-                <h4 class="mb-0 mb-1">Read docs</h4>
-                <p class="mb-0">Learn more about RedStone</p>
-              </button>
-            </a>
-          </div>
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section>
+      <div class="container">
+        <div class="row flex-center gap-3">
+          <a href="https://discord.com/invite/PVxBZKFr46" target="_blank" referrerpolicy="no-referrer"
+            class="big-button-link">
+            <button class="big-button">
+              <img src="/assets/img/icons/discord.svg" class="big-button-image mb-2" alt="Discord icon" />
+              <h4 class="mb-0 mb-1">Join Developer Chat</h4>
+              <p class="mb-0">We are waiting for all your questions</p>
+            </button>
+          </a>
+          <a href="https://twitter.com/redstone_defi" target="_blank" referrerpolicy="no-referrer"
+            class="big-button-link">
+            <button class="big-button">
+              <img src="/assets/img/icons/twitter.svg" class="big-button-image mb-2" alt="Twitter icon" />
+              <h4 class="mb-0 mb-1">Follow us on Twitter</h4>
+              <p class="mb-0">Stay up to date with latest news</p>
+            </button>
+          </a>
+          <a href="https://docs.redstone.finance/" target="_blank" referrerpolicy="no-referrer" class="big-button-link">
+            <button class="big-button docs">
+              <img src="/assets/img/icons/accountable.svg" class="big-button-image mb-2" alt="Twitter icon"
+                style="height: 36px; width: auto" />
+              <h4 class="mb-0 mb-1">Read docs</h4>
+              <p class="mb-0">Learn more about RedStone</p>
+            </button>
+          </a>
         </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      </div>
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="faq">@@include('./common/questions.html')</section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section id="faq">@@include('./common/questions.html')</section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+  </main>
+  <!-- ===============================================-->
+  <!--    End of Main Content-->
+  <!-- ===============================================-->
 
-    @@include('./common/footer.html') @@include('./common/scripts.html')
-    <script src="assets/js/theme.js" type="text/javascript"></script>
-    <!-- Start of HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js-eu1.hs-scripts.com/26706494.js"
-    ></script>
-    <!-- End of HubSpot Embed Code -->
-  </body>
+  @@include('./common/footer.html') @@include('./common/scripts.html')
+  <script src="assets/js/theme.js" type="text/javascript"></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26706494.js"></script>
+  <!-- End of HubSpot Embed Code -->
+</body>
+
 </html>
