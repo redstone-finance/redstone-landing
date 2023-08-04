@@ -18429,4 +18429,60 @@ label {
   width: 100%;
   border-radius: 0.5rem;
 }
+
+#expedition {
+  background-color: #3E434E;
+  height: 100vh;
+}
+#expedition .container-expedition {
+  height: 100%;
+}
+#expedition .expedition-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  color: #A7A8AC;
+}
+#expedition .expedition-content-header {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+}
+@media only screen and (max-width: 600px) {
+  #expedition .expedition-content-header {
+    font-size: 19px;
+    line-height: 29px;
+  }
+}
+#expedition .expedition-content-subheader {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 600px) {
+  #expedition .expedition-content-subheader {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+#expedition .expedition-content .diamond {
+  width: 120px;
+}
+
+.navbar-expedition {
+  background: #2D323E;
+}
+
+.icon-discord {
+  width: 20px;
+  height: auto;
+}
+
+.navbar-brand {
+  margin-right: 0 !important;
+}
 /*# sourceMappingURL=theme.css.map */
