@@ -18044,6 +18044,7 @@ label {
 }
 
 .tab-button {
+  font-size: 0.8rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -18052,6 +18053,11 @@ label {
   background: none;
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .tab-button {
+    font-size: 1.2rem;
+  }
 }
 
 .tab-content {
