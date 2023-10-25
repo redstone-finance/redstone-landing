@@ -45,9 +45,9 @@ const projects = [
     url: "https://www.primeprotocol.xyz/",
   },
   {
-    name: "Mento Finance",
+    name: "Mento Labs",
     image: "assets/img/trusted-by/mento-finance.svg",
-    url: "https://mento.finance/",
+    url: "https://www.mentolabs.xyz/",
   },
   {
     name: "Lido",
