@@ -701,7 +701,7 @@ function fetchData() {
   sourcesNumberElement.innerHTML = preloader;
   tokensNumberElement.innerHTML = preloader;
   dataPointsElement.innerHTML = preloader;
-  fetch("https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/src/config/sources.json").then(function (response) {
+  fetch("https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json").then(function (response) {
     return response.json();
   }).then(function (data) {
     sourcesNumberElement.innerHTML = Object.keys(data).length;
