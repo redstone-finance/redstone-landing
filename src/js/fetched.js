@@ -12,7 +12,7 @@ function fetchData() {
   dataPointsElement.innerHTML = preloader;
 
   fetch(
-    "https://raw.githubusercontent.com/redstone-finance/redstone-oracles-monorepo/main/packages/oracle-node/src/config/sources.json"
+    "https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json"
   )
     .then((response) => response.json())
     .then((data) => {
