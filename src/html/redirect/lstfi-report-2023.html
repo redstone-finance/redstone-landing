@@ -36,11 +36,15 @@
       property="twitter:image"
       content="https://redstone.finance/assets/img/previews/lstfi-report-preview.png"
     />
+    @@include('../common/analytics-in-head.html')
+    <link href="/assets/css/theme.css" rel="stylesheet" lazyload />
   </head>
   <body>
+    @@include('../common/analytics-in-body.html')
     <script type="text/javascript">
-      window.location.href =
-        "https://raw.githubusercontent.com/redstone-finance/redstone-landing/master/public/reports/lstfi-report.pdf";
+      var reportUrl =
+        "https://drive.google.com/file/d/1bo9Ku7sYDNWJu786lk-h7vsQwrvHAZzB/view?usp=sharing";
     </script>
+    @@include('../common/report-redirect-common.html')
   </body>
 </html>

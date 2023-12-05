@@ -1,0 +1,33 @@
+<script>
+  console.log("Report redirect logic is starting...");
+
+  // Ensure this script is included after the global variable `reportUrl` is defined
+  if (typeof reportUrl !== "undefined") {
+    // Create a new div element
+    var redirectDiv = document.createElement("div");
+    redirectDiv.style.textAlign = "center"; // Center the text
+    redirectDiv.style.marginTop = "30px";
+
+    // Create the message
+    redirectDiv.innerHTML =
+      'Redirecting to the report... <br> If you are not redirected, please <a href="' +
+      reportUrl +
+      '">click this link</a>';
+
+    // Append the div to the body of the document
+    document.body.appendChild(redirectDiv);
+
+    // Redirect after 1500 milliseconds
+    setTimeout(function () {
+      window.location.href = reportUrl;
+    }, 1500);
+  } else {
+    // Error message if reportUrl is not defined
+    var errorMessage = document.createElement("div");
+    errorMessage.style.textAlign = "center";
+    errorMessage.style.marginTop = "30px";
+    errorMessage.innerHTML =
+      'Something doesn\'t work. Please reach out to <a href="mailto:dev@redstone.finance">dev@redstone.finance</a>.';
+    document.body.appendChild(errorMessage);
+  }
+</script>
