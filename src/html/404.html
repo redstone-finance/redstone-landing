@@ -1,59 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id=%27+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MVRQF2VJ');
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Hotjar Tracking Code for https://redstone.finance/ -->
-    <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hjfunction(){(h.hj.q=h.hj.q[]).push(arguments)};
-          h._hjSettings={hjid:3513422,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=%27);
-    </script>
-    <script>
-      var cookie3Options = {
-        siteId: 224,
-        additionalTracking: true,
-        cookielessEnabled: true,
-      };
-
-      window._paq = window._paq || [];
-      (function () {
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src =
-          "https://cdn.cookie3.co/scripts/analytics/latest/cookie3.analytics.min.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
+    @@include('./common/analytics-scripts-in-head.html')
     @@include('./common/head.html')
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-MVRQF2VJ"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <main>
       <section id="not-found">
         <div class="col-12 col-lg-8 text-center mx-auto mb-3">

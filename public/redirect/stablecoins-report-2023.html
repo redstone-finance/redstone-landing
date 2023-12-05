@@ -36,10 +36,39 @@
       property="twitter:image"
       content="https://redstone.finance/assets/img/previews/stablecoins-report-preview.png"
     />
-    <script>
-  console.log("Analytics code snippet in head loaded");
+    <!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-FT767HW5C2");
 </script>
 
+<!--  Hotjar Tracking Code for https://redstone.finance/ -->
+<script>
+  (function (h, o, t, j, a, r) {
+    h.hj =
+      h.hj ||
+      function () {
+        (h.hj.q = h.hj.q || []).push(arguments);
+      };
+    h._hjSettings = { hjid: 3513422, hjsv: 6 };
+    a = o.getElementsByTagName("head")[0];
+    r = o.createElement("script");
+    r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+</script>
+
+<!-- Cookie3 Tracking Code -->
 <script>
   var cookie3Options = {
     siteId: 224,
@@ -59,38 +88,9 @@
   })();
 </script>
 
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-FT767HW5C2"
-></script>
-<script async>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-FT767HW5C2");
-</script>
-
     <link href="/assets/css/theme.css" rel="stylesheet" lazyload />
   </head>
   <body>
-    <script>
-  console.log("Analytics code snippet in body loaded");
-</script>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript
-  ><iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-MVRQF2VJ"
-    height="0"
-    width="0"
-    style="display: none; visibility: hidden"
-  ></iframe
-></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <script type="text/javascript">
       var reportUrl =
         "https://drive.google.com/file/d/1sX3mtOn0SljM_DLOD6eYXDomnTzwqX_X/view?usp=sharing";
