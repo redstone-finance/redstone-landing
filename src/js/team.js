@@ -62,7 +62,7 @@ if (document.getElementById("members")) {
 
   members.forEach((member) => {
     const card = document.createElement("div");
-    card.classList.add("col-12", "col-sm-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-sm-5", "col-md-4", "col-lg-3");
 
     card.innerHTML += `
       <img class="member-picture" src="${member.img}"/>
