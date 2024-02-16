@@ -278,7 +278,7 @@ function generateClientCard(name, logo, url, announcement, tvl) {
     <img class="client-picture" src="${logo}"/>
     <div class="client-info fw-medium">
       <p class="mb-0 fs-0">${name}</p>
-      ${tvl ? `<p class="mb-0 fs-0">$${formattedTvl}</p>` : ""}
+      ${tvl ? `<p class="mb-0 fs-0">TVL: $${formattedTvl}</p>` : ""}
       ${
         announcement
           ? `<a
@@ -301,7 +301,7 @@ if (
 
   featuredClients.forEach((client, index) => {
     const card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
       client.name,
       client.logo,

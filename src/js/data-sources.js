@@ -128,7 +128,7 @@ if (dataSourcesCrossChainSection) {
       "mt-n5"
     );
     manyMoreItem.innerHTML += `
-      <p class="mb-0 mt-2 fw-bold">And many more!</p>
+      <p class="mb-0 mt-2 fw-bold">& many more</p>
     `;
     element.appendChild(manyMoreItem);
   }

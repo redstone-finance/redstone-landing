@@ -650,7 +650,7 @@ if (clientsLstLrtSection) {
   var clientsLstLrtElement = document.getElementById("clients");
   lstLrtClients.forEach(function (client, index) {
     var card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 
@@ -722,7 +722,7 @@ if (clientsMainPageSection) {
   var clientsMainPageElement = document.getElementById("main-page-clients");
   clientsMainPage.forEach(function (client, index) {
     var card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 
@@ -947,14 +947,14 @@ function getClientsCount() {
 
 function generateClientCard(name, logo, url, announcement, tvl) {
   var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
-  return "\n    <img class=\"client-picture\" src=\"".concat(logo, "\"/>\n    <div class=\"client-info fw-medium\">\n      <p class=\"mb-0 fs-0\">").concat(name, "</p>\n      ").concat(tvl ? "<p class=\"mb-0 fs-0\">$".concat(formattedTvl, "</p>") : "", "\n      ").concat(announcement ? "<a\n        href=\"".concat(announcement, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n      >\n        <p>Announcement</p>\n      </a>") : "", "\n    </div>");
+  return "\n    <img class=\"client-picture\" src=\"".concat(logo, "\"/>\n    <div class=\"client-info fw-medium\">\n      <p class=\"mb-0 fs-0\">").concat(name, "</p>\n      ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n      ").concat(announcement ? "<a\n        href=\"".concat(announcement, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n      >\n        <p>Announcement</p>\n      </a>") : "", "\n    </div>");
 }
 
 if (document.getElementById("featured-clients") && document.getElementById("all-clients")) {
   var featuredClientsElement = document.getElementById("featured-clients");
   featuredClients.forEach(function (client, index) {
     var card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 
@@ -1086,7 +1086,7 @@ if (dataSourcesCrossChainSection) {
 
     _manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
 
-    _manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">And many more!</p>\n    ";
+    _manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">& many more</p>\n    ";
 
     _element3.appendChild(_manyMoreItem);
   }
@@ -1434,7 +1434,7 @@ var projects = [{
 }, {
   name: "Enzyme",
   image: "assets/img/clients/enzyme.png",
-  url: "https://www.fujidao.org/"
+  url: "https://enzyme.finance/"
 }, {
   name: "Gravita",
   image: "assets/img/clients/gravita.png",
@@ -1498,7 +1498,7 @@ var projects = [{
 }, {
   name: "Term Finance",
   image: "assets/img/clients/term.png",
-  url: "https://mytermfinance.com/"
+  url: "https://www.term.finance/"
 }, {
   name: "Nostra",
   image: "assets/img/clients/nostra.png",
@@ -1534,7 +1534,7 @@ if (trustedByCrossChainSection) {
 
     _manyMoreItem2.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
 
-    _manyMoreItem2.innerHTML += "\n    <p class=\"mb-0 mt-2 fw-bold\">\n      And many more!\n    </p>\n  ";
+    _manyMoreItem2.innerHTML += "\n    <a class=\"mb-0 mt-2 fw-bold\" href=\"/clients\">\n      & many more!\n    </a>\n  ";
 
     _element6.appendChild(_manyMoreItem2);
   }

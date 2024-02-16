@@ -17,7 +17,7 @@ const projects = [
   {
     name: "Enzyme",
     image: "assets/img/clients/enzyme.png",
-    url: "https://www.fujidao.org/",
+    url: "https://enzyme.finance/",
   },
   {
     name: "Gravita",
@@ -97,7 +97,7 @@ const projects = [
   {
     name: "Term Finance",
     image: "assets/img/clients/term.png",
-    url: "https://mytermfinance.com/",
+    url: "https://www.term.finance/",
   },
   {
     name: "Nostra",
@@ -158,9 +158,9 @@ if (trustedByCrossChainSection) {
       "mt-n5"
     );
     manyMoreItem.innerHTML += `
-    <p class="mb-0 mt-2 fw-bold">
-      And many more!
-    </p>
+    <a class="mb-0 mt-2 fw-bold" href="/clients">
+      & many more!
+    </a>
   `;
     element.appendChild(manyMoreItem);
   }

@@ -17537,9 +17537,8 @@ label {
   width: 36px;
 }
 
-.medium-button-link {
-  width: 200px;
-  height: 115px;
+.report-button-link {
+  width: 60%;
   border: 1px solid;
   border-radius: 15px;
   padding: 2rem;
@@ -17549,7 +17548,7 @@ label {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.medium-button-link:hover {
+.report-button-link:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
@@ -17768,7 +17767,7 @@ label {
 }
 
 .client-picture {
-  width: 100%;
+  width: 70%;
   margin-bottom: 1rem;
 }
 

@@ -68,7 +68,7 @@ if (clientsLstLrtSection) {
   const clientsLstLrtElement = document.getElementById("clients");
   lstLrtClients.forEach((client, index) => {
     const card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
       client.name,
       client.logo,
