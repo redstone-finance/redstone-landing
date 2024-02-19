@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    @@include('../common/analytics-scripts-in-head.html')
+    @@include('../common/head.html')
+  </head>
+  <body>
+    <main>
+      @@include('../common/navbar.html', { "isHome": true })
+      <section class="pt-8 pb-6 min-vh-100" id="price-feed-setup-consumtion">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center mx-auto mb-5">
+              <div class="h6 fw-bold fs-4 lh-sm mb-3">Services</div>
+            </div>
+            <div class="col-md-6 mb-3 mb-lg-6">
+              <div class="text-center px-lg-3">
+                <div class="h5 fw-bold">Price Feed Setup</div>
+                <div class="h5 fw-bold">"I need a price feed for my asset"</div>
+                <p class="mb-md-0">
+                  RedStone delivers exactly the data feeds you need (LSTs, LRTs,
+                  RWAs i.e. USDM, USDe, C3E), tailored to your protocol's
+                  requirements. The quickest execution on the market (2-3 weeks
+                  from start to finish), with liquidity requirements instead of
+                  volume.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3 mb-lg-6">
+              <div class="text-center px-lg-3">
+                <div class="h5 fw-bold">Price Feed Consumption</div>
+                <div class="h5 fw-bold">
+                  "I want to use a price feed in my protocol"
+                </div>
+                <p class="mb-md-0">
+                  3 dedicated models of consumptions tailored to specific types
+                  of protocols. Consume all the popular assets with the
+                  frequency you need but also price feeds you can't get with
+                  other oracles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('../common/footer.html') @@include('../common/scripts.html')
+    </main>
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/26706494.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>
