@@ -7,26 +7,27 @@
   <body>
     <main>
       @@include('../common/navbar.html', { "isHome": true })
-
       <section class="pt-7 py-md-4 py-lg-2 mt-md-8 mt-lg-8" id="home">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center mx-auto mb-5">
-              <div class="h6 fw-bold fs-4 lh-sm mb-4">
+        <div class="container position-relative">
+          <div class="row gap-lg-8 gap-4">
+            <div class="col-md-8 col-lg-7 text-center text-md-start">
+              <div class="h1 mt-4 mb-3 display-3 fw-bold lh-sm mt-lg-0">
                 Choose LST & LRT Oracle price feed you need
               </div>
-              <div class="col-lg-12 text-center mx-auto mb-3">
-                <p class="mb-0">
-                  Do you need price feed for a another LST or LRT? Let us know
-                  on our
-                  <a
-                    target="_blank"
-                    referrerpolicy="no-referrer"
-                    href="https://discord.com/invite/PVxBZKFr46"
-                    >Discord</a
-                  >!
-                </p>
-              </div>
+              <p class="mb-3 fs-1">
+                Do you need price feed for a another LST or LRT?
+                <br class="d-none d-lg-block" />
+                Let us know on our
+                <a
+                  target="_blank"
+                  referrerpolicy="no-referrer"
+                  href="https://discord.com/invite/PVxBZKFr46"
+                  >Discord</a
+                >!
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-3 text-center text-md-end px-0">
+              <img width="100%" src="/assets/img/lst-lrt-oracle.png" />
             </div>
           </div>
         </div>

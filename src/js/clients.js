@@ -99,8 +99,7 @@ const otherClients = [
     name: "Stader",
     logo: "/assets/img/clients/stader.png",
     url: "https://www.staderlabs.com/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1702698921984962623",
+    announcement: "https://x.com/redstone_defi/status/1702698921984962623",
     tvlUrl: "https://api.llama.fi/tvl/stader",
   },
   {
@@ -336,7 +335,7 @@ if (
   const allClients = [...featuredClients, ...otherClients];
   allClients.forEach((client, index) => {
     const card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
       client.name,
       client.logo,

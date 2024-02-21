@@ -627,15 +627,15 @@ var lstLrtClients = [{
   tvlUrl: "https://api.llama.fi/tvl/stakewise"
 }, {
   name: "Stader",
-  logo: "/assets/img/clients/morpho.png",
+  logo: "/assets/img/clients/stader.png",
   url: "https://www.staderlabs.com/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1702698921984962623",
   tvlUrl: "https://api.llama.fi/tvl/stader"
 }, {
   name: "Redacted Cartel",
-  logo: "/assets/img/clients/layerbank.png",
+  logo: "/assets/img/clients/redacted.png",
   url: "https://redacted.finance/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1759608928189727042",
   tvlUrl: "https://api.llama.fi/tvl/redacted-protocol"
 }, {
   name: "Lido",
@@ -816,7 +816,7 @@ var otherClients = [{
   name: "Stader",
   logo: "/assets/img/clients/stader.png",
   url: "https://www.staderlabs.com/",
-  announcement: "https://twitter.com/redstone_defi/status/1702698921984962623",
+  announcement: "https://x.com/redstone_defi/status/1702698921984962623",
   tvlUrl: "https://api.llama.fi/tvl/stader"
 }, {
   name: "Lido",
@@ -975,7 +975,7 @@ if (document.getElementById("featured-clients") && document.getElementById("all-
   var allClients = [].concat(featuredClients, otherClients);
   allClients.forEach(function (client, index) {
     var card = document.createElement("div");
-    card.classList.add("col-5", "col-md-4", "col-lg-3");
+    card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 

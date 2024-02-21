@@ -41,16 +41,17 @@ const lstLrtClients = [
   },
   {
     name: "Stader",
-    logo: "/assets/img/clients/morpho.png",
+    logo: "/assets/img/clients/stader.png",
     url: "https://www.staderlabs.com/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1702698921984962623",
     tvlUrl: "https://api.llama.fi/tvl/stader",
   },
   {
     name: "Redacted Cartel",
-    logo: "/assets/img/clients/layerbank.png",
+    logo: "/assets/img/clients/redacted.png",
     url: "https://redacted.finance/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1759608928189727042",
     tvlUrl: "https://api.llama.fi/tvl/redacted-protocol",
   },
   {
