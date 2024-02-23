@@ -2,7 +2,7 @@ let slideIndex = 1;
 
 function showSlides(n) {
   let i;
-  const slides = document.getElementsByClassName("slide");
+  const slides = document.getElementsByClassName("testimonial-slide");
   const dots = document.getElementsByClassName("dot");
   if (slides.length > 0 && dots.length > 0) {
     if (n > slides.length) {

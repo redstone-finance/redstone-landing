@@ -1,4 +1,5 @@
 import animateDataPoints from "./animate";
+import { getClientsCount } from "./clients";
 
 function fetchData() {
   const preloader = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`;
@@ -6,10 +7,12 @@ function fetchData() {
   const sourcesNumberElement = document.getElementById("sources-number");
   const tokensNumberElement = document.getElementById("tokens-number");
   const dataPointsElement = document.getElementById("data-points-number");
+  const clientsElement = document.getElementById("clients-number");
 
   sourcesNumberElement.innerHTML = preloader;
   tokensNumberElement.innerHTML = preloader;
   dataPointsElement.innerHTML = preloader;
+  clientsElement.innerHTML = preloader;
 
   fetch(
     "https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json"
@@ -59,6 +62,8 @@ function fetchData() {
 
     animateDataPoints(milisecondInterval, pointsPerDisplayInterval);
   });
+
+  clientsElement.innerHTML = getClientsCount();
 }
 
 export default fetchData;

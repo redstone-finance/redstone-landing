@@ -76,6 +76,7 @@
     @include media-breakpoint-up(md) {
         font-size: 30px;
         line-height: 30px;
+        margin-bottom: 1rem;
     }
 }
 
@@ -386,4 +387,44 @@
 
 .navbar-brand {
     margin-right: 0 !important;
+}
+
+.navbar-dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+  
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    border: 1px solid #FD627A;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 7rem;
+    }
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }

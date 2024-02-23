@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    @@include('../common/analytics-scripts-in-head.html')
+    @@include('../common/head.html')
+  </head>
+  <body>
+    <main>
+      @@include('../common/navbar.html', { "isHome": true })
+      <section class="pt-8 pb-6 min-vh-100" id="data-consumption-models">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center mx-auto mb-5">
+              <div class="h6 fw-bold fs-4 lh-sm mb-4">
+                3 Oracles models tailored to your needs
+              </div>
+              <div class="col-lg-6 text-center mx-auto mb-3">
+                <p class="mb-0">
+                  Modular Oracle that delivers exactly the data feeds you need,
+                  tailored to your protocol's requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-lg-6">
+              <div class="text-center px-lg-3">
+                <img
+                  loading="lazy"
+                  class="lazy img-fluid img-features mb-3"
+                  src="/assets/img/icons/bank.svg"
+                  alt="bank"
+                  height="80"
+                  width="80"
+                />
+                <div class="h5 fw-bold">RedStone Core (Pull)</div>
+                <p class="mb-md-0">
+                  Lowest gas costs, a few seconds of latency, dApp users deliver
+                  signed data packages on demand to the destination chain.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-lg-6">
+              <div class="text-center px-lg-3">
+                <img
+                  loading="lazy"
+                  class="lazy img-fluid img-features mb-3"
+                  src="/assets/img/icons/clock.svg"
+                  alt="bank"
+                  height="80"
+                  width="80"
+                />
+                <div class="h5 fw-bold">RedStone Classic (Push)</div>
+                <p class="mb-md-0">
+                  Compatible with traditional Oracles, dApp gets full control
+                  over data source and update conditions (heartbeat and
+                  deviation threshold).
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-lg-6">
+              <div class="text-center px-lg-3">
+                <img
+                  loading="lazy"
+                  class="lazy img-fluid img-features mb-3"
+                  src="/assets/img/icons/gear.svg"
+                  alt="bank"
+                  height="80"
+                  width="80"
+                />
+                <div class="h5 fw-bold">RedStone X (Zero-latency)</div>
+                <p class="mb-md-0">
+                  Front-running proof, tailored for sophisticated protocols like
+                  Perps & Options, based on GMX design.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row col-12 col-md-9 align-items-center mx-auto">
+            <h5 class="text-center">
+              Want to dive deeper?
+              <a
+                href="https://docs.redstone.finance/"
+                target="_blank"
+                role="button"
+              >
+                Check the Docs!
+              </a>
+            </h5>
+          </div>
+        </div>
+      </section>
+      @@include('../common/footer.html') @@include('../common/scripts.html')
+    </main>
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/26706494.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>

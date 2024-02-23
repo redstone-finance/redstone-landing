@@ -72,28 +72,28 @@ const chains = [
     image: "assets/img/chains/gnosis.png",
   },
   {
-    name: "Rootstock",
-    image: "assets/img/chains/rootstock.png",
+    name: "Manta",
+    image: "assets/img/chains/manta.png",
   },
   {
-    name: "Klaytn",
-    image: "assets/img/chains/klaytn.png",
+    name: "Blast",
+    image: "assets/img/chains/blast.png",
   },
   {
     name: "Cronos",
     image: "assets/img/chains/cronos.png",
   },
   {
-    name: "Metis",
-    image: "assets/img/chains/metis.png",
+    name: "Mantle",
+    image: "assets/img/chains/mantle.png",
   },
   {
-    name: "Moonbeam",
-    image: "assets/img/chains/moonbeam.png",
+    name: "Linea",
+    image: "assets/img/chains/linea.png",
   },
   {
-    name: "Aurora",
-    image: "assets/img/chains/aurora.png",
+    name: "AltLayer",
+    image: "assets/img/chains/alt-layer.png",
   },
 ];
 

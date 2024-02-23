@@ -17514,6 +17514,25 @@ label {
   width: 36px;
 }
 
+.report-button-link {
+  width: 60%;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 2rem;
+  color: #616368;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.report-button-link:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid #616368;
+}
+
 .link-like-text-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17563,7 +17582,7 @@ label {
   }
 }
 
-.slide {
+.testimonial-slide {
   display: none;
   text-align: center;
 }
@@ -17722,6 +17741,15 @@ label {
 .testimonial-image {
   height: 100px;
   border-radius: 50px;
+}
+
+.client-picture {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.client-info {
+  text-align: center;
 }
 
 /*-----------------------------------------------
@@ -18193,6 +18221,7 @@ label {
   .stat-number {
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -18467,5 +18496,71 @@ label {
 
 .navbar-brand {
   margin-left: 0 !important;
+}
+
+.navbar-dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  gap: var(--gap);
+  border: 1px solid #FD627A;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .marquee {
+    margin-top: 7rem;
+  }
+}
+
+.marquee__content {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: var(--gap);
+  min-width: 100%;
+  -webkit-animation: marquee 15s linear infinite;
+  animation: marquee 15s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-1*(-100% - var(--gap))));
+    transform: translateX(calc(-1*(-100% - var(--gap))));
+  }
+}
+
+@keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-1*(-100% - var(--gap))));
+    transform: translateX(calc(-1*(-100% - var(--gap))));
+  }
 }
 /*# sourceMappingURL=theme-rtl.css.map */

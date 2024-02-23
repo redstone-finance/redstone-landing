@@ -1,123 +1,124 @@
 const projects = [
   {
     name: "DeltaPrime",
-    image: "assets/img/trusted-by/delta-prime.png",
+    image: "assets/img/clients/deltaprime.png",
     url: "https://deltaprime.io/",
   },
   {
-    name: "ZKX",
-    image: "assets/img/trusted-by/zkx.png",
-    url: "https://zkx.fi/",
+    name: "Venus",
+    image: "assets/img/clients/venus.png",
+    url: "https://venus.io/",
   },
   {
-    name: "Moola Market",
-    image: "assets/img/trusted-by/moola.png",
-    url: "https://moola.market/",
+    name: "Sommelier",
+    image: "assets/img/clients/sommelier.png",
+    url: "https://www.sommelier.finance/",
   },
   {
-    name: "FujiDAO",
-    image: "assets/img/trusted-by/fuji.png",
-    url: "https://www.fujidao.org/",
+    name: "Enzyme",
+    image: "assets/img/clients/enzyme.png",
+    url: "https://enzyme.finance/",
   },
   {
-    name: "DLC.link",
-    image: "assets/img/trusted-by/dlc-link.png",
-    url: "https://www.dlc.link/",
+    name: "Gravita",
+    image: "assets/img/clients/gravita.png",
+    url: "https://www.gravitaprotocol.com/",
   },
   {
-    name: "Bundlr Network",
-    image: "assets/img/trusted-by/bundlr.png",
-    url: "https://bundlr.network/",
+    name: "Silo",
+    image: "assets/img/clients/silo.png",
+    url: "https://www.silo.finance/",
   },
   {
-    name: "ArDrive",
-    image: "assets/img/trusted-by/ardrive.png",
-    url: "https://ardrive.io/",
+    name: "Gearbox",
+    image: "assets/img/clients/gearbox.png",
+    url: "https://gearbox.fi/",
   },
   {
-    name: "Brightpool Finance",
-    image: "assets/img/trusted-by/brightpool.png",
-    url: "https://brightpool.finance/",
+    name: "Morpho Blue",
+    image: "assets/img/clients/morpho.png",
+    url: "https://app.morpho.org/",
   },
   {
-    name: "Prime Protocol",
-    image: "assets/img/trusted-by/prime-protocol.png",
-    url: "https://www.primeprotocol.xyz/",
+    name: "CIAN",
+    image: "assets/img/clients/cian.png",
+    url: "https://cian.app/",
   },
   {
     name: "Mento Labs",
-    image: "assets/img/trusted-by/mento-finance.svg",
+    image: "assets/img/clients/mento-finance.svg",
     url: "https://www.mentolabs.xyz/",
   },
   {
     name: "Lido",
-    image: "assets/img/trusted-by/lido.png",
+    image: "assets/img/clients/lido.png",
     url: "https://lido.fi/",
   },
   {
     name: "Gamma",
-    image: "assets/img/trusted-by/gamma.png",
+    image: "assets/img/clients/gamma.png",
     url: "https://www.gamma.xyz/",
   },
   {
     name: "Vesta Finance",
-    image: "assets/img/trusted-by/vesta-finance.png",
+    image: "assets/img/clients/vesta.png",
     url: "https://vestafinance.xyz/",
   },
   {
     name: "Y2K",
-    image: "assets/img/trusted-by/y2k.png",
+    image: "assets/img/clients/y2k.png",
     url: "https://www.y2k.finance/",
   },
   {
-    name: "Yield Yak",
-    image: "assets/img/trusted-by/yield-yak.png",
-    url: "https://twitter.com/yieldyak_/",
+    name: "Swell",
+    image: "assets/img/clients/swell.png",
+    url: "https://www.swellnetwork.io/",
   },
   {
-    name: "Float Capital",
-    image: "assets/img/trusted-by/float-capital.png",
-    url: "https://float.capital/",
+    name: "Angle",
+    image: "assets/img/clients/angle.png",
+    url: "https://www.angle.money/",
+  },
+  {
+    name: "LayerBank",
+    image: "assets/img/clients/layerbank.png",
+    url: "https://layerbank.finance/",
   },
   {
     name: "Cadence Protocol",
-    image: "assets/img/trusted-by/cadence-protocol.png",
-    url: "https://twitter.com/CadenceProtocol",
+    image: "assets/img/clients/cadence.png",
+    url: "https://www.cadenceprotocol.io/",
   },
   {
     name: "Silo",
-    image: "assets/img/trusted-by/silo.png",
+    image: "assets/img/clients/silo.png",
     url: "https://www.silo.finance/",
   },
   {
-    name: "Raft",
-    image: "assets/img/trusted-by/raft.png",
-    url: "https://www.raft.fi/",
+    name: "Term Finance",
+    image: "assets/img/clients/term.png",
+    url: "https://www.term.finance/",
   },
   {
     name: "Nostra",
-    image: "assets/img/trusted-by/nostra.png",
+    image: "assets/img/clients/nostra.png",
     url: "https://nostra.finance/",
   },
   {
     name: "Hubble Exchange",
-    image: "assets/img/trusted-by/hubble-exchange.png",
-    url: "https://twitter.com/HubbleExchange/",
+    image: "assets/img/clients/hubble-exchange.png",
+    url: "https://app.hubble.exchange/",
+  },
+
+  {
+    name: "ZeroLend",
+    image: "assets/img/clients/zerolend.png",
+    url: "https://zerolend.xyz/",
   },
   {
-    name: "EMDX",
-    image: "assets/img/trusted-by/emdx.png",
-    url: "https://twitter.com/emdx_io/",
-  },
-  {
-    name: "Voltz",
-    image: "assets/img/trusted-by/voltz.png",
-    url: "https://twitter.com/voltz_xyz/",
-  },
-  {
-    name: "Swell",
-    image: "assets/img/trusted-by/swell.png",
-    url: "https://twitter.com/swellnetworkio/photo",
+    name: "Shoebill",
+    image: "assets/img/clients/shoebill.png",
+    url: "https://shoebill.finance/",
   },
 ];
 
@@ -128,9 +129,6 @@ if (trustedByCrossChainSection) {
     projects.forEach((project) => {
       const projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
-
-      const isBlackBackgroundRequired = project.name === "Prime Protocol";
-
       projectItem.innerHTML += `
         <a
           href="${project.url}"
@@ -145,9 +143,6 @@ if (trustedByCrossChainSection) {
             alt="${project.name} Logo"
             height="60"
             width="60"
-            style="${
-              isBlackBackgroundRequired ? "background: black; padding: 6px" : ""
-            }"  
           />
           <p class="mb-0 mt-2">${project.name}</p>
         </a>
@@ -163,9 +158,9 @@ if (trustedByCrossChainSection) {
       "mt-n5"
     );
     manyMoreItem.innerHTML += `
-    <p class="mb-0 mt-2 fw-bold">
-      And many more!
-    </p>
+    <a class="mb-0 mt-2 fw-bold" href="/clients">
+      & many more!
+    </a>
   `;
     element.appendChild(manyMoreItem);
   }
