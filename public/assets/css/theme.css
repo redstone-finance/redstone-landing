@@ -18537,7 +18537,8 @@ label {
   -ms-user-select: none;
   user-select: none;
   gap: var(--gap);
-  border: 1px solid #FD627A;
+  border-top: 1px solid #FD627A;
+  border-bottom: 1px solid #FD627A;
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
