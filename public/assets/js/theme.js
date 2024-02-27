@@ -605,13 +605,13 @@ var lstLrtClients = [{
   name: "KelpDAO",
   logo: "/assets/img/clients/kelp-dao.png",
   url: "https://www.kelpdao.xyz/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
   tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
 }, {
   name: "Renzo",
   logo: "/assets/img/clients/renzo.png",
   url: "https://www.renzoprotocol.com/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1760741284111896625",
   tvlUrl: "https://api.llama.fi/tvl/renzo"
 }, {
   name: "Swell",
@@ -701,13 +701,13 @@ var clientsMainPage = [{
   name: "KelpDAO",
   logo: "/assets/img/clients/kelp-dao.png",
   url: "https://www.kelpdao.xyz/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
   tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
 }, {
   name: "Renzo",
   logo: "/assets/img/clients/renzo.png",
   url: "https://www.renzoprotocol.com/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1760741284111896625",
   tvlUrl: "https://api.llama.fi/tvl/renzo"
 }, {
   name: "Swell",
@@ -787,6 +787,24 @@ var featuredClients = [{
   url: "https://www.silo.finance/",
   announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
   tvlUrl: "https://api.llama.fi/tvl/silo-finance"
+}, {
+  name: "KelpDAO",
+  logo: "/assets/img/clients/kelp-dao.png",
+  url: "https://www.kelpdao.xyz/",
+  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
+  tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
+}, {
+  name: "Renzo",
+  logo: "/assets/img/clients/renzo.png",
+  url: "https://www.renzoprotocol.com/",
+  announcement: "https://x.com/redstone_defi/status/1760741284111896625",
+  tvlUrl: "https://api.llama.fi/tvl/renzo"
+}, {
+  name: "Pendle",
+  logo: "/assets/img/clients/pendle.png",
+  url: "https://www.pendle.finance/",
+  announcement: "https://x.com/redstone_defi/status/1760260799833182642",
+  tvlUrl: "https://api.llama.fi/tvl/pendle"
 }];
 var otherClients = [{
   name: "Mento",

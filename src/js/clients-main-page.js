@@ -43,14 +43,14 @@ const clientsMainPage = [
     name: "KelpDAO",
     logo: "/assets/img/clients/kelp-dao.png",
     url: "https://www.kelpdao.xyz/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1760998051194573109",
     tvlUrl: "https://api.llama.fi/tvl/kelp-dao",
   },
   {
     name: "Renzo",
     logo: "/assets/img/clients/renzo.png",
     url: "https://www.renzoprotocol.com/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1760741284111896625",
     tvlUrl: "https://api.llama.fi/tvl/renzo",
   },
   {
