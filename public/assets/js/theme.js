@@ -376,6 +376,54 @@ var auditorsPartners = [{
 }, {
   name: "Caldera",
   image: "assets/img/auditors-partners/caldera.png"
+}, {
+  name: "AltLayer",
+  image: "assets/img/auditors-partners/altlayer.png"
+}, {
+  name: "Conduit",
+  image: "assets/img/auditors-partners/conduit.png"
+}, {
+  name: "Lumoz",
+  image: "assets/img/auditors-partners/lumoz.png"
+}, {
+  name: "Chaos Labs",
+  image: "assets/img/auditors-partners/chaos-labs.png"
+}, {
+  name: "Gauntlet",
+  image: "assets/img/auditors-partners/gauntlet.png"
+}, {
+  name: "Alterscope",
+  image: "assets/img/auditors-partners/alterscope.png"
+}, {
+  name: "TokenLogic",
+  image: "assets/img/auditors-partners/tokenlogic.png"
+}, {
+  name: "Sei",
+  image: "assets/img/auditors-partners/sei.png"
+}, {
+  name: "Monad",
+  image: "assets/img/auditors-partners/monad.png"
+}, {
+  name: "EigenLayer",
+  image: "assets/img/auditors-partners/eigenlayer.png"
+}, {
+  name: "Staking Rewards",
+  image: "assets/img/auditors-partners/staking-rewards.png"
+}, {
+  name: "Klin",
+  image: "assets/img/auditors-partners/klin.png"
+}, {
+  name: "Hashnote",
+  image: "assets/img/auditors-partners/hashnote.png"
+}, {
+  name: "Astria",
+  image: "assets/img/auditors-partners/astria.png"
+}, {
+  name: "Espresso Systems",
+  image: "assets/img/auditors-partners/espresso-systems.png"
+}, {
+  name: "Safary",
+  image: "assets/img/auditors-partners/safary.png"
 }];
 var auditorsPartnersChainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -388,7 +436,7 @@ if (auditorsPartnersChainsCrossChainSection) {
 
       var auditorsPartnersItem = document.createElement("div");
       auditorsPartnersItem.classList.add("tab-item");
-      auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n          width=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n        <p class=\"mb-0 mt-0\">").concat((_auditorsPartnersElem = auditorsPartnersElement === null || auditorsPartnersElement === void 0 ? void 0 : auditorsPartnersElement.title) !== null && _auditorsPartnersElem !== void 0 ? _auditorsPartnersElem : "", "</p>\n      ");
+      auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n        <p class=\"mb-0 mt-0\">").concat((_auditorsPartnersElem = auditorsPartnersElement === null || auditorsPartnersElement === void 0 ? void 0 : auditorsPartnersElement.title) !== null && _auditorsPartnersElem !== void 0 ? _auditorsPartnersElem : "", "</p>\n      ");
 
       _element.appendChild(auditorsPartnersItem);
     });
@@ -547,8 +595,8 @@ var chains = [{
   name: "Fantom",
   image: "assets/img/chains/fantom.png"
 }, {
-  name: "Evmos",
-  image: "assets/img/chains/evmos.png"
+  name: "Mode",
+  image: "assets/img/chains/mode.png"
 }, {
   name: "Kava",
   image: "assets/img/chains/kava.png"
@@ -571,8 +619,8 @@ var chains = [{
   name: "Linea",
   image: "assets/img/chains/linea.png"
 }, {
-  name: "AltLayer",
-  image: "assets/img/chains/alt-layer.png"
+  name: "Fraxtal",
+  image: "assets/img/chains/fraxtal.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -683,7 +731,7 @@ var clientsMainPage = [{
   name: "LayerBank",
   logo: "/assets/img/clients/layerbank.png",
   url: "https://layerbank.finance/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1762492831288246514",
   tvlUrl: "https://api.llama.fi/tvl/layerbank"
 }, {
   name: "Sommelier",
@@ -755,7 +803,7 @@ var featuredClients = [{
   name: "LayerBank",
   logo: "/assets/img/clients/layerbank.png",
   url: "https://layerbank.finance/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1762492831288246514",
   tvlUrl: "https://api.llama.fi/tvl/layerbank"
 }, {
   name: "Sommelier",
@@ -785,7 +833,7 @@ var featuredClients = [{
   name: "Silo",
   logo: "/assets/img/clients/silo.png",
   url: "https://www.silo.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
+  announcement: "https://twitter.com/redstone_defi/status/1758884066949214689",
   tvlUrl: "https://api.llama.fi/tvl/silo-finance"
 }, {
   name: "KelpDAO",
@@ -805,13 +853,43 @@ var featuredClients = [{
   url: "https://www.pendle.finance/",
   announcement: "https://x.com/redstone_defi/status/1760260799833182642",
   tvlUrl: "https://api.llama.fi/tvl/pendle"
+}, {
+  name: "Ethena",
+  logo: "/assets/img/clients/ethena.png",
+  url: "https://www.ethena.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
+  tvlUrl: "https://api.llama.fi/tvl/ethena"
+}, {
+  name: "ZeroLend",
+  logo: "/assets/img/clients/zerolend.png",
+  url: "https://zerolend.xyz/",
+  announcement: "https://twitter.com/redstone_defi/status/1762855479670407290",
+  tvlUrl: "https://api.llama.fi/tvl/zerolend"
+}, {
+  name: "Shoebill",
+  logo: "/assets/img/clients/shoebill.png",
+  url: "https://shoebill.finance/",
+  announcement: "https://twitter.com/redstone_defi/status/1763580020751245496",
+  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance"
+}, {
+  name: "Redacted Cartel",
+  logo: "/assets/img/clients/redacted.png",
+  url: "https://redacted.finance/",
+  announcement: "https://twitter.com/redstone_defi/status/1759608928189727042",
+  tvlUrl: "https://api.llama.fi/tvl/redacted"
+}, {
+  name: "Swell",
+  logo: "/assets/img/clients/swell.png",
+  url: "https://www.swellnetwork.io/",
+  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
+  tvlUrl: "https://api.llama.fi/tvl/swell"
 }];
 var otherClients = [{
   name: "Mento",
   logo: "/assets/img/clients/mento.png",
   url: "https://www.silo.finance/",
   announcement: "https://blog.redstone.finance/2023/05/18/mento-labs-chooses-redstone-from-multiple-oracle-providers",
-  tvlUrl: "https://www.mento.org/"
+  tvlUrl: "https://api.llama.fi/tvl/mento"
 }, {
   name: "CIAN",
   logo: "/assets/img/clients/cian.png",
@@ -824,12 +902,6 @@ var otherClients = [{
   url: "https://www.gravitaprotocol.com/",
   announcement: "https://twitter.com/redstone_defi/status/1701913686921941128",
   tvlUrl: "https://api.llama.fi/tvl/gravita-protocol"
-}, {
-  name: "Swell",
-  logo: "/assets/img/clients/swell.png",
-  url: "https://www.swellnetwork.io/",
-  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-  tvlUrl: "https://api.llama.fi/tvl/swell"
 }, {
   name: "Stader",
   logo: "/assets/img/clients/stader.png",
@@ -956,6 +1028,12 @@ var otherClients = [{
   url: "https://interestprotocol.io/",
   announcement: "https://twitter.com/interest_dinero/status/1621516358927130624",
   tvlUrl: "https://api.llama.fi/tvl/interest-protocol"
+}, {
+  name: "Reserve",
+  logo: "/assets/img/clients/reserve.png",
+  url: "https://reserve.org/",
+  announcement: "https://twitter.com/redstone_defi/status/1758159389297688589",
+  tvlUrl: "https://api.llama.fi/tvl/reserve"
 }];
 
 function getClientsCount() {
@@ -965,7 +1043,7 @@ function getClientsCount() {
 
 function generateClientCard(name, logo, url, announcement, tvl) {
   var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
-  return "\n    <img class=\"client-picture\" src=\"".concat(logo, "\"/>\n    <div class=\"client-info fw-medium\">\n      <p class=\"mb-0 fs-0\">").concat(name, "</p>\n      ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n      ").concat(announcement ? "<a\n        href=\"".concat(announcement, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n      >\n        <p>Announcement</p>\n      </a>") : "", "\n    </div>");
+  return "\n    <a         \n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "", "\n      </div>\n    </a>");
 }
 
 if (document.getElementById("featured-clients") && document.getElementById("all-clients")) {
@@ -1196,7 +1274,7 @@ var partners = [{
 }, {
   name: "Maven11",
   url: "https://www.maven11.com/",
-  image: "assets/img/partners/maven11.svg"
+  image: "assets/img/partners/maven11.png"
 }, {
   name: "Distributed Global",
   url: "http://www.distributedglobal.com/",
@@ -1446,85 +1524,29 @@ var projects = [{
   image: "assets/img/clients/venus.png",
   url: "https://venus.io/"
 }, {
-  name: "Sommelier",
-  image: "assets/img/clients/sommelier.png",
-  url: "https://www.sommelier.finance/"
-}, {
-  name: "Enzyme",
-  image: "assets/img/clients/enzyme.png",
-  url: "https://enzyme.finance/"
-}, {
-  name: "Gravita",
-  image: "assets/img/clients/gravita.png",
-  url: "https://www.gravitaprotocol.com/"
-}, {
-  name: "Silo",
-  image: "assets/img/clients/silo.png",
-  url: "https://www.silo.finance/"
-}, {
-  name: "Gearbox",
-  image: "assets/img/clients/gearbox.png",
-  url: "https://gearbox.fi/"
+  name: "Pendle",
+  image: "assets/img/clients/pendle.png",
+  url: "https://www.pendle.finance/"
 }, {
   name: "Morpho Blue",
   image: "assets/img/clients/morpho.png",
   url: "https://app.morpho.org/"
 }, {
-  name: "CIAN",
-  image: "assets/img/clients/cian.png",
-  url: "https://cian.app/"
-}, {
-  name: "Mento Labs",
-  image: "assets/img/clients/mento-finance.svg",
-  url: "https://www.mentolabs.xyz/"
-}, {
-  name: "Lido",
-  image: "assets/img/clients/lido.png",
-  url: "https://lido.fi/"
-}, {
-  name: "Gamma",
-  image: "assets/img/clients/gamma.png",
-  url: "https://www.gamma.xyz/"
-}, {
-  name: "Vesta Finance",
-  image: "assets/img/clients/vesta.png",
-  url: "https://vestafinance.xyz/"
-}, {
-  name: "Y2K",
-  image: "assets/img/clients/y2k.png",
-  url: "https://www.y2k.finance/"
-}, {
-  name: "Swell",
-  image: "assets/img/clients/swell.png",
-  url: "https://www.swellnetwork.io/"
-}, {
-  name: "Angle",
-  image: "assets/img/clients/angle.png",
-  url: "https://www.angle.money/"
-}, {
-  name: "LayerBank",
-  image: "assets/img/clients/layerbank.png",
-  url: "https://layerbank.finance/"
-}, {
-  name: "Cadence Protocol",
-  image: "assets/img/clients/cadence.png",
-  url: "https://www.cadenceprotocol.io/"
-}, {
   name: "Silo",
   image: "assets/img/clients/silo.png",
   url: "https://www.silo.finance/"
 }, {
-  name: "Term Finance",
-  image: "assets/img/clients/term.png",
-  url: "https://www.term.finance/"
+  name: "Sommelier",
+  image: "assets/img/clients/sommelier.png",
+  url: "https://www.sommelier.finance/"
 }, {
-  name: "Nostra",
-  image: "assets/img/clients/nostra.png",
-  url: "https://nostra.finance/"
+  name: "Gearbox",
+  image: "assets/img/clients/gearbox.png",
+  url: "https://gearbox.fi/"
 }, {
-  name: "Hubble Exchange",
-  image: "assets/img/clients/hubble-exchange.png",
-  url: "https://app.hubble.exchange/"
+  name: "LayerBank",
+  image: "assets/img/clients/layerbank.png",
+  url: "https://layerbank.finance/"
 }, {
   name: "ZeroLend",
   image: "assets/img/clients/zerolend.png",
@@ -1533,6 +1555,62 @@ var projects = [{
   name: "Shoebill",
   image: "assets/img/clients/shoebill.png",
   url: "https://shoebill.finance/"
+}, {
+  name: "Term Finance",
+  image: "assets/img/clients/term.png",
+  url: "https://www.term.finance/"
+}, {
+  name: "Angle",
+  image: "assets/img/clients/angle.png",
+  url: "https://www.angle.money/"
+}, {
+  name: "Lido",
+  image: "assets/img/clients/lido.png",
+  url: "https://lido.fi/"
+}, {
+  name: "Swell",
+  image: "assets/img/clients/swell.png",
+  url: "https://www.swellnetwork.io/"
+}, {
+  name: "Renzo",
+  image: "assets/img/clients/renzo.png",
+  url: "https://www.renzoprotocol.com/"
+}, {
+  name: "Etherfi",
+  image: "assets/img/clients/etherfi.png",
+  url: "https://www.ether.fi/"
+}, {
+  name: "Prisma",
+  image: "assets/img/clients/prisma.png",
+  url: "https://prismafinance.com/"
+}, {
+  name: "Gravita",
+  image: "assets/img/clients/gravita.png",
+  url: "https://www.gravitaprotocol.com/"
+}, {
+  name: "Enzyme",
+  image: "assets/img/clients/enzyme.png",
+  url: "https://enzyme.finance/"
+}, {
+  name: "CIAN",
+  image: "assets/img/clients/cian.png",
+  url: "https://cian.app/"
+}, {
+  name: "Mento",
+  image: "assets/img/clients/mento.png",
+  url: "https://www.mento.org/"
+}, {
+  name: "Hubble Exchange",
+  image: "assets/img/clients/hubble-exchange.png",
+  url: "https://app.hubble.exchange/"
+}, {
+  name: "Gamma",
+  image: "assets/img/clients/gamma.png",
+  url: "https://www.gamma.xyz/"
+}, {
+  name: "Cadence Protocol",
+  image: "assets/img/clients/cadence.png",
+  url: "https://www.cadenceprotocol.io/"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
 

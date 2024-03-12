@@ -21,7 +21,8 @@ const clientsMainPage = [
     name: "LayerBank",
     logo: "/assets/img/clients/layerbank.png",
     url: "https://layerbank.finance/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1762492831288246514",
     tvlUrl: "https://api.llama.fi/tvl/layerbank",
   },
   {

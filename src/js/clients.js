@@ -19,7 +19,8 @@ const featuredClients = [
     name: "LayerBank",
     logo: "/assets/img/clients/layerbank.png",
     url: "https://layerbank.finance/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1762492831288246514",
     tvlUrl: "https://api.llama.fi/tvl/layerbank",
   },
   {
@@ -57,7 +58,7 @@ const featuredClients = [
     logo: "/assets/img/clients/silo.png",
     url: "https://www.silo.finance/",
     announcement:
-      "https://twitter.com/redstone_defi/status/1737503311941812232",
+      "https://twitter.com/redstone_defi/status/1758884066949214689",
     tvlUrl: "https://api.llama.fi/tvl/silo-finance",
   },
   {
@@ -81,6 +82,46 @@ const featuredClients = [
     announcement: "https://x.com/redstone_defi/status/1760260799833182642",
     tvlUrl: "https://api.llama.fi/tvl/pendle",
   },
+  {
+    name: "Ethena",
+    logo: "/assets/img/clients/ethena.png",
+    url: "https://www.ethena.fi/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1764682387127226633",
+    tvlUrl: "https://api.llama.fi/tvl/ethena",
+  },
+  {
+    name: "ZeroLend",
+    logo: "/assets/img/clients/zerolend.png",
+    url: "https://zerolend.xyz/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1762855479670407290",
+    tvlUrl: "https://api.llama.fi/tvl/zerolend",
+  },
+  {
+    name: "Shoebill",
+    logo: "/assets/img/clients/shoebill.png",
+    url: "https://shoebill.finance/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1763580020751245496",
+    tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
+  },
+  {
+    name: "Redacted Cartel",
+    logo: "/assets/img/clients/redacted.png",
+    url: "https://redacted.finance/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1759608928189727042",
+    tvlUrl: "https://api.llama.fi/tvl/redacted",
+  },
+  {
+    name: "Swell",
+    logo: "/assets/img/clients/swell.png",
+    url: "https://www.swellnetwork.io/",
+    announcement:
+      "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
+    tvlUrl: "https://api.llama.fi/tvl/swell",
+  },
 ];
 
 const otherClients = [
@@ -90,7 +131,7 @@ const otherClients = [
     url: "https://www.silo.finance/",
     announcement:
       "https://blog.redstone.finance/2023/05/18/mento-labs-chooses-redstone-from-multiple-oracle-providers",
-    tvlUrl: "https://www.mento.org/",
+    tvlUrl: "https://api.llama.fi/tvl/mento",
   },
   {
     name: "CIAN",
@@ -107,14 +148,6 @@ const otherClients = [
     announcement:
       "https://twitter.com/redstone_defi/status/1701913686921941128",
     tvlUrl: "https://api.llama.fi/tvl/gravita-protocol",
-  },
-  {
-    name: "Swell",
-    logo: "/assets/img/clients/swell.png",
-    url: "https://www.swellnetwork.io/",
-    announcement:
-      "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-    tvlUrl: "https://api.llama.fi/tvl/swell",
   },
   {
     name: "Stader",
@@ -282,6 +315,14 @@ const otherClients = [
       "https://twitter.com/interest_dinero/status/1621516358927130624",
     tvlUrl: "https://api.llama.fi/tvl/interest-protocol",
   },
+  {
+    name: "Reserve",
+    logo: "/assets/img/clients/reserve.png",
+    url: "https://reserve.org/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1758159389297688589",
+    tvlUrl: "https://api.llama.fi/tvl/reserve",
+  },
 ];
 
 function getClientsCount() {
@@ -295,22 +336,29 @@ function generateClientCard(name, logo, url, announcement, tvl) {
     : "";
 
   return `
-    <img class="client-picture" src="${logo}"/>
-    <div class="client-info fw-medium">
-      <p class="mb-0 fs-0">${name}</p>
-      ${tvl ? `<p class="mb-0 fs-0">TVL: $${formattedTvl}</p>` : ""}
-      ${
-        announcement
-          ? `<a
-        href="${announcement}"
-        target="_blank"
-        referrerpolicy="no-referrer"
-      >
-        <p>Announcement</p>
-      </a>`
-          : ""
-      }
-    </div>`;
+    <a         
+      href="${url}"
+      target="_blank"
+      referrerpolicy="no-referrer"
+      class="link-like-text-button"
+    >
+      <img class="client-picture" src="${logo}"/>
+      <div class="client-info fw-medium">
+        <p class="mb-0 fs-0">${name}</p>
+        ${tvl ? `<p class="mb-0 fs-0">TVL: $${formattedTvl}</p>` : ""}
+        ${
+          announcement
+            ? `<a
+          href="${announcement}"
+          target="_blank"
+          referrerpolicy="no-referrer"
+        >
+          <p>Announcement</p>
+        </a>`
+            : ""
+        }
+      </div>
+    </a>`;
 }
 
 if (

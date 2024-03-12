@@ -10,29 +10,9 @@ const projects = [
     url: "https://venus.io/",
   },
   {
-    name: "Sommelier",
-    image: "assets/img/clients/sommelier.png",
-    url: "https://www.sommelier.finance/",
-  },
-  {
-    name: "Enzyme",
-    image: "assets/img/clients/enzyme.png",
-    url: "https://enzyme.finance/",
-  },
-  {
-    name: "Gravita",
-    image: "assets/img/clients/gravita.png",
-    url: "https://www.gravitaprotocol.com/",
-  },
-  {
-    name: "Silo",
-    image: "assets/img/clients/silo.png",
-    url: "https://www.silo.finance/",
-  },
-  {
-    name: "Gearbox",
-    image: "assets/img/clients/gearbox.png",
-    url: "https://gearbox.fi/",
+    name: "Pendle",
+    image: "assets/img/clients/pendle.png",
+    url: "https://www.pendle.finance/",
   },
   {
     name: "Morpho Blue",
@@ -40,76 +20,25 @@ const projects = [
     url: "https://app.morpho.org/",
   },
   {
-    name: "CIAN",
-    image: "assets/img/clients/cian.png",
-    url: "https://cian.app/",
+    name: "Silo",
+    image: "assets/img/clients/silo.png",
+    url: "https://www.silo.finance/",
   },
   {
-    name: "Mento Labs",
-    image: "assets/img/clients/mento-finance.svg",
-    url: "https://www.mentolabs.xyz/",
+    name: "Sommelier",
+    image: "assets/img/clients/sommelier.png",
+    url: "https://www.sommelier.finance/",
   },
   {
-    name: "Lido",
-    image: "assets/img/clients/lido.png",
-    url: "https://lido.fi/",
-  },
-  {
-    name: "Gamma",
-    image: "assets/img/clients/gamma.png",
-    url: "https://www.gamma.xyz/",
-  },
-  {
-    name: "Vesta Finance",
-    image: "assets/img/clients/vesta.png",
-    url: "https://vestafinance.xyz/",
-  },
-  {
-    name: "Y2K",
-    image: "assets/img/clients/y2k.png",
-    url: "https://www.y2k.finance/",
-  },
-  {
-    name: "Swell",
-    image: "assets/img/clients/swell.png",
-    url: "https://www.swellnetwork.io/",
-  },
-  {
-    name: "Angle",
-    image: "assets/img/clients/angle.png",
-    url: "https://www.angle.money/",
+    name: "Gearbox",
+    image: "assets/img/clients/gearbox.png",
+    url: "https://gearbox.fi/",
   },
   {
     name: "LayerBank",
     image: "assets/img/clients/layerbank.png",
     url: "https://layerbank.finance/",
   },
-  {
-    name: "Cadence Protocol",
-    image: "assets/img/clients/cadence.png",
-    url: "https://www.cadenceprotocol.io/",
-  },
-  {
-    name: "Silo",
-    image: "assets/img/clients/silo.png",
-    url: "https://www.silo.finance/",
-  },
-  {
-    name: "Term Finance",
-    image: "assets/img/clients/term.png",
-    url: "https://www.term.finance/",
-  },
-  {
-    name: "Nostra",
-    image: "assets/img/clients/nostra.png",
-    url: "https://nostra.finance/",
-  },
-  {
-    name: "Hubble Exchange",
-    image: "assets/img/clients/hubble-exchange.png",
-    url: "https://app.hubble.exchange/",
-  },
-
   {
     name: "ZeroLend",
     image: "assets/img/clients/zerolend.png",
@@ -119,6 +48,76 @@ const projects = [
     name: "Shoebill",
     image: "assets/img/clients/shoebill.png",
     url: "https://shoebill.finance/",
+  },
+  {
+    name: "Term Finance",
+    image: "assets/img/clients/term.png",
+    url: "https://www.term.finance/",
+  },
+  {
+    name: "Angle",
+    image: "assets/img/clients/angle.png",
+    url: "https://www.angle.money/",
+  },
+  {
+    name: "Lido",
+    image: "assets/img/clients/lido.png",
+    url: "https://lido.fi/",
+  },
+  {
+    name: "Swell",
+    image: "assets/img/clients/swell.png",
+    url: "https://www.swellnetwork.io/",
+  },
+  {
+    name: "Renzo",
+    image: "assets/img/clients/renzo.png",
+    url: "https://www.renzoprotocol.com/",
+  },
+  {
+    name: "Etherfi",
+    image: "assets/img/clients/etherfi.png",
+    url: "https://www.ether.fi/",
+  },
+  {
+    name: "Prisma",
+    image: "assets/img/clients/prisma.png",
+    url: "https://prismafinance.com/",
+  },
+  {
+    name: "Gravita",
+    image: "assets/img/clients/gravita.png",
+    url: "https://www.gravitaprotocol.com/",
+  },
+  {
+    name: "Enzyme",
+    image: "assets/img/clients/enzyme.png",
+    url: "https://enzyme.finance/",
+  },
+  {
+    name: "CIAN",
+    image: "assets/img/clients/cian.png",
+    url: "https://cian.app/",
+  },
+  {
+    name: "Mento",
+    image: "assets/img/clients/mento.png",
+    url: "https://www.mento.org/",
+  },
+  {
+    name: "Hubble Exchange",
+    image: "assets/img/clients/hubble-exchange.png",
+    url: "https://app.hubble.exchange/",
+  },
+  {
+    name: "Gamma",
+    image: "assets/img/clients/gamma.png",
+    url: "https://www.gamma.xyz/",
+  },
+  {
+    name: "Cadence Protocol",
+    image: "assets/img/clients/cadence.png",
+    url: "https://www.cadenceprotocol.io/",
   },
 ];
 

@@ -32,6 +32,70 @@ const auditorsPartners = [
     name: "Caldera",
     image: "assets/img/auditors-partners/caldera.png",
   },
+  {
+    name: "AltLayer",
+    image: "assets/img/auditors-partners/altlayer.png",
+  },
+  {
+    name: "Conduit",
+    image: "assets/img/auditors-partners/conduit.png",
+  },
+  {
+    name: "Lumoz",
+    image: "assets/img/auditors-partners/lumoz.png",
+  },
+  {
+    name: "Chaos Labs",
+    image: "assets/img/auditors-partners/chaos-labs.png",
+  },
+  {
+    name: "Gauntlet",
+    image: "assets/img/auditors-partners/gauntlet.png",
+  },
+  {
+    name: "Alterscope",
+    image: "assets/img/auditors-partners/alterscope.png",
+  },
+  {
+    name: "TokenLogic",
+    image: "assets/img/auditors-partners/tokenlogic.png",
+  },
+  {
+    name: "Sei",
+    image: "assets/img/auditors-partners/sei.png",
+  },
+  {
+    name: "Monad",
+    image: "assets/img/auditors-partners/monad.png",
+  },
+  {
+    name: "EigenLayer",
+    image: "assets/img/auditors-partners/eigenlayer.png",
+  },
+  {
+    name: "Staking Rewards",
+    image: "assets/img/auditors-partners/staking-rewards.png",
+  },
+  {
+    name: "Klin",
+    image: "assets/img/auditors-partners/klin.png",
+  },
+  {
+    name: "Hashnote",
+    image: "assets/img/auditors-partners/hashnote.png",
+  },
+  {
+    name: "Astria",
+    image: "assets/img/auditors-partners/astria.png",
+  },
+  {
+    name: "Espresso Systems",
+    image: "assets/img/auditors-partners/espresso-systems.png",
+  },
+  {
+    name: "Safary",
+    image: "assets/img/auditors-partners/safary.png",
+  },
 ];
 
 const auditorsPartnersChainsCrossChainSection =
@@ -49,7 +113,6 @@ if (auditorsPartnersChainsCrossChainSection) {
           src="${auditorsPartnersElement.image}"
           alt="${auditorsPartnersElement.name} Logo"
           height="60"
-          width="60"
         />
         <p class="mb-0 mt-2">${auditorsPartnersElement.name}</p>
         <p class="mb-0 mt-0">${auditorsPartnersElement?.title ?? ""}</p>

@@ -60,8 +60,8 @@ const chains = [
     image: "assets/img/chains/fantom.png",
   },
   {
-    name: "Evmos",
-    image: "assets/img/chains/evmos.png",
+    name: "Mode",
+    image: "assets/img/chains/mode.png",
   },
   {
     name: "Kava",
@@ -92,8 +92,8 @@ const chains = [
     image: "assets/img/chains/linea.png",
   },
   {
-    name: "AltLayer",
-    image: "assets/img/chains/alt-layer.png",
+    name: "Fraxtal",
+    image: "assets/img/chains/fraxtal.png",
   },
 ];
 

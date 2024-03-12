@@ -17,7 +17,7 @@ const partners = [
   {
     name: "Maven11",
     url: "https://www.maven11.com/",
-    image: "assets/img/partners/maven11.svg",
+    image: "assets/img/partners/maven11.png",
   },
   {
     name: "Distributed Global",
