@@ -858,7 +858,7 @@ var featuredClients = [{
   logo: "/assets/img/clients/ethena.png",
   url: "https://www.ethena.fi/",
   announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
-  tvlUrl: "https://api.llama.fi/tvl/ethena"
+  tvlUrl: "https://stablecoins.llama.fi/stablecoin/146"
 }, {
   name: "ZeroLend",
   logo: "/assets/img/clients/zerolend.png",
@@ -1042,11 +1042,20 @@ function getClientsCount() {
 
 
 function generateClientCard(name, logo, url, announcement, tvl) {
-  var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
-  return "\n    <a         \n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "", "\n      </div>\n    </a>");
+  var tvlBeforeParsing = tvl;
+
+  if (name === "Ethena") {
+    var _tvlBeforeParsing, _historicalData, _historicalData$circu;
+
+    var historicalData = (_tvlBeforeParsing = tvlBeforeParsing) === null || _tvlBeforeParsing === void 0 ? void 0 : _tvlBeforeParsing.tokens;
+    tvlBeforeParsing = historicalData === null || historicalData === void 0 ? void 0 : (_historicalData = historicalData[historicalData.length - 1]) === null || _historicalData === void 0 ? void 0 : (_historicalData$circu = _historicalData.circulating) === null || _historicalData$circu === void 0 ? void 0 : _historicalData$circu.peggedUSD;
+  }
+
+  var formattedTvl = tvlBeforeParsing ? new Intl.NumberFormat().format(tvlBeforeParsing.toFixed(0)) : "";
+  return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "", "\n      </div>\n    </a>");
 }
 
-if (document.getElementById("featured-clients") && document.getElementById("all-clients")) {
+if (document.getElementById("featured-clients")) {
   var featuredClientsElement = document.getElementById("featured-clients");
   featuredClients.forEach(function (client, index) {
     var card = document.createElement("div");
@@ -1067,13 +1076,16 @@ if (document.getElementById("featured-clients") && document.getElementById("all-
       });
     }
   });
+}
+
+if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
   var allClients = [].concat(featuredClients, otherClients);
   allClients.forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
-    card.id = client.name;
+    card.id = "".concat(client.name, "_all_clients");
 
     if (allClientsElement.childNodes.length !== allClients.length) {
       allClientsElement.appendChild(card);
@@ -1082,7 +1094,7 @@ if (document.getElementById("featured-clients") && document.getElementById("all-
     if (client.tvlUrl) {
       fetch(client.tvlUrl).then(function (response) {
         response.json().then(function (tvl) {
-          var clientCard = document.getElementById(allClients[index].name);
+          var clientCard = document.getElementById("".concat(allClients[index].name, "_all_clients"));
           clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
         });
       });

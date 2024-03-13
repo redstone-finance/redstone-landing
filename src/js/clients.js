@@ -88,7 +88,7 @@ const featuredClients = [
     url: "https://www.ethena.fi/",
     announcement:
       "https://twitter.com/redstone_defi/status/1764682387127226633",
-    tvlUrl: "https://api.llama.fi/tvl/ethena",
+    tvlUrl: "https://stablecoins.llama.fi/stablecoin/146",
   },
   {
     name: "ZeroLend",
@@ -331,12 +331,20 @@ function getClientsCount() {
 
 // eslint-disable-next-line no-unused-vars
 function generateClientCard(name, logo, url, announcement, tvl) {
-  const formattedTvl = tvl
-    ? new Intl.NumberFormat().format(tvl.toFixed(0))
+  let tvlBeforeParsing = tvl;
+
+  if (name === "Ethena") {
+    const historicalData = tvlBeforeParsing?.tokens;
+    tvlBeforeParsing =
+      historicalData?.[historicalData.length - 1]?.circulating?.peggedUSD;
+  }
+
+  const formattedTvl = tvlBeforeParsing
+    ? new Intl.NumberFormat().format(tvlBeforeParsing.toFixed(0))
     : "";
 
   return `
-    <a         
+    <a
       href="${url}"
       target="_blank"
       referrerpolicy="no-referrer"
@@ -361,12 +369,8 @@ function generateClientCard(name, logo, url, announcement, tvl) {
     </a>`;
 }
 
-if (
-  document.getElementById("featured-clients") &&
-  document.getElementById("all-clients")
-) {
+if (document.getElementById("featured-clients")) {
   const featuredClientsElement = document.getElementById("featured-clients");
-
   featuredClients.forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
@@ -377,11 +381,9 @@ if (
       client.announcement
     );
     card.id = client.name;
-
     if (featuredClientsElement.childNodes.length !== featuredClients.length) {
       featuredClientsElement.appendChild(card);
     }
-
     if (client.tvlUrl) {
       fetch(client.tvlUrl).then((response) => {
         response.json().then((tvl) => {
@@ -399,7 +401,9 @@ if (
       });
     }
   });
+}
 
+if (document.getElementById("all-clients")) {
   const allClientsElement = document.getElementById("all-clients");
   const allClients = [...featuredClients, ...otherClients];
   allClients.forEach((client, index) => {
@@ -411,7 +415,7 @@ if (
       client.url,
       client.announcement
     );
-    card.id = client.name;
+    card.id = `${client.name}_all_clients`;
 
     if (allClientsElement.childNodes.length !== allClients.length) {
       allClientsElement.appendChild(card);
@@ -420,7 +424,9 @@ if (
     if (client.tvlUrl) {
       fetch(client.tvlUrl).then((response) => {
         response.json().then((tvl) => {
-          const clientCard = document.getElementById(allClients[index].name);
+          const clientCard = document.getElementById(
+            `${allClients[index].name}_all_clients`
+          );
           clientCard.innerHTML = generateClientCard(
             client.name,
             client.logo,
