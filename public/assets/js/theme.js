@@ -997,7 +997,7 @@ var otherClients = [{
   logo: "/assets/img/clients/cadence.png",
   url: "https://www.cadenceprotocol.io/",
   announcement: "https://x.com/redstone_defi/status/1645872955388497923",
-  tvlUrl: ""
+  tvlUrl: "https://api.llama.fi/tvl/cadence-protocol"
 }, {
   name: "LoanShark",
   logo: "/assets/img/clients/loanshark.png",
@@ -1034,6 +1034,114 @@ var otherClients = [{
   url: "https://reserve.org/",
   announcement: "https://twitter.com/redstone_defi/status/1758159389297688589",
   tvlUrl: "https://api.llama.fi/tvl/reserve"
+}, {
+  name: "Juice",
+  logo: "/assets/img/clients/juice.png",
+  url: "https://twitter.com/Juice_Finance",
+  announcement: "https://twitter.com/redstone_defi/status/1767219012147311017",
+  tvlUrl: "https://api.llama.fi/tvl/juice-finance"
+}, {
+  name: "Dolomite",
+  logo: "/assets/img/clients/dolomite.png",
+  url: "https://dolomite.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1770843033900102015",
+  tvlUrl: "https://api.llama.fi/tvl/dolomite"
+}, {
+  name: "StakeStone",
+  logo: "/assets/img/clients/stake-stone.png",
+  url: "https://stakestone.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1750184210432930055",
+  tvlUrl: "https://api.llama.fi/tvl/stakestone"
+}, {
+  name: "Arrakis",
+  logo: "/assets/img/clients/arrakis.png",
+  url: "https://www.arrakis.finance/",
+  announcement: "https://twitter.com/redstone_defi/status/1768295475260821525",
+  tvlUrl: "https://api.llama.fi/tvl/arrakis-finance"
+}, {
+  name: "Curvance",
+  logo: "/assets/img/clients/curvance.png",
+  url: "https://www.curvance.com/",
+  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699",
+  tvlUrl: ""
+}, {
+  name: "Ionic",
+  logo: "/assets/img/clients/ionic.png",
+  url: "https://app.ionic.money/",
+  announcement: "https://twitter.com/redstone_defi/status/1771190205728641304",
+  tvlUrl: "https://api.llama.fi/tvl/ionic-protocol"
+}, {
+  name: "Orbit",
+  logo: "/assets/img/clients/orbit.png",
+  url: "https://orbitlending.io/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/orbit-protocol"
+}, {
+  name: "Kinza",
+  logo: "/assets/img/clients/kinza.png",
+  url: "https://kinza.finance/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/kinza-finance"
+}, {
+  name: "Puffer",
+  logo: "/assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
+}, {
+  name: "IronClad",
+  logo: "/assets/img/clients/ironclad.png",
+  url: "https://www.ironclad.finance/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/ironclad-finance"
+}, {
+  name: "Ion Protocol",
+  logo: "/assets/img/clients/ion-protocol.png",
+  url: "https://ionprotocol.io/",
+  announcement: "",
+  tvlUrl: ""
+}, {
+  name: "Synonym",
+  logo: "/assets/img/clients/synonym.png",
+  url: "https://www.synonym.finance/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/synonym-finance"
+}, {
+  name: "LogX",
+  logo: "/assets/img/clients/logx.png",
+  url: "https://app.logx.trade/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/logx"
+}, {
+  name: "Wand",
+  logo: "/assets/img/clients/wand.png",
+  url: "https://wand.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1763317814088339716",
+  tvlUrl: "https://api.llama.fi/tvl/wand-protocol"
+}, {
+  name: "BlastOff",
+  logo: "/assets/img/clients/blastoff.png",
+  url: "https://blastoff.zone/",
+  announcement: "https://twitter.com/redstone_defi/status/1763317803422273638",
+  tvlUrl: "https://api.llama.fi/tvl/blastoff"
+}, {
+  name: "Phuture",
+  logo: "/assets/img/clients/phuture.png",
+  url: "https://www.phuture.finance/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/phuture"
+}, {
+  name: "BitPerp",
+  logo: "/assets/img/clients/bitperp.png",
+  url: "https://twitter.com/bitperp",
+  announcement: "",
+  tvlUrl: ""
+}, {
+  name: "Lyve Finance",
+  logo: "/assets/img/clients/lyve.png",
+  url: "https://www.lyvefi.xyz/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/lyvefinance"
 }];
 
 function getClientsCount() {
