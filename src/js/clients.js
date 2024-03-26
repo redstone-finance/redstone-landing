@@ -457,6 +457,13 @@ const otherClients = [
     announcement: "",
     tvlUrl: "https://api.llama.fi/tvl/lyvefinance",
   },
+  {
+    name: "Fraxlend",
+    logo: "/assets/img/clients/frax.png",
+    url: "https://app.frax.finance/fraxlend/available-pairs",
+    announcement: "",
+    tvlUrl: "https://api.llama.fi/tvl/fraxlend",
+  },
 ];
 
 function getClientsCount() {
