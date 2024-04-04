@@ -17,7 +17,21 @@ var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
   videoElem.innerHTML = `
-  <video position="relative" width="100%" height="100%" name="RedStone" autoplay loop>
+  <video
+    position="relative"
+    width="100%"
+    height="100%"
+    style="
+      border:none;
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+    "
+    name="RedStone"
+    autoplay
+    loop
+    muted
+  >
     <source src="/assets/animations/redstone-landing-animation.webm">
   </video>
   `;

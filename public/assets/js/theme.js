@@ -1772,7 +1772,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  videoElem.innerHTML = "\n  <video position=\"relative\" width=\"100%\" height=\"100%\" name=\"RedStone\" autoplay loop>\n    <source src=\"/assets/animations/redstone-landing-animation.webm\">\n  </video>\n  ";
+  videoElem.innerHTML = "\n  <video\n    position=\"relative\"\n    width=\"100%\"\n    height=\"100%\"\n    style=\"\n      border:none;\n      -webkit-mask-image: -webkit-radial-gradient(white, black);\n      -webkit-backface-visibility: hidden;\n      -moz-backface-visibility: hidden;\n    \"\n    name=\"RedStone\"\n    autoplay\n    loop\n    muted\n  >\n    <source src=\"/assets/animations/redstone-landing-animation.webm\">\n  </video>\n  ";
 }
 
 var cookieScript = document.getElementById("cookie-script");
