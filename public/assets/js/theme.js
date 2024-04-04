@@ -1772,7 +1772,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  videoElem.innerHTML = "<iframe style=\"border: none; position: relative; width: 100%; height: 100%;\" scrolling=\"no\" frameborder=\"0\" src=\"https://rive.app/community/5039-10212-redstone-interactive-animation/embed\"></iframe>";
+  videoElem.innerHTML = "\n  <video position=\"relative\" width=\"100%\" height=\"100%\" name=\"RedStone\" autoplay loop>\n    <source src=\"/assets/animations/redstone.mov\">\n  </video>\n  ";
 }
 
 var cookieScript = document.getElementById("cookie-script");
