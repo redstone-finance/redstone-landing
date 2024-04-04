@@ -1772,7 +1772,7 @@ docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
 
 if (videoElem) {
-  videoElem.innerHTML = "\n  <video position=\"relative\" width=\"100%\" height=\"100%\" name=\"RedStone\" autoplay loop>\n    <source src=\"/assets/animations/redstone.mov\">\n  </video>\n  ";
+  videoElem.innerHTML = "\n  <video position=\"relative\" width=\"100%\" height=\"100%\" name=\"RedStone\" autoplay loop>\n    <source src=\"/assets/animations/redstone-landing-animation.webm\">\n  </video>\n  ";
 }
 
 var cookieScript = document.getElementById("cookie-script");

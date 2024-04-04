@@ -18,7 +18,7 @@ var videoElem = document.getElementById("redstone-video");
 if (videoElem) {
   videoElem.innerHTML = `
   <video position="relative" width="100%" height="100%" name="RedStone" autoplay loop>
-    <source src="/assets/animations/redstone.mov">
+    <source src="/assets/animations/redstone-landing-animation.webm">
   </video>
   `;
 }
