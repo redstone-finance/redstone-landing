@@ -18177,7 +18177,7 @@ label {
 }
 
 .first-page {
-  max-height: 100vh;
+  min-height: 70vh;
   margin-bottom: 5rem;
 }
 
