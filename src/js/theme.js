@@ -28,11 +28,13 @@ if (videoElem) {
       -moz-backface-visibility: hidden;
     "
     name="RedStone"
-    autoplay
-    loop
+    autoplay="autoplay"
+    loop="loop"
     muted
+    defaultMuted
+    playsinline
   >
-    <source src="/assets/animations/redstone-landing-animation.webm">
+    <source src="/assets/animations/redstone-landing-animation.mp4">
   </video>
   `;
 }
