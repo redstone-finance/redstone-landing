@@ -95,6 +95,18 @@ const chains = [
     name: "Fraxtal",
     image: "assets/img/chains/fraxtal.png",
   },
+  {
+    name: "Reya",
+    image: "assets/img/chains/reya.png",
+  },
+  {
+    name: "zkLink Nova",
+    image: "assets/img/chains/zklink-nova.png",
+  },
+  {
+    name: "Etherlink",
+    image: "assets/img/chains/etherlink.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");

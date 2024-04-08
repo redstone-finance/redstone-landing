@@ -382,7 +382,8 @@ const otherClients = [
     name: "Kinza",
     logo: "/assets/img/clients/kinza.png",
     url: "https://kinza.finance/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1774089203451887997",
     tvlUrl: "https://api.llama.fi/tvl/kinza-finance",
   },
   {
@@ -396,14 +397,16 @@ const otherClients = [
     name: "IronClad",
     logo: "/assets/img/clients/ironclad.png",
     url: "https://www.ironclad.finance/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1772700106867061009",
     tvlUrl: "https://api.llama.fi/tvl/ironclad-finance",
   },
   {
     name: "Ion Protocol",
     logo: "/assets/img/clients/ion-protocol.png",
     url: "https://ionprotocol.io/",
-    announcement: "",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1772641449244594405",
     tvlUrl: "",
   },
   {
@@ -463,6 +466,14 @@ const otherClients = [
     url: "https://app.frax.finance/fraxlend/available-pairs",
     announcement: "",
     tvlUrl: "https://api.llama.fi/tvl/fraxlend",
+  },
+  {
+    name: "Opal",
+    logo: "/assets/img/clients/opal.png",
+    url: "https://opaldefi.xyz/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1775946468458918299",
+    tvlUrl: "",
   },
 ];
 

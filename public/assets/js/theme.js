@@ -621,6 +621,15 @@ var chains = [{
 }, {
   name: "Fraxtal",
   image: "assets/img/chains/fraxtal.png"
+}, {
+  name: "Reya",
+  image: "assets/img/chains/reya.png"
+}, {
+  name: "zkLink Nova",
+  image: "assets/img/chains/zklink-nova.png"
+}, {
+  name: "Etherlink",
+  image: "assets/img/chains/etherlink.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -1080,7 +1089,7 @@ var otherClients = [{
   name: "Kinza",
   logo: "/assets/img/clients/kinza.png",
   url: "https://kinza.finance/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1774089203451887997",
   tvlUrl: "https://api.llama.fi/tvl/kinza-finance"
 }, {
   name: "Puffer",
@@ -1092,13 +1101,13 @@ var otherClients = [{
   name: "IronClad",
   logo: "/assets/img/clients/ironclad.png",
   url: "https://www.ironclad.finance/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1772700106867061009",
   tvlUrl: "https://api.llama.fi/tvl/ironclad-finance"
 }, {
   name: "Ion Protocol",
   logo: "/assets/img/clients/ion-protocol.png",
   url: "https://ionprotocol.io/",
-  announcement: "",
+  announcement: "https://twitter.com/redstone_defi/status/1772641449244594405",
   tvlUrl: ""
 }, {
   name: "Synonym",
@@ -1148,6 +1157,12 @@ var otherClients = [{
   url: "https://app.frax.finance/fraxlend/available-pairs",
   announcement: "",
   tvlUrl: "https://api.llama.fi/tvl/fraxlend"
+}, {
+  name: "Opal",
+  logo: "/assets/img/clients/opal.png",
+  url: "https://opaldefi.xyz/",
+  announcement: "https://twitter.com/redstone_defi/status/1775946468458918299",
+  tvlUrl: ""
 }];
 
 function getClientsCount() {
