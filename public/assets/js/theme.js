@@ -1068,12 +1068,6 @@ var otherClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1768295475260821525",
   tvlUrl: "https://api.llama.fi/tvl/arrakis-finance"
 }, {
-  name: "Curvance",
-  logo: "/assets/img/clients/curvance.png",
-  url: "https://www.curvance.com/",
-  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699",
-  tvlUrl: ""
-}, {
   name: "Ionic",
   logo: "/assets/img/clients/ionic.png",
   url: "https://app.ionic.money/",
