@@ -390,7 +390,7 @@ const otherClients = [
     name: "Puffer",
     logo: "/assets/img/clients/puffer.png",
     url: "https://www.puffer.fi/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1777383319640113558",
     tvlUrl: "https://api.llama.fi/tvl/puffer-finance",
   },
   {
@@ -443,7 +443,7 @@ const otherClients = [
     name: "Phuture",
     logo: "/assets/img/clients/phuture.png",
     url: "https://www.phuture.finance/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1777698036099297736",
     tvlUrl: "https://api.llama.fi/tvl/phuture",
   },
   {
@@ -457,7 +457,7 @@ const otherClients = [
     name: "Lyve Finance",
     logo: "/assets/img/clients/lyve.png",
     url: "https://www.lyvefi.xyz/",
-    announcement: "",
+    announcement: "https://x.com/redstone_defi/status/1778075562046816467",
     tvlUrl: "https://api.llama.fi/tvl/lyvefinance",
   },
   {
@@ -473,6 +473,30 @@ const otherClients = [
     url: "https://opaldefi.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1775946468458918299",
+    tvlUrl: "",
+  },
+  {
+    name: "Merchant Moe",
+    logo: "/assets/img/clients/merchant-moe.png",
+    url: "https://merchantmoe.com/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1778471787640336442",
+    tvlUrl: "https://api.llama.fi/tvl/merchant-moe",
+  },
+  {
+    name: "Euler",
+    logo: "/assets/img/clients/euler.png",
+    url: "https://www.euler.finance/#/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1761828429601857840",
+    tvlUrl: "https://api.llama.fi/tvl/euler",
+  },
+  {
+    name: "GHO",
+    logo: "/assets/img/clients/gho.png",
+    url: "https://gho.xyz/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1773726966040129938",
     tvlUrl: "",
   },
 ];
