@@ -107,6 +107,18 @@ const chains = [
     name: "Etherlink",
     image: "assets/img/chains/etherlink.png",
   },
+  {
+    name: "B² Network",
+    image: "assets/img/chains/b2network.png",
+  },
+  {
+    name: "X Layer",
+    image: "assets/img/chains/xlayer.png",
+  },
+  {
+    name: "Parallel",
+    image: "assets/img/chains/parallel.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");

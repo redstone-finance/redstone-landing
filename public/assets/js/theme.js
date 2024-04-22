@@ -630,6 +630,15 @@ var chains = [{
 }, {
   name: "Etherlink",
   image: "assets/img/chains/etherlink.png"
+}, {
+  name: "B² Network",
+  image: "assets/img/chains/b2network.png"
+}, {
+  name: "X Layer",
+  image: "assets/img/chains/xlayer.png"
+}, {
+  name: "Parallel",
+  image: "assets/img/chains/parallel.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -1175,6 +1184,30 @@ var otherClients = [{
   url: "https://gho.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1773726966040129938",
   tvlUrl: ""
+}, {
+  name: "Native",
+  logo: "/assets/img/clients/native.png",
+  url: "https://aqua.native.org/",
+  announcement: "https://twitter.com/redstone_defi/status/1781030443963552168",
+  tvlUrl: "https://api.llama.fi/tvl/native"
+}, {
+  name: "Goku Money",
+  logo: "/assets/img/clients/goku-money.png",
+  url: "https://twitter.com/goku_stable",
+  announcement: "https://twitter.com/redstone_defi/status/1780959653456904464",
+  tvlUrl: "https://api.llama.fi/tvl/goku-money"
+}, {
+  name: "Tokemak",
+  logo: "/assets/img/clients/tokemak.png",
+  url: "https://www.tokemak.xyz/",
+  announcement: "https://twitter.com/redstone_defi/status/1780933859179450536",
+  tvlUrl: "https://api.llama.fi/tvl/tokemak"
+}, {
+  name: "Hubble Exchange",
+  logo: "/assets/img/clients/hubble.png",
+  url: "https://app.hubble.exchange/",
+  announcement: "https://twitter.com/redstone_defi/status/1780597130517942531",
+  tvlUrl: "https://api.llama.fi/tvl/hubble-exchange"
 }];
 
 function getClientsCount() {
