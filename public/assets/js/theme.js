@@ -901,6 +901,30 @@ var featuredClients = [{
   url: "https://www.swellnetwork.io/",
   announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
   tvlUrl: "https://api.llama.fi/tvl/swell"
+}, {
+  name: "Puffer",
+  logo: "/assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/",
+  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
+  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
+}, {
+  name: "Balancer",
+  logo: "/assets/img/clients/balancer.png",
+  url: "https://balancer.fi/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/balancer"
+}, {
+  name: "Fraxlend",
+  logo: "/assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend/available-pairs",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
+}, {
+  name: "Gearbox",
+  logo: "/assets/img/clients/gearbox.png",
+  url: "https://gearbox.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1755626055640211900",
+  tvlUrl: "https://api.llama.fi/tvl/gearbox"
 }];
 var otherClients = [{
   name: "Mento",
@@ -1208,6 +1232,18 @@ var otherClients = [{
   url: "https://app.hubble.exchange/",
   announcement: "https://twitter.com/redstone_defi/status/1780597130517942531",
   tvlUrl: "https://api.llama.fi/tvl/hubble-exchange"
+}, {
+  name: "Balancer",
+  logo: "/assets/img/clients/balancer.png",
+  url: "https://balancer.fi/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/balancer"
+}, {
+  name: "Synfutures",
+  logo: "/assets/img/clients/synfutures.png",
+  url: "https://oyster.synfutures.com/#/odyssey",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/synfutures"
 }];
 
 function getClientsCount() {
@@ -1332,7 +1368,7 @@ var dataSources = [{
   image: "/assets/img/data-sources/camelot.png"
 }, {
   name: "Frax",
-  image: "/assets/img/data-sources/frax.svg"
+  image: "/assets/img/data-sources/frax.png"
 }, {
   name: "Coinmarketcap",
   image: "/assets/img/data-sources/coinmarketcap.png"

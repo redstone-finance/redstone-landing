@@ -73,7 +73,7 @@ const dataSources = [
   },
   {
     name: "Frax",
-    image: "/assets/img/data-sources/frax.svg",
+    image: "/assets/img/data-sources/frax.png",
   },
   {
     name: "Coinmarketcap",
