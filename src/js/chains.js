@@ -119,6 +119,10 @@ const chains = [
     name: "Parallel",
     image: "assets/img/chains/parallel.png",
   },
+  {
+    name: "BOB",
+    image: "assets/img/chains/bob.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");

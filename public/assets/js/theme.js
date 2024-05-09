@@ -639,6 +639,9 @@ var chains = [{
 }, {
   name: "Parallel",
   image: "assets/img/chains/parallel.png"
+}, {
+  name: "BOB",
+  image: "assets/img/chains/bob.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -1197,10 +1200,10 @@ var otherClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1778471787640336442",
   tvlUrl: "https://api.llama.fi/tvl/merchant-moe"
 }, {
-  name: "Euler",
+  name: "Euler V2",
   logo: "/assets/img/clients/euler.png",
   url: "https://www.euler.finance/#/",
-  announcement: "https://twitter.com/redstone_defi/status/1761828429601857840",
+  announcement: "https://twitter.com/redstone_defi/status/1786425647528874308",
   tvlUrl: "https://api.llama.fi/tvl/euler"
 }, {
   name: "GHO",
@@ -1244,6 +1247,12 @@ var otherClients = [{
   url: "https://oyster.synfutures.com/#/odyssey",
   announcement: "",
   tvlUrl: "https://api.llama.fi/tvl/synfutures"
+}, {
+  name: "Clave",
+  logo: "/assets/img/clients/clave.png",
+  url: "https://getclave.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1784945784460591379",
+  tvlUrl: ""
 }];
 
 function getClientsCount() {
