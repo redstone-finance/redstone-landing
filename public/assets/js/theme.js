@@ -642,6 +642,15 @@ var chains = [{
 }, {
   name: "BOB",
   image: "assets/img/chains/bob.png"
+}, {
+  name: "Story Protocol",
+  image: "assets/img/chains/story-protocol.png"
+}, {
+  name: "Berachain",
+  image: "assets/img/chains/berachain.png"
+}, {
+  name: "CyberConnect",
+  image: "assets/img/chains/cyberconnect.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -1253,6 +1262,18 @@ var otherClients = [{
   url: "https://getclave.io/",
   announcement: "https://twitter.com/redstone_defi/status/1784945784460591379",
   tvlUrl: ""
+}, {
+  name: "SphereX",
+  logo: "/assets/img/clients/spherex.png",
+  url: "https://www.sx.xyz/",
+  announcement: "https://twitter.com/redstone_defi/status/1788569792741605533",
+  tvlUrl: ""
+}, {
+  name: "Seismic Finance",
+  logo: "/assets/img/clients/seismic-finance.png",
+  url: "https://app.seismic.finance/",
+  announcement: "https://twitter.com/redstone_defi/status/1788599830161551470",
+  tvlUrl: "https://api.llama.fi/tvl/seismic"
 }];
 
 function getClientsCount() {

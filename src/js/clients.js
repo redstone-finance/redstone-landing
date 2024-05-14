@@ -574,6 +574,22 @@ const otherClients = [
       "https://twitter.com/redstone_defi/status/1784945784460591379",
     tvlUrl: "",
   },
+  {
+    name: "SphereX",
+    logo: "/assets/img/clients/spherex.png",
+    url: "https://www.sx.xyz/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1788569792741605533",
+    tvlUrl: "",
+  },
+  {
+    name: "Seismic Finance",
+    logo: "/assets/img/clients/seismic-finance.png",
+    url: "https://app.seismic.finance/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1788599830161551470",
+    tvlUrl: "https://api.llama.fi/tvl/seismic",
+  },
 ];
 
 function getClientsCount() {

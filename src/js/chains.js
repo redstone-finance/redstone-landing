@@ -123,6 +123,18 @@ const chains = [
     name: "BOB",
     image: "assets/img/chains/bob.png",
   },
+  {
+    name: "Story Protocol",
+    image: "assets/img/chains/story-protocol.png",
+  },
+  {
+    name: "Berachain",
+    image: "assets/img/chains/berachain.png",
+  },
+  {
+    name: "CyberConnect",
+    image: "assets/img/chains/cyberconnect.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");
