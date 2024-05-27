@@ -1122,7 +1122,7 @@ var otherClients = [{
   name: "Orbit",
   logo: "/assets/img/clients/orbit.png",
   url: "https://orbitlending.io/",
-  announcement: "",
+  announcement: "https://x.com/redstone_defi/status/1791136552430833742",
   tvlUrl: "https://api.llama.fi/tvl/orbit-protocol"
 }, {
   name: "Kinza",
@@ -1274,6 +1274,30 @@ var otherClients = [{
   url: "https://app.seismic.finance/",
   announcement: "https://twitter.com/redstone_defi/status/1788599830161551470",
   tvlUrl: "https://api.llama.fi/tvl/seismic"
+}, {
+  name: "Glyph",
+  logo: "/assets/img/clients/glyph.png",
+  url: "https://www.glyph.fi/",
+  announcement: "https://x.com/redstone_defi/status/1789324604231840046",
+  tvlUrl: "https://api.llama.fi/tvl/glyph"
+}, {
+  name: "f(x) Protocol",
+  logo: "/assets/img/clients/fx-protocol.png",
+  url: "https://fx.aladdin.club/assets/",
+  announcement: "https://x.com/redstone_defi/status/1793671435254366568",
+  tvlUrl: "https://api.llama.fi/tvl/fx-protocol"
+}, {
+  name: "Swaap",
+  logo: "/assets/img/clients/swaap.png",
+  url: "https://www.swaap.finance/",
+  announcement: "https://x.com/redstone_defi/status/1793341079103983654",
+  tvlUrl: "https://api.llama.fi/tvl/swaap"
+}, {
+  name: "Lista DAO",
+  logo: "/assets/img/clients/lista-dao.png",
+  url: "https://linktr.ee/lista_dao",
+  announcement: "https://x.com/redstone_defi/status/1791507378338242852",
+  tvlUrl: "https://api.llama.fi/tvl/lista-dao"
 }];
 
 function getClientsCount() {
