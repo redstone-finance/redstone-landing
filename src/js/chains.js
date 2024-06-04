@@ -135,6 +135,14 @@ const chains = [
     name: "CyberConnect",
     image: "assets/img/chains/cyberconnect.png",
   },
+  {
+    name: "Merlin",
+    image: "assets/img/chains/merlin.png",
+  },
+  {
+    name: "re.al",
+    image: "assets/img/chains/real.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");
