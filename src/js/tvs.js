@@ -1,6 +1,6 @@
 function generateTvsElement(tvs) {
   const defillamaUrl =
-    "https://defillama.com/oracles/RedStone?staking=true&pool2=true&govtokens=true&doublecounted=true&borrowed=true&liquidstaking=true&vesting=true";
+    "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
   return `
     <div class="tvs-link mt-3 mt-md-5">
       <a
@@ -10,7 +10,14 @@ function generateTvsElement(tvs) {
         class="link-like-text-button"
       >
         <div class="py-2 px-4">
-          <h3 class="">Protecting <b>${tvs} billion</b></h3>
+        ${
+          tvs
+            ? `<h3>Protecting <b>${tvs} billion</b></h3>`
+            : `<div class="flex gap-5 align-items-center">
+                <h3>Protecting</h3>
+                <div class="loader"></div>
+              </div>`
+        }  
           <div class="flex gap-2 align-items-center justify-md-content-left justify-content-center">
             <h6 class="m-0">Total Value Secured (TVS) by</h6>
             <img src="/assets/img/logos/defillama.svg" />
@@ -31,4 +38,6 @@ if (document.getElementById("tvs")) {
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
     });
   });
+
+  tvsElement.innerHTML = generateTvsElement();
 }

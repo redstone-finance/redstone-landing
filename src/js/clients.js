@@ -25,7 +25,7 @@ const featuredClients = [
   {
     name: "Fraxlend",
     logo: "/assets/img/clients/frax.png",
-    url: "https://app.frax.finance/fraxlend/available-pairs",
+    url: "https://app.frax.finance/fraxlend",
     announcement: "https://x.com/redstone_defi/status/1804529795310682267",
     tvlUrl: "https://api.llama.fi/tvl/fraxlend",
   },
@@ -36,7 +36,7 @@ const featuredClients = [
     url: "https://www.ethena.fi/",
     announcement:
       "https://twitter.com/redstone_defi/status/1764682387127226633",
-    tvlUrl: "https://stablecoins.llama.fi/stablecoin/146",
+    tvlUrl: "https://api.llama.fi/tvl/ethena",
   },
   {
     name: "EtherFi",
@@ -612,17 +612,17 @@ function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
 
+function emptyAnnouncementLink(name) {
+  return name === "Balancer"
+    ? `<a class="inactiveLink">
+    <p>Announcement</p>
+  </a>`
+    : "";
+}
+
 function generateClientCard(name, logo, url, announcement, tvl) {
-  let tvlBeforeParsing = tvl;
-
-  if (name === "Ethena") {
-    const historicalData = tvlBeforeParsing?.tokens;
-    tvlBeforeParsing =
-      historicalData?.[historicalData.length - 1]?.circulating?.peggedUSD;
-  }
-
-  const formattedTvl = tvlBeforeParsing
-    ? new Intl.NumberFormat().format(tvlBeforeParsing.toFixed(0))
+  const formattedTvl = tvl
+    ? new Intl.NumberFormat().format(tvl.toFixed(0))
     : "";
 
   return `
@@ -645,7 +645,7 @@ function generateClientCard(name, logo, url, announcement, tvl) {
         >
           <p>Announcement</p>
         </a>`
-            : ""
+            : `${emptyAnnouncementLink(name)}`
         }
       </div>
     </a>`;

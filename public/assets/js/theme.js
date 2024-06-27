@@ -847,7 +847,7 @@ var featuredClients = [{
 }, {
   name: "Fraxlend",
   logo: "/assets/img/clients/frax.png",
-  url: "https://app.frax.finance/fraxlend/available-pairs",
+  url: "https://app.frax.finance/fraxlend",
   announcement: "https://x.com/redstone_defi/status/1804529795310682267",
   tvlUrl: "https://api.llama.fi/tvl/fraxlend"
 }, {
@@ -855,7 +855,7 @@ var featuredClients = [{
   logo: "/assets/img/clients/ethena.png",
   url: "https://www.ethena.fi/",
   announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
-  tvlUrl: "https://stablecoins.llama.fi/stablecoin/146"
+  tvlUrl: "https://api.llama.fi/tvl/ethena"
 }, {
   name: "EtherFi",
   logo: "/assets/img/clients/etherfi.png",
@@ -1301,18 +1301,13 @@ function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
 
+function emptyAnnouncementLink(name) {
+  return name === "Balancer" ? "<a class=\"inactiveLink\">\n    <p>Announcement</p>\n  </a>" : "";
+}
+
 function generateClientCard(name, logo, url, announcement, tvl) {
-  var tvlBeforeParsing = tvl;
-
-  if (name === "Ethena") {
-    var _tvlBeforeParsing, _historicalData, _historicalData$circu;
-
-    var historicalData = (_tvlBeforeParsing = tvlBeforeParsing) === null || _tvlBeforeParsing === void 0 ? void 0 : _tvlBeforeParsing.tokens;
-    tvlBeforeParsing = historicalData === null || historicalData === void 0 ? void 0 : (_historicalData = historicalData[historicalData.length - 1]) === null || _historicalData === void 0 ? void 0 : (_historicalData$circu = _historicalData.circulating) === null || _historicalData$circu === void 0 ? void 0 : _historicalData$circu.peggedUSD;
-  }
-
-  var formattedTvl = tvlBeforeParsing ? new Intl.NumberFormat().format(tvlBeforeParsing.toFixed(0)) : "";
-  return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "", "\n      </div>\n    </a>");
+  var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
+  return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "".concat(emptyAnnouncementLink(name)), "\n      </div>\n    </a>");
 }
 
 function sortFn(a, b) {
@@ -1864,9 +1859,9 @@ var projects = [{
   image: "assets/img/clients/etherfi.png",
   url: "https://www.ether.fi/"
 }, {
-  name: "Prisma",
-  image: "assets/img/clients/prisma.png",
-  url: "https://prismafinance.com/"
+  name: "Fraxlend",
+  image: "assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend"
 }, {
   name: "Gravita",
   image: "assets/img/clients/gravita.png",
@@ -1884,13 +1879,13 @@ var projects = [{
   image: "assets/img/clients/mento.png",
   url: "https://www.mento.org/"
 }, {
-  name: "Hubble Exchange",
-  image: "assets/img/clients/hubble-exchange.png",
-  url: "https://app.hubble.exchange/"
+  name: "Euler",
+  image: "assets/img/clients/euler.png",
+  url: "https://www.euler.finance/#/"
 }, {
-  name: "Gamma",
-  image: "assets/img/clients/gamma.png",
-  url: "https://www.gamma.xyz/"
+  name: "Puffer",
+  image: "assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/"
 }, {
   name: "Cadence Protocol",
   image: "assets/img/clients/cadence.png",
@@ -1921,8 +1916,8 @@ if (trustedByCrossChainSection) {
 }
 
 function generateTvsElement(tvs) {
-  var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=true&pool2=true&govtokens=true&doublecounted=true&borrowed=true&liquidstaking=true&vesting=true";
-  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <h3 class=\"\">Protecting <b>").concat(tvs, " billion</b></h3>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div");
+  var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n        ").concat(tvs ? "<h3>Protecting <b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex gap-5 align-items-center\">\n                <h3>Protecting</h3>\n                <div class=\"loader\"></div>\n              </div>", "  \n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div");
 }
 
 if (document.getElementById("tvs")) {
@@ -1935,6 +1930,7 @@ if (document.getElementById("tvs")) {
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
     });
   });
+  tvsElement.innerHTML = generateTvsElement();
 } // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */
