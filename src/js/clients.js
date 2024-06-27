@@ -1,11 +1,10 @@
 const featuredClients = [
   {
-    name: "Venus",
-    logo: "/assets/img/clients/venus.png",
-    url: "https://venus.io/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1679188915218173952",
-    tvlUrl: "https://api.llama.fi/tvl/venus",
+    name: "Pendle",
+    logo: "/assets/img/clients/pendle.png",
+    url: "https://www.pendle.finance/",
+    announcement: "https://x.com/redstone_defi/status/1760260799833182642",
+    tvlUrl: "https://api.llama.fi/tvl/pendle",
   },
   {
     name: "Morpho Blue",
@@ -16,6 +15,69 @@ const featuredClients = [
     tvlUrl: "https://api.llama.fi/tvl/morpho-blue",
   },
   {
+    name: "Venus",
+    logo: "/assets/img/clients/venus.png",
+    url: "https://venus.io/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1679188915218173952",
+    tvlUrl: "https://api.llama.fi/tvl/venus",
+  },
+  {
+    name: "Fraxlend",
+    logo: "/assets/img/clients/frax.png",
+    url: "https://app.frax.finance/fraxlend/available-pairs",
+    announcement: "https://x.com/redstone_defi/status/1804529795310682267",
+    tvlUrl: "https://api.llama.fi/tvl/fraxlend",
+  },
+
+  {
+    name: "Ethena",
+    logo: "/assets/img/clients/ethena.png",
+    url: "https://www.ethena.fi/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1764682387127226633",
+    tvlUrl: "https://stablecoins.llama.fi/stablecoin/146",
+  },
+  {
+    name: "EtherFi",
+    logo: "/assets/img/clients/etherfi.png",
+    url: "https://www.ether.fi/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1737503311941812232",
+    tvlUrl: "https://api.llama.fi/tvl/ether.fi",
+  },
+  {
+    name: "Renzo",
+    logo: "/assets/img/clients/renzo.png",
+    url: "https://www.renzoprotocol.com/",
+    announcement: "https://x.com/redstone_defi/status/1760741284111896625",
+    tvlUrl: "https://api.llama.fi/tvl/renzo",
+  },
+  {
+    name: "Puffer",
+    logo: "/assets/img/clients/puffer.png",
+    url: "https://www.puffer.fi/",
+    announcement: "https://x.com/redstone_defi/status/1777383319640113558",
+    tvlUrl: "https://api.llama.fi/tvl/puffer-finance",
+  },
+
+  {
+    name: "ZeroLend",
+    logo: "/assets/img/clients/zerolend.png",
+    url: "https://zerolend.xyz/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1762855479670407290",
+    tvlUrl: "https://api.llama.fi/tvl/zerolend",
+  },
+  {
+    name: "DeltaPrime",
+    logo: "/assets/img/clients/deltaprime.png",
+    url: "https://deltaprime.io/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1750519070758436929",
+    tvlUrl: "https://api.llama.fi/tvl/deltaprime",
+  },
+  {
     name: "LayerBank",
     logo: "/assets/img/clients/layerbank.png",
     url: "https://layerbank.finance/",
@@ -23,6 +85,46 @@ const featuredClients = [
       "https://twitter.com/redstone_defi/status/1762492831288246514",
     tvlUrl: "https://api.llama.fi/tvl/layerbank",
   },
+  {
+    name: "Gearbox",
+    logo: "/assets/img/clients/gearbox.png",
+    url: "https://gearbox.fi/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1755626055640211900",
+    tvlUrl: "https://api.llama.fi/tvl/gearbox",
+  },
+
+  {
+    name: "Balancer",
+    logo: "/assets/img/clients/balancer.png",
+    url: "https://balancer.fi/",
+    announcement: "",
+    tvlUrl: "https://api.llama.fi/tvl/balancer",
+  },
+  {
+    name: "Swell",
+    logo: "/assets/img/clients/swell.png",
+    url: "https://www.swellnetwork.io/",
+    announcement:
+      "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
+    tvlUrl: "https://api.llama.fi/tvl/swell",
+  },
+  {
+    name: "KelpDAO",
+    logo: "/assets/img/clients/kelp-dao.png",
+    url: "https://www.kelpdao.xyz/",
+    announcement: "https://x.com/redstone_defi/status/1760998051194573109",
+    tvlUrl: "https://api.llama.fi/tvl/kelp-dao",
+  },
+  {
+    name: "StakeStone",
+    logo: "/assets/img/clients/stake-stone.png",
+    url: "https://stakestone.io/",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1750184210432930055",
+    tvlUrl: "https://api.llama.fi/tvl/stakestone",
+  },
+
   {
     name: "Sommelier",
     logo: "/assets/img/clients/sommelier.png",
@@ -37,75 +139,7 @@ const featuredClients = [
     announcement: " https://x.com/redstone_defi/status/1715012465929723989",
     tvlUrl: "https://api.llama.fi/tvl/enzyme-finance",
   },
-  {
-    name: "DeltaPrime",
-    logo: "/assets/img/clients/deltaprime.png",
-    url: "https://deltaprime.io/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1750519070758436929",
-    tvlUrl: "https://api.llama.fi/tvl/deltaprime",
-  },
-  {
-    name: "EtherFi",
-    logo: "/assets/img/clients/etherfi.png",
-    url: "https://www.ether.fi/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1737503311941812232",
-    tvlUrl: "https://api.llama.fi/tvl/ether.fi",
-  },
-  {
-    name: "Silo",
-    logo: "/assets/img/clients/silo.png",
-    url: "https://www.silo.finance/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1758884066949214689",
-    tvlUrl: "https://api.llama.fi/tvl/silo-finance",
-  },
-  {
-    name: "KelpDAO",
-    logo: "/assets/img/clients/kelp-dao.png",
-    url: "https://www.kelpdao.xyz/",
-    announcement: "https://x.com/redstone_defi/status/1760998051194573109",
-    tvlUrl: "https://api.llama.fi/tvl/kelp-dao",
-  },
-  {
-    name: "Renzo",
-    logo: "/assets/img/clients/renzo.png",
-    url: "https://www.renzoprotocol.com/",
-    announcement: "https://x.com/redstone_defi/status/1760741284111896625",
-    tvlUrl: "https://api.llama.fi/tvl/renzo",
-  },
-  {
-    name: "Pendle",
-    logo: "/assets/img/clients/pendle.png",
-    url: "https://www.pendle.finance/",
-    announcement: "https://x.com/redstone_defi/status/1760260799833182642",
-    tvlUrl: "https://api.llama.fi/tvl/pendle",
-  },
-  {
-    name: "Ethena",
-    logo: "/assets/img/clients/ethena.png",
-    url: "https://www.ethena.fi/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1764682387127226633",
-    tvlUrl: "https://stablecoins.llama.fi/stablecoin/146",
-  },
-  {
-    name: "ZeroLend",
-    logo: "/assets/img/clients/zerolend.png",
-    url: "https://zerolend.xyz/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1762855479670407290",
-    tvlUrl: "https://api.llama.fi/tvl/zerolend",
-  },
-  {
-    name: "Shoebill",
-    logo: "/assets/img/clients/shoebill.png",
-    url: "https://shoebill.finance/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1763580020751245496",
-    tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
-  },
+
   {
     name: "Redacted Cartel",
     logo: "/assets/img/clients/redacted.png",
@@ -115,41 +149,12 @@ const featuredClients = [
     tvlUrl: "https://api.llama.fi/tvl/redacted",
   },
   {
-    name: "Swell",
-    logo: "/assets/img/clients/swell.png",
-    url: "https://www.swellnetwork.io/",
+    name: "Euler V2",
+    logo: "/assets/img/clients/euler.png",
+    url: "https://www.euler.finance/#/",
     announcement:
-      "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-    tvlUrl: "https://api.llama.fi/tvl/swell",
-  },
-  {
-    name: "Puffer",
-    logo: "/assets/img/clients/puffer.png",
-    url: "https://www.puffer.fi/",
-    announcement: "https://x.com/redstone_defi/status/1777383319640113558",
-    tvlUrl: "https://api.llama.fi/tvl/puffer-finance",
-  },
-  {
-    name: "Balancer",
-    logo: "/assets/img/clients/balancer.png",
-    url: "https://balancer.fi/",
-    announcement: "",
-    tvlUrl: "https://api.llama.fi/tvl/balancer",
-  },
-  {
-    name: "Fraxlend",
-    logo: "/assets/img/clients/frax.png",
-    url: "https://app.frax.finance/fraxlend/available-pairs",
-    announcement: "",
-    tvlUrl: "https://api.llama.fi/tvl/fraxlend",
-  },
-  {
-    name: "Gearbox",
-    logo: "/assets/img/clients/gearbox.png",
-    url: "https://gearbox.fi/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1755626055640211900",
-    tvlUrl: "https://api.llama.fi/tvl/gearbox",
+      "https://twitter.com/redstone_defi/status/1786425647528874308",
+    tvlUrl: "https://api.llama.fi/tvl/euler",
   },
 ];
 
@@ -168,7 +173,7 @@ const otherClients = [
     url: "https://cian.app/",
     announcement:
       "https://blog.redstone.finance/2023/07/12/case-study-cian-integrates-redstone-oracles-to-revolutionize-algorithmic-strategic-vaults-and-decentralized-automation-tools",
-    tvlUrl: "https://api.llama.fi/tvl/cian",
+    tvlUrl: "https://api.llama.fi/tvl/cian-protocol",
   },
   {
     name: "Gravita",
@@ -216,14 +221,6 @@ const otherClients = [
     announcement:
       "https://blog.redstone.finance/2023/09/18/addressing-options-protocols-needs-premia-blue-integrates-redstone-oracles",
     tvlUrl: "https://api.llama.fi/tvl/premia",
-  },
-  {
-    name: "Gearbox",
-    logo: "/assets/img/clients/gearbox.png",
-    url: "https://gearbox.fi/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1755626055640211900",
-    tvlUrl: "https://api.llama.fi/tvl/gearbox",
   },
   {
     name: "Sturdy V2",
@@ -277,8 +274,7 @@ const otherClients = [
     name: "Y2K",
     logo: "/assets/img/clients/y2k.png",
     url: "https://www.y2k.finance/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1679551315582803968",
+    announcement: "https://x.com/redstone_defi/status/1679551310990024704",
     tvlUrl: "https://api.llama.fi/tvl/y2k-finance",
   },
   {
@@ -308,8 +304,7 @@ const otherClients = [
     name: "LoanShark",
     logo: "/assets/img/clients/loanshark.png",
     url: "https://loanshark.tech/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1714660648314089788",
+    announcement: "https://x.com/redstone_defi/status/1714660633898336668",
     tvlUrl: "https://api.llama.fi/tvl/loanshark-core",
   },
   {
@@ -350,7 +345,7 @@ const otherClients = [
     url: "https://reserve.org/",
     announcement:
       "https://twitter.com/redstone_defi/status/1758159389297688589",
-    tvlUrl: "https://api.llama.fi/tvl/reserve",
+    tvlUrl: "https://api.llama.fi/tvl/reserve-protocol",
   },
   {
     name: "Juice",
@@ -406,13 +401,6 @@ const otherClients = [
     announcement:
       "https://twitter.com/redstone_defi/status/1774089203451887997",
     tvlUrl: "https://api.llama.fi/tvl/kinza-finance",
-  },
-  {
-    name: "Puffer",
-    logo: "/assets/img/clients/puffer.png",
-    url: "https://www.puffer.fi/",
-    announcement: "https://x.com/redstone_defi/status/1777383319640113558",
-    tvlUrl: "https://api.llama.fi/tvl/puffer-finance",
   },
   {
     name: "IronClad",
@@ -482,13 +470,6 @@ const otherClients = [
     tvlUrl: "https://api.llama.fi/tvl/lyvefinance",
   },
   {
-    name: "Fraxlend",
-    logo: "/assets/img/clients/frax.png",
-    url: "https://app.frax.finance/fraxlend/available-pairs",
-    announcement: "",
-    tvlUrl: "https://api.llama.fi/tvl/fraxlend",
-  },
-  {
     name: "Opal",
     logo: "/assets/img/clients/opal.png",
     url: "https://opaldefi.xyz/",
@@ -553,13 +534,6 @@ const otherClients = [
     tvlUrl: "https://api.llama.fi/tvl/hubble-exchange",
   },
   {
-    name: "Balancer",
-    logo: "/assets/img/clients/balancer.png",
-    url: "https://balancer.fi/",
-    announcement: "",
-    tvlUrl: "https://api.llama.fi/tvl/balancer",
-  },
-  {
     name: "Synfutures",
     logo: "/assets/img/clients/synfutures.png",
     url: "https://oyster.synfutures.com/#/odyssey",
@@ -618,13 +592,26 @@ const otherClients = [
     announcement: "https://x.com/redstone_defi/status/1791507378338242852",
     tvlUrl: "https://api.llama.fi/tvl/lista-dao",
   },
+  {
+    name: "Segment",
+    logo: "/assets/img/clients/segment.png",
+    url: "https://app.segment.finance/",
+    announcement: "https://x.com/redstone_defi/status/1803075558814961731 ",
+    tvlUrl: "https://api.llama.fi/tvl/segment-finance",
+  },
+  {
+    name: "Yei",
+    logo: "/assets/img/clients/yei.png",
+    url: "https://www.yei.finance/",
+    announcement: "https://x.com/redstone_defi/status/1803805083152638089",
+    tvlUrl: "https://api.llama.fi/tvl/yei-finance",
+  },
 ];
 
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
 
-// eslint-disable-next-line no-unused-vars
 function generateClientCard(name, logo, url, announcement, tvl) {
   let tvlBeforeParsing = tvl;
 
@@ -643,7 +630,7 @@ function generateClientCard(name, logo, url, announcement, tvl) {
       href="${url}"
       target="_blank"
       referrerpolicy="no-referrer"
-      class="link-like-text-button"
+      class="link-like-text-button-flex"
     >
       <img class="client-picture" src="${logo}"/>
       <div class="client-info fw-medium">
@@ -662,6 +649,16 @@ function generateClientCard(name, logo, url, announcement, tvl) {
         }
       </div>
     </a>`;
+}
+
+function sortFn(a, b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) {
+    return -1;
+  }
+  if (a.name.toLowerCase() > b.name.toLowerCase()) {
+    return 1;
+  }
+  return 0;
 }
 
 if (document.getElementById("featured-clients")) {
@@ -701,7 +698,7 @@ if (document.getElementById("featured-clients")) {
 if (document.getElementById("all-clients")) {
   const allClientsElement = document.getElementById("all-clients");
   const allClients = [...featuredClients, ...otherClients];
-  allClients.forEach((client, index) => {
+  allClients.sort(sortFn).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(

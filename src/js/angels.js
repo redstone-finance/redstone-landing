@@ -76,7 +76,7 @@ if (angelsSection) {
           role="button"
           target="_blank"
           rel="noreferrer noopener"
-          class="link-like-text-button"
+          class="link-like-text-button-flex"
         >
           <img
             class="testimonial-image"

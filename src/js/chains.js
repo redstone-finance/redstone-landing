@@ -143,6 +143,10 @@ const chains = [
     name: "re.al",
     image: "assets/img/chains/real.png",
   },
+  {
+    name: "Sei",
+    image: "assets/img/chains/sei.png",
+  },
 ];
 
 const chainsCrossChainSection = document.getElementById("cross-chain");
