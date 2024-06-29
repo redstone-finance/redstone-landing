@@ -754,7 +754,7 @@ if (clientsLstLrtSection) {
   });
 }
 
-var clientsMainPage = [{
+var clientsServicesPage = [{
   name: "Venus",
   logo: "/assets/img/clients/venus.png",
   url: "https://venus.io/",
@@ -803,23 +803,23 @@ var clientsMainPage = [{
   announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
   tvlUrl: "https://api.llama.fi/tvl/swell"
 }];
-var clientsMainPageSection = document.getElementById("clients");
+var clientsServicesPageSection = document.getElementById("services-page-clients");
 
-if (clientsMainPageSection) {
-  var clientsMainPageElement = document.getElementById("main-page-clients");
-  clientsMainPage.forEach(function (client, index) {
+if (clientsServicesPageSection) {
+  var clientsServicesPageElement = document.getElementById("clients");
+  clientsServicesPage.forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 
-    if (clientsMainPageElement.childNodes.length !== clientsMainPage.length) {
-      clientsMainPageElement.appendChild(card);
+    if (clientsServicesPageElement.childNodes.length !== clientsServicesPageSection.length) {
+      clientsServicesPageElement.appendChild(card);
     }
 
     fetch(client.tvlUrl).then(function (response) {
       response.json().then(function (tvl) {
-        var clientCard = document.getElementById(clientsMainPage[index].name);
+        var clientCard = document.getElementById(clientsServicesPageSection[index].name);
         clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
       });
     });

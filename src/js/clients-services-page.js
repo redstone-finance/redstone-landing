@@ -1,6 +1,6 @@
 import { generateClientCard } from "./clients";
 
-const clientsMainPage = [
+const clientsServicesPage = [
   {
     name: "Venus",
     logo: "/assets/img/clients/venus.png",
@@ -64,10 +64,12 @@ const clientsMainPage = [
   },
 ];
 
-const clientsMainPageSection = document.getElementById("clients");
-if (clientsMainPageSection) {
-  const clientsMainPageElement = document.getElementById("main-page-clients");
-  clientsMainPage.forEach((client, index) => {
+const clientsServicesPageSection = document.getElementById(
+  "services-page-clients"
+);
+if (clientsServicesPageSection) {
+  const clientsServicesPageElement = document.getElementById("clients");
+  clientsServicesPage.forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
@@ -78,13 +80,18 @@ if (clientsMainPageSection) {
     );
     card.id = client.name;
 
-    if (clientsMainPageElement.childNodes.length !== clientsMainPage.length) {
-      clientsMainPageElement.appendChild(card);
+    if (
+      clientsServicesPageElement.childNodes.length !==
+      clientsServicesPageSection.length
+    ) {
+      clientsServicesPageElement.appendChild(card);
     }
 
     fetch(client.tvlUrl).then((response) => {
       response.json().then((tvl) => {
-        const clientCard = document.getElementById(clientsMainPage[index].name);
+        const clientCard = document.getElementById(
+          clientsServicesPageSection[index].name
+        );
         clientCard.innerHTML = generateClientCard(
           client.name,
           client.logo,
