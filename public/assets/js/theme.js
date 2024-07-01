@@ -755,11 +755,11 @@ if (clientsLstLrtSection) {
 }
 
 var clientsServicesPage = [{
-  name: "Venus",
-  logo: "/assets/img/clients/venus.png",
-  url: "https://venus.io/",
-  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
-  tvlUrl: "https://api.llama.fi/tvl/venus"
+  name: "Pendle",
+  logo: "/assets/img/clients/pendle.png",
+  url: "https://www.pendle.finance/",
+  announcement: "https://x.com/redstone_defi/status/1760260799833182642",
+  tvlUrl: "https://api.llama.fi/tvl/pendle"
 }, {
   name: "Morpho Blue",
   logo: "/assets/img/clients/morpho.png",
@@ -767,17 +767,23 @@ var clientsServicesPage = [{
   announcement: "https://twitter.com/redstone_defi/status/1753335171020136620",
   tvlUrl: "https://api.llama.fi/tvl/morpho-blue"
 }, {
-  name: "LayerBank",
-  logo: "/assets/img/clients/layerbank.png",
-  url: "https://layerbank.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1762492831288246514",
-  tvlUrl: "https://api.llama.fi/tvl/layerbank"
+  name: "Venus",
+  logo: "/assets/img/clients/venus.png",
+  url: "https://venus.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
+  tvlUrl: "https://api.llama.fi/tvl/venus"
 }, {
-  name: "Sommelier",
-  logo: "/assets/img/clients/sommelier.png",
-  url: "https://www.sommelier.finance/",
-  announcement: "https://x.com/redstone_defi/status/1692574274605793339",
-  tvlUrl: "https://api.llama.fi/tvl/sommelier"
+  name: "Fraxlend",
+  logo: "/assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend",
+  announcement: "https://x.com/redstone_defi/status/1804529795310682267",
+  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
+}, {
+  name: "Ethena",
+  logo: "/assets/img/clients/ethena.png",
+  url: "https://www.ethena.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
+  tvlUrl: "https://api.llama.fi/tvl/ethena"
 }, {
   name: "EtherFi",
   logo: "/assets/img/clients/etherfi.png",
@@ -785,23 +791,17 @@ var clientsServicesPage = [{
   announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
   tvlUrl: "https://api.llama.fi/tvl/ether.fi"
 }, {
-  name: "KelpDAO",
-  logo: "/assets/img/clients/kelp-dao.png",
-  url: "https://www.kelpdao.xyz/",
-  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
-  tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
-}, {
   name: "Renzo",
   logo: "/assets/img/clients/renzo.png",
   url: "https://www.renzoprotocol.com/",
   announcement: "https://x.com/redstone_defi/status/1760741284111896625",
   tvlUrl: "https://api.llama.fi/tvl/renzo"
 }, {
-  name: "Swell",
-  logo: "/assets/img/clients/swell.png",
-  url: "https://www.swellnetwork.io/",
-  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-  tvlUrl: "https://api.llama.fi/tvl/swell"
+  name: "Puffer",
+  logo: "/assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/",
+  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
+  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
 }];
 var clientsServicesPageSection = document.getElementById("services-page-clients");
 
@@ -819,7 +819,7 @@ if (clientsServicesPageSection) {
 
     fetch(client.tvlUrl).then(function (response) {
       response.json().then(function (tvl) {
-        var clientCard = document.getElementById(clientsServicesPageSection[index].name);
+        var clientCard = document.getElementById(clientsServicesPage[index].name);
         clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
       });
     });
