@@ -16,7 +16,7 @@ function generateTvsElement(tvs) {
               tvs
                 ? `<h3 class="mb-0"><b>${tvs} billion</b></h3>`
                 : `<div class="flex align-items-center justify-content-center loader-container-tvs">
-                    <div class="loader"></div>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                   </div>`
             }
             <div class="simple-tooltip">

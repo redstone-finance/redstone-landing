@@ -18590,41 +18590,8 @@ label {
   color: inherit;
 }
 
-.loader {
-  width: 60px;
-  aspect-ratio: 4;
-  --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
-  background: var(--_g) 100% 50%, var(--_g) 50% 50%, var(--_g) 0% 50%;
-  background-size: 33.3333333333% 100%;
-  -webkit-animation: l7 1s infinite linear;
-  animation: l7 1s infinite linear;
-}
-
-@-webkit-keyframes l7 {
-  33% {
-    background-size: 33.3333333333% 0%, 33.3333333333% 100%, 33.3333333333% 100%;
-  }
-  50% {
-    background-size: 33.3333333333% 100%, 33.3333333333% 0%, 33.3333333333% 100%;
-  }
-  66% {
-    background-size: 33.3333333333% 100%, 33.3333333333% 100%, 33.3333333333% 0%;
-  }
-}
-
-@keyframes l7 {
-  33% {
-    background-size: 33.3333333333% 0%, 33.3333333333% 100%, 33.3333333333% 100%;
-  }
-  50% {
-    background-size: 33.3333333333% 100%, 33.3333333333% 0%, 33.3333333333% 100%;
-  }
-  66% {
-    background-size: 33.3333333333% 100%, 33.3333333333% 100%, 33.3333333333% 0%;
-  }
-}
 .loader-container-tvs {
-  width: 150px;
+  width: 157px;
 }
 
 .inactiveLink {
