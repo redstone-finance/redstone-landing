@@ -38,8 +38,8 @@ const angels = [
   {
     name: "Jeff Yin",
     title: "Merlin Chain Founder",
-    image: "assets/img/angels/merlin.jpg",
-    url: "https://x.com/redstone_defi/status/1798293614294163747",
+    image: "assets/img/angels/jeff-yin.jpg",
+    url: "https://x.com/BitmapTech",
   },
   {
     name: "Daniel Dizon",
