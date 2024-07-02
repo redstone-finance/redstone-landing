@@ -24,10 +24,10 @@ const angels = [
     url: "https://twitter.com/el33th4xor",
   },
   {
-    name: "Coinflipcanada",
-    title: "GMX Contributor",
-    image: "assets/img/angels/coinflipcanada.png",
-    url: "https://twitter.com/coinflipcanada",
+    name: "Smokey",
+    title: "Berachain Co-Founder",
+    image: "assets/img/angels/smokey.jpg",
+    url: "https://x.com/SmokeyTheBera",
   },
   {
     name: "Richard Ma",
@@ -36,22 +36,34 @@ const angels = [
     url: "https://www.linkedin.com/in/rtmtd/",
   },
   {
-    name: "Jacob Blish",
-    title: "Lido Head of BD",
-    image: "assets/img/angels/jacob-blish.png",
-    url: "https://twitter.com/chaingenius",
+    name: "Jeff Yin",
+    title: "Merlin Chain Founder",
+    image: "assets/img/angels/jeff-yin.jpg",
+    url: "https://x.com/BitmapTech",
   },
   {
-    name: "Marco Cora",
-    title: "zkSync Head of BD",
-    image: "assets/img/angels/marco-cora.png",
-    url: "https://twitter.com/Be1garat",
+    name: "Daniel Dizon",
+    title: "Swell Founder",
+    image: "assets/img/angels/daniel-dizon.jpg",
+    url: "https://x.com/daniel_swell_",
   },
   {
-    name: "Justin Reyes",
-    title: "Lido Head of DeFi",
-    image: "assets/img/angels/justin-reyes.png",
-    url: "https://twitter.com/Justin_Stables",
+    name: "Mike Silagadze",
+    title: "Etherfi CEO",
+    image: "assets/img/angels/mike-silagadze.jpg",
+    url: "https://x.com/MikeSilagadze",
+  },
+  {
+    name: "Amir Forouzani",
+    title: "Puffer CEO",
+    image: "assets/img/angels/amir-forouzani.jpg",
+    url: "https://x.com/amironchain",
+  },
+  {
+    name: "Coinflipcanada",
+    title: "GMX Contributor",
+    image: "assets/img/angels/coinflipcanada.png",
+    url: "https://twitter.com/coinflipcanada",
   },
   {
     name: "Patrick Dai",
@@ -76,7 +88,7 @@ if (angelsSection) {
           role="button"
           target="_blank"
           rel="noreferrer noopener"
-          class="link-like-text-button"
+          class="link-like-text-button-flex"
         >
           <img
             class="testimonial-image"

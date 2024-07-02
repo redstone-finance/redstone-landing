@@ -269,30 +269,40 @@ var angels = [{
   image: "assets/img/angels/emin-gun-sirer.png",
   url: "https://twitter.com/el33th4xor"
 }, {
-  name: "Coinflipcanada",
-  title: "GMX Contributor",
-  image: "assets/img/angels/coinflipcanada.png",
-  url: "https://twitter.com/coinflipcanada"
+  name: "Smokey",
+  title: "Berachain Co-Founder",
+  image: "assets/img/angels/smokey.jpg",
+  url: "https://x.com/SmokeyTheBera"
 }, {
   name: "Richard Ma",
   title: "Quantstamp CEO",
   image: "assets/img/angels/richard-ma.png",
   url: "https://www.linkedin.com/in/rtmtd/"
 }, {
-  name: "Jacob Blish",
-  title: "Lido Head of BD",
-  image: "assets/img/angels/jacob-blish.png",
-  url: "https://twitter.com/chaingenius"
+  name: "Jeff Yin",
+  title: "Merlin Chain Founder",
+  image: "assets/img/angels/jeff-yin.jpg",
+  url: "https://x.com/BitmapTech"
 }, {
-  name: "Marco Cora",
-  title: "zkSync Head of BD",
-  image: "assets/img/angels/marco-cora.png",
-  url: "https://twitter.com/Be1garat"
+  name: "Daniel Dizon",
+  title: "Swell Founder",
+  image: "assets/img/angels/daniel-dizon.jpg",
+  url: "https://x.com/daniel_swell_"
 }, {
-  name: "Justin Reyes",
-  title: "Lido Head of DeFi",
-  image: "assets/img/angels/justin-reyes.png",
-  url: "https://twitter.com/Justin_Stables"
+  name: "Mike Silagadze",
+  title: "Etherfi CEO",
+  image: "assets/img/angels/mike-silagadze.jpg",
+  url: "https://x.com/MikeSilagadze"
+}, {
+  name: "Amir Forouzani",
+  title: "Puffer CEO",
+  image: "assets/img/angels/amir-forouzani.jpg",
+  url: "https://x.com/amironchain"
+}, {
+  name: "Coinflipcanada",
+  title: "GMX Contributor",
+  image: "assets/img/angels/coinflipcanada.png",
+  url: "https://twitter.com/coinflipcanada"
 }, {
   name: "Patrick Dai",
   title: "Qtum Founder",
@@ -309,7 +319,7 @@ if (angelsSection) {
       var angelItem = document.createElement("div");
       angelItem.classList.add("partner-item");
       angelItem.classList.add("mt-4");
-      angelItem.innerHTML += "\n        <a\n          href=\"".concat(angel.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            class=\"testimonial-image\"\n            loading=\"lazy\"\n            src=\"").concat(angel.image, "\"\n            alt=\"").concat(angel.name, " Logo\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n          <p class=\"mb-0 mt-0\" style=\"height: 75px;\">").concat(angel.title, "</p>\n        </a>\n      ");
+      angelItem.innerHTML += "\n        <a\n          href=\"".concat(angel.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button-flex\"\n        >\n          <img\n            class=\"testimonial-image\"\n            loading=\"lazy\"\n            src=\"").concat(angel.image, "\"\n            alt=\"").concat(angel.name, " Logo\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(angel.name, "</p>\n          <p class=\"mb-0 mt-0\" style=\"height: 75px;\">").concat(angel.title, "</p>\n        </a>\n      ");
       element.appendChild(angelItem);
     });
   }
@@ -657,6 +667,9 @@ var chains = [{
 }, {
   name: "re.al",
   image: "assets/img/chains/real.png"
+}, {
+  name: "Sei",
+  image: "assets/img/chains/sei.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
 
@@ -751,12 +764,12 @@ if (clientsLstLrtSection) {
   });
 }
 
-var clientsMainPage = [{
-  name: "Venus",
-  logo: "/assets/img/clients/venus.png",
-  url: "https://venus.io/",
-  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
-  tvlUrl: "https://api.llama.fi/tvl/venus"
+var clientsServicesPage = [{
+  name: "Pendle",
+  logo: "/assets/img/clients/pendle.png",
+  url: "https://www.pendle.finance/",
+  announcement: "https://x.com/redstone_defi/status/1760260799833182642",
+  tvlUrl: "https://api.llama.fi/tvl/pendle"
 }, {
   name: "Morpho Blue",
   logo: "/assets/img/clients/morpho.png",
@@ -764,17 +777,23 @@ var clientsMainPage = [{
   announcement: "https://twitter.com/redstone_defi/status/1753335171020136620",
   tvlUrl: "https://api.llama.fi/tvl/morpho-blue"
 }, {
-  name: "LayerBank",
-  logo: "/assets/img/clients/layerbank.png",
-  url: "https://layerbank.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1762492831288246514",
-  tvlUrl: "https://api.llama.fi/tvl/layerbank"
+  name: "Venus",
+  logo: "/assets/img/clients/venus.png",
+  url: "https://venus.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
+  tvlUrl: "https://api.llama.fi/tvl/venus"
 }, {
-  name: "Sommelier",
-  logo: "/assets/img/clients/sommelier.png",
-  url: "https://www.sommelier.finance/",
-  announcement: "https://x.com/redstone_defi/status/1692574274605793339",
-  tvlUrl: "https://api.llama.fi/tvl/sommelier"
+  name: "Fraxlend",
+  logo: "/assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend",
+  announcement: "https://x.com/redstone_defi/status/1804529795310682267",
+  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
+}, {
+  name: "Ethena",
+  logo: "/assets/img/clients/ethena.png",
+  url: "https://www.ethena.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
+  tvlUrl: "https://api.llama.fi/tvl/ethena"
 }, {
   name: "EtherFi",
   logo: "/assets/img/clients/etherfi.png",
@@ -782,41 +801,35 @@ var clientsMainPage = [{
   announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
   tvlUrl: "https://api.llama.fi/tvl/ether.fi"
 }, {
-  name: "KelpDAO",
-  logo: "/assets/img/clients/kelp-dao.png",
-  url: "https://www.kelpdao.xyz/",
-  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
-  tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
-}, {
   name: "Renzo",
   logo: "/assets/img/clients/renzo.png",
   url: "https://www.renzoprotocol.com/",
   announcement: "https://x.com/redstone_defi/status/1760741284111896625",
   tvlUrl: "https://api.llama.fi/tvl/renzo"
 }, {
-  name: "Swell",
-  logo: "/assets/img/clients/swell.png",
-  url: "https://www.swellnetwork.io/",
-  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-  tvlUrl: "https://api.llama.fi/tvl/swell"
+  name: "Puffer",
+  logo: "/assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/",
+  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
+  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
 }];
-var clientsMainPageSection = document.getElementById("clients");
+var clientsServicesPageSection = document.getElementById("services-page-clients");
 
-if (clientsMainPageSection) {
-  var clientsMainPageElement = document.getElementById("main-page-clients");
-  clientsMainPage.forEach(function (client, index) {
+if (clientsServicesPageSection) {
+  var clientsServicesPageElement = document.getElementById("clients");
+  clientsServicesPage.forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
 
-    if (clientsMainPageElement.childNodes.length !== clientsMainPage.length) {
-      clientsMainPageElement.appendChild(card);
+    if (clientsServicesPageElement.childNodes.length !== clientsServicesPageSection.length) {
+      clientsServicesPageElement.appendChild(card);
     }
 
     fetch(client.tvlUrl).then(function (response) {
       response.json().then(function (tvl) {
-        var clientCard = document.getElementById(clientsMainPage[index].name);
+        var clientCard = document.getElementById(clientsServicesPage[index].name);
         clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
       });
     });
@@ -824,11 +837,11 @@ if (clientsMainPageSection) {
 }
 
 var featuredClients = [{
-  name: "Venus",
-  logo: "/assets/img/clients/venus.png",
-  url: "https://venus.io/",
-  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
-  tvlUrl: "https://api.llama.fi/tvl/venus"
+  name: "Pendle",
+  logo: "/assets/img/clients/pendle.png",
+  url: "https://www.pendle.finance/",
+  announcement: "https://x.com/redstone_defi/status/1760260799833182642",
+  tvlUrl: "https://api.llama.fi/tvl/pendle"
 }, {
   name: "Morpho Blue",
   logo: "/assets/img/clients/morpho.png",
@@ -836,11 +849,89 @@ var featuredClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1753335171020136620",
   tvlUrl: "https://api.llama.fi/tvl/morpho-blue"
 }, {
+  name: "Venus",
+  logo: "/assets/img/clients/venus.png",
+  url: "https://venus.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1679188915218173952",
+  tvlUrl: "https://api.llama.fi/tvl/venus"
+}, {
+  name: "Fraxlend",
+  logo: "/assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend",
+  announcement: "https://x.com/redstone_defi/status/1804529795310682267",
+  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
+}, {
+  name: "Ethena",
+  logo: "/assets/img/clients/ethena.png",
+  url: "https://www.ethena.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
+  tvlUrl: "https://api.llama.fi/tvl/ethena"
+}, {
+  name: "EtherFi",
+  logo: "/assets/img/clients/etherfi.png",
+  url: "https://www.ether.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
+  tvlUrl: "https://api.llama.fi/tvl/ether.fi"
+}, {
+  name: "Renzo",
+  logo: "/assets/img/clients/renzo.png",
+  url: "https://www.renzoprotocol.com/",
+  announcement: "https://x.com/redstone_defi/status/1760741284111896625",
+  tvlUrl: "https://api.llama.fi/tvl/renzo"
+}, {
+  name: "Puffer",
+  logo: "/assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/",
+  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
+  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
+}, {
+  name: "ZeroLend",
+  logo: "/assets/img/clients/zerolend.png",
+  url: "https://zerolend.xyz/",
+  announcement: "https://twitter.com/redstone_defi/status/1762855479670407290",
+  tvlUrl: "https://api.llama.fi/tvl/zerolend"
+}, {
+  name: "DeltaPrime",
+  logo: "/assets/img/clients/deltaprime.png",
+  url: "https://deltaprime.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1750519070758436929",
+  tvlUrl: "https://api.llama.fi/tvl/deltaprime"
+}, {
   name: "LayerBank",
   logo: "/assets/img/clients/layerbank.png",
   url: "https://layerbank.finance/",
   announcement: "https://twitter.com/redstone_defi/status/1762492831288246514",
   tvlUrl: "https://api.llama.fi/tvl/layerbank"
+}, {
+  name: "Gearbox",
+  logo: "/assets/img/clients/gearbox.png",
+  url: "https://gearbox.fi/",
+  announcement: "https://twitter.com/redstone_defi/status/1755626055640211900",
+  tvlUrl: "https://api.llama.fi/tvl/gearbox"
+}, {
+  name: "Balancer",
+  logo: "/assets/img/clients/balancer.png",
+  url: "https://balancer.fi/",
+  announcement: "",
+  tvlUrl: "https://api.llama.fi/tvl/balancer"
+}, {
+  name: "Swell",
+  logo: "/assets/img/clients/swell.png",
+  url: "https://www.swellnetwork.io/",
+  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
+  tvlUrl: "https://api.llama.fi/tvl/swell"
+}, {
+  name: "KelpDAO",
+  logo: "/assets/img/clients/kelp-dao.png",
+  url: "https://www.kelpdao.xyz/",
+  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
+  tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
+}, {
+  name: "StakeStone",
+  logo: "/assets/img/clients/stake-stone.png",
+  url: "https://stakestone.io/",
+  announcement: "https://twitter.com/redstone_defi/status/1750184210432930055",
+  tvlUrl: "https://api.llama.fi/tvl/stakestone"
 }, {
   name: "Sommelier",
   logo: "/assets/img/clients/sommelier.png",
@@ -854,95 +945,17 @@ var featuredClients = [{
   announcement: " https://x.com/redstone_defi/status/1715012465929723989",
   tvlUrl: "https://api.llama.fi/tvl/enzyme-finance"
 }, {
-  name: "DeltaPrime",
-  logo: "/assets/img/clients/deltaprime.png",
-  url: "https://deltaprime.io/",
-  announcement: "https://twitter.com/redstone_defi/status/1750519070758436929",
-  tvlUrl: "https://api.llama.fi/tvl/deltaprime"
-}, {
-  name: "EtherFi",
-  logo: "/assets/img/clients/etherfi.png",
-  url: "https://www.ether.fi/",
-  announcement: "https://twitter.com/redstone_defi/status/1737503311941812232",
-  tvlUrl: "https://api.llama.fi/tvl/ether.fi"
-}, {
-  name: "Silo",
-  logo: "/assets/img/clients/silo.png",
-  url: "https://www.silo.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1758884066949214689",
-  tvlUrl: "https://api.llama.fi/tvl/silo-finance"
-}, {
-  name: "KelpDAO",
-  logo: "/assets/img/clients/kelp-dao.png",
-  url: "https://www.kelpdao.xyz/",
-  announcement: "https://x.com/redstone_defi/status/1760998051194573109",
-  tvlUrl: "https://api.llama.fi/tvl/kelp-dao"
-}, {
-  name: "Renzo",
-  logo: "/assets/img/clients/renzo.png",
-  url: "https://www.renzoprotocol.com/",
-  announcement: "https://x.com/redstone_defi/status/1760741284111896625",
-  tvlUrl: "https://api.llama.fi/tvl/renzo"
-}, {
-  name: "Pendle",
-  logo: "/assets/img/clients/pendle.png",
-  url: "https://www.pendle.finance/",
-  announcement: "https://x.com/redstone_defi/status/1760260799833182642",
-  tvlUrl: "https://api.llama.fi/tvl/pendle"
-}, {
-  name: "Ethena",
-  logo: "/assets/img/clients/ethena.png",
-  url: "https://www.ethena.fi/",
-  announcement: "https://twitter.com/redstone_defi/status/1764682387127226633",
-  tvlUrl: "https://stablecoins.llama.fi/stablecoin/146"
-}, {
-  name: "ZeroLend",
-  logo: "/assets/img/clients/zerolend.png",
-  url: "https://zerolend.xyz/",
-  announcement: "https://twitter.com/redstone_defi/status/1762855479670407290",
-  tvlUrl: "https://api.llama.fi/tvl/zerolend"
-}, {
-  name: "Shoebill",
-  logo: "/assets/img/clients/shoebill.png",
-  url: "https://shoebill.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1763580020751245496",
-  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance"
-}, {
   name: "Redacted Cartel",
   logo: "/assets/img/clients/redacted.png",
   url: "https://redacted.finance/",
   announcement: "https://twitter.com/redstone_defi/status/1759608928189727042",
   tvlUrl: "https://api.llama.fi/tvl/redacted"
 }, {
-  name: "Swell",
-  logo: "/assets/img/clients/swell.png",
-  url: "https://www.swellnetwork.io/",
-  announcement: "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
-  tvlUrl: "https://api.llama.fi/tvl/swell"
-}, {
-  name: "Puffer",
-  logo: "/assets/img/clients/puffer.png",
-  url: "https://www.puffer.fi/",
-  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
-  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
-}, {
-  name: "Balancer",
-  logo: "/assets/img/clients/balancer.png",
-  url: "https://balancer.fi/",
-  announcement: "",
-  tvlUrl: "https://api.llama.fi/tvl/balancer"
-}, {
-  name: "Fraxlend",
-  logo: "/assets/img/clients/frax.png",
-  url: "https://app.frax.finance/fraxlend/available-pairs",
-  announcement: "",
-  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
-}, {
-  name: "Gearbox",
-  logo: "/assets/img/clients/gearbox.png",
-  url: "https://gearbox.fi/",
-  announcement: "https://twitter.com/redstone_defi/status/1755626055640211900",
-  tvlUrl: "https://api.llama.fi/tvl/gearbox"
+  name: "Euler V2",
+  logo: "/assets/img/clients/euler.png",
+  url: "https://www.euler.finance/#/",
+  announcement: "https://twitter.com/redstone_defi/status/1786425647528874308",
+  tvlUrl: "https://api.llama.fi/tvl/euler"
 }];
 var otherClients = [{
   name: "Mento",
@@ -955,7 +968,7 @@ var otherClients = [{
   logo: "/assets/img/clients/cian.png",
   url: "https://cian.app/",
   announcement: "https://blog.redstone.finance/2023/07/12/case-study-cian-integrates-redstone-oracles-to-revolutionize-algorithmic-strategic-vaults-and-decentralized-automation-tools",
-  tvlUrl: "https://api.llama.fi/tvl/cian"
+  tvlUrl: "https://api.llama.fi/tvl/cian-protocol"
 }, {
   name: "Gravita",
   logo: "/assets/img/clients/gravita.png",
@@ -992,12 +1005,6 @@ var otherClients = [{
   url: "https://premia.blue/",
   announcement: "https://blog.redstone.finance/2023/09/18/addressing-options-protocols-needs-premia-blue-integrates-redstone-oracles",
   tvlUrl: "https://api.llama.fi/tvl/premia"
-}, {
-  name: "Gearbox",
-  logo: "/assets/img/clients/gearbox.png",
-  url: "https://gearbox.fi/",
-  announcement: "https://twitter.com/redstone_defi/status/1755626055640211900",
-  tvlUrl: "https://api.llama.fi/tvl/gearbox"
 }, {
   name: "Sturdy V2",
   logo: "/assets/img/clients/sturdy.png",
@@ -1038,7 +1045,7 @@ var otherClients = [{
   name: "Y2K",
   logo: "/assets/img/clients/y2k.png",
   url: "https://www.y2k.finance/",
-  announcement: "https://twitter.com/redstone_defi/status/1679551315582803968",
+  announcement: "https://x.com/redstone_defi/status/1679551310990024704",
   tvlUrl: "https://api.llama.fi/tvl/y2k-finance"
 }, {
   name: "Float",
@@ -1062,7 +1069,7 @@ var otherClients = [{
   name: "LoanShark",
   logo: "/assets/img/clients/loanshark.png",
   url: "https://loanshark.tech/",
-  announcement: "https://twitter.com/redstone_defi/status/1714660648314089788",
+  announcement: "https://x.com/redstone_defi/status/1714660633898336668",
   tvlUrl: "https://api.llama.fi/tvl/loanshark-core"
 }, {
   name: "Vesta Finance",
@@ -1093,7 +1100,7 @@ var otherClients = [{
   logo: "/assets/img/clients/reserve.png",
   url: "https://reserve.org/",
   announcement: "https://twitter.com/redstone_defi/status/1758159389297688589",
-  tvlUrl: "https://api.llama.fi/tvl/reserve"
+  tvlUrl: "https://api.llama.fi/tvl/reserve-protocol"
 }, {
   name: "Juice",
   logo: "/assets/img/clients/juice.png",
@@ -1136,12 +1143,6 @@ var otherClients = [{
   url: "https://kinza.finance/",
   announcement: "https://twitter.com/redstone_defi/status/1774089203451887997",
   tvlUrl: "https://api.llama.fi/tvl/kinza-finance"
-}, {
-  name: "Puffer",
-  logo: "/assets/img/clients/puffer.png",
-  url: "https://www.puffer.fi/",
-  announcement: "https://x.com/redstone_defi/status/1777383319640113558",
-  tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
 }, {
   name: "IronClad",
   logo: "/assets/img/clients/ironclad.png",
@@ -1197,12 +1198,6 @@ var otherClients = [{
   announcement: "https://x.com/redstone_defi/status/1778075562046816467",
   tvlUrl: "https://api.llama.fi/tvl/lyvefinance"
 }, {
-  name: "Fraxlend",
-  logo: "/assets/img/clients/frax.png",
-  url: "https://app.frax.finance/fraxlend/available-pairs",
-  announcement: "",
-  tvlUrl: "https://api.llama.fi/tvl/fraxlend"
-}, {
   name: "Opal",
   logo: "/assets/img/clients/opal.png",
   url: "https://opaldefi.xyz/",
@@ -1251,12 +1246,6 @@ var otherClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1780597130517942531",
   tvlUrl: "https://api.llama.fi/tvl/hubble-exchange"
 }, {
-  name: "Balancer",
-  logo: "/assets/img/clients/balancer.png",
-  url: "https://balancer.fi/",
-  announcement: "",
-  tvlUrl: "https://api.llama.fi/tvl/balancer"
-}, {
   name: "Synfutures",
   logo: "/assets/img/clients/synfutures.png",
   url: "https://oyster.synfutures.com/#/odyssey",
@@ -1304,25 +1293,43 @@ var otherClients = [{
   url: "https://linktr.ee/lista_dao",
   announcement: "https://x.com/redstone_defi/status/1791507378338242852",
   tvlUrl: "https://api.llama.fi/tvl/lista-dao"
+}, {
+  name: "Segment",
+  logo: "/assets/img/clients/segment.png",
+  url: "https://app.segment.finance/",
+  announcement: "https://x.com/redstone_defi/status/1803075558814961731 ",
+  tvlUrl: "https://api.llama.fi/tvl/segment-finance"
+}, {
+  name: "Yei",
+  logo: "/assets/img/clients/yei.png",
+  url: "https://www.yei.finance/",
+  announcement: "https://x.com/redstone_defi/status/1803805083152638089",
+  tvlUrl: "https://api.llama.fi/tvl/yei-finance"
 }];
 
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
-} // eslint-disable-next-line no-unused-vars
+}
 
+function emptyAnnouncementLink(name) {
+  return name === "Balancer" ? "<a class=\"inactiveLink\">\n    <p>Announcement</p>\n  </a>" : "";
+}
 
 function generateClientCard(name, logo, url, announcement, tvl) {
-  var tvlBeforeParsing = tvl;
+  var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
+  return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "".concat(emptyAnnouncementLink(name)), "\n      </div>\n    </a>");
+}
 
-  if (name === "Ethena") {
-    var _tvlBeforeParsing, _historicalData, _historicalData$circu;
-
-    var historicalData = (_tvlBeforeParsing = tvlBeforeParsing) === null || _tvlBeforeParsing === void 0 ? void 0 : _tvlBeforeParsing.tokens;
-    tvlBeforeParsing = historicalData === null || historicalData === void 0 ? void 0 : (_historicalData = historicalData[historicalData.length - 1]) === null || _historicalData === void 0 ? void 0 : (_historicalData$circu = _historicalData.circulating) === null || _historicalData$circu === void 0 ? void 0 : _historicalData$circu.peggedUSD;
+function sortFn(a, b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) {
+    return -1;
   }
 
-  var formattedTvl = tvlBeforeParsing ? new Intl.NumberFormat().format(tvlBeforeParsing.toFixed(0)) : "";
-  return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "", "\n      </div>\n    </a>");
+  if (a.name.toLowerCase() > b.name.toLowerCase()) {
+    return 1;
+  }
+
+  return 0;
 }
 
 if (document.getElementById("featured-clients")) {
@@ -1351,7 +1358,7 @@ if (document.getElementById("featured-clients")) {
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
   var allClients = [].concat(featuredClients, otherClients);
-  allClients.forEach(function (client, index) {
+  allClients.sort(sortFn).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
@@ -1558,9 +1565,9 @@ var partners = [{
   url: "https://www.maven11.com/",
   image: "assets/img/partners/maven11.png"
 }, {
-  name: "Distributed Global",
-  url: "http://www.distributedglobal.com/",
-  image: "assets/img/partners/distributed-global.png"
+  name: "Arrington Capital",
+  url: "https://www.arringtoncapital.com/",
+  image: "assets/img/partners/arrington-capital.svg"
 }, {
   name: "Arweave",
   url: "https://www.arweave.org/",
@@ -1574,6 +1581,34 @@ var partners = [{
   url: "https://7xvc.com/",
   image: "assets/img/partners/seven-x.png"
 }, {
+  name: "IOSG",
+  url: "https://iosg.vc/",
+  image: "assets/img/partners/iosg.png"
+}, {
+  name: "Spartan Capital",
+  url: "https://www.spartangroup.io/",
+  image: "assets/img/partners/spartan-capital.jpg"
+}, {
+  name: "White Star Capital",
+  url: "https://whitestarcapital.com/",
+  image: "assets/img/partners/white-star-capital.png"
+}, {
+  name: "Protagonist",
+  url: "https://www.protagonist.co/",
+  image: "assets/img/partners/protagonist.png"
+}, {
+  name: "Alphemy Capital",
+  url: "https://alphemy.capital/",
+  image: "assets/img/partners/alphemy-capital.png"
+}, {
+  name: "Samara Asset Group",
+  url: "https://www.samara-ag.com/",
+  image: "assets/img/partners/samara-asset-group.png"
+}, {
+  name: "gumi Cryptos Capital",
+  url: "https://www.gumi-cryptos.com/",
+  image: "assets/img/partners/gumi-cryptos.jpeg"
+}, {
   name: "KR1",
   url: "https://www.kryptonite1.co/",
   image: "assets/img/partners/kr1.jpg"
@@ -1581,6 +1616,34 @@ var partners = [{
   name: "BeringWaters",
   url: "https://beringwaters.com/",
   image: "assets/img/partners/beringwaters.png"
+}, {
+  name: "Distributed Global",
+  url: "http://www.distributedglobal.com/",
+  image: "assets/img/partners/distributed-global.png"
+}, {
+  name: "Amber Group",
+  url: "https://www.ambergroup.io/",
+  image: "assets/img/partners/amber-group.png"
+}, {
+  name: "Thanefield Capital",
+  url: "https://thanefield.capital/",
+  image: "assets/img/partners/thanefield-capital.jpg"
+}, {
+  name: "Selini Capital",
+  url: "https://www.selinicapital.com/",
+  image: "assets/img/partners/selini-capital.png"
+}, {
+  name: "4RC",
+  url: "https://www.fourthrevolution.capital/",
+  image: "assets/img/partners/4rc.png"
+}, {
+  name: "Revelo Intel",
+  url: "https://revelointel.com/",
+  image: "assets/img/partners/revelo-intel.png"
+}, {
+  name: "HTX Ventures",
+  url: "https://www.htx.com/ventures",
+  image: "assets/img/partners/htx-ventures.png"
 }, {
   name: "1KX",
   url: "https://twitter.com/1kxnetwork",
@@ -1598,21 +1661,13 @@ var partners = [{
   url: "https://trgc.io/",
   image: "assets/img/partners/trgc.svg"
 }, {
-  name: "Permanent Ventures",
-  url: "https://twitter.com/permanentvc",
-  image: "assets/img/partners/permanent-ventures.png"
+  name: "Kenetic Capital",
+  url: "https://www.kenetic.capital/",
+  image: "assets/img/partners/kenetic-capital.png"
 }, {
-  name: "4SV",
-  url: "https://www.4sv.io/",
-  image: "assets/img/partners/4sv.png"
-}, {
-  name: "Numeus",
-  url: "https://numeus.xyz/",
-  image: "assets/img/partners/numeus.svg"
-}, {
-  name: "The Graph",
-  url: "https://thegraph.com/",
-  image: "assets/img/partners/graph.png"
+  name: "Relayer Capital",
+  url: "https://relayer.capital/",
+  image: "assets/img/partners/relayer-capital.jpg"
 }];
 var partnersSection = document.getElementById("partners");
 
@@ -1862,9 +1917,9 @@ var projects = [{
   image: "assets/img/clients/etherfi.png",
   url: "https://www.ether.fi/"
 }, {
-  name: "Prisma",
-  image: "assets/img/clients/prisma.png",
-  url: "https://prismafinance.com/"
+  name: "Fraxlend",
+  image: "assets/img/clients/frax.png",
+  url: "https://app.frax.finance/fraxlend"
 }, {
   name: "Gravita",
   image: "assets/img/clients/gravita.png",
@@ -1882,13 +1937,13 @@ var projects = [{
   image: "assets/img/clients/mento.png",
   url: "https://www.mento.org/"
 }, {
-  name: "Hubble Exchange",
-  image: "assets/img/clients/hubble-exchange.png",
-  url: "https://app.hubble.exchange/"
+  name: "Euler",
+  image: "assets/img/clients/euler.png",
+  url: "https://www.euler.finance/#/"
 }, {
-  name: "Gamma",
-  image: "assets/img/clients/gamma.png",
-  url: "https://www.gamma.xyz/"
+  name: "Puffer",
+  image: "assets/img/clients/puffer.png",
+  url: "https://www.puffer.fi/"
 }, {
   name: "Cadence Protocol",
   image: "assets/img/clients/cadence.png",
@@ -1903,7 +1958,7 @@ if (trustedByCrossChainSection) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
-      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
+      projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button-flex\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
 
       _element6.appendChild(projectItem);
     });
@@ -1916,6 +1971,24 @@ if (trustedByCrossChainSection) {
 
     _element6.appendChild(_manyMoreItem2);
   }
+}
+
+function generateTvsElement(tvs) {
+  var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
+}
+
+if (document.getElementById("tvs")) {
+  var tvsUrl = "https://simplescraper.io/api/UCyfpCsZgxWOriZ6Gt2Q?apikey=dUkGSzMvdCuU1fKgkpFxuGAFpkCJM1xA";
+  var tvsElement = document.getElementById("tvs");
+  fetch(tvsUrl).then(function (response) {
+    response.json().then(function (parsedResponse) {
+      var tvs = parsedResponse.data[0].TVS;
+      var parsedTvs = tvs.slice(0, 4);
+      tvsElement.innerHTML = generateTvsElement(parsedTvs);
+    });
+  });
+  tvsElement.innerHTML = generateTvsElement();
 } // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */

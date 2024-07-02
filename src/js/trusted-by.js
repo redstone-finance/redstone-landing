@@ -80,9 +80,9 @@ const projects = [
     url: "https://www.ether.fi/",
   },
   {
-    name: "Prisma",
-    image: "assets/img/clients/prisma.png",
-    url: "https://prismafinance.com/",
+    name: "Fraxlend",
+    image: "assets/img/clients/frax.png",
+    url: "https://app.frax.finance/fraxlend",
   },
   {
     name: "Gravita",
@@ -105,14 +105,14 @@ const projects = [
     url: "https://www.mento.org/",
   },
   {
-    name: "Hubble Exchange",
-    image: "assets/img/clients/hubble-exchange.png",
-    url: "https://app.hubble.exchange/",
+    name: "Euler",
+    image: "assets/img/clients/euler.png",
+    url: "https://www.euler.finance/#/",
   },
   {
-    name: "Gamma",
-    image: "assets/img/clients/gamma.png",
-    url: "https://www.gamma.xyz/",
+    name: "Puffer",
+    image: "assets/img/clients/puffer.png",
+    url: "https://www.puffer.fi/",
   },
   {
     name: "Cadence Protocol",
@@ -134,7 +134,7 @@ if (trustedByCrossChainSection) {
           role="button"
           target="_blank"
           rel="noreferrer noopener"
-          class="link-like-text-button"
+          class="link-like-text-button-flex"
         >
           <img
             loading="lazy"
