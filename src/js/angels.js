@@ -19,7 +19,7 @@ const angels = [
   },
   {
     name: "Emin Gün Sirer",
-    title: "Avalanche Co-Founder",
+    title: "Ava Labs Founder",
     image: "assets/img/angels/emin-gun-sirer.png",
     url: "https://twitter.com/el33th4xor",
   },

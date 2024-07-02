@@ -18622,17 +18622,10 @@ label {
   cursor: pointer;
 }
 
-/* Tooltip container */
-.simple-tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-/* Tooltip text */
 .simple-tooltip .tooltiptext {
   visibility: hidden;
   width: 350px;
-  margin-left: -290px;
+  margin-left: -310px;
   margin-top: -108px;
   background-color: #F5F7FA;
   border: 1px solid;
@@ -18640,7 +18633,6 @@ label {
   padding: 0.5rem;
   border-radius: 6px;
   font-size: 0.75rem;
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
@@ -18651,7 +18643,6 @@ label {
   }
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .simple-tooltip:hover .tooltiptext {
   visibility: visible;
 }
