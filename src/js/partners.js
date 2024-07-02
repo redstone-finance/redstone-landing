@@ -20,15 +20,16 @@ const partners = [
     image: "assets/img/partners/maven11.png",
   },
   {
-    name: "Distributed Global",
-    url: "http://www.distributedglobal.com/",
-    image: "assets/img/partners/distributed-global.png",
+    name: "Arrington Capital",
+    url: "https://www.arringtoncapital.com/",
+    image: "assets/img/partners/arrington-capital.svg",
   },
   {
     name: "Arweave",
     url: "https://www.arweave.org/",
     image: "assets/img/partners/arweave.svg",
   },
+
   {
     name: "Lattice",
     url: "https://lattice.fund/",
@@ -40,6 +41,42 @@ const partners = [
     image: "assets/img/partners/seven-x.png",
   },
   {
+    name: "IOSG",
+    url: "https://iosg.vc/",
+    image: "assets/img/partners/iosg.png",
+  },
+  {
+    name: "Spartan Capital",
+    url: "https://www.spartangroup.io/",
+    image: "assets/img/partners/spartan-capital.jpg",
+  },
+  {
+    name: "White Star Capital",
+    url: "https://whitestarcapital.com/",
+    image: "assets/img/partners/white-star-capital.png",
+  },
+  {
+    name: "Protagonist",
+    url: "https://www.protagonist.co/",
+    image: "assets/img/partners/protagonist.png",
+  },
+
+  {
+    name: "Alphemy Capital",
+    url: "https://alphemy.capital/",
+    image: "assets/img/partners/alphemy-capital.png",
+  },
+  {
+    name: "Samara Asset Group",
+    url: "https://www.samara-ag.com/",
+    image: "assets/img/partners/samara-asset-group.png",
+  },
+  {
+    name: "gumi Cryptos Capital",
+    url: "https://www.gumi-cryptos.com/",
+    image: "assets/img/partners/gumi-cryptos.jpeg",
+  },
+  {
     name: "KR1",
     url: "https://www.kryptonite1.co/",
     image: "assets/img/partners/kr1.jpg",
@@ -49,6 +86,43 @@ const partners = [
     url: "https://beringwaters.com/",
     image: "assets/img/partners/beringwaters.png",
   },
+  {
+    name: "Distributed Global",
+    url: "http://www.distributedglobal.com/",
+    image: "assets/img/partners/distributed-global.png",
+  },
+
+  {
+    name: "Amber Group",
+    url: "https://www.ambergroup.io/",
+    image: "assets/img/partners/amber-group.png",
+  },
+  {
+    name: "Thanefield Capital",
+    url: "https://thanefield.capital/",
+    image: "assets/img/partners/thanefield-capital.jpg",
+  },
+  {
+    name: "Selini Capital",
+    url: "https://www.selinicapital.com/",
+    image: "assets/img/partners/selini-capital.png",
+  },
+  {
+    name: "4RC",
+    url: "https://www.fourthrevolution.capital/",
+    image: "assets/img/partners/4rc.png",
+  },
+  {
+    name: "Revelo Intel",
+    url: "https://revelointel.com/",
+    image: "assets/img/partners/revelo-intel.png",
+  },
+  {
+    name: "HTX Ventures",
+    url: "https://www.htx.com/ventures",
+    image: "assets/img/partners/htx-ventures.png",
+  },
+
   {
     name: "1KX",
     url: "https://twitter.com/1kxnetwork",
@@ -70,24 +144,14 @@ const partners = [
     image: "assets/img/partners/trgc.svg",
   },
   {
-    name: "Permanent Ventures",
-    url: "https://twitter.com/permanentvc",
-    image: "assets/img/partners/permanent-ventures.png",
+    name: "Kenetic Capital",
+    url: "https://www.kenetic.capital/",
+    image: "assets/img/partners/kenetic-capital.png",
   },
   {
-    name: "4SV",
-    url: "https://www.4sv.io/",
-    image: "assets/img/partners/4sv.png",
-  },
-  {
-    name: "Numeus",
-    url: "https://numeus.xyz/",
-    image: "assets/img/partners/numeus.svg",
-  },
-  {
-    name: "The Graph",
-    url: "https://thegraph.com/",
-    image: "assets/img/partners/graph.png",
+    name: "Relayer Capital",
+    url: "https://relayer.capital/",
+    image: "assets/img/partners/relayer-capital.jpg",
   },
 ];
 

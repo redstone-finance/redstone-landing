@@ -269,30 +269,40 @@ var angels = [{
   image: "assets/img/angels/emin-gun-sirer.png",
   url: "https://twitter.com/el33th4xor"
 }, {
-  name: "Coinflipcanada",
-  title: "GMX Contributor",
-  image: "assets/img/angels/coinflipcanada.png",
-  url: "https://twitter.com/coinflipcanada"
+  name: "Smokey",
+  title: "Berachain Co-Founder",
+  image: "assets/img/angels/smokey.jpg",
+  url: "https://x.com/SmokeyTheBera"
 }, {
   name: "Richard Ma",
   title: "Quantstamp CEO",
   image: "assets/img/angels/richard-ma.png",
   url: "https://www.linkedin.com/in/rtmtd/"
 }, {
-  name: "Jacob Blish",
-  title: "Lido Head of BD",
-  image: "assets/img/angels/jacob-blish.png",
-  url: "https://twitter.com/chaingenius"
+  name: "Jeff Yin",
+  title: "Merlin Chain Founder",
+  image: "assets/img/angels/merlin.jpg",
+  url: "https://x.com/redstone_defi/status/1798293614294163747"
 }, {
-  name: "Marco Cora",
-  title: "zkSync Head of BD",
-  image: "assets/img/angels/marco-cora.png",
-  url: "https://twitter.com/Be1garat"
+  name: "Daniel Dizon",
+  title: "Swell Founder",
+  image: "assets/img/angels/daniel-dizon.jpg",
+  url: "https://x.com/daniel_swell_"
 }, {
-  name: "Justin Reyes",
-  title: "Lido Head of DeFi",
-  image: "assets/img/angels/justin-reyes.png",
-  url: "https://twitter.com/Justin_Stables"
+  name: "Mike Silagadze",
+  title: "Etherfi CEO",
+  image: "assets/img/angels/mike-silagadze.jpg",
+  url: "https://x.com/MikeSilagadze"
+}, {
+  name: "Amir Forouzani",
+  title: "Puffer CEO",
+  image: "assets/img/angels/amir-forouzani.jpg",
+  url: "https://x.com/amironchain"
+}, {
+  name: "Coinflipcanada",
+  title: "GMX Contributor",
+  image: "assets/img/angels/coinflipcanada.png",
+  url: "https://twitter.com/coinflipcanada"
 }, {
   name: "Patrick Dai",
   title: "Qtum Founder",
@@ -1555,9 +1565,9 @@ var partners = [{
   url: "https://www.maven11.com/",
   image: "assets/img/partners/maven11.png"
 }, {
-  name: "Distributed Global",
-  url: "http://www.distributedglobal.com/",
-  image: "assets/img/partners/distributed-global.png"
+  name: "Arrington Capital",
+  url: "https://www.arringtoncapital.com/",
+  image: "assets/img/partners/arrington-capital.svg"
 }, {
   name: "Arweave",
   url: "https://www.arweave.org/",
@@ -1571,6 +1581,34 @@ var partners = [{
   url: "https://7xvc.com/",
   image: "assets/img/partners/seven-x.png"
 }, {
+  name: "IOSG",
+  url: "https://iosg.vc/",
+  image: "assets/img/partners/iosg.png"
+}, {
+  name: "Spartan Capital",
+  url: "https://www.spartangroup.io/",
+  image: "assets/img/partners/spartan-capital.jpg"
+}, {
+  name: "White Star Capital",
+  url: "https://whitestarcapital.com/",
+  image: "assets/img/partners/white-star-capital.png"
+}, {
+  name: "Protagonist",
+  url: "https://www.protagonist.co/",
+  image: "assets/img/partners/protagonist.png"
+}, {
+  name: "Alphemy Capital",
+  url: "https://alphemy.capital/",
+  image: "assets/img/partners/alphemy-capital.png"
+}, {
+  name: "Samara Asset Group",
+  url: "https://www.samara-ag.com/",
+  image: "assets/img/partners/samara-asset-group.png"
+}, {
+  name: "gumi Cryptos Capital",
+  url: "https://www.gumi-cryptos.com/",
+  image: "assets/img/partners/gumi-cryptos.jpeg"
+}, {
   name: "KR1",
   url: "https://www.kryptonite1.co/",
   image: "assets/img/partners/kr1.jpg"
@@ -1578,6 +1616,34 @@ var partners = [{
   name: "BeringWaters",
   url: "https://beringwaters.com/",
   image: "assets/img/partners/beringwaters.png"
+}, {
+  name: "Distributed Global",
+  url: "http://www.distributedglobal.com/",
+  image: "assets/img/partners/distributed-global.png"
+}, {
+  name: "Amber Group",
+  url: "https://www.ambergroup.io/",
+  image: "assets/img/partners/amber-group.png"
+}, {
+  name: "Thanefield Capital",
+  url: "https://thanefield.capital/",
+  image: "assets/img/partners/thanefield-capital.jpg"
+}, {
+  name: "Selini Capital",
+  url: "https://www.selinicapital.com/",
+  image: "assets/img/partners/selini-capital.png"
+}, {
+  name: "4RC",
+  url: "https://www.fourthrevolution.capital/",
+  image: "assets/img/partners/4rc.png"
+}, {
+  name: "Revelo Intel",
+  url: "https://revelointel.com/",
+  image: "assets/img/partners/revelo-intel.png"
+}, {
+  name: "HTX Ventures",
+  url: "https://www.htx.com/ventures",
+  image: "assets/img/partners/htx-ventures.png"
 }, {
   name: "1KX",
   url: "https://twitter.com/1kxnetwork",
@@ -1595,21 +1661,13 @@ var partners = [{
   url: "https://trgc.io/",
   image: "assets/img/partners/trgc.svg"
 }, {
-  name: "Permanent Ventures",
-  url: "https://twitter.com/permanentvc",
-  image: "assets/img/partners/permanent-ventures.png"
+  name: "Kenetic Capital",
+  url: "https://www.kenetic.capital/",
+  image: "assets/img/partners/kenetic-capital.png"
 }, {
-  name: "4SV",
-  url: "https://www.4sv.io/",
-  image: "assets/img/partners/4sv.png"
-}, {
-  name: "Numeus",
-  url: "https://numeus.xyz/",
-  image: "assets/img/partners/numeus.svg"
-}, {
-  name: "The Graph",
-  url: "https://thegraph.com/",
-  image: "assets/img/partners/graph.png"
+  name: "Relayer Capital",
+  url: "https://relayer.capital/",
+  image: "assets/img/partners/relayer-capital.jpg"
 }];
 var partnersSection = document.getElementById("partners");
 
