@@ -46,8 +46,20 @@
 }
 
 .first-page {
-    min-height: 70vh;
+    height: 70vh;
+    min-height: 900px;
+    max-height: 1100px;
     margin-bottom: 5rem;
+
+    @include media-breakpoint-up(md) {
+        min-height: 700px;
+        max-height: 900px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: 500px;
+        max-height: 700px;
+    }
 }
 
 .first-page-buttons-container {
