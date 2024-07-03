@@ -1,6 +1,8 @@
 function generateTvsElement(tvs) {
+  tvs;
   const defillamaUrl =
     "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
+  const tmpTvs = "$3.43";
   return `
     <div class="tvs-link mt-3 mt-md-5">
       <a
@@ -13,8 +15,8 @@ function generateTvsElement(tvs) {
           <div class="flex gap-2 align-items-center justify-content-center mb-2">
             <h3 class="mb-0">Protecting</h3>
             ${
-              tvs
-                ? `<h3 class="mb-0"><b>${tvs} billion</b></h3>`
+              tmpTvs
+                ? `<h3 class="mb-0"><b>${tmpTvs} billion</b></h3>`
                 : `<div class="flex align-items-center justify-content-center loader-container-tvs">
                     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                   </div>`
