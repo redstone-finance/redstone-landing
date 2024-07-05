@@ -1312,7 +1312,7 @@ function getClientsCount() {
 }
 
 function emptyAnnouncementLink(name) {
-  return name === "Balancer" ? "<a class=\"inactiveLink\">\n    <p>Announcement</p>\n  </a>" : "";
+  return name === "Balancer" ? "<a class=\"inactive-link\">\n    <p>Announcement</p>\n  </a>" : "";
 }
 
 function generateClientCard(name, logo, url, announcement, tvl) {
@@ -1974,23 +1974,37 @@ if (trustedByCrossChainSection) {
 }
 
 function generateTvsElement(tvs) {
-  tvs;
   var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
-  var tmpTvs = "$3.43";
-  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tmpTvs ? "<h3 class=\"mb-0\"><b>".concat(tmpTvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
 }
 
 if (document.getElementById("tvs")) {
-  var tvsUrl = "https://simplescraper.io/api/UCyfpCsZgxWOriZ6Gt2Q?apikey=dUkGSzMvdCuU1fKgkpFxuGAFpkCJM1xA";
+  var tvsUrl = "https://d12s4zpdqk5syt.cloudfront.net/api/PHnrSeRI0Uf6O6vtFBE2";
   var tvsElement = document.getElementById("tvs");
   fetch(tvsUrl).then(function (response) {
     response.json().then(function (parsedResponse) {
-      var tvs = parsedResponse.data[0].TVS;
+      var tvs = parsedResponse.data[0].RedStoneTVS;
       var parsedTvs = tvs.slice(0, 4);
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
+      var tooltipElements = document.querySelectorAll(".simple-tooltip");
+      tooltipElements.forEach(function (element) {
+        return element.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+        });
+      });
     });
   });
   tvsElement.innerHTML = generateTvsElement();
+  var tooltipElements = document.querySelectorAll(".simple-tooltip");
+  tooltipElements.forEach(function (element) {
+    return element.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+    });
+  });
 } // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */

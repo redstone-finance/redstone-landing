@@ -17573,7 +17573,7 @@ label {
   display: inline-block;
   position: relative;
   width: 60px;
-  height: 15px;
+  height: 10px;
 }
 
 .lds-ellipsis div {
@@ -18631,7 +18631,7 @@ label {
   width: 157px;
 }
 
-.inactiveLink {
+.inactive-link {
   pointer-events: visible;
   cursor: pointer;
 }

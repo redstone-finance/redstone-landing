@@ -614,7 +614,7 @@ function getClientsCount() {
 
 function emptyAnnouncementLink(name) {
   return name === "Balancer"
-    ? `<a class="inactiveLink">
+    ? `<a class="inactive-link">
     <p>Announcement</p>
   </a>`
     : "";

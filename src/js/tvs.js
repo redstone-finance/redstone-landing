@@ -1,8 +1,6 @@
 function generateTvsElement(tvs) {
-  tvs;
   const defillamaUrl =
     "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
-  const tmpTvs = "$3.43";
   return `
     <div class="tvs-link mt-3 mt-md-5">
       <a
@@ -15,8 +13,8 @@ function generateTvsElement(tvs) {
           <div class="flex gap-2 align-items-center justify-content-center mb-2">
             <h3 class="mb-0">Protecting</h3>
             ${
-              tmpTvs
-                ? `<h3 class="mb-0"><b>${tmpTvs} billion</b></h3>`
+              tvs
+                ? `<h3 class="mb-0"><b>${tvs} billion</b></h3>`
                 : `<div class="flex align-items-center justify-content-center loader-container-tvs">
                     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                   </div>`
@@ -39,15 +37,32 @@ function generateTvsElement(tvs) {
 
 if (document.getElementById("tvs")) {
   const tvsUrl =
-    "https://simplescraper.io/api/UCyfpCsZgxWOriZ6Gt2Q?apikey=dUkGSzMvdCuU1fKgkpFxuGAFpkCJM1xA";
+    "https://d12s4zpdqk5syt.cloudfront.net/api/PHnrSeRI0Uf6O6vtFBE2";
   const tvsElement = document.getElementById("tvs");
   fetch(tvsUrl).then((response) => {
     response.json().then((parsedResponse) => {
-      const tvs = parsedResponse.data[0].TVS;
+      const tvs = parsedResponse.data[0].RedStoneTVS;
       const parsedTvs = tvs.slice(0, 4);
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
+
+      const tooltipElements = document.querySelectorAll(".simple-tooltip");
+      tooltipElements.forEach((element) =>
+        element.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+        })
+      );
     });
   });
 
   tvsElement.innerHTML = generateTvsElement();
+  const tooltipElements = document.querySelectorAll(".simple-tooltip");
+  tooltipElements.forEach((element) =>
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+    })
+  );
 }
