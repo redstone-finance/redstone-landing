@@ -606,6 +606,13 @@ const otherClients = [
     announcement: "https://x.com/redstone_defi/status/1803805083152638089",
     tvlUrl: "https://api.llama.fi/tvl/yei-finance",
   },
+  {
+    name: "BitLen",
+    logo: "/assets/img/clients/bitlen.png",
+    url: "https://www.bitlen.io/",
+    announcement: "https://x.com/redstone_defi/status/1814314379778941211",
+    tvlUrl: "https://api.llama.fi/tvl/bitlen-finance",
+  },
 ];
 
 function getClientsCount() {
