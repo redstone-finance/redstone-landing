@@ -1,15 +1,13 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /* -------------------------------------------------------------------------- */
-
 /*                                    Utils                                   */
-
 /* -------------------------------------------------------------------------- */
 var docReady = function docReady(fn) {
   // see if DOM is already available
@@ -19,22 +17,18 @@ var docReady = function docReady(fn) {
     setTimeout(fn, 1);
   }
 };
-
 var resize = function resize(fn) {
   return window.addEventListener("resize", fn);
 };
-
 var isIterableArray = function isIterableArray(array) {
   return Array.isArray(array) && !!array.length;
 };
-
 var camelize = function camelize(str) {
   var text = str.replace(/[-_\s.]+(.)?/g, function (_, c) {
     return c ? c.toUpperCase() : "";
   });
   return "".concat(text.substr(0, 1).toLowerCase()).concat(text.substr(1));
 };
-
 var getData = function getData(el, data) {
   try {
     return JSON.parse(el.dataset[camelize(data)]);
@@ -42,27 +36,26 @@ var getData = function getData(el, data) {
     return el.dataset[camelize(data)];
   }
 };
-/* ----------------------------- Colors function ---------------------------- */
 
+/* ----------------------------- Colors function ---------------------------- */
 
 var hexToRgb = function hexToRgb(hexValue) {
   var hex;
-  hexValue.indexOf("#") === 0 ? hex = hexValue.substring(1) : hex = hexValue; // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-
+  hexValue.indexOf("#") === 0 ? hex = hexValue.substring(1) : hex = hexValue;
+  // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b;
   }));
   return result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : null;
 };
-
 var rgbaColor = function rgbaColor() {
   var color = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "#fff";
   var alpha = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.5;
   return "rgba(".concat(hexToRgb(color), ", ").concat(alpha, ")");
 };
-/* --------------------------------- Colors --------------------------------- */
 
+/* --------------------------------- Colors --------------------------------- */
 
 var colors = {
   primary: "#2c7be5",
@@ -89,16 +82,13 @@ var grays = {
   1100: "#0b1727",
   black: "#000"
 };
-
 var hasClass = function hasClass(el, className) {
   !el && false;
   return el.classList.value.includes(className);
 };
-
 var addClass = function addClass(el, className) {
   el.classList.add(className);
 };
-
 var getOffset = function getOffset(el) {
   var rect = el.getBoundingClientRect();
   var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -108,26 +98,22 @@ var getOffset = function getOffset(el) {
     left: rect.left + scrollLeft
   };
 };
-
 var isScrolledIntoView = function isScrolledIntoView(el) {
   var top = el.offsetTop;
   var left = el.offsetLeft;
   var width = el.offsetWidth;
   var height = el.offsetHeight;
-
   while (el.offsetParent) {
     // eslint-disable-next-line no-param-reassign
     el = el.offsetParent;
     top += el.offsetTop;
     left += el.offsetLeft;
   }
-
   return {
     all: top >= window.pageYOffset && left >= window.pageXOffset && top + height <= window.pageYOffset + window.innerHeight && left + width <= window.pageXOffset + window.innerWidth,
     partial: top < window.pageYOffset + window.innerHeight && left < window.pageXOffset + window.innerWidth && top + height > window.pageYOffset && left + width > window.pageXOffset
   };
 };
-
 var breakpoints = {
   xs: 0,
   sm: 576,
@@ -136,33 +122,28 @@ var breakpoints = {
   xl: 1200,
   xxl: 1540
 };
-
 var getBreakpoint = function getBreakpoint(el) {
   var classes = el && el.classList.value;
   var breakpoint;
-
   if (classes) {
     breakpoint = breakpoints[classes.split(" ").filter(function (cls) {
       return cls.includes("navbar-expand-");
     }).pop().split("-").pop()];
   }
-
   return breakpoint;
 };
-/* --------------------------------- Cookie --------------------------------- */
 
+/* --------------------------------- Cookie --------------------------------- */
 
 var setCookie = function setCookie(name, value, expire) {
   var expires = new Date();
   expires.setTime(expires.getTime() + expire);
   document.cookie = "".concat(name, "=").concat(value, ";expires=").concat(expires.toUTCString());
 };
-
 var getCookie = function getCookie(name) {
   var keyValue = document.cookie.match("(^|;) ?".concat(name, "=([^;]*)(;|$)"));
   return keyValue ? keyValue[2] : keyValue;
 };
-
 var settings = {
   tinymce: {
     theme: "oxide"
@@ -171,35 +152,32 @@ var settings = {
     borderColor: "rgba(255, 255, 255, 0.8)"
   }
 };
+
 /* -------------------------- Chart Initialization -------------------------- */
 
 var newChart = function newChart(chart, config) {
   var ctx = chart.getContext("2d");
   return new window.Chart(ctx, config);
 };
-/* ---------------------------------- Store --------------------------------- */
 
+/* ---------------------------------- Store --------------------------------- */
 
 var getItemFromStore = function getItemFromStore(key, defaultValue) {
   var store = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : localStorage;
-
   try {
     return JSON.parse(store.getItem(key)) || defaultValue;
   } catch (_unused) {
     return store.getItem(key) || defaultValue;
   }
 };
-
 var setItemToStore = function setItemToStore(key, payload) {
   var store = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : localStorage;
   return store.setItem(key, payload);
 };
-
 var getStoreSpace = function getStoreSpace() {
   var store = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : localStorage;
   return parseFloat((escape(encodeURIComponent(JSON.stringify(store))).length / (1024 * 1024)).toFixed(2));
 };
-
 var utils = {
   docReady: docReady,
   resize: resize,
@@ -223,15 +201,14 @@ var utils = {
   setItemToStore: setItemToStore,
   getStoreSpace: getStoreSpace
 };
+
 /* -------------------------------------------------------------------------- */
-
 /*                                  Detector                                  */
-
 /* -------------------------------------------------------------------------- */
 
 var detectorInit = function detectorInit() {
   var _window = window,
-      is = _window.is;
+    is = _window.is;
   var html = document.querySelector("html");
   is.opera() && addClass(html, "opera");
   is.mobile() && addClass(html, "mobile");
@@ -247,7 +224,6 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, "windows");
   navigator.userAgent.match("CriOS") && addClass(html, "chrome");
 };
-
 var angels = [{
   name: "Stani Kulechov",
   title: "Aave & Lens Founder",
@@ -310,10 +286,8 @@ var angels = [{
   url: "https://twitter.com/PatrickXDai"
 }];
 var angelsSection = document.getElementById("cross-chain");
-
 if (angelsSection) {
   var element = document.getElementById("angels");
-
   if (element.childNodes.length === 0) {
     angels.forEach(function (angel) {
       var angelItem = document.createElement("div");
@@ -324,25 +298,20 @@ if (angelsSection) {
     });
   }
 }
-
 function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
   var referenceDataPoints = 269400336;
   var referenceTimestamp = 1630398567000;
   var fromReferenceToNow = Date.now() - referenceTimestamp;
   var pointsOnPageOpen = referenceDataPoints + fromReferenceToNow * (pointsPerDisplayInterval / displayInterval);
-
   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-
   function animateValue(htmlElement, startPoint, interval, pointsPerInterval) {
     var startTimestamp = null;
     var previousPoint = startPoint;
     var previousTimestamp = 0;
-
-    var step = function step(timestamp) {
+    var _step = function step(timestamp) {
       if (!startTimestamp) startTimestamp = timestamp;
-
       if (timestamp - previousTimestamp > interval) {
         var progress = (timestamp - previousTimestamp) / interval * pointsPerInterval;
         var currentPoint = Math.floor(previousPoint + progress);
@@ -350,17 +319,13 @@ function animateDataPoints(displayInterval, pointsPerDisplayInterval) {
         previousTimestamp = timestamp;
         previousPoint = currentPoint;
       }
-
-      window.requestAnimationFrame(step);
+      window.requestAnimationFrame(_step);
     };
-
-    window.requestAnimationFrame(step);
+    window.requestAnimationFrame(_step);
   }
-
   var obj = document.getElementById("data-points-number");
   animateValue(obj, pointsOnPageOpen, displayInterval, pointsPerDisplayInterval);
 }
-
 var auditorsPartners = [{
   name: "ABDK",
   image: "assets/img/auditors-partners/abdk.png"
@@ -436,27 +401,22 @@ var auditorsPartners = [{
   image: "assets/img/auditors-partners/safary.png"
 }];
 var auditorsPartnersChainsCrossChainSection = document.getElementById("cross-chain");
-
 if (auditorsPartnersChainsCrossChainSection) {
   var _element = document.getElementById("auditors-partners");
-
   if (_element.childNodes.length === 0) {
     auditorsPartners.forEach(function (auditorsPartnersElement) {
       var _auditorsPartnersElem;
-
       var auditorsPartnersItem = document.createElement("div");
       auditorsPartnersItem.classList.add("tab-item");
       auditorsPartnersItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(auditorsPartnersElement.image, "\"\n          alt=\"").concat(auditorsPartnersElement.name, " Logo\"\n          height=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(auditorsPartnersElement.name, "</p>\n        <p class=\"mb-0 mt-0\">").concat((_auditorsPartnersElem = auditorsPartnersElement === null || auditorsPartnersElement === void 0 ? void 0 : auditorsPartnersElement.title) !== null && _auditorsPartnersElem !== void 0 ? _auditorsPartnersElem : "", "</p>\n      ");
-
       _element.appendChild(auditorsPartnersItem);
     });
   }
 }
+
 /*-----------------------------------------------
 |   Top navigation opacity on scroll
 -----------------------------------------------*/
-
-
 var navbarInit = function navbarInit() {
   var Selector = {
     NAVBAR: "[data-navbar-on-scroll]",
@@ -475,8 +435,8 @@ var navbarInit = function navbarInit() {
   var DataKey = {
     NAVBAR_ON_SCROLL: "navbar-light-on-scroll"
   };
-  var navbar = document.querySelector(Selector.NAVBAR); // responsive nav collapsed
-
+  var navbar = document.querySelector(Selector.NAVBAR);
+  // responsive nav collapsed
   navbar.addEventListener("click", function (e) {
     if (e.target.classList.contains("nav-link") && window.innerWidth < utils.getBreakpoint(navbar)) {
       navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
@@ -489,46 +449,40 @@ var navbarInit = function navbarInit() {
       }
     }
   });
-
   if (navbar) {
     var windowHeight = window.innerHeight;
     var html = document.documentElement;
     var navbarCollapse = navbar.querySelector(Selector.NAVBAR_COLLAPSE);
-
     var allColors = _objectSpread(_objectSpread({}, utils.colors), utils.grays);
-
     var name = utils.getData(navbar, DataKey.NAVBAR_ON_SCROLL);
     var colorName = Object.keys(allColors).includes(name) ? name : "white";
     var color = allColors[colorName];
     var bgClassName = "bg-".concat(colorName);
     var shadowName = "shadow-transition";
     var colorRgb = utils.hexToRgb(color);
-
     var _window$getComputedSt = window.getComputedStyle(navbar),
-        backgroundImage = _window$getComputedSt.backgroundImage;
-
+      backgroundImage = _window$getComputedSt.backgroundImage;
     var transition = "background-color 0.35s ease";
-    navbar.style.backgroundImage = "none"; // Change navbar background color on scroll
+    navbar.style.backgroundImage = "none";
 
+    // Change navbar background color on scroll
     window.addEventListener(Events.SCROLL, function () {
       var scrollTop = html.scrollTop;
-      var alpha = scrollTop / windowHeight * 0.15; // Add class on scroll
-
+      var alpha = scrollTop / windowHeight * 0.15;
+      // Add class on scroll
       navbar.classList.add("backdrop");
-
       if (alpha === 0) {
         navbar.classList.remove("backdrop");
       }
-
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
       navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, "show") ? backgroundImage : "none";
       alpha > 0 || utils.hasClass(navbarCollapse, "show") ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
-    }); // Toggle bg class on window resize
+    });
 
+    // Toggle bg class on window resize
     utils.resize(function () {
       var breakPoint = utils.getBreakpoint(navbar);
-
       if (window.innerWidth > breakPoint) {
         navbar.style.backgroundImage = html.scrollTop ? backgroundImage : "none";
         navbar.style.transition = "none";
@@ -537,7 +491,6 @@ var navbarInit = function navbarInit() {
         navbar.classList.add(shadowName);
         navbar.style.backgroundImage = backgroundImage;
       }
-
       if (window.innerWidth <= breakPoint) {
         navbar.style.transition = utils.hasClass(navbarCollapse, "show") ? transition : "none";
       }
@@ -558,7 +511,6 @@ var navbarInit = function navbarInit() {
     });
   }
 };
-
 var chains = [{
   name: "Ethereum",
   image: "assets/img/chains/eth.png"
@@ -672,26 +624,21 @@ var chains = [{
   image: "assets/img/chains/sei.png"
 }];
 var chainsCrossChainSection = document.getElementById("cross-chain");
-
 if (chainsCrossChainSection) {
   var _element2 = document.getElementById("chains");
-
   if (_element2.childNodes.length === 0) {
     chains.forEach(function (chain) {
       var chainItem = document.createElement("div");
       chainItem.classList.add("tab-item");
       chainItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(chain.image, "\"\n          alt=\"").concat(chain.name, " Logo\"\n          height=\"60\"\n          width=\"60\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(chain.name, "</p>\n      ");
-
       _element2.appendChild(chainItem);
     });
     var manyMoreItem = document.createElement("div");
     manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
     manyMoreItem.innerHTML += "\n      <a\n        class=\"mb-0 mt-2 fw-bold\"\n        href=\"https://docs.redstone.finance/docs/smart-contract-devs/supported-chains\"\n        target=\"_blank\"\n        role=\"button\"\n        referrerpolicy=\"no-referrer\"\n      >\n        Full list in Docs!\n      </a>\n    ";
-
     _element2.appendChild(manyMoreItem);
   }
 }
-
 var lstLrtClients = [{
   name: "EtherFi",
   logo: "/assets/img/clients/etherfi.png",
@@ -742,7 +689,6 @@ var lstLrtClients = [{
   tvlUrl: "https://api.llama.fi/tvl/lido"
 }];
 var clientsLstLrtSection = document.getElementById("lst-lrt-clients");
-
 if (clientsLstLrtSection) {
   var clientsLstLrtElement = document.getElementById("clients");
   lstLrtClients.forEach(function (client, index) {
@@ -750,11 +696,9 @@ if (clientsLstLrtSection) {
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
-
     if (clientsLstLrtElement.childNodes.length !== lstLrtClients.length) {
       clientsLstLrtElement.appendChild(card);
     }
-
     fetch(client.tvlUrl).then(function (response) {
       response.json().then(function (tvl) {
         var clientCard = document.getElementById(lstLrtClients[index].name);
@@ -763,7 +707,6 @@ if (clientsLstLrtSection) {
     });
   });
 }
-
 var clientsServicesPage = [{
   name: "Pendle",
   logo: "/assets/img/clients/pendle.png",
@@ -814,7 +757,6 @@ var clientsServicesPage = [{
   tvlUrl: "https://api.llama.fi/tvl/puffer-finance"
 }];
 var clientsServicesPageSection = document.getElementById("services-page-clients");
-
 if (clientsServicesPageSection) {
   var clientsServicesPageElement = document.getElementById("clients");
   clientsServicesPage.forEach(function (client, index) {
@@ -822,11 +764,9 @@ if (clientsServicesPageSection) {
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
-
     if (clientsServicesPageElement.childNodes.length !== clientsServicesPageSection.length) {
       clientsServicesPageElement.appendChild(card);
     }
-
     fetch(client.tvlUrl).then(function (response) {
       response.json().then(function (tvl) {
         var clientCard = document.getElementById(clientsServicesPage[index].name);
@@ -835,7 +775,6 @@ if (clientsServicesPageSection) {
     });
   });
 }
-
 var featuredClients = [{
   name: "Pendle",
   logo: "/assets/img/clients/pendle.png",
@@ -932,6 +871,12 @@ var featuredClients = [{
   url: "https://stakestone.io/",
   announcement: "https://twitter.com/redstone_defi/status/1750184210432930055",
   tvlUrl: "https://api.llama.fi/tvl/stakestone"
+}, {
+  name: "Symbiotic",
+  logo: "/assets/img/clients/symbiotic.webp",
+  url: "https://symbiotic.fi/",
+  announcement: "https://x.com/redstone_defi/status/1824456969962525145",
+  tvlUrl: "https://api.llama.fi/tvl/symbiotic"
 }, {
   name: "Sommelier",
   logo: "/assets/img/clients/sommelier.png",
@@ -1312,32 +1257,25 @@ var otherClients = [{
   announcement: "https://x.com/redstone_defi/status/1814314379778941211",
   tvlUrl: "https://api.llama.fi/tvl/bitlen-finance"
 }];
-
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
-
 function emptyAnnouncementLink(name) {
   return name === "Balancer" ? "<a class=\"inactive-link\">\n    <p>Announcement</p>\n  </a>" : "";
 }
-
 function generateClientCard(name, logo, url, announcement, tvl) {
   var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
   return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "".concat(emptyAnnouncementLink(name)), "\n      </div>\n    </a>");
 }
-
 function sortFn(a, b) {
   if (a.name.toLowerCase() < b.name.toLowerCase()) {
     return -1;
   }
-
   if (a.name.toLowerCase() > b.name.toLowerCase()) {
     return 1;
   }
-
   return 0;
 }
-
 if (document.getElementById("featured-clients")) {
   var featuredClientsElement = document.getElementById("featured-clients");
   featuredClients.forEach(function (client, index) {
@@ -1345,11 +1283,9 @@ if (document.getElementById("featured-clients")) {
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = client.name;
-
     if (featuredClientsElement.childNodes.length !== featuredClients.length) {
       featuredClientsElement.appendChild(card);
     }
-
     if (client.tvlUrl) {
       fetch(client.tvlUrl).then(function (response) {
         response.json().then(function (tvl) {
@@ -1360,7 +1296,6 @@ if (document.getElementById("featured-clients")) {
     }
   });
 }
-
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
   var allClients = [].concat(featuredClients, otherClients);
@@ -1369,11 +1304,9 @@ if (document.getElementById("all-clients")) {
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
     card.id = "".concat(client.name, "_all_clients");
-
     if (allClientsElement.childNodes.length !== allClients.length) {
       allClientsElement.appendChild(card);
     }
-
     if (client.tvlUrl) {
       fetch(client.tvlUrl).then(function (response) {
         response.json().then(function (tvl) {
@@ -1384,7 +1317,6 @@ if (document.getElementById("all-clients")) {
     }
   });
 }
-
 var dataSources = [{
   name: "Uniswap",
   image: "/assets/img/data-sources/uniswap.png"
@@ -1459,30 +1391,22 @@ var dataSources = [{
   image: "/assets/img/data-sources/4sv.png"
 }];
 var dataSourcesCrossChainSection = document.getElementById("cross-chain");
-
 if (dataSourcesCrossChainSection) {
   var _element3 = document.getElementById("data-sources");
-
   if (_element3.childNodes.length === 0) {
     dataSources.forEach(function (dataSource) {
       var dataSourceItem = document.createElement("div");
       dataSourceItem.classList.add("tab-item");
       var isNonSquare = ["Coinbase"].includes(dataSource.name);
       dataSourceItem.innerHTML += "\n        <img\n          loading=\"lazy\"\n          src=\"".concat(dataSource.image, "\"\n          alt=\"").concat(dataSource.name, " Logo\"\n          height=\"60\"\n          width=\"").concat(isNonSquare ? 80 : 60, "\"\n        />\n        <p class=\"mb-0 mt-2\">").concat(dataSource.name, "</p>\n    ");
-
       _element3.appendChild(dataSourceItem);
     });
-
     var _manyMoreItem = document.createElement("div");
-
     _manyMoreItem.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
-
     _manyMoreItem.innerHTML += "\n      <p class=\"mb-0 mt-2 fw-bold\">& many more</p>\n    ";
-
     _element3.appendChild(_manyMoreItem);
   }
 }
-
 function fetchData() {
   var preloader = "<div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>";
   var sourcesNumberElement = document.getElementById("sources-number");
@@ -1527,33 +1451,25 @@ function fetchData() {
   });
   clientsElement.innerHTML = getClientsCount();
 }
-
 var _window2 = window,
-    is = _window2.is;
-
+  is = _window2.is;
 function isDeviceMobile() {
   return is.mobile() || is.iphone() || is.androidPhone() || is.windowsPhone() || is.blackberry();
 }
-
 var openTab = function openTab(event, tabName) {
   var contentIndex;
   var linkIndex;
   var tabContents = document.getElementsByClassName("tab-content");
-
   for (contentIndex = 0; contentIndex < tabContents.length; contentIndex += 1) {
     tabContents[contentIndex].style.display = "none";
   }
-
   var tabLinks = document.getElementsByClassName("tab-button");
-
   for (linkIndex = 0; linkIndex < tabLinks.length; linkIndex += 1) {
     tabLinks[linkIndex].style["border-bottom"] = "1px solid #e5e7eb";
   }
-
   document.getElementById(tabName).style.display = "flex";
   event.currentTarget.style["border-bottom"] = "1px solid #FD627A";
 };
-
 var partners = [{
   name: "Lemniscap",
   url: "https://lemniscap.com/",
@@ -1676,22 +1592,18 @@ var partners = [{
   image: "assets/img/partners/relayer-capital.jpg"
 }];
 var partnersSection = document.getElementById("partners");
-
 if (partnersSection) {
   var _element4 = document.getElementById("backed-by");
-
   if (_element4.childNodes.length === 0) {
     partners.forEach(function (partner) {
       var partnerItem = document.createElement("div");
       partnerItem.classList.add("partner-item");
       var isBlackBackgroundRequired = partner.name === "Distributed Global";
       partnerItem.innerHTML += "\n        <a\n          href=\"".concat(partner.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n        >\n          <img\n            src=\"").concat(partner.image, "\"\n            width=\"120px\"\n            alt=\"").concat(partner.name, " Logo\"\n            style=\"").concat(isBlackBackgroundRequired ? "background: black; padding: 6px" : "", "\"\n          />\n        </a>\n      ");
-
       _element4.appendChild(partnerItem);
     });
   }
 }
-
 var pictures = [{
   image: "/assets/img/pictures/1.jpg"
 }, {
@@ -1726,7 +1638,6 @@ var pictures = [{
   image: "/assets/img/pictures/16.jpeg"
 }];
 var pictureSection = document.getElementById("gallery");
-
 if (pictureSection) {
   pictures.forEach(function (picture) {
     var pictureItem = document.createElement("img");
@@ -1734,18 +1645,14 @@ if (pictureSection) {
     pictureSection.appendChild(pictureItem);
   });
 }
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                Scroll To Top                               */
-
 /* -------------------------------------------------------------------------- */
-
-
 var scrollToTop = function scrollToTop() {
   document.querySelectorAll("[data-anchor] > a, [data-scroll-to]").forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       var _utils$getData;
-
       e.preventDefault();
       var el = e.target;
       var id = utils.getData(el, "scroll-to") || el.getAttribute("href");
@@ -1758,7 +1665,6 @@ var scrollToTop = function scrollToTop() {
     });
   });
 };
-
 if (document.getElementById("members")) {
   var members = [{
     name: "Jakub",
@@ -1809,55 +1715,42 @@ if (document.getElementById("members")) {
     twitter: "https://twitter.com/warcin101",
     linkedin: "https://www.linkedin.com/in/marcin-wilk-73895a1a2/"
   }];
-
   var _element5 = document.getElementById("members");
-
   members.forEach(function (member) {
     var card = document.createElement("div");
     card.classList.add("col-sm-5", "col-md-4", "col-lg-3");
     card.innerHTML += "\n      <img class=\"member-picture\" src=\"".concat(member.img, "\"/>\n      <div class=\"member-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(member.name, "</p>\n        <p  class=\"mb-0 fs-0\">").concat(member.role, "</p>\n        <div class=\"member-social\">\n        <a\n          href=\"").concat(member.twitter, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"big-button-image\"\n            src=\"/assets/img/icons/twitter.svg\"\n          >\n        </a>\n        <a\n          href=\"").concat(member.linkedin, "\"\n          style=\"color: #616368\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <img\n            class=\"big-button-image\"\n            src=\"/assets/img/icons/linkedin.svg\"\n          >\n        </a>\n      </div>");
-
     _element5.appendChild(card);
   });
 }
-
 var slideIndex = 1;
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("testimonial-slide");
   var dots = document.getElementsByClassName("dot");
-
   if (slides.length > 0 && dots.length > 0) {
     if (n > slides.length) {
       slideIndex = 1;
     }
-
     if (n < 1) {
       slideIndex = slides.length;
-    } // eslint-disable-next-line no-plusplus
-
-
+    }
+    // eslint-disable-next-line no-plusplus
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-    } // eslint-disable-next-line no-plusplus
-
-
+    }
+    // eslint-disable-next-line no-plusplus
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
   }
 }
-
 showSlides(slideIndex);
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 var projects = [{
   name: "DeltaPrime",
   image: "assets/img/clients/deltaprime.png",
@@ -1956,34 +1849,25 @@ var projects = [{
   url: "https://www.cadenceprotocol.io/"
 }];
 var trustedByCrossChainSection = document.getElementById("cross-chain");
-
 if (trustedByCrossChainSection) {
   var _element6 = document.getElementById("trusted-by");
-
   if (_element6.childNodes.length === 0) {
     projects.forEach(function (project) {
       var projectItem = document.createElement("div");
       projectItem.classList.add("tab-item");
       projectItem.innerHTML += "\n        <a\n          href=\"".concat(project.url, "\"\n          role=\"button\"\n          target=\"_blank\"\n          rel=\"noreferrer noopener\"\n          class=\"link-like-text-button-flex\"\n        >\n          <img\n            loading=\"lazy\"\n            src=\"").concat(project.image, "\"\n            alt=\"").concat(project.name, " Logo\"\n            height=\"60\"\n            width=\"60\"\n          />\n          <p class=\"mb-0 mt-2\">").concat(project.name, "</p>\n        </a>\n      ");
-
       _element6.appendChild(projectItem);
     });
-
     var _manyMoreItem2 = document.createElement("div");
-
     _manyMoreItem2.classList.add("d-flex", "col-lg-12", "justify-content-center", "mt-lg-0", "mt-n5");
-
     _manyMoreItem2.innerHTML += "\n    <a class=\"mb-0 mt-2 fw-bold\" href=\"/clients\">\n      & many more!\n    </a>\n  ";
-
     _element6.appendChild(_manyMoreItem2);
   }
 }
-
 function generateTvsElement(tvs) {
   var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
   return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
 }
-
 if (document.getElementById("tvs")) {
   var tvsUrl = "https://d12s4zpdqk5syt.cloudfront.net/api/PHnrSeRI0Uf6O6vtFBE2";
   var tvsElement = document.getElementById("tvs");
@@ -2011,21 +1895,20 @@ if (document.getElementById("tvs")) {
       event.stopImmediatePropagation();
     });
   });
-} // /* -------------------------------------------------------------------------- */
+}
+
+// /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */
-
 
 docReady(fetchData);
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
 var videoElem = document.getElementById("redstone-video");
-
 if (videoElem) {
   videoElem.innerHTML = "\n  <video\n    position=\"relative\"\n    width=\"100%\"\n    height=\"100%\"\n    style=\"\n      border:none;\n      -webkit-mask-image: -webkit-radial-gradient(white, black);\n      -webkit-backface-visibility: hidden;\n      -moz-backface-visibility: hidden;\n    \"\n    name=\"RedStone\"\n    autoplay=\"autoplay\"\n    loop=\"loop\"\n    muted\n    defaultMuted\n    playsinline\n  >\n    <source src=\"/assets/animations/redstone-landing-animation.mp4\">\n  </video>\n  ";
 }
-
 var cookieScript = document.getElementById("cookie-script");
 cookieScript.addEventListener("load", function () {
   window.cookieconsent.initialise({
