@@ -901,6 +901,12 @@ var featuredClients = [{
   url: "https://www.euler.finance/#/",
   announcement: "https://twitter.com/redstone_defi/status/1786425647528874308",
   tvlUrl: "https://api.llama.fi/tvl/euler"
+}, {
+  name: "SkateFi",
+  logo: "/assets/img/clients/skate_fi.jpg",
+  url: "https://x.com/skate_fi",
+  announcement: "https://x.com/redstone_defi/status/1826590572741808172",
+  tvlUrl: "https://api.llama.fi/tvl/skate-fi"
 }];
 var otherClients = [{
   name: "Mento",
