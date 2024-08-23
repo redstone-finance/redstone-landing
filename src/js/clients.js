@@ -162,9 +162,6 @@ const featuredClients = [
       "https://twitter.com/redstone_defi/status/1786425647528874308",
     tvlUrl: "https://api.llama.fi/tvl/euler",
   },
-];
-
-const otherClients = [
   {
     name: "SkateFi",
     logo: "/assets/img/clients/skate_fi.png",
@@ -172,6 +169,9 @@ const otherClients = [
     announcement: "https://x.com/redstone_defi/status/1826590572741808172",
     tvlUrl: "https://api.llama.fi/tvl/skate-fi",
   },
+];
+
+const otherClients = [
   {
     name: "Mento",
     logo: "/assets/img/clients/mento.png",
