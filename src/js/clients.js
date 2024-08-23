@@ -166,6 +166,13 @@ const featuredClients = [
 
 const otherClients = [
   {
+    name: "SkateFi",
+    logo: "/assets/img/clients/skate_fi.png",
+    url: "https://x.com/skate_fi",
+    announcement: "https://x.com/redstone_defi/status/1826590572741808172",
+    tvlUrl: "https://api.llama.fi/tvl/skate-fi",
+  },
+  {
     name: "Mento",
     logo: "/assets/img/clients/mento.png",
     url: "https://www.silo.finance/",
