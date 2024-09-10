@@ -173,6 +173,13 @@ const featuredClients = [
 
 const otherClients = [
   {
+    name: "AO",
+    logo: "/assets/img/clients/ao.png",
+    url: "https://ao.arweave.dev/",
+    announcement: "https://x.com/redstone_defi/status/1832086628686574030",
+    tvlUrl: "",
+  },
+  {
     name: "Mento",
     logo: "/assets/img/clients/mento.png",
     url: "https://www.silo.finance/",
