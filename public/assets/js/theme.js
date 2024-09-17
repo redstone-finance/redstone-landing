@@ -1885,7 +1885,8 @@ if (document.getElementById("tvs")) {
   var tvsElement = document.getElementById("tvs");
   fetch(tvsUrl).then(function (response) {
     response.json().then(function (parsedResponse) {
-      var tvs = parsedResponse.data[0].RedStoneTVS;
+      parsedResponse.data[0].RedStoneTVS;
+      var tvs = "$4.582b";
       var parsedTvs = tvs.slice(0, 4);
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
       var tooltipElements = document.querySelectorAll(".simple-tooltip");
