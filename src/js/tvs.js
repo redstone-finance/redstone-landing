@@ -37,7 +37,7 @@ function generateTvsElement(tvs) {
 
 if (document.getElementById("tvs")) {
   const tvsUrl =
-    "https://d12s4zpdqk5syt.cloudfront.net/api/PHnrSeRI0Uf6O6vtFBE2";
+    "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   const tvsElement = document.getElementById("tvs");
   fetch(tvsUrl).then((response) => {
     response.json().then((parsedResponse) => {
