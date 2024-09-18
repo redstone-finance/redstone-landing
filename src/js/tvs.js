@@ -41,8 +41,7 @@ if (document.getElementById("tvs")) {
   const tvsElement = document.getElementById("tvs");
   fetch(tvsUrl).then((response) => {
     response.json().then((parsedResponse) => {
-      parsedResponse.data[0].RedStoneTVS;
-      const tvs = "$4.582b";
+      const tvs = parsedResponse.data[0].RedStoneTVS;
       const parsedTvs = tvs.slice(0, 4);
       tvsElement.innerHTML = generateTvsElement(parsedTvs);
 
