@@ -224,6 +224,14 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, "windows");
   navigator.userAgent.match("CriOS") && addClass(html, "chrome");
 };
+(function () {
+  if (!window.location.pathname.endsWith("/") && !window.location.pathname.split("/").pop().includes(".")) {
+    var newUrl = "".concat(window.location.protocol, "//").concat(window.location.host).concat(window.location.pathname, "/").concat(window.location.search);
+    window.history.replaceState({
+      path: newUrl
+    }, "", newUrl);
+  }
+})();
 var angels = [{
   name: "Stani Kulechov",
   title: "Aave & Lens Founder",
