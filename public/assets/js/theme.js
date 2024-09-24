@@ -1298,7 +1298,7 @@ if (document.getElementById("featured-clients")) {
 }
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
-  var allClients = otherClients;
+  var allClients = [].concat(featuredClients, otherClients);
   allClients.sort(sortFn).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
