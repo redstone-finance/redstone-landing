@@ -224,14 +224,6 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, "windows");
   navigator.userAgent.match("CriOS") && addClass(html, "chrome");
 };
-(function () {
-  if (!window.location.pathname.endsWith("/") && !window.location.pathname.split("/").pop().includes(".")) {
-    var newUrl = "".concat(window.location.protocol, "//").concat(window.location.host).concat(window.location.pathname, "/").concat(window.location.search);
-    window.history.replaceState({
-      path: newUrl
-    }, "", newUrl);
-  }
-})();
 var angels = [{
   name: "Stani Kulechov",
   title: "Aave & Lens Founder",
@@ -1079,12 +1071,6 @@ var otherClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1770843033900102015",
   tvlUrl: "https://api.llama.fi/tvl/dolomite"
 }, {
-  name: "StakeStone",
-  logo: "/assets/img/clients/stake-stone.png",
-  url: "https://stakestone.io/",
-  announcement: "https://twitter.com/redstone_defi/status/1750184210432930055",
-  tvlUrl: "https://api.llama.fi/tvl/stakestone"
-}, {
   name: "Arrakis",
   logo: "/assets/img/clients/arrakis.png",
   url: "https://www.arrakis.finance/",
@@ -1174,12 +1160,6 @@ var otherClients = [{
   url: "https://merchantmoe.com/",
   announcement: "https://twitter.com/redstone_defi/status/1778471787640336442",
   tvlUrl: "https://api.llama.fi/tvl/merchant-moe"
-}, {
-  name: "Euler V2",
-  logo: "/assets/img/clients/euler.png",
-  url: "https://www.euler.finance/#/",
-  announcement: "https://twitter.com/redstone_defi/status/1786425647528874308",
-  tvlUrl: "https://api.llama.fi/tvl/euler"
 }, {
   name: "GHO",
   logo: "/assets/img/clients/gho.png",
@@ -1318,7 +1298,7 @@ if (document.getElementById("featured-clients")) {
 }
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
-  var allClients = [].concat(featuredClients, otherClients);
+  var allClients = otherClients;
   allClients.sort(sortFn).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");

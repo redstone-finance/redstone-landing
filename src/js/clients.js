@@ -384,14 +384,6 @@ const otherClients = [
     tvlUrl: "https://api.llama.fi/tvl/dolomite",
   },
   {
-    name: "StakeStone",
-    logo: "/assets/img/clients/stake-stone.png",
-    url: "https://stakestone.io/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1750184210432930055",
-    tvlUrl: "https://api.llama.fi/tvl/stakestone",
-  },
-  {
     name: "Arrakis",
     logo: "/assets/img/clients/arrakis.png",
     url: "https://www.arrakis.finance/",
@@ -504,14 +496,6 @@ const otherClients = [
     announcement:
       "https://twitter.com/redstone_defi/status/1778471787640336442",
     tvlUrl: "https://api.llama.fi/tvl/merchant-moe",
-  },
-  {
-    name: "Euler V2",
-    logo: "/assets/img/clients/euler.png",
-    url: "https://www.euler.finance/#/",
-    announcement:
-      "https://twitter.com/redstone_defi/status/1786425647528874308",
-    tvlUrl: "https://api.llama.fi/tvl/euler",
   },
   {
     name: "GHO",
