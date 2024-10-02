@@ -235,6 +235,13 @@ const otherClients = [
     tvlUrl: "https://api.llama.fi/tvl/abracadabra",
   },
   {
+    name: "PumpBTC",
+    logo: "/assets/img/clients/pump-btc.jpg",
+    url: "https://mainnet.pumpbtc.xyz/",
+    announcement: "https://x.com/redstone_defi/status/1840752927872577956",
+    tvlUrl: "https://api.llama.fi/tvl/pumpBTC",
+  },
+  {
     name: "Premia",
     logo: "/assets/img/clients/premia.png",
     url: "https://premia.blue/",
