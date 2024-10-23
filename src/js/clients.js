@@ -624,6 +624,13 @@ const otherClients = [
     announcement: "https://x.com/redstone_defi/status/1814314379778941211",
     tvlUrl: "https://api.llama.fi/tvl/bitlen-finance",
   },
+  {
+    name: "Elixir",
+    logo: "/assets/img/clients/elixir.jpg",
+    url: "https://www.elixir.xyz/",
+    announcement: "https://x.com/redstone_defi/status/1848741129745023135",
+    tvlUrl: "https://api.llama.fi/tvl/elixir",
+  },
 ];
 
 function getClientsCount() {
