@@ -917,7 +917,7 @@ var otherClients = [{
 }, {
   name: "Mento",
   logo: "/assets/img/clients/mento.png",
-  url: "https://www.silo.finance/",
+  url: "https://www.mento.org/",
   announcement: "https://blog.redstone.finance/2023/05/18/mento-labs-chooses-redstone-from-multiple-oracle-providers",
   tvlUrl: "https://api.llama.fi/tvl/mento"
 }, {
@@ -1268,6 +1268,18 @@ var otherClients = [{
   url: "https://www.elixir.xyz/",
   announcement: "https://x.com/redstone_defi/status/1848741129745023135",
   tvlUrl: "https://api.llama.fi/tvl/elixir"
+}, {
+  name: "Silo Finance",
+  logo: "/assets/img/clients/silo.png",
+  url: "https://www.silo.finance/",
+  announcement: "https://x.com/redstone_defi/status/1755305505814384880",
+  tvlUrl: "https://api.llama.fi/tvl/silo-finance"
+}, {
+  name: "Silo Stake",
+  logo: "/assets/img/clients/silo-stake.jpg",
+  url: "https://www.silostaking.io/",
+  announcement: "https://x.com/redstone_defi/status/1803805083152638089",
+  tvlUrl: "https://api.llama.fi/tvl/silostake"
 }];
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
