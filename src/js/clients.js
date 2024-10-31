@@ -645,6 +645,14 @@ const otherClients = [
     announcement: "https://x.com/redstone_defi/status/1803805083152638089",
     tvlUrl: "https://api.llama.fi/tvl/silostake",
   },
+  {
+    name: "HAI",
+    logo: "/assets/img/clients/hai.webp",
+    url: "https://www.letsgethai.com/",
+    announcement:
+      "https://x.com/redstone_defi/status/1851308060050161775/photo/1",
+    tvlUrl: "",
+  },
 ];
 
 function getClientsCount() {

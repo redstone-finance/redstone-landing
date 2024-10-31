@@ -19,7 +19,7 @@
 .tab-content {
   @include media-breakpoint-up(lg) {
     gap: 0;
-    justify-content: flex-start;
+    justify-content: center;
   }
   margin-top: 2rem;
   width: 100%;
