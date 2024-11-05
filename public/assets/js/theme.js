@@ -1894,6 +1894,14 @@ if (trustedByCrossChainSection) {
     _element6.appendChild(_manyMoreItem2);
   }
 }
+var getSingleTvlValue = function getSingleTvlValue() {
+  return fetch("https://api.llama.fi/tvl/silostake").then(function (response) {
+    return response.text();
+  })["catch"](function (error) {
+    console.error("Error fetching TVL:", error);
+    throw error;
+  });
+};
 function generateTvsElement(tvs) {
   var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
   return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
@@ -1926,6 +1934,9 @@ if (document.getElementById("tvs")) {
     });
   });
 }
+getSingleTvlValue().then(function (tvlValue) {
+  console.log(tvlValue);
+});
 
 // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */

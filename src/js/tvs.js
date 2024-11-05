@@ -1,3 +1,12 @@
+const getSingleTvlValue = () => {
+  return fetch("https://api.llama.fi/tvl/silostake")
+    .then((response) => response.text())
+    .catch((error) => {
+      console.error("Error fetching TVL:", error);
+      throw error;
+    });
+};
+
 function generateTvsElement(tvs) {
   const defillamaUrl =
     "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
@@ -66,3 +75,7 @@ if (document.getElementById("tvs")) {
     })
   );
 }
+
+getSingleTvlValue().then((tvlValue) => {
+  console.log(tvlValue);
+});
