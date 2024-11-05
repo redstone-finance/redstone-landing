@@ -913,7 +913,7 @@ var otherClients = [{
   logo: "/assets/img/clients/ao.png",
   url: "https://ao.arweave.dev/",
   announcement: "https://x.com/redstone_defi/status/1832086628686574030",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Mento",
   logo: "/assets/img/clients/mento.png",
@@ -991,13 +991,13 @@ var otherClients = [{
   logo: "/assets/img/clients/curvance.png",
   url: "https://www.curvance.com/",
   announcement: "https://twitter.com/redstone_defi/status/1752735923060801699",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "ZKX",
   logo: "/assets/img/clients/zkx.png",
   url: "https://zkx.fi/",
   announcement: "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Moola Market",
   logo: "/assets/img/clients/moola.png",
@@ -1111,7 +1111,7 @@ var otherClients = [{
   logo: "/assets/img/clients/ion-protocol.png",
   url: "https://ionprotocol.io/",
   announcement: "https://twitter.com/redstone_defi/status/1772641449244594405",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Synonym",
   logo: "/assets/img/clients/synonym.png",
@@ -1147,7 +1147,7 @@ var otherClients = [{
   logo: "/assets/img/clients/bitperp.png",
   url: "https://twitter.com/bitperp",
   announcement: "",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Lyve Finance",
   logo: "/assets/img/clients/lyve.png",
@@ -1159,7 +1159,7 @@ var otherClients = [{
   logo: "/assets/img/clients/opal.png",
   url: "https://opaldefi.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1775946468458918299",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Merchant Moe",
   logo: "/assets/img/clients/merchant-moe.png",
@@ -1171,7 +1171,7 @@ var otherClients = [{
   logo: "/assets/img/clients/gho.png",
   url: "https://gho.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1773726966040129938",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Native",
   logo: "/assets/img/clients/native.png",
@@ -1207,13 +1207,13 @@ var otherClients = [{
   logo: "/assets/img/clients/clave.png",
   url: "https://getclave.io/",
   announcement: "https://twitter.com/redstone_defi/status/1784945784460591379",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "SphereX",
   logo: "/assets/img/clients/spherex.png",
   url: "https://www.sx.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1788569792741605533",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Seismic Finance",
   logo: "/assets/img/clients/seismic-finance.png",
@@ -1285,7 +1285,7 @@ var otherClients = [{
   logo: "/assets/img/clients/hai.webp",
   url: "https://www.letsgethai.com/",
   announcement: "https://x.com/redstone_defi/status/1851308060050161775/photo/1",
-  tvlUrl: ""
+  tvlUrl: false
 }];
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
@@ -1437,16 +1437,48 @@ if (dataSourcesCrossChainSection) {
     _element3.appendChild(_manyMoreItem);
   }
 }
+var getTotalTvlStatValue = function getTotalTvlStatValue(protocols) {
+  var promises = protocols.map(function (protocol) {
+    return fetch("https://api.llama.fi/tvl/".concat(protocol)).then(function (response) {
+      return response.text();
+    }).then(function (data) {
+      return parseFloat(data) || 0;
+    });
+  });
+  return Promise.all(promises).then(function (values) {
+    var sum = values.reduce(function (acc, curr) {
+      return acc + curr;
+    }, 0);
+    // Format to billions with 1 decimal place
+    return (sum / 1e9).toFixed(1);
+  })["catch"](function (error) {
+    console.error("Error fetching TVL values:", error);
+    throw error;
+  });
+};
 function fetchData() {
   var preloader = "<div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>";
   var sourcesNumberElement = document.getElementById("sources-number");
   var tokensNumberElement = document.getElementById("tokens-number");
   var dataPointsElement = document.getElementById("data-points-number");
   var clientsElement = document.getElementById("clients-number");
-  sourcesNumberElement.innerHTML = preloader;
-  tokensNumberElement.innerHTML = preloader;
-  dataPointsElement.innerHTML = preloader;
+  var tvlElement = document.getElementById("tvl-number");
+  if (sourcesNumberElement) {
+    sourcesNumberElement.innerHTML = preloader;
+  }
+  if (dataPointsElement) {
+    dataPointsElement.innerHTML = preloader;
+  }
+  if (tokensNumberElement) {
+    tokensNumberElement.innerHTML = preloader;
+  }
+  if (tvlElement) {
+    tvlElement.innerHTML = preloader;
+  }
   clientsElement.innerHTML = preloader;
+  getTotalTvlStatValue(["silostake", "aave", "uniswap"]).then(function (total) {
+    tvlElement.innerHTML = "".concat(total, " billion");
+  });
   fetch("https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json").then(function (response) {
     return response.json();
   }).then(function (data) {

@@ -177,7 +177,7 @@ const otherClients = [
     logo: "/assets/img/clients/ao.png",
     url: "https://ao.arweave.dev/",
     announcement: "https://x.com/redstone_defi/status/1832086628686574030",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Mento",
@@ -279,7 +279,7 @@ const otherClients = [
     url: "https://www.curvance.com/",
     announcement:
       "https://twitter.com/redstone_defi/status/1752735923060801699",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "ZKX",
@@ -287,7 +287,7 @@ const otherClients = [
     url: "https://zkx.fi/",
     announcement:
       "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Moola Market",
@@ -435,7 +435,7 @@ const otherClients = [
     url: "https://ionprotocol.io/",
     announcement:
       "https://twitter.com/redstone_defi/status/1772641449244594405",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Synonym",
@@ -479,7 +479,7 @@ const otherClients = [
     logo: "/assets/img/clients/bitperp.png",
     url: "https://twitter.com/bitperp",
     announcement: "",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Lyve Finance",
@@ -494,7 +494,7 @@ const otherClients = [
     url: "https://opaldefi.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1775946468458918299",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Merchant Moe",
@@ -510,7 +510,7 @@ const otherClients = [
     url: "https://gho.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1773726966040129938",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Native",
@@ -557,7 +557,7 @@ const otherClients = [
     url: "https://getclave.io/",
     announcement:
       "https://twitter.com/redstone_defi/status/1784945784460591379",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "SphereX",
@@ -565,7 +565,7 @@ const otherClients = [
     url: "https://www.sx.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1788569792741605533",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Seismic Finance",
@@ -651,7 +651,7 @@ const otherClients = [
     url: "https://www.letsgethai.com/",
     announcement:
       "https://x.com/redstone_defi/status/1851308060050161775/photo/1",
-    tvlUrl: "",
+    tvlUrl: false,
   },
 ];
 

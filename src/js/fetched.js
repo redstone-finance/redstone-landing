@@ -1,6 +1,25 @@
 import animateDataPoints from "./animate";
 import { getClientsCount } from "./clients";
 
+const getTotalTvlStatValue = (protocols) => {
+  const promises = protocols.map((protocol) =>
+    fetch(`https://api.llama.fi/tvl/${protocol}`)
+      .then((response) => response.text())
+      .then((data) => parseFloat(data) || 0)
+  );
+
+  return Promise.all(promises)
+    .then((values) => {
+      const sum = values.reduce((acc, curr) => acc + curr, 0);
+      // Format to billions with 1 decimal place
+      return (sum / 1e9).toFixed(1);
+    })
+    .catch((error) => {
+      console.error("Error fetching TVL values:", error);
+      throw error;
+    });
+};
+
 function fetchData() {
   const preloader = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`;
 
@@ -8,12 +27,26 @@ function fetchData() {
   const tokensNumberElement = document.getElementById("tokens-number");
   const dataPointsElement = document.getElementById("data-points-number");
   const clientsElement = document.getElementById("clients-number");
+  const tvlElement = document.getElementById("tvl-number");
 
-  sourcesNumberElement.innerHTML = preloader;
-  tokensNumberElement.innerHTML = preloader;
-  dataPointsElement.innerHTML = preloader;
+  if (sourcesNumberElement) {
+    sourcesNumberElement.innerHTML = preloader;
+  }
+  if (dataPointsElement) {
+    dataPointsElement.innerHTML = preloader;
+  }
+  if (tokensNumberElement) {
+    tokensNumberElement.innerHTML = preloader;
+  }
+  if (tvlElement) {
+    tvlElement.innerHTML = preloader;
+  }
+
   clientsElement.innerHTML = preloader;
 
+  getTotalTvlStatValue(["silostake", "aave", "uniswap"]).then((total) => {
+    tvlElement.innerHTML = total + " billion";
+  });
   fetch(
     "https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json"
   )
