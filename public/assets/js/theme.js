@@ -1894,11 +1894,22 @@ if (trustedByCrossChainSection) {
     _element6.appendChild(_manyMoreItem2);
   }
 }
-var getSingleTvlValue = function getSingleTvlValue() {
-  return fetch("https://api.llama.fi/tvl/silostake").then(function (response) {
-    return response.text();
+var getTotalTvlValue = function getTotalTvlValue(protocols) {
+  var promises = protocols.map(function (protocol) {
+    return fetch("https://api.llama.fi/tvl/".concat(protocol)).then(function (response) {
+      return response.text();
+    }).then(function (data) {
+      return parseFloat(data) || 0;
+    });
+  } // Convert to number, use 0 if invalid
+  );
+  return Promise.all(promises).then(function (values) {
+    var sum = values.reduce(function (acc, curr) {
+      return acc + curr;
+    }, 0);
+    return sum;
   })["catch"](function (error) {
-    console.error("Error fetching TVL:", error);
+    console.error("Error fetching TVL values:", error);
     throw error;
   });
 };
@@ -1934,8 +1945,8 @@ if (document.getElementById("tvs")) {
     });
   });
 }
-getSingleTvlValue().then(function (tvlValue) {
-  console.log(tvlValue);
+getTotalTvlValue(["silostake", "aave", "uniswap"]).then(function (total) {
+  console.log("Total TVL: $".concat(total.toLocaleString()));
 });
 
 // /* -------------------------------------------------------------------------- */

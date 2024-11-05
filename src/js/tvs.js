@@ -1,8 +1,18 @@
-const getSingleTvlValue = () => {
-  return fetch("https://api.llama.fi/tvl/silostake")
-    .then((response) => response.text())
+const getTotalTvlValue = (protocols) => {
+  const promises = protocols.map(
+    (protocol) =>
+      fetch(`https://api.llama.fi/tvl/${protocol}`)
+        .then((response) => response.text())
+        .then((data) => parseFloat(data) || 0) // Convert to number, use 0 if invalid
+  );
+
+  return Promise.all(promises)
+    .then((values) => {
+      const sum = values.reduce((acc, curr) => acc + curr, 0);
+      return sum;
+    })
     .catch((error) => {
-      console.error("Error fetching TVL:", error);
+      console.error("Error fetching TVL values:", error);
       throw error;
     });
 };
@@ -76,6 +86,6 @@ if (document.getElementById("tvs")) {
   );
 }
 
-getSingleTvlValue().then((tvlValue) => {
-  console.log(tvlValue);
+getTotalTvlValue(["silostake", "aave", "uniswap"]).then((total) => {
+  console.log(`Total TVL: $${total.toLocaleString()}`);
 });
