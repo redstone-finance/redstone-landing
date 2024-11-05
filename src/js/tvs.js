@@ -1,15 +1,15 @@
 const getTotalTvlValue = (protocols) => {
-  const promises = protocols.map(
-    (protocol) =>
-      fetch(`https://api.llama.fi/tvl/${protocol}`)
-        .then((response) => response.text())
-        .then((data) => parseFloat(data) || 0) // Convert to number, use 0 if invalid
+  const promises = protocols.map((protocol) =>
+    fetch(`https://api.llama.fi/tvl/${protocol}`)
+      .then((response) => response.text())
+      .then((data) => parseFloat(data) || 0)
   );
 
   return Promise.all(promises)
     .then((values) => {
       const sum = values.reduce((acc, curr) => acc + curr, 0);
-      return sum;
+      // Format to billions with 1 decimal place
+      return (sum / 1e9).toFixed(1);
     })
     .catch((error) => {
       console.error("Error fetching TVL values:", error);
@@ -55,27 +55,30 @@ function generateTvsElement(tvs) {
 }
 
 if (document.getElementById("tvs")) {
-  const tvsUrl =
-    "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
+  // const tvsUrl =
+  //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   const tvsElement = document.getElementById("tvs");
-  fetch(tvsUrl).then((response) => {
-    response.json().then((parsedResponse) => {
-      const tvs = parsedResponse.data[0].RedStoneTVS;
-      const parsedTvs = tvs.slice(0, 4);
-      tvsElement.innerHTML = generateTvsElement(parsedTvs);
 
-      const tooltipElements = document.querySelectorAll(".simple-tooltip");
-      tooltipElements.forEach((element) =>
-        element.addEventListener("click", (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-        })
-      );
-    });
+  getTotalTvlValue(["silostake", "aave", "uniswap"]).then((total) => {
+    tvsElement.innerHTML = generateTvsElement(total);
+    const tooltipElements = document.querySelectorAll(".simple-tooltip");
+    tooltipElements.forEach((element) =>
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+      })
+    );
   });
+  // fetch(tvsUrl).then((response) => {
+  //   response.json().then((parsedResponse) => {
+  //     const tvs = parsedResponse.data[0].RedStoneTVS;
+  //     const parsedTvs = tvs.slice(0, 4);
+  //     tvsElement.innerHTML = generateTvsElement(parsedTvs);
+  //   });
+  // });
 
-  tvsElement.innerHTML = generateTvsElement();
+  // tvsElement.innerHTML = generateTvsElement();
   const tooltipElements = document.querySelectorAll(".simple-tooltip");
   tooltipElements.forEach((element) =>
     element.addEventListener("click", (event) => {
@@ -85,7 +88,3 @@ if (document.getElementById("tvs")) {
     })
   );
 }
-
-getTotalTvlValue(["silostake", "aave", "uniswap"]).then((total) => {
-  console.log(`Total TVL: $${total.toLocaleString()}`);
-});

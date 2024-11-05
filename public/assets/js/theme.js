@@ -1901,13 +1901,13 @@ var getTotalTvlValue = function getTotalTvlValue(protocols) {
     }).then(function (data) {
       return parseFloat(data) || 0;
     });
-  } // Convert to number, use 0 if invalid
-  );
+  });
   return Promise.all(promises).then(function (values) {
     var sum = values.reduce(function (acc, curr) {
       return acc + curr;
     }, 0);
-    return sum;
+    // Format to billions with 1 decimal place
+    return (sum / 1e9).toFixed(1);
   })["catch"](function (error) {
     console.error("Error fetching TVL values:", error);
     throw error;
@@ -1918,24 +1918,29 @@ function generateTvsElement(tvs) {
   return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
 }
 if (document.getElementById("tvs")) {
-  var tvsUrl = "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
+  // const tvsUrl =
+  //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   var tvsElement = document.getElementById("tvs");
-  fetch(tvsUrl).then(function (response) {
-    response.json().then(function (parsedResponse) {
-      var tvs = parsedResponse.data[0].RedStoneTVS;
-      var parsedTvs = tvs.slice(0, 4);
-      tvsElement.innerHTML = generateTvsElement(parsedTvs);
-      var tooltipElements = document.querySelectorAll(".simple-tooltip");
-      tooltipElements.forEach(function (element) {
-        return element.addEventListener("click", function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-        });
+  getTotalTvlValue(["silostake", "aave", "uniswap"]).then(function (total) {
+    tvsElement.innerHTML = generateTvsElement(total);
+    var tooltipElements = document.querySelectorAll(".simple-tooltip");
+    tooltipElements.forEach(function (element) {
+      return element.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
       });
     });
   });
-  tvsElement.innerHTML = generateTvsElement();
+  // fetch(tvsUrl).then((response) => {
+  //   response.json().then((parsedResponse) => {
+  //     const tvs = parsedResponse.data[0].RedStoneTVS;
+  //     const parsedTvs = tvs.slice(0, 4);
+  //     tvsElement.innerHTML = generateTvsElement(parsedTvs);
+  //   });
+  // });
+
+  // tvsElement.innerHTML = generateTvsElement();
   var tooltipElements = document.querySelectorAll(".simple-tooltip");
   tooltipElements.forEach(function (element) {
     return element.addEventListener("click", function (event) {
@@ -1945,9 +1950,6 @@ if (document.getElementById("tvs")) {
     });
   });
 }
-getTotalTvlValue(["silostake", "aave", "uniswap"]).then(function (total) {
-  console.log("Total TVL: $".concat(total.toLocaleString()));
-});
 
 // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
