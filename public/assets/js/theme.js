@@ -903,6 +903,11 @@ var featuredClients = [{
   tvlUrl: "https://api.llama.fi/tvl/euler"
 }];
 var otherClients = [{
+  name: "Agora",
+  logo: "/assets/img/clients/agora.svg",
+  url: "https://www.agora.finance/",
+  tvlUrl: "https://api.llama.fi/tvl/agora"
+}, {
   name: "SkateFi",
   logo: "/assets/img/clients/skate_fi.jpg",
   url: "https://x.com/skate_fi",
