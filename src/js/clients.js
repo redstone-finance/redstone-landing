@@ -78,6 +78,13 @@ const featuredClients = [
     tvlUrl: "https://api.llama.fi/tvl/deltaprime",
   },
   {
+    name: "Lombard",
+    logo: "/assets/img/clients/lombard.png",
+    url: "https://lombard.finance/",
+    announcement: "https://x.com/redstone_defi/status/1843639665808802127",
+    tvlUrl: "https://api.llama.fi/tvl/lombard",
+  },
+  {
     name: "LayerBank",
     logo: "/assets/img/clients/layerbank.png",
     url: "https://layerbank.finance/",
