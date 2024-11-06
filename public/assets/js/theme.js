@@ -1613,7 +1613,8 @@ function fetchData() {
     tvlElement.innerHTML = preloader;
   }
   clientsElement.innerHTML = preloader;
-  getTotalTvlStatValue(["silostake", "aave", "uniswap"]).then(function (total) {
+  var protocolIds = ["evaa-protocol", "yield-yak", "venus", "fraxlend", "puffer-finance", "lombard", "solv-protocol", "zerolend", "deltaprime", "layerbank", "gearbox", "sommelier", "enzyme-finance", "euler", "angle", "gravita-protocol", "bitlen-finance", "cian-protocol", "dolomite", "cygnus", "ionic-protocol", "juice-finance", "ironclad-finance", "kinza-finance", "lista-dao", "merchant-moe", "mento", "native", "obit", "premia", "segment-finance", "satoshi-protocol", "sturdy", "sumer.money", "synonym-finance", "skate-fi", "tokemak", "yei-finance", "pendle"];
+  getTotalTvlStatValue(protocolIds).then(function (total) {
     tvlElement.innerHTML = "".concat(total, " billion");
   });
   fetch("https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json").then(function (response) {

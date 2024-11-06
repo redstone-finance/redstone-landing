@@ -44,7 +44,49 @@ function fetchData() {
 
   clientsElement.innerHTML = preloader;
 
-  getTotalTvlStatValue(["silostake", "aave", "uniswap"]).then((total) => {
+  const protocolIds = [
+    "evaa-protocol",
+    "yield-yak",
+    "venus",
+    "fraxlend",
+    "puffer-finance",
+    "lombard",
+    "solv-protocol",
+    "zerolend",
+    "deltaprime",
+    "layerbank",
+    "gearbox",
+    "sommelier",
+    "enzyme-finance",
+    "euler",
+    "angle",
+    "gravita-protocol",
+    "bitlen-finance",
+    "cian-protocol",
+    "dolomite",
+    "cygnus",
+    "ionic-protocol",
+    "juice-finance",
+    "ironclad-finance",
+    "kinza-finance",
+    "lista-dao",
+    "merchant-moe",
+    "mento",
+    "native",
+    "obit",
+    "premia",
+    "segment-finance",
+    "satoshi-protocol",
+    "sturdy",
+    "sumer.money",
+    "synonym-finance",
+    "skate-fi",
+    "tokemak",
+    "yei-finance",
+    "pendle",
+  ];
+
+  getTotalTvlStatValue(protocolIds).then((total) => {
     tvlElement.innerHTML = total + " billion";
   });
   fetch(
