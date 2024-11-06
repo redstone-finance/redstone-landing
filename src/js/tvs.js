@@ -21,37 +21,77 @@ function generateTvsElement(tvs) {
   const defillamaUrl =
     "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
   return `
-    <div class="tvs-link mt-3 mt-md-5" style="max-width: 300px;">
+    <div class="tvs-link mt-md-5 w-100" style="max-width: 490px;">
       <a
         href="${defillamaUrl}"
         target="_blank"
         referrerpolicy="no-referrer"
-        class="link-like-text-button"
+        class="link-like-text-button w-100"
       >
-        <div class="py-2 px-4">
-          <div class="flex flex-wrap align-items-center text-center justify-content-center mb-2">
-            <h6 class="mb-1">We secure <b>85</b> top-tier DeFi teams and protocols, collectively managing assets of</h3>
-            ${
-              tvs
-                ? `<h3 class="mb-0"><b>${tvs} billion</b></h3>`
-                : `<div class="flex align-items-center justify-content-center loader-container-tvs">
-                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                  </div>`
-            }
-             <div class="flex gap-2 align-items-center justify-md-content-left justify-content-center">
-            <h6 class="m-0 mt-1">RedStone TVS Cumulative &nbsp;</h6>
-          </div>
-            <div class="simple-tooltip">
-              <img src="/assets/img/icons/info.svg"/>
-              <span class="tooltiptext">
-                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.
-              </span>
+        <div class="py-3 px-4 w-100">
+          <div class="d-flex justify-content-between align-items-stretch w-100">
+            <!-- TVS Column -->
+            <div class="text-center d-flex flex-column" style="flex: 1;">
+                <div class="d-flex align-items-center justify-content-center">
+                  <h6 class="mb-1 text-nowrap">RedStone TVS  <span class="simple-tooltip ms-1">
+                    <img style="width: 13px;" src="/assets/img/icons/info.svg"/>
+                    <span class="tooltiptext text-wrap">
+                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.
+                    </span>
+                  </span></h6>
+                </div>
+                ${
+                  tvs
+                    ? `<h1 class="mt-auto mb-0"><b>$${tvs}B</b></h1>`
+                    : `<div class="d-flex align-items-center justify-content-center loader-container-tvs mt-auto">
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                      </div>`
+                }
+            </div>
+
+            <!-- Separator -->
+            <div class="mx-2 d-flex align-items-center">
+              <div style="width: 1px; height: 100%; background-color: rgba(59, 130, 246, 0.2);"></div>
+            </div>
+
+            <!-- Clients Column -->
+            <div class="text-center d-flex flex-column" style="flex: 1;">
+              <h6 class="mb-1 text-nowrap">No. of clients
+                <span class="simple-tooltip ms-1">
+                    <img style="width: 13px;" src="/assets/img/icons/info.svg"/>
+                    <span class="tooltiptext text-wrap">
+                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.
+                </span>
+              </h6>
+              <h2 class="mt-auto mb-0"><b>85</b></h2>
+            </div>
+              <div class="mx-2 d-flex align-items-center">
+              <div style="width: 1px; height: 100%; background-color: rgba(59, 130, 246, 0.2);"></div>
+            </div>
+             <div class="text-center d-flex flex-column" style="flex: 1;">
+              <h6 class="mb-1 text-nowrap">Client's TVL
+                <span class="simple-tooltip ms-1">
+                    <img style="width: 13px;" src="/assets/img/icons/info.svg"/>
+                    <span class="tooltiptext text-wrap">
+                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.
+                </span>
+              </h6>
+              <h2 class="mt-auto mb-0"><b>$17.4B</b></h2>
             </div>
           </div>
-         
         </div>
       </a>
-    </div>`;
+    </div>
+      <a
+      href="${defillamaUrl}"
+      target="_blank"
+      referrerpolicy="no-referrer"
+      class="link-like-text-button w-100"
+    >
+      <div class="mt-2 ml-4" style="font-size: 10px;">
+        <small>Sourced from</small> <img src="/assets/img/logos/defillama.svg" style="height: 20px;" />
+      </div>
+    </a>`;
 }
 
 if (document.getElementById("tvs")) {
