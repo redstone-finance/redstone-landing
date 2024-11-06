@@ -51,7 +51,6 @@ function fetchData() {
     "fraxlend",
     "puffer-finance",
     "lombard",
-    "solv-protocol",
     "zerolend",
     "deltaprime",
     "layerbank",
@@ -83,7 +82,6 @@ function fetchData() {
     "skate-fi",
     "tokemak",
     "yei-finance",
-    "pendle",
   ];
 
   getTotalTvlStatValue(protocolIds).then((total) => {

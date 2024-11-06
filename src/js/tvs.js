@@ -1,21 +1,21 @@
-// const getTotalTvlValue = (protocols) => {
-//   const promises = protocols.map((protocol) =>
-//     fetch(`https://api.llama.fi/tvl/${protocol}`)
-//       .then((response) => response.text())
-//       .then((data) => parseFloat(data) || 0)
-//   );
+const getTotalTvlValue = (protocols) => {
+  const promises = protocols.map((protocol) =>
+    fetch(`https://api.llama.fi/tvl/${protocol}`)
+      .then((response) => response.text())
+      .then((data) => parseFloat(data) || 0)
+  );
 
-//   return Promise.all(promises)
-//     .then((values) => {
-//       const sum = values.reduce((acc, curr) => acc + curr, 0);
-//       // Format to billions with 1 decimal place
-//       return (sum / 1e9).toFixed(1);
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching TVL values:", error);
-//       throw error;
-//     });
-// };
+  return Promise.all(promises)
+    .then((values) => {
+      const sum = values.reduce((acc, curr) => acc + curr, 0);
+      // Format to billions with 1 decimal place
+      return (sum / 1e9).toFixed(1);
+    })
+    .catch((error) => {
+      console.error("Error fetching TVL values:", error);
+      throw error;
+    });
+};
 
 function generateTvsElement(tvs) {
   const defillamaUrl =
@@ -55,28 +55,66 @@ function generateTvsElement(tvs) {
 }
 
 if (document.getElementById("tvs")) {
-  const tvsUrl =
-    "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
+  // const tvsUrl =
+  //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   const tvsElement = document.getElementById("tvs");
-
-  // getTotalTvlValue(["silostake", "aave", "uniswap"]).then((total) => {
-  //   // tvsElement.innerHTML = generateTvsElement(total);
-  //   const tooltipElements = document.querySelectorAll(".simple-tooltip");
-  //   tooltipElements.forEach((element) =>
-  //     element.addEventListener("click", (event) => {
-  //       event.preventDefault();
-  //       event.stopPropagation();
-  //       event.stopImmediatePropagation();
-  //     })
-  //   );
-  // });
-  fetch(tvsUrl).then((response) => {
-    response.json().then((parsedResponse) => {
-      const tvs = parsedResponse.data[0].RedStoneTVS;
-      const parsedTvs = tvs.slice(0, 4);
-      tvsElement.innerHTML = generateTvsElement(parsedTvs);
-    });
+  const protocolIds = [
+    "evaa-protocol",
+    "yield-yak",
+    "venus",
+    "fraxlend",
+    "puffer-finance",
+    "lombard",
+    "zerolend",
+    "deltaprime",
+    "layerbank",
+    "gearbox",
+    "sommelier",
+    "enzyme-finance",
+    "euler",
+    "angle",
+    "gravita-protocol",
+    "bitlen-finance",
+    "cian-protocol",
+    "dolomite",
+    "cygnus",
+    "ionic-protocol",
+    "juice-finance",
+    "ironclad-finance",
+    "kinza-finance",
+    "lista-dao",
+    "merchant-moe",
+    "mento",
+    "native",
+    "obit",
+    "premia",
+    "segment-finance",
+    "satoshi-protocol",
+    "sturdy",
+    "sumer.money",
+    "synonym-finance",
+    "skate-fi",
+    "tokemak",
+    "yei-finance",
+  ];
+  getTotalTvlValue(protocolIds).then((total) => {
+    tvsElement.innerHTML = generateTvsElement(total);
+    const tooltipElements = document.querySelectorAll(".simple-tooltip");
+    tooltipElements.forEach((element) =>
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+      })
+    );
   });
+  // fetch(tvsUrl).then((response) => {
+  //   response.json().then((parsedResponse) => {
+  //     const tvs = parsedResponse.data[0].RedStoneTVS;
+  //     const parsedTvs = tvs.slice(0, 4);
+  //     tvsElement.innerHTML = generateTvsElement(parsedTvs);
+  //   });
+  // });
 
   tvsElement.innerHTML = generateTvsElement();
   const tooltipElements = document.querySelectorAll(".simple-tooltip");
