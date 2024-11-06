@@ -890,6 +890,11 @@ var featuredClients = [{
   announcement: " https://x.com/redstone_defi/status/1715012465929723989",
   tvlUrl: "https://api.llama.fi/tvl/enzyme-finance"
 }, {
+  name: "Veda",
+  logo: "/assets/img/clients/veda.png",
+  url: "https://veda.tech/",
+  tvlUrl: "https://api.llama.fi/tvl/veda"
+}, {
   name: "Redacted Cartel",
   logo: "/assets/img/clients/redacted.png",
   url: "https://redacted.finance/",
@@ -907,6 +912,43 @@ var otherClients = [{
   logo: "/assets/img/clients/agora.svg",
   url: "https://www.agora.finance/",
   tvlUrl: "https://api.llama.fi/tvl/agora"
+}, {
+  name: "Shoebill",
+  logo: "/assets/img/clients/shoebill.png",
+  url: "https://shoebill.finance/",
+  tvlUrl: "https://api.llama.fi/tvl/shoebill"
+}, {
+  name: "Ebisu",
+  logo: "/assets/img/clients/ebisu.png",
+  url: "https://ebisu.finance/",
+  tvlUrl: "https://api.llama.fi/tvl/ebisu"
+}, {
+  name: "Satoshi Protocol",
+  logo: "/assets/img/clients/satoshi.png",
+  announcement: "https://x.com/Satoshi_BTCFi/status/1842211984567324997",
+  url: "https://www.satoshiprotocol.org/",
+  tvlUrl: "https://api.llama.fi/tvl/satoshi-protocol"
+}, {
+  name: "Mountain Protocol",
+  logo: "/assets/img/clients/mountain.png",
+  announcement: "https://x.com/redstone_defi/status/1749431872206348754",
+  url: "https://mountainprotocol.com/",
+  tvlUrl: "https://api.llama.fi/tvl/mountain-protocol"
+}, {
+  name: "Overnight",
+  logo: "/assets/img/clients/overnight.webp",
+  url: "https://overnight.fi/",
+  tvlUrl: "https://api.llama.fi/tvl/overnight"
+}, {
+  name: "Anzen",
+  logo: "/assets/img/clients/anzen.png",
+  url: "https://anzenprotocol.xyz/",
+  tvlUrl: "https://api.llama.fi/tvl/anzen"
+}, {
+  name: "Cygnus",
+  logo: "/assets/img/clients/cygnus.png",
+  url: "https://cygnus.finance/",
+  tvlUrl: "https://api.llama.fi/tvl/cygnus"
 }, {
   name: "SkateFi",
   logo: "/assets/img/clients/skate_fi.jpg",
