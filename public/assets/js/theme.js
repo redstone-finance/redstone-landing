@@ -1926,53 +1926,53 @@ if (trustedByCrossChainSection) {
     _element6.appendChild(_manyMoreItem2);
   }
 }
-var getTotalTvlValue = function getTotalTvlValue(protocols) {
-  var promises = protocols.map(function (protocol) {
-    return fetch("https://api.llama.fi/tvl/".concat(protocol)).then(function (response) {
-      return response.text();
-    }).then(function (data) {
-      return parseFloat(data) || 0;
-    });
-  });
-  return Promise.all(promises).then(function (values) {
-    var sum = values.reduce(function (acc, curr) {
-      return acc + curr;
-    }, 0);
-    // Format to billions with 1 decimal place
-    return (sum / 1e9).toFixed(1);
-  })["catch"](function (error) {
-    console.error("Error fetching TVL values:", error);
-    throw error;
-  });
-};
+
+// const getTotalTvlValue = (protocols) => {
+//   const promises = protocols.map((protocol) =>
+//     fetch(`https://api.llama.fi/tvl/${protocol}`)
+//       .then((response) => response.text())
+//       .then((data) => parseFloat(data) || 0)
+//   );
+
+//   return Promise.all(promises)
+//     .then((values) => {
+//       const sum = values.reduce((acc, curr) => acc + curr, 0);
+//       // Format to billions with 1 decimal place
+//       return (sum / 1e9).toFixed(1);
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching TVL values:", error);
+//       throw error;
+//     });
+// };
+
 function generateTvsElement(tvs) {
   var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
-  return "\n    <div class=\"tvs-link mt-md-5 w-100\" style=\"max-width: 490px;\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button w-100\"\n      >\n        <div class=\"py-3 px-4 w-100\">\n          <div class=\"d-flex justify-content-between align-items-stretch w-100\">\n            <!-- TVS Column -->\n            <div class=\"text-center d-flex flex-column\" style=\"flex: 1;\">\n                <div class=\"d-flex align-items-center justify-content-center\">\n                  <h6 class=\"mb-1 text-nowrap\">RedStone TVS  <span class=\"simple-tooltip ms-1\">\n                    <img style=\"width: 13px;\" src=\"/assets/img/icons/info.svg\"/>\n                    <span class=\"tooltiptext text-wrap\">\n                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n                    </span>\n                  </span></h6>\n                </div>\n                ").concat(tvs ? "<h1 class=\"mt-auto mb-0\"><b>$".concat(tvs, "B</b></h1>") : "<div class=\"d-flex align-items-center justify-content-center loader-container-tvs mt-auto\">\n                        <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                      </div>", "\n            </div>\n\n            <!-- Separator -->\n            <div class=\"mx-2 d-flex align-items-center\">\n              <div style=\"width: 1px; height: 100%; background-color: rgba(59, 130, 246, 0.2);\"></div>\n            </div>\n\n            <!-- Clients Column -->\n            <div class=\"text-center d-flex flex-column\" style=\"flex: 1;\">\n              <h6 class=\"mb-1 text-nowrap\">No. of clients\n                <span class=\"simple-tooltip ms-1\">\n                    <img style=\"width: 13px;\" src=\"/assets/img/icons/info.svg\"/>\n                    <span class=\"tooltiptext text-wrap\">\n                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n                </span>\n              </h6>\n              <h2 class=\"mt-auto mb-0\"><b>85</b></h2>\n            </div>\n              <div class=\"mx-2 d-flex align-items-center\">\n              <div style=\"width: 1px; height: 100%; background-color: rgba(59, 130, 246, 0.2);\"></div>\n            </div>\n             <div class=\"text-center d-flex flex-column\" style=\"flex: 1;\">\n              <h6 class=\"mb-1 text-nowrap\">Client's TVL\n                <span class=\"simple-tooltip ms-1\">\n                    <img style=\"width: 13px;\" src=\"/assets/img/icons/info.svg\"/>\n                    <span class=\"tooltiptext text-wrap\">\n                      TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n                </span>\n              </h6>\n              <h2 class=\"mt-auto mb-0\"><b>$17.4B</b></h2>\n            </div>\n          </div>\n        </div>\n      </a>\n    </div>\n      <a\n      href=\"").concat(defillamaUrl, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button w-100\"\n    >\n      <div class=\"mt-2 ml-4\" style=\"font-size: 10px;\">\n        <small>Sourced from</small> <img src=\"/assets/img/logos/defillama.svg\" style=\"height: 20px;\" />\n      </div>\n    </a>");
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">RedStone TVS sourced from</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
 }
 if (document.getElementById("tvs")) {
-  // const tvsUrl =
-  //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
+  var tvsUrl = "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   var tvsElement = document.getElementById("tvs");
-  getTotalTvlValue(["silostake", "aave", "uniswap"]).then(function (total) {
-    tvsElement.innerHTML = generateTvsElement(total);
-    var tooltipElements = document.querySelectorAll(".simple-tooltip");
-    tooltipElements.forEach(function (element) {
-      return element.addEventListener("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-      });
+
+  // getTotalTvlValue(["silostake", "aave", "uniswap"]).then((total) => {
+  //   // tvsElement.innerHTML = generateTvsElement(total);
+  //   const tooltipElements = document.querySelectorAll(".simple-tooltip");
+  //   tooltipElements.forEach((element) =>
+  //     element.addEventListener("click", (event) => {
+  //       event.preventDefault();
+  //       event.stopPropagation();
+  //       event.stopImmediatePropagation();
+  //     })
+  //   );
+  // });
+  fetch(tvsUrl).then(function (response) {
+    response.json().then(function (parsedResponse) {
+      var tvs = parsedResponse.data[0].RedStoneTVS;
+      var parsedTvs = tvs.slice(0, 4);
+      tvsElement.innerHTML = generateTvsElement(parsedTvs);
     });
   });
-  // fetch(tvsUrl).then((response) => {
-  //   response.json().then((parsedResponse) => {
-  //     const tvs = parsedResponse.data[0].RedStoneTVS;
-  //     const parsedTvs = tvs.slice(0, 4);
-  //     tvsElement.innerHTML = generateTvsElement(parsedTvs);
-  //   });
-  // });
-
-  // tvsElement.innerHTML = generateTvsElement();
+  tvsElement.innerHTML = generateTvsElement();
   var tooltipElements = document.querySelectorAll(".simple-tooltip");
   tooltipElements.forEach(function (element) {
     return element.addEventListener("click", function (event) {
