@@ -9,7 +9,10 @@ function fetchData() {
   const dataPointsElement = document.getElementById("data-points-number");
   const clientsElement = document.getElementById("clients-number");
 
-  sourcesNumberElement.innerHTML = preloader;
+  if (sourcesNumberElement) {
+    sourcesNumberElement.innerHTML = preloader;
+  }
+
   tokensNumberElement.innerHTML = preloader;
   dataPointsElement.innerHTML = preloader;
   clientsElement.innerHTML = preloader;

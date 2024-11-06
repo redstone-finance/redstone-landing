@@ -161,7 +161,10 @@ const featuredClients = [
     name: "Veda",
     logo: "/assets/img/clients/veda.png",
     url: "https://veda.tech/",
-    tvlUrl: "https://api.llama.fi/tvl/veda",
+    tvlUrl: [
+      "https://api.llama.fi/tvl/ether.fi-liquid",
+      "https://api.llama.fi/tvl/ether.fi-vaults",
+    ],
   },
   {
     name: "Redacted Cartel",
@@ -192,7 +195,7 @@ const otherClients = [
     name: "Shoebill",
     logo: "/assets/img/clients/shoebill.png",
     url: "https://shoebill.finance/",
-    tvlUrl: "https://api.llama.fi/tvl/shoebill",
+    tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
   },
   {
     name: "Ebisu",
@@ -837,20 +840,49 @@ if (document.getElementById("featured-clients")) {
       featuredClientsElement.appendChild(card);
     }
     if (client.tvlUrl) {
-      fetch(client.tvlUrl).then((response) => {
-        response.json().then((tvl) => {
-          const clientCard = document.getElementById(
-            featuredClients[index].name
-          );
-          clientCard.innerHTML = generateClientCard(
-            client.name,
-            client.logo,
-            client.url,
-            client.announcement,
-            tvl
-          );
-        });
-      });
+      if (Array.isArray(client.tvlUrl)) {
+        console.log("tvl is array", client.name);
+        const promises = client.tvlUrl.map((url) =>
+          fetch(url).then((response) => response.json())
+        );
+
+        Promise.all(promises)
+          .then((tvlValues) => {
+            const totalTvl = tvlValues.reduce((sum, tvl) => sum + tvl, 0);
+            const clientCard = document.getElementById(
+              featuredClients[index].name
+            );
+            clientCard.innerHTML = generateClientCard(
+              client.name,
+              client.logo,
+              client.url,
+              client.announcement,
+              totalTvl
+            );
+          })
+          .catch((error) => {
+            console.error("Error fetching TVL values:", error);
+          });
+      } else {
+        // Handle single URL case
+        fetch(client.tvlUrl)
+          .then((response) => response.json())
+          .then((tvl) => {
+            const clientCard = document.getElementById(
+              featuredClients[index].name
+            );
+            clientCard.innerHTML = generateClientCard(
+              client.name,
+              client.logo,
+              client.url,
+              client.announcement,
+              tvl
+            );
+          })
+          .catch((error) => {
+            console.error("Error fetching TVL value:", error);
+          });
+      }
     }
   });
 }
