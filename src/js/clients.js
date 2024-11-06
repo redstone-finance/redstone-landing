@@ -167,12 +167,12 @@ const featuredClients = [
     ],
   },
   {
-    name: "Redacted Cartel",
+    name: "Dinero",
     logo: "/assets/img/clients/redacted.png",
-    url: "https://redacted.finance/",
+    url: "https://dinero.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1759608928189727042",
-    tvlUrl: "https://api.llama.fi/tvl/redacted",
+    tvlUrl: "https://api.llama.fi/tvl/dinero",
   },
   {
     name: "Euler V2",
@@ -221,13 +221,13 @@ const otherClients = [
     name: "Overnight",
     logo: "/assets/img/clients/overnight.webp",
     url: "https://overnight.fi/",
-    tvlUrl: "https://api.llama.fi/tvl/overnight",
+    tvlUrl: "https://api.llama.fi/tvl/overnight-finance",
   },
   {
     name: "Anzen",
-    logo: "/assets/img/clients/anzen.png",
-    url: "https://anzenprotocol.xyz/",
-    tvlUrl: "https://api.llama.fi/tvl/anzen",
+    logo: "/assets/img/clients/anzen.jpg",
+    url: "https://x.com/AnzenFinance",
+    tvlUrl: "https://api.llama.fi/tvl/anzen-finance",
   },
   {
     name: "Cygnus",
@@ -512,7 +512,7 @@ const otherClients = [
     url: "https://ionprotocol.io/",
     announcement:
       "https://twitter.com/redstone_defi/status/1772641449244594405",
-    tvlUrl: "",
+    tvlUrl: "https://api.llama.fi/tvl/ion-protocol",
   },
   {
     name: "Sumer.money",
@@ -548,7 +548,7 @@ const otherClients = [
     url: "https://re7.capital/",
   },
   {
-    name: "CoinDesk Indices",
+    name: "CoinDesk Indices CESR",
     logo: "/assets/img/clients/coindesk.jpg",
     announcement: "https://x.com/perkinscr97/status/1833522573885215038",
     url: "https://www.coindesk.com/",
