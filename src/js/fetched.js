@@ -1,9 +1,16 @@
 import animateDataPoints from "./animate";
-import { getClientsCount } from "./clients";
+import { getClientsCount, allClients } from "./clients";
 
-const getTotalTvlStatValue = (protocols) => {
-  const promises = protocols.map((protocol) =>
-    fetch(`https://api.llama.fi/tvl/${protocol}`)
+const getAllTvlUrls = (clients) => {
+  return clients
+    .map((client) => client.tvlUrl)
+    .filter((tvl) => tvl)
+    .flat();
+};
+
+const getTotalTvlStatValue = (urls) => {
+  const promises = urls.map((url) =>
+    fetch(url)
       .then((response) => response.text())
       .then((data) => parseFloat(data) || 0)
   );
@@ -44,47 +51,7 @@ function fetchData() {
 
   clientsElement.innerHTML = preloader;
 
-  const protocolIds = [
-    "evaa-protocol",
-    "yield-yak",
-    "venus",
-    "fraxlend",
-    "puffer-finance",
-    "lombard",
-    "zerolend",
-    "deltaprime",
-    "layerbank",
-    "gearbox",
-    "sommelier",
-    "enzyme-finance",
-    "euler",
-    "angle",
-    "gravita-protocol",
-    "bitlen-finance",
-    "cian-protocol",
-    "dolomite",
-    "cygnus",
-    "ionic-protocol",
-    "juice-finance",
-    "ironclad-finance",
-    "kinza-finance",
-    "lista-dao",
-    "merchant-moe",
-    "mento",
-    "native",
-    "obit",
-    "premia",
-    "segment-finance",
-    "satoshi-protocol",
-    "sturdy",
-    "sumer.money",
-    "synonym-finance",
-    "skate-fi",
-    "tokemak",
-    "yei-finance",
-  ];
-
-  getTotalTvlStatValue(protocolIds).then((total) => {
+  getTotalTvlStatValue(getAllTvlUrls(allClients)).then((total) => {
     tvlElement.innerHTML = total + " billion";
   });
   fetch(

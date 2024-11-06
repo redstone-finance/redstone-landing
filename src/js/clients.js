@@ -891,10 +891,9 @@ if (document.getElementById("featured-clients")) {
     }
   });
 }
-
+const allClients = [...featuredClients, ...otherClients];
 if (document.getElementById("all-clients")) {
   const allClientsElement = document.getElementById("all-clients");
-  const allClients = [...featuredClients, ...otherClients];
   allClients.sort(sortFn).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
@@ -953,4 +952,4 @@ if (document.getElementById("all-clients")) {
   });
 }
 
-export default { getClientsCount, generateClientCard };
+export default { getClientsCount, generateClientCard, allClients };

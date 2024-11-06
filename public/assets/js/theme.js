@@ -1446,9 +1446,9 @@ if (document.getElementById("featured-clients")) {
     }
   });
 }
+var allClients = [].concat(featuredClients, otherClients);
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
-  var allClients = [].concat(featuredClients, otherClients);
   allClients.sort(sortFn).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
@@ -1574,9 +1574,16 @@ if (dataSourcesCrossChainSection) {
     _element3.appendChild(_manyMoreItem);
   }
 }
-var getTotalTvlStatValue = function getTotalTvlStatValue(protocols) {
-  var promises = protocols.map(function (protocol) {
-    return fetch("https://api.llama.fi/tvl/".concat(protocol)).then(function (response) {
+var getAllTvlUrls = function getAllTvlUrls(clients) {
+  return clients.map(function (client) {
+    return client.tvlUrl;
+  }).filter(function (tvl) {
+    return tvl;
+  }).flat();
+};
+var getTotalTvlStatValue = function getTotalTvlStatValue(urls) {
+  var promises = urls.map(function (url) {
+    return fetch(url).then(function (response) {
       return response.text();
     }).then(function (data) {
       return parseFloat(data) || 0;
@@ -1613,8 +1620,7 @@ function fetchData() {
     tvlElement.innerHTML = preloader;
   }
   clientsElement.innerHTML = preloader;
-  var protocolIds = ["evaa-protocol", "yield-yak", "venus", "fraxlend", "puffer-finance", "lombard", "zerolend", "deltaprime", "layerbank", "gearbox", "sommelier", "enzyme-finance", "euler", "angle", "gravita-protocol", "bitlen-finance", "cian-protocol", "dolomite", "cygnus", "ionic-protocol", "juice-finance", "ironclad-finance", "kinza-finance", "lista-dao", "merchant-moe", "mento", "native", "obit", "premia", "segment-finance", "satoshi-protocol", "sturdy", "sumer.money", "synonym-finance", "skate-fi", "tokemak", "yei-finance"];
-  getTotalTvlStatValue(protocolIds).then(function (total) {
+  getTotalTvlStatValue(getAllTvlUrls(allClients)).then(function (total) {
     tvlElement.innerHTML = "".concat(total, " billion");
   });
   fetch("https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json").then(function (response) {
