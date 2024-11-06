@@ -30,7 +30,7 @@ function generateTvsElement(tvs) {
       >
         <div class="py-2 px-4">
           <div class="flex flex-wrap align-items-center text-center justify-content-center mb-2">
-            <h6 class="mb-1">We secure 85 top-tier DeFi teams and protocols, collectively managing assets of</h3>
+            <h6 class="mb-1">We secure <b>85</b> top-tier DeFi teams and protocols, collectively managing assets of</h3>
             ${
               tvs
                 ? `<h3 class="mb-0"><b>${tvs} billion</b></h3>`
