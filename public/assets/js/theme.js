@@ -872,12 +872,6 @@ var featuredClients = [{
   announcement: "https://twitter.com/redstone_defi/status/1750184210432930055",
   tvlUrl: "https://api.llama.fi/tvl/stakestone"
 }, {
-  name: "Symbiotic",
-  logo: "/assets/img/clients/symbiotic.webp",
-  url: "https://symbiotic.fi/",
-  announcement: "https://x.com/redstone_defi/status/1824456969962525145",
-  tvlUrl: "https://api.llama.fi/tvl/symbiotic"
-}, {
   name: "Sommelier",
   logo: "/assets/img/clients/sommelier.png",
   url: "https://www.sommelier.finance/",
@@ -901,14 +895,20 @@ var featuredClients = [{
   url: "https://www.euler.finance/#/",
   announcement: "https://twitter.com/redstone_defi/status/1786425647528874308",
   tvlUrl: "https://api.llama.fi/tvl/euler"
-}, {
+}];
+var otherClients = [{
   name: "SkateFi",
   logo: "/assets/img/clients/skate_fi.jpg",
   url: "https://x.com/skate_fi",
   announcement: "https://x.com/redstone_defi/status/1826590572741808172",
   tvlUrl: "https://api.llama.fi/tvl/skate-fi"
-}];
-var otherClients = [{
+}, {
+  name: "Symbiotic",
+  logo: "/assets/img/clients/symbiotic.webp",
+  url: "https://symbiotic.fi/",
+  announcement: "https://x.com/redstone_defi/status/1824456969962525145",
+  tvlUrl: "https://api.llama.fi/tvl/symbiotic"
+}, {
   name: "AO",
   logo: "/assets/img/clients/ao.png",
   url: "https://ao.arweave.dev/",
