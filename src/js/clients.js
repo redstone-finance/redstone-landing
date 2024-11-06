@@ -109,12 +109,24 @@ const featuredClients = [
     tvlUrl: "https://api.llama.fi/tvl/balancer",
   },
   {
+    name: "Solv",
+    logo: "/assets/img/clients/solv.jpg",
+    url: "https://solv.finance/",
+    announcement: "https://x.com/redstone_defi/status/1841840786109038861",
+    tvlUrl: "https://api.llama.fi/tvl/solv-protocol",
+  },
+  {
     name: "Swell",
     logo: "/assets/img/clients/swell.png",
     url: "https://www.swellnetwork.io/",
     announcement:
       "https://blog.redstone.finance/2023/06/22/case-study-redstone-oracles-provides-sweth-feed-for-swell-network",
     tvlUrl: "https://api.llama.fi/tvl/swell",
+  },
+  {
+    name: "Kraken (kBTC)",
+    logo: "/assets/img/clients/kraken.jpg",
+    url: "https://www.kraken.com/",
   },
   {
     name: "KelpDAO",
@@ -216,7 +228,7 @@ const otherClients = [
   },
   {
     name: "Cygnus",
-    logo: "/assets/img/clients/cygnus.png",
+    logo: "/assets/img/clients/cygnus.jpg",
     url: "https://cygnus.finance/",
     tvlUrl: "https://api.llama.fi/tvl/cygnus",
   },
@@ -498,6 +510,45 @@ const otherClients = [
     announcement:
       "https://twitter.com/redstone_defi/status/1772641449244594405",
     tvlUrl: "",
+  },
+  {
+    name: "Sumer.money",
+    logo: "/assets/img/clients/sumer-money.webp",
+    url: "https://sumer.money/",
+    tvlUrl: "https://api.llama.fi/tvl/sumer.money",
+  },
+  {
+    name: "Alien Finance",
+    logo: "/assets/img/clients/alien.jpg",
+    url: "https://alien.finance/",
+    tvlUrl: "https://api.llama.fi/tvl/alien-finance",
+  },
+  {
+    name: "Lore Finance",
+    logo: "/assets/img/clients/lore.jpg",
+    url: "https://lore.finance/",
+    tvlUrl: "https://api.llama.fi/tvl/lore-finance",
+  },
+  {
+    name: "Gauntlet",
+    logo: "/assets/img/clients/gauntlet.jpeg",
+    url: "https://www.gauntlet.xyz/",
+  },
+  {
+    name: "fBomb",
+    logo: "/assets/img/clients/fbomb.jpg",
+    url: "https://x.com/fbombopera",
+  },
+  {
+    name: "Re7",
+    logo: "/assets/img/clients/re7.jpeg",
+    url: "https://re7.capital/",
+  },
+  {
+    name: "CoinDesk Indices",
+    logo: "/assets/img/clients/coindesk.jpg",
+    announcement: "https://x.com/perkinscr97/status/1833522573885215038",
+    url: "https://www.coindesk.com/",
   },
   {
     name: "Synonym",
