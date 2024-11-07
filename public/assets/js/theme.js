@@ -1575,7 +1575,9 @@ if (dataSourcesCrossChainSection) {
   }
 }
 var getAllTvlUrls = function getAllTvlUrls(clients) {
-  return clients.map(function (client) {
+  return clients.filter(function (client) {
+    return client.name !== "Pendle" && client.name !== "Solv";
+  }).map(function (client) {
     return client.tvlUrl;
   }).filter(function (tvl) {
     return tvl;
