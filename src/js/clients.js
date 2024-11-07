@@ -127,6 +127,7 @@ const featuredClients = [
     name: "Kraken (kBTC)",
     logo: "/assets/img/clients/kraken.jpg",
     url: "https://www.kraken.com/",
+    tvlUrl: "https://api.llama.fi/tvl/kraken",
   },
   {
     name: "KelpDAO",

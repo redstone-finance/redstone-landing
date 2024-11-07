@@ -874,7 +874,8 @@ var featuredClients = [{
 }, {
   name: "Kraken (kBTC)",
   logo: "/assets/img/clients/kraken.jpg",
-  url: "https://www.kraken.com/"
+  url: "https://www.kraken.com/",
+  tvlUrl: "https://api.llama.fi/tvl/kraken"
 }, {
   name: "KelpDAO",
   logo: "/assets/img/clients/kelp-dao.png",
