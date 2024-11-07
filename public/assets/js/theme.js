@@ -1391,6 +1391,15 @@ var otherClients = [{
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
+var sortClientsByUrlsPresence = function sortClientsByUrlsPresence(clients) {
+  return clients.sort(function (a, b) {
+    if (a.tvlUrl && !b.tvlUrl) return -1;
+    if (!a.tvlUrl && b.tvlUrl) return 1;
+    if (a.announcement && !b.announcement) return -1;
+    if (!a.announcement && b.announcement) return 1;
+    return 0;
+  });
+};
 function emptyAnnouncementLink(name) {
   return name === "Balancer" ? "<a class=\"inactive-link\">\n    <p>Announcement</p>\n  </a>" : "";
 }
@@ -1398,18 +1407,9 @@ function generateClientCard(name, logo, url, announcement, tvl) {
   var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
   return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "".concat(emptyAnnouncementLink(name)), "\n      </div>\n    </a>");
 }
-function sortFn(a, b) {
-  if (a.name.toLowerCase() < b.name.toLowerCase()) {
-    return -1;
-  }
-  if (a.name.toLowerCase() > b.name.toLowerCase()) {
-    return 1;
-  }
-  return 0;
-}
 if (document.getElementById("featured-clients")) {
   var featuredClientsElement = document.getElementById("featured-clients");
-  featuredClients.forEach(function (client, index) {
+  sortClientsByUrlsPresence(featuredClients).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
@@ -1428,7 +1428,7 @@ if (document.getElementById("featured-clients")) {
           var totalTvl = tvlValues.reduce(function (sum, tvl) {
             return sum + tvl;
           }, 0);
-          var clientCard = document.getElementById(featuredClients[index].name);
+          var clientCard = document.getElementById(sortClientsByUrlsPresence(featuredClients)[index].name);
           clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, totalTvl);
         })["catch"](function (error) {
           console.error("Error fetching TVL values:", error);
@@ -1450,7 +1450,7 @@ if (document.getElementById("featured-clients")) {
 var allClients = [].concat(featuredClients, otherClients);
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
-  allClients.sort(sortFn).forEach(function (client, index) {
+  sortClientsByUrlsPresence(allClients).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);

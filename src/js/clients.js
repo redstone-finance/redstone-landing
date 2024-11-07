@@ -782,6 +782,18 @@ function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
 
+const sortClientsByUrlsPresence = (clients) => {
+  return clients.sort((a, b) => {
+    if (a.tvlUrl && !b.tvlUrl) return -1;
+    if (!a.tvlUrl && b.tvlUrl) return 1;
+
+    if (a.announcement && !b.announcement) return -1;
+    if (!a.announcement && b.announcement) return 1;
+
+    return 0;
+  });
+};
+
 function emptyAnnouncementLink(name) {
   return name === "Balancer"
     ? `<a class="inactive-link">
@@ -821,19 +833,9 @@ function generateClientCard(name, logo, url, announcement, tvl) {
     </a>`;
 }
 
-function sortFn(a, b) {
-  if (a.name.toLowerCase() < b.name.toLowerCase()) {
-    return -1;
-  }
-  if (a.name.toLowerCase() > b.name.toLowerCase()) {
-    return 1;
-  }
-  return 0;
-}
-
 if (document.getElementById("featured-clients")) {
   const featuredClientsElement = document.getElementById("featured-clients");
-  featuredClients.forEach((client, index) => {
+  sortClientsByUrlsPresence(featuredClients).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
@@ -856,7 +858,7 @@ if (document.getElementById("featured-clients")) {
           .then((tvlValues) => {
             const totalTvl = tvlValues.reduce((sum, tvl) => sum + tvl, 0);
             const clientCard = document.getElementById(
-              featuredClients[index].name
+              sortClientsByUrlsPresence(featuredClients)[index].name
             );
             clientCard.innerHTML = generateClientCard(
               client.name,
@@ -893,9 +895,10 @@ if (document.getElementById("featured-clients")) {
   });
 }
 const allClients = [...featuredClients, ...otherClients];
+
 if (document.getElementById("all-clients")) {
   const allClientsElement = document.getElementById("all-clients");
-  allClients.sort(sortFn).forEach((client, index) => {
+  sortClientsByUrlsPresence(allClients).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
