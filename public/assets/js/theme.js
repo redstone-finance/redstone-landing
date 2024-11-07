@@ -927,7 +927,8 @@ var otherClients = [{
   name: "Shoebill",
   logo: "/assets/img/clients/shoebill.png",
   url: "https://shoebill.finance/",
-  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance"
+  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
+  announcement: "https://x.com/ShoebillFinance/status/1808170804829622572"
 }, {
   name: "Ebisu",
   logo: "/assets/img/clients/ebisu.png",
@@ -982,7 +983,8 @@ var otherClients = [{
   name: "EVAA",
   logo: "/assets/img/clients/evaa.jpeg",
   url: "https://evaa.finance/",
-  tvlUrl: "https://api.llama.fi/tvl/evaa-protocol"
+  tvlUrl: "https://api.llama.fi/tvl/evaa-protocol",
+  announcement: "https://twitter.com/redstone_defi/status/1745823159587397833"
 }, {
   name: "Mento",
   logo: "/assets/img/clients/mento.png",
@@ -1059,14 +1061,13 @@ var otherClients = [{
   name: "Curvance",
   logo: "/assets/img/clients/curvance.png",
   url: "https://www.curvance.com/",
-  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699",
-  tvlUrl: false
+  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699"
 }, {
   name: "ZKX",
   logo: "/assets/img/clients/zkx.png",
   url: "https://zkx.fi/",
   announcement: "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-  tvlUrl: false
+  tvlUrl: "https://api.llama.fi/tvl/zkx"
 }, {
   name: "Moola Market",
   logo: "/assets/img/clients/moola.png",
@@ -1199,7 +1200,8 @@ var otherClients = [{
 }, {
   name: "Gauntlet",
   logo: "/assets/img/clients/gauntlet.jpeg",
-  url: "https://www.gauntlet.xyz/"
+  url: "https://www.gauntlet.xyz/",
+  announcement: "https://x.com/redstone_defi/status/1776268198301860208"
 }, {
   name: "fBomb",
   logo: "/assets/img/clients/fbomb.jpg",
@@ -1207,7 +1209,8 @@ var otherClients = [{
 }, {
   name: "Re7",
   logo: "/assets/img/clients/re7.jpeg",
-  url: "https://re7.capital/"
+  url: "https://re7.capital/",
+  announcement: "https://x.com/redstone_defi/status/1753335171020136620"
 }, {
   name: "CoinDesk Indices CESR",
   logo: "/assets/img/clients/coindesk.jpg",
@@ -2093,7 +2096,7 @@ var getTotalTvlValue = function getTotalTvlValue(protocols) {
 function generateTvsElement(tvs) {
   // const defillamaUrl =
   //   "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
-  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ".concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">RedStone Total Value Secured, based on TVL from</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n    </div>");
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ".concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">RedStone TVS, based on TVL from</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n    </div>");
 }
 if (document.getElementById("tvs")) {
   // const tvsUrl =

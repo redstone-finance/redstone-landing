@@ -197,6 +197,7 @@ const otherClients = [
     logo: "/assets/img/clients/shoebill.png",
     url: "https://shoebill.finance/",
     tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
+    announcement: "https://x.com/ShoebillFinance/status/1808170804829622572",
   },
   {
     name: "Ebisu",
@@ -262,6 +263,8 @@ const otherClients = [
     logo: "/assets/img/clients/evaa.jpeg",
     url: "https://evaa.finance/",
     tvlUrl: "https://api.llama.fi/tvl/evaa-protocol",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1745823159587397833",
   },
   {
     name: "Mento",
@@ -363,7 +366,6 @@ const otherClients = [
     url: "https://www.curvance.com/",
     announcement:
       "https://twitter.com/redstone_defi/status/1752735923060801699",
-    tvlUrl: false,
   },
   {
     name: "ZKX",
@@ -371,7 +373,7 @@ const otherClients = [
     url: "https://zkx.fi/",
     announcement:
       "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-    tvlUrl: false,
+    tvlUrl: "https://api.llama.fi/tvl/zkx",
   },
   {
     name: "Moola Market",
@@ -543,6 +545,7 @@ const otherClients = [
     name: "Gauntlet",
     logo: "/assets/img/clients/gauntlet.jpeg",
     url: "https://www.gauntlet.xyz/",
+    announcement: "https://x.com/redstone_defi/status/1776268198301860208",
   },
   {
     name: "fBomb",
@@ -553,6 +556,7 @@ const otherClients = [
     name: "Re7",
     logo: "/assets/img/clients/re7.jpeg",
     url: "https://re7.capital/",
+    announcement: "https://x.com/redstone_defi/status/1753335171020136620",
   },
   {
     name: "CoinDesk Indices CESR",
