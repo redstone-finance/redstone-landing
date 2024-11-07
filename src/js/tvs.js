@@ -18,16 +18,10 @@ const getTotalTvlValue = (protocols) => {
 };
 
 function generateTvsElement(tvs) {
-  const defillamaUrl =
-    "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
+  // const defillamaUrl =
+  //   "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
   return `
     <div class="tvs-link mt-3 mt-md-5">
-      <a
-        href="${defillamaUrl}"
-        target="_blank"
-        referrerpolicy="no-referrer"
-        class="link-like-text-button"
-      >
         <div class="py-2 px-4">
           <div class="flex gap-2 align-items-center justify-content-center mb-2">
             <h3 class="mb-0">Protecting</h3>
@@ -50,7 +44,6 @@ function generateTvsElement(tvs) {
             <img src="/assets/img/logos/defillama.svg" />
           </div>
         </div>
-      </a>
     </div>`;
 }
 
