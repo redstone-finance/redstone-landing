@@ -874,7 +874,8 @@ var featuredClients = [{
 }, {
   name: "Kraken (kBTC)",
   logo: "/assets/img/clients/kraken.jpg",
-  url: "https://www.kraken.com/"
+  url: "https://www.kraken.com/",
+  tvlUrl: "https://api.llama.fi/tvl/kraken"
 }, {
   name: "KelpDAO",
   logo: "/assets/img/clients/kelp-dao.png",
@@ -926,12 +927,13 @@ var otherClients = [{
   name: "Shoebill",
   logo: "/assets/img/clients/shoebill.png",
   url: "https://shoebill.finance/",
-  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance"
+  tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
+  announcement: "https://x.com/ShoebillFinance/status/1808170804829622572"
 }, {
   name: "Ebisu",
   logo: "/assets/img/clients/ebisu.png",
   url: "https://ebisu.finance/",
-  tvlUrl: "https://api.llama.fi/tvl/ebisu"
+  tvlUrl: "https://api.llama.fi/tvl/ebisu-finance"
 }, {
   name: "Satoshi Protocol",
   logo: "/assets/img/clients/satoshi.png",
@@ -976,12 +978,13 @@ var otherClients = [{
   logo: "/assets/img/clients/ao.png",
   url: "https://ao.arweave.dev/",
   announcement: "https://x.com/redstone_defi/status/1832086628686574030",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "EVAA",
   logo: "/assets/img/clients/evaa.jpeg",
   url: "https://evaa.finance/",
-  tvlUrl: "https://api.llama.fi/tvl/evaa-protocol"
+  tvlUrl: "https://api.llama.fi/tvl/evaa-protocol",
+  announcement: "https://twitter.com/redstone_defi/status/1745823159587397833"
 }, {
   name: "Mento",
   logo: "/assets/img/clients/mento.png",
@@ -1058,14 +1061,13 @@ var otherClients = [{
   name: "Curvance",
   logo: "/assets/img/clients/curvance.png",
   url: "https://www.curvance.com/",
-  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699",
-  tvlUrl: ""
+  announcement: "https://twitter.com/redstone_defi/status/1752735923060801699"
 }, {
   name: "ZKX",
   logo: "/assets/img/clients/zkx.png",
   url: "https://zkx.fi/",
   announcement: "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-  tvlUrl: ""
+  tvlUrl: "https://api.llama.fi/tvl/zkx"
 }, {
   name: "Moola Market",
   logo: "/assets/img/clients/moola.png",
@@ -1198,7 +1200,8 @@ var otherClients = [{
 }, {
   name: "Gauntlet",
   logo: "/assets/img/clients/gauntlet.jpeg",
-  url: "https://www.gauntlet.xyz/"
+  url: "https://www.gauntlet.xyz/",
+  announcement: "https://x.com/redstone_defi/status/1776268198301860208"
 }, {
   name: "fBomb",
   logo: "/assets/img/clients/fbomb.jpg",
@@ -1206,7 +1209,8 @@ var otherClients = [{
 }, {
   name: "Re7",
   logo: "/assets/img/clients/re7.jpeg",
-  url: "https://re7.capital/"
+  url: "https://re7.capital/",
+  announcement: "https://x.com/redstone_defi/status/1753335171020136620"
 }, {
   name: "CoinDesk Indices CESR",
   logo: "/assets/img/clients/coindesk.jpg",
@@ -1247,7 +1251,7 @@ var otherClients = [{
   logo: "/assets/img/clients/bitperp.png",
   url: "https://twitter.com/bitperp",
   announcement: "",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Lyve Finance",
   logo: "/assets/img/clients/lyve.png",
@@ -1259,7 +1263,7 @@ var otherClients = [{
   logo: "/assets/img/clients/opal.png",
   url: "https://opaldefi.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1775946468458918299",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Merchant Moe",
   logo: "/assets/img/clients/merchant-moe.png",
@@ -1271,7 +1275,7 @@ var otherClients = [{
   logo: "/assets/img/clients/gho.png",
   url: "https://gho.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1773726966040129938",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Native",
   logo: "/assets/img/clients/native.png",
@@ -1307,13 +1311,13 @@ var otherClients = [{
   logo: "/assets/img/clients/clave.png",
   url: "https://getclave.io/",
   announcement: "https://twitter.com/redstone_defi/status/1784945784460591379",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "SphereX",
   logo: "/assets/img/clients/spherex.png",
   url: "https://www.sx.xyz/",
   announcement: "https://twitter.com/redstone_defi/status/1788569792741605533",
-  tvlUrl: ""
+  tvlUrl: false
 }, {
   name: "Seismic Finance",
   logo: "/assets/img/clients/seismic-finance.png",
@@ -1385,11 +1389,20 @@ var otherClients = [{
   logo: "/assets/img/clients/hai.webp",
   url: "https://www.letsgethai.com/",
   announcement: "https://x.com/redstone_defi/status/1851308060050161775/photo/1",
-  tvlUrl: ""
+  tvlUrl: false
 }];
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
+var sortClientsByUrlsPresence = function sortClientsByUrlsPresence(clients) {
+  return clients.sort(function (a, b) {
+    if (a.tvlUrl && !b.tvlUrl) return -1;
+    if (!a.tvlUrl && b.tvlUrl) return 1;
+    if (a.announcement && !b.announcement) return -1;
+    if (!a.announcement && b.announcement) return 1;
+    return 0;
+  });
+};
 function emptyAnnouncementLink(name) {
   return name === "Balancer" ? "<a class=\"inactive-link\">\n    <p>Announcement</p>\n  </a>" : "";
 }
@@ -1397,18 +1410,9 @@ function generateClientCard(name, logo, url, announcement, tvl) {
   var formattedTvl = tvl ? new Intl.NumberFormat().format(tvl.toFixed(0)) : "";
   return "\n    <a\n      href=\"".concat(url, "\"\n      target=\"_blank\"\n      referrerpolicy=\"no-referrer\"\n      class=\"link-like-text-button-flex\"\n    >\n      <img class=\"client-picture\" src=\"").concat(logo, "\"/>\n      <div class=\"client-info fw-medium\">\n        <p class=\"mb-0 fs-0\">").concat(name, "</p>\n        ").concat(tvl ? "<p class=\"mb-0 fs-0\">TVL: $".concat(formattedTvl, "</p>") : "", "\n        ").concat(announcement ? "<a\n          href=\"".concat(announcement, "\"\n          target=\"_blank\"\n          referrerpolicy=\"no-referrer\"\n        >\n          <p>Announcement</p>\n        </a>") : "".concat(emptyAnnouncementLink(name)), "\n      </div>\n    </a>");
 }
-function sortFn(a, b) {
-  if (a.name.toLowerCase() < b.name.toLowerCase()) {
-    return -1;
-  }
-  if (a.name.toLowerCase() > b.name.toLowerCase()) {
-    return 1;
-  }
-  return 0;
-}
 if (document.getElementById("featured-clients")) {
   var featuredClientsElement = document.getElementById("featured-clients");
-  featuredClients.forEach(function (client, index) {
+  sortClientsByUrlsPresence(featuredClients).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
@@ -1418,7 +1422,6 @@ if (document.getElementById("featured-clients")) {
     }
     if (client.tvlUrl) {
       if (Array.isArray(client.tvlUrl)) {
-        console.log("tvl is array", client.name);
         var promises = client.tvlUrl.map(function (url) {
           return fetch(url).then(function (response) {
             return response.json();
@@ -1428,7 +1431,7 @@ if (document.getElementById("featured-clients")) {
           var totalTvl = tvlValues.reduce(function (sum, tvl) {
             return sum + tvl;
           }, 0);
-          var clientCard = document.getElementById(featuredClients[index].name);
+          var clientCard = document.getElementById(sortClientsByUrlsPresence(featuredClients)[index].name);
           clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, totalTvl);
         })["catch"](function (error) {
           console.error("Error fetching TVL values:", error);
@@ -1447,10 +1450,10 @@ if (document.getElementById("featured-clients")) {
     }
   });
 }
+var allClients = [].concat(featuredClients, otherClients);
 if (document.getElementById("all-clients")) {
   var allClientsElement = document.getElementById("all-clients");
-  var allClients = [].concat(featuredClients, otherClients);
-  allClients.sort(sortFn).forEach(function (client, index) {
+  sortClientsByUrlsPresence(allClients).forEach(function (client, index) {
     var card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement);
@@ -1459,12 +1462,29 @@ if (document.getElementById("all-clients")) {
       allClientsElement.appendChild(card);
     }
     if (client.tvlUrl) {
-      fetch(client.tvlUrl).then(function (response) {
-        response.json().then(function (tvl) {
-          var clientCard = document.getElementById("".concat(allClients[index].name, "_all_clients"));
-          clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
+      if (Array.isArray(client.tvlUrl)) {
+        var promises = client.tvlUrl.map(function (url) {
+          return fetch(url).then(function (response) {
+            return response.json();
+          });
         });
-      });
+        Promise.all(promises).then(function (tvlValues) {
+          var totalTvl = tvlValues.reduce(function (sum, tvl) {
+            return sum + tvl;
+          }, 0);
+          var clientCard = document.getElementById("".concat(allClients[index].name, "_all_clients"));
+          clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, totalTvl);
+        })["catch"](function (error) {
+          console.error("Error fetching TVL values:", error);
+        });
+      } else {
+        fetch(client.tvlUrl).then(function (response) {
+          response.json().then(function (tvl) {
+            var clientCard = document.getElementById("".concat(allClients[index].name, "_all_clients"));
+            clientCard.innerHTML = generateClientCard(client.name, client.logo, client.url, client.announcement, tvl);
+          });
+        });
+      }
     }
   });
 }
@@ -1558,18 +1578,55 @@ if (dataSourcesCrossChainSection) {
     _element3.appendChild(_manyMoreItem);
   }
 }
+var getAllTvlUrls = function getAllTvlUrls(clients) {
+  return clients.map(function (client) {
+    return client.tvlUrl;
+  }).filter(function (tvl) {
+    return tvl;
+  }).flat();
+};
+var getTotalTvlStatValue = function getTotalTvlStatValue(urls) {
+  var promises = urls.map(function (url) {
+    return fetch(url).then(function (response) {
+      return response.text();
+    }).then(function (data) {
+      return parseFloat(data) || 0;
+    });
+  });
+  return Promise.all(promises).then(function (values) {
+    var sum = values.reduce(function (acc, curr) {
+      return acc + curr;
+    }, 0);
+    // Format to billions with 1 decimal place
+    return (sum / 1e9).toFixed(1);
+  })["catch"](function (error) {
+    console.error("Error fetching TVL values:", error);
+    throw error;
+  });
+};
 function fetchData() {
   var preloader = "<div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>";
   var sourcesNumberElement = document.getElementById("sources-number");
   var tokensNumberElement = document.getElementById("tokens-number");
   var dataPointsElement = document.getElementById("data-points-number");
   var clientsElement = document.getElementById("clients-number");
+  var tvlElement = document.getElementById("tvl-number");
   if (sourcesNumberElement) {
     sourcesNumberElement.innerHTML = preloader;
   }
-  tokensNumberElement.innerHTML = preloader;
-  dataPointsElement.innerHTML = preloader;
+  if (dataPointsElement) {
+    dataPointsElement.innerHTML = preloader;
+  }
+  if (tokensNumberElement) {
+    tokensNumberElement.innerHTML = preloader;
+  }
+  if (tvlElement) {
+    tvlElement.innerHTML = preloader;
+  }
   clientsElement.innerHTML = preloader;
+  getTotalTvlStatValue(getAllTvlUrls(allClients)).then(function (total) {
+    tvlElement.innerHTML = "".concat(total, " billion");
+  });
   fetch("https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json").then(function (response) {
     return response.json();
   }).then(function (data) {
@@ -2017,28 +2074,54 @@ if (trustedByCrossChainSection) {
     _element6.appendChild(_manyMoreItem2);
   }
 }
+var getTotalTvlValue = function getTotalTvlValue(protocols) {
+  var promises = protocols.map(function (protocol) {
+    return fetch("https://api.llama.fi/tvl/".concat(protocol)).then(function (response) {
+      return response.text();
+    }).then(function (data) {
+      return parseFloat(data) || 0;
+    });
+  });
+  return Promise.all(promises).then(function (values) {
+    var sum = values.reduce(function (acc, curr) {
+      return acc + curr;
+    }, 0);
+    // Format to billions with 1 decimal place
+    return (sum / 1e9).toFixed(1);
+  })["catch"](function (error) {
+    console.error("Error fetching TVL values:", error);
+    throw error;
+  });
+};
 function generateTvsElement(tvs) {
-  var defillamaUrl = "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
-  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n      <a\n        href=\"".concat(defillamaUrl, "\"\n        target=\"_blank\"\n        referrerpolicy=\"no-referrer\"\n        class=\"link-like-text-button\"\n      >\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ").concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">Total Value Secured (TVS) by</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n      </a>\n    </div>");
+  // const defillamaUrl =
+  //   "https://defillama.com/oracles/RedStone?staking=false&pool2=false&govtokens=false&doublecounted=true&borrowed=true&liquidstaking=false&vesting=false";
+  return "\n    <div class=\"tvs-link mt-3 mt-md-5\">\n        <div class=\"py-2 px-4\">\n          <div class=\"flex gap-2 align-items-center justify-content-center mb-2\">\n            <h3 class=\"mb-0\">Protecting</h3>\n            ".concat(tvs ? "<h3 class=\"mb-0\"><b>".concat(tvs, " billion</b></h3>") : "<div class=\"flex align-items-center justify-content-center loader-container-tvs\">\n                    <div class=\"lds-ellipsis\"><div></div><div></div><div></div><div></div></div>\n                  </div>", "\n            <div class=\"simple-tooltip\">\n              <img src=\"/assets/img/icons/info.svg\" />\n              <span class=\"tooltiptext\">\n                TVS (Total Value Secured) is a metric similar to TVL (Total Value Locked) that also counts assets that are temporarily outside of the protocol (Borrows & Double Count) but could be lost if an oracle misprices delivered feeds.\n              </span>\n            </div>\n          </div>\n          <div class=\"flex gap-2 align-items-center justify-md-content-left justify-content-center\">\n            <h6 class=\"m-0\">RedStone TVS, based on TVL from</h6>\n            <img src=\"/assets/img/logos/defillama.svg\" />\n          </div>\n        </div>\n    </div>");
 }
 if (document.getElementById("tvs")) {
-  var tvsUrl = "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
+  // const tvsUrl =
+  //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   var tvsElement = document.getElementById("tvs");
-  fetch(tvsUrl).then(function (response) {
-    response.json().then(function (parsedResponse) {
-      var tvs = parsedResponse.data[0].RedStoneTVS;
-      var parsedTvs = tvs.slice(0, 4);
-      tvsElement.innerHTML = generateTvsElement(parsedTvs);
-      var tooltipElements = document.querySelectorAll(".simple-tooltip");
-      tooltipElements.forEach(function (element) {
-        return element.addEventListener("click", function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-        });
+  var protocolIds = ["evaa-protocol", "yield-yak", "venus", "fraxlend", "puffer-finance", "lombard", "zerolend", "deltaprime", "layerbank", "gearbox", "sommelier", "enzyme-finance", "euler", "angle", "gravita-protocol", "bitlen-finance", "cian-protocol", "dolomite", "cygnus", "ionic-protocol", "juice-finance", "ironclad-finance", "kinza-finance", "lista-dao", "merchant-moe", "mento", "native", "orbit", "premia", "segment-finance", "satoshi-protocol", "sturdy", "sumer.money", "synonym-finance", "skate-fi", "tokemak", "yei-finance"];
+  getTotalTvlValue(protocolIds).then(function (total) {
+    tvsElement.innerHTML = generateTvsElement(total);
+    var tooltipElements = document.querySelectorAll(".simple-tooltip");
+    tooltipElements.forEach(function (element) {
+      return element.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
       });
     });
   });
+  // fetch(tvsUrl).then((response) => {
+  //   response.json().then((parsedResponse) => {
+  //     const tvs = parsedResponse.data[0].RedStoneTVS;
+  //     const parsedTvs = tvs.slice(0, 4);
+  //     tvsElement.innerHTML = generateTvsElement(parsedTvs);
+  //   });
+  // });
+
   tvsElement.innerHTML = generateTvsElement();
   var tooltipElements = document.querySelectorAll(".simple-tooltip");
   tooltipElements.forEach(function (element) {

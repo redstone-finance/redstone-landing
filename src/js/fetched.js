@@ -1,5 +1,31 @@
 import animateDataPoints from "./animate";
-import { getClientsCount } from "./clients";
+import { getClientsCount, allClients } from "./clients";
+
+const getAllTvlUrls = (clients) => {
+  return clients
+    .map((client) => client.tvlUrl)
+    .filter((tvl) => tvl)
+    .flat();
+};
+
+const getTotalTvlStatValue = (urls) => {
+  const promises = urls.map((url) =>
+    fetch(url)
+      .then((response) => response.text())
+      .then((data) => parseFloat(data) || 0)
+  );
+
+  return Promise.all(promises)
+    .then((values) => {
+      const sum = values.reduce((acc, curr) => acc + curr, 0);
+      // Format to billions with 1 decimal place
+      return (sum / 1e9).toFixed(1);
+    })
+    .catch((error) => {
+      console.error("Error fetching TVL values:", error);
+      throw error;
+    });
+};
 
 function fetchData() {
   const preloader = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`;
@@ -8,15 +34,26 @@ function fetchData() {
   const tokensNumberElement = document.getElementById("tokens-number");
   const dataPointsElement = document.getElementById("data-points-number");
   const clientsElement = document.getElementById("clients-number");
+  const tvlElement = document.getElementById("tvl-number");
 
   if (sourcesNumberElement) {
     sourcesNumberElement.innerHTML = preloader;
   }
+  if (dataPointsElement) {
+    dataPointsElement.innerHTML = preloader;
+  }
+  if (tokensNumberElement) {
+    tokensNumberElement.innerHTML = preloader;
+  }
+  if (tvlElement) {
+    tvlElement.innerHTML = preloader;
+  }
 
-  tokensNumberElement.innerHTML = preloader;
-  dataPointsElement.innerHTML = preloader;
   clientsElement.innerHTML = preloader;
 
+  getTotalTvlStatValue(getAllTvlUrls(allClients)).then((total) => {
+    tvlElement.innerHTML = total + " billion";
+  });
   fetch(
     "https://raw.githubusercontent.com/redstone-finance/redstone-app/main/src/config/sources.json"
   )

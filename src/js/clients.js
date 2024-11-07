@@ -127,6 +127,7 @@ const featuredClients = [
     name: "Kraken (kBTC)",
     logo: "/assets/img/clients/kraken.jpg",
     url: "https://www.kraken.com/",
+    tvlUrl: "https://api.llama.fi/tvl/kraken",
   },
   {
     name: "KelpDAO",
@@ -196,12 +197,13 @@ const otherClients = [
     logo: "/assets/img/clients/shoebill.png",
     url: "https://shoebill.finance/",
     tvlUrl: "https://api.llama.fi/tvl/shoebill-finance",
+    announcement: "https://x.com/ShoebillFinance/status/1808170804829622572",
   },
   {
     name: "Ebisu",
     logo: "/assets/img/clients/ebisu.png",
     url: "https://ebisu.finance/",
-    tvlUrl: "https://api.llama.fi/tvl/ebisu",
+    tvlUrl: "https://api.llama.fi/tvl/ebisu-finance",
   },
   {
     name: "Satoshi Protocol",
@@ -254,13 +256,15 @@ const otherClients = [
     logo: "/assets/img/clients/ao.png",
     url: "https://ao.arweave.dev/",
     announcement: "https://x.com/redstone_defi/status/1832086628686574030",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "EVAA",
     logo: "/assets/img/clients/evaa.jpeg",
     url: "https://evaa.finance/",
     tvlUrl: "https://api.llama.fi/tvl/evaa-protocol",
+    announcement:
+      "https://twitter.com/redstone_defi/status/1745823159587397833",
   },
   {
     name: "Mento",
@@ -362,7 +366,6 @@ const otherClients = [
     url: "https://www.curvance.com/",
     announcement:
       "https://twitter.com/redstone_defi/status/1752735923060801699",
-    tvlUrl: "",
   },
   {
     name: "ZKX",
@@ -370,7 +373,7 @@ const otherClients = [
     url: "https://zkx.fi/",
     announcement:
       "https://blog.redstone.finance/2022/11/18/redstonepowered-ep-4-zkx",
-    tvlUrl: "",
+    tvlUrl: "https://api.llama.fi/tvl/zkx",
   },
   {
     name: "Moola Market",
@@ -542,6 +545,7 @@ const otherClients = [
     name: "Gauntlet",
     logo: "/assets/img/clients/gauntlet.jpeg",
     url: "https://www.gauntlet.xyz/",
+    announcement: "https://x.com/redstone_defi/status/1776268198301860208",
   },
   {
     name: "fBomb",
@@ -552,6 +556,7 @@ const otherClients = [
     name: "Re7",
     logo: "/assets/img/clients/re7.jpeg",
     url: "https://re7.capital/",
+    announcement: "https://x.com/redstone_defi/status/1753335171020136620",
   },
   {
     name: "CoinDesk Indices CESR",
@@ -601,7 +606,7 @@ const otherClients = [
     logo: "/assets/img/clients/bitperp.png",
     url: "https://twitter.com/bitperp",
     announcement: "",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Lyve Finance",
@@ -616,7 +621,7 @@ const otherClients = [
     url: "https://opaldefi.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1775946468458918299",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Merchant Moe",
@@ -632,7 +637,7 @@ const otherClients = [
     url: "https://gho.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1773726966040129938",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Native",
@@ -679,7 +684,7 @@ const otherClients = [
     url: "https://getclave.io/",
     announcement:
       "https://twitter.com/redstone_defi/status/1784945784460591379",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "SphereX",
@@ -687,7 +692,7 @@ const otherClients = [
     url: "https://www.sx.xyz/",
     announcement:
       "https://twitter.com/redstone_defi/status/1788569792741605533",
-    tvlUrl: "",
+    tvlUrl: false,
   },
   {
     name: "Seismic Finance",
@@ -773,13 +778,25 @@ const otherClients = [
     url: "https://www.letsgethai.com/",
     announcement:
       "https://x.com/redstone_defi/status/1851308060050161775/photo/1",
-    tvlUrl: "",
+    tvlUrl: false,
   },
 ];
 
 function getClientsCount() {
   return featuredClients.length + otherClients.length;
 }
+
+const sortClientsByUrlsPresence = (clients) => {
+  return clients.sort((a, b) => {
+    if (a.tvlUrl && !b.tvlUrl) return -1;
+    if (!a.tvlUrl && b.tvlUrl) return 1;
+
+    if (a.announcement && !b.announcement) return -1;
+    if (!a.announcement && b.announcement) return 1;
+
+    return 0;
+  });
+};
 
 function emptyAnnouncementLink(name) {
   return name === "Balancer"
@@ -820,19 +837,9 @@ function generateClientCard(name, logo, url, announcement, tvl) {
     </a>`;
 }
 
-function sortFn(a, b) {
-  if (a.name.toLowerCase() < b.name.toLowerCase()) {
-    return -1;
-  }
-  if (a.name.toLowerCase() > b.name.toLowerCase()) {
-    return 1;
-  }
-  return 0;
-}
-
 if (document.getElementById("featured-clients")) {
   const featuredClientsElement = document.getElementById("featured-clients");
-  featuredClients.forEach((client, index) => {
+  sortClientsByUrlsPresence(featuredClients).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
@@ -847,7 +854,6 @@ if (document.getElementById("featured-clients")) {
     }
     if (client.tvlUrl) {
       if (Array.isArray(client.tvlUrl)) {
-        console.log("tvl is array", client.name);
         const promises = client.tvlUrl.map((url) =>
           fetch(url).then((response) => response.json())
         );
@@ -856,7 +862,7 @@ if (document.getElementById("featured-clients")) {
           .then((tvlValues) => {
             const totalTvl = tvlValues.reduce((sum, tvl) => sum + tvl, 0);
             const clientCard = document.getElementById(
-              featuredClients[index].name
+              sortClientsByUrlsPresence(featuredClients)[index].name
             );
             clientCard.innerHTML = generateClientCard(
               client.name,
@@ -892,11 +898,11 @@ if (document.getElementById("featured-clients")) {
     }
   });
 }
+const allClients = [...featuredClients, ...otherClients];
 
 if (document.getElementById("all-clients")) {
   const allClientsElement = document.getElementById("all-clients");
-  const allClients = [...featuredClients, ...otherClients];
-  allClients.sort(sortFn).forEach((client, index) => {
+  sortClientsByUrlsPresence(allClients).forEach((client, index) => {
     const card = document.createElement("div");
     card.classList.add("col-5", "col-md-4", "col-lg-3", "text-center");
     card.innerHTML = generateClientCard(
@@ -912,22 +918,46 @@ if (document.getElementById("all-clients")) {
     }
 
     if (client.tvlUrl) {
-      fetch(client.tvlUrl).then((response) => {
-        response.json().then((tvl) => {
-          const clientCard = document.getElementById(
-            `${allClients[index].name}_all_clients`
-          );
-          clientCard.innerHTML = generateClientCard(
-            client.name,
-            client.logo,
-            client.url,
-            client.announcement,
-            tvl
-          );
+      if (Array.isArray(client.tvlUrl)) {
+        const promises = client.tvlUrl.map((url) =>
+          fetch(url).then((response) => response.json())
+        );
+
+        Promise.all(promises)
+          .then((tvlValues) => {
+            const totalTvl = tvlValues.reduce((sum, tvl) => sum + tvl, 0);
+            const clientCard = document.getElementById(
+              `${allClients[index].name}_all_clients`
+            );
+            clientCard.innerHTML = generateClientCard(
+              client.name,
+              client.logo,
+              client.url,
+              client.announcement,
+              totalTvl
+            );
+          })
+          .catch((error) => {
+            console.error("Error fetching TVL values:", error);
+          });
+      } else {
+        fetch(client.tvlUrl).then((response) => {
+          response.json().then((tvl) => {
+            const clientCard = document.getElementById(
+              `${allClients[index].name}_all_clients`
+            );
+            clientCard.innerHTML = generateClientCard(
+              client.name,
+              client.logo,
+              client.url,
+              client.announcement,
+              tvl
+            );
+          });
         });
-      });
+      }
     }
   });
 }
 
-export default { getClientsCount, generateClientCard };
+export default { getClientsCount, generateClientCard, allClients };
