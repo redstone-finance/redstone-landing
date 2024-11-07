@@ -86,7 +86,7 @@ if (document.getElementById("tvs")) {
     "merchant-moe",
     "mento",
     "native",
-    "obit",
+    "orbit",
     "premia",
     "segment-finance",
     "satoshi-protocol",

@@ -2097,7 +2097,7 @@ if (document.getElementById("tvs")) {
   // const tvsUrl =
   //   "https://d12s4zpdqk5syt.cloudfront.net/v1/recipes/PHnrSeRI0Uf6O6vtFBE2/results-latest";
   var tvsElement = document.getElementById("tvs");
-  var protocolIds = ["evaa-protocol", "yield-yak", "venus", "fraxlend", "puffer-finance", "lombard", "zerolend", "deltaprime", "layerbank", "gearbox", "sommelier", "enzyme-finance", "euler", "angle", "gravita-protocol", "bitlen-finance", "cian-protocol", "dolomite", "cygnus", "ionic-protocol", "juice-finance", "ironclad-finance", "kinza-finance", "lista-dao", "merchant-moe", "mento", "native", "obit", "premia", "segment-finance", "satoshi-protocol", "sturdy", "sumer.money", "synonym-finance", "skate-fi", "tokemak", "yei-finance"];
+  var protocolIds = ["evaa-protocol", "yield-yak", "venus", "fraxlend", "puffer-finance", "lombard", "zerolend", "deltaprime", "layerbank", "gearbox", "sommelier", "enzyme-finance", "euler", "angle", "gravita-protocol", "bitlen-finance", "cian-protocol", "dolomite", "cygnus", "ionic-protocol", "juice-finance", "ironclad-finance", "kinza-finance", "lista-dao", "merchant-moe", "mento", "native", "orbit", "premia", "segment-finance", "satoshi-protocol", "sturdy", "sumer.money", "synonym-finance", "skate-fi", "tokemak", "yei-finance"];
   getTotalTvlValue(protocolIds).then(function (total) {
     tvsElement.innerHTML = generateTvsElement(total);
     var tooltipElements = document.querySelectorAll(".simple-tooltip");
