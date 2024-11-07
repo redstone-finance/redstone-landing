@@ -3,7 +3,6 @@ import { getClientsCount, allClients } from "./clients";
 
 const getAllTvlUrls = (clients) => {
   return clients
-    .filter((client) => client.name !== "Pendle" && client.name !== "Solv")
     .map((client) => client.tvlUrl)
     .filter((tvl) => tvl)
     .flat();

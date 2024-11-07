@@ -40,7 +40,7 @@ function generateTvsElement(tvs) {
             </div>
           </div>
           <div class="flex gap-2 align-items-center justify-md-content-left justify-content-center">
-            <h6 class="m-0">RedStone TVS sourced from</h6>
+            <h6 class="m-0">RedStone Total Value Secured, based on TVL from</h6>
             <img src="/assets/img/logos/defillama.svg" />
           </div>
         </div>
