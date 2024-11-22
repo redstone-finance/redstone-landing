@@ -187,13 +187,6 @@ const featuredClients = [
 
 const otherClients = [
   {
-    name: "Hemi",
-    logo: "/assets/img/clients/hemi.png",
-    url: "https://hemi.xyz/",
-    // tvlUrl: "https://api.llama.fi/tvl/hemi",
-    announcement: "https://x.com/hemi_xyz/status/1859264985592983940",
-  },
-  {
     name: "Agora",
     logo: "/assets/img/clients/agora.svg",
     url: "https://www.agora.finance/",
