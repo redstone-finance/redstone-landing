@@ -545,6 +545,9 @@ var chains = [{
   name: "Starknet",
   image: "assets/img/chains/starknet.png"
 }, {
+  name: "Hemi",
+  image: "assets/img/auditors-partners/hemi.png"
+}, {
   name: "Canto",
   image: "assets/img/chains/canto.png"
 }, {
