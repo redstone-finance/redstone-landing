@@ -77,7 +77,7 @@ if (document.getElementById("members")) {
         >
           <img
             class="big-button-image"
-            src="/assets/img/icons/twitter.svg"
+            src="/assets/img/icons/x.svg"
           >
         </a>
         <a
